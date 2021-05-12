@@ -1,5 +1,5 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
-  <trei:trei name="GTU1" >
+  <trei:trei name="PLC_GTU1" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.010" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.010" />
@@ -544,10 +544,51 @@
             <attribute type="unit.System.Attributes.Description" value="Стружка в масле откачки от СТ" />
           </ct:object>
         </ct:object>
+        <ct:object name="IM" access-level="public" >
+          <ct:object name="KPV" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВ" />
+          </ct:object>
+          <ct:object name="KPG" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВЗ и КПГ" />
+          </ct:object>
+          <ct:object name="POS" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ПОС ГТУ" />
+          </ct:object>
+          <ct:object name="SK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="СК" />
+          </ct:object>
+          <ct:object name="CheckV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль виброаппаратуры ГТУ" />
+          </ct:object>
+          <ct:object name="Elst" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание электростартера" />
+          </ct:object>
+          <ct:object name="Starter1" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электростартер" />
+          </ct:object>
+          <ct:object name="Starter2" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Повышенная мощность электростартера" />
+          </ct:object>
+          <ct:object name="ContBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль БЗД" />
+          </ct:object>
+          <ct:object name="DeblBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
+          </ct:object>
+          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
+          </ct:object>
+          <ct:object name="DG" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ДГ" />
+          </ct:object>
+          <ct:object name="VNA" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ВНА" />
+          </ct:object>
+        </ct:object>
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="GTU2" >
+  <trei:trei name="PLC_GTU2" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.020" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.020" />
@@ -1092,10 +1133,51 @@
             <attribute type="unit.System.Attributes.Description" value="Стружка в масле откачки от СТ" />
           </ct:object>
         </ct:object>
+        <ct:object name="IM" access-level="public" >
+          <ct:object name="KPV" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВ" />
+          </ct:object>
+          <ct:object name="KPG" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВЗ и КПГ" />
+          </ct:object>
+          <ct:object name="POS" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ПОС ГТУ" />
+          </ct:object>
+          <ct:object name="SK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="СК" />
+          </ct:object>
+          <ct:object name="CheckV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль виброаппаратуры ГТУ" />
+          </ct:object>
+          <ct:object name="Elst" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание электростартера" />
+          </ct:object>
+          <ct:object name="Starter1" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электростартер" />
+          </ct:object>
+          <ct:object name="Starter2" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Повышенная мощность электростартера" />
+          </ct:object>
+          <ct:object name="ContBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль БЗД" />
+          </ct:object>
+          <ct:object name="DeblBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
+          </ct:object>
+          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
+          </ct:object>
+          <ct:object name="DG" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ДГ" />
+          </ct:object>
+          <ct:object name="VNA" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ВНА" />
+          </ct:object>
+        </ct:object>
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="GTU3" >
+  <trei:trei name="PLC_GTU3" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.030" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.030" />
@@ -1640,1173 +1722,51 @@
             <attribute type="unit.System.Attributes.Description" value="Стружка в масле откачки от СТ" />
           </ct:object>
         </ct:object>
-      </dp:application-object>
-    </trei:master-module>
-  </trei:trei>
-  <trei:trei name="GPA1" >
-    <trei:master-module name="m903e" >
-      <trei:ethernet-adapter name="Eth1" address="192.168.003.012" />
-      <trei:ethernet-adapter name="Eth2" address="192.168.004.012" />
-      <trei:unet-server name="UnetServer" address-map="" port="6001"/>
-      <dp:application-object name="Tree" access-level="public" >
-        <ct:object name="AI" access-level="public" >
-          <ct:object name="AI_T_outKST_1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха 1 в сбросном воздуховоде КШТ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+        <ct:object name="IM" access-level="public" >
+          <ct:object name="KPV" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВ" />
           </ct:object>
-          <ct:object name="AI_T_outKST_2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха 2 в сбросном воздуховоде КШТ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="KPG" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="КПВЗ и КПГ" />
           </ct:object>
-          <ct:object name="AI_T_KST" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в КШТ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="POS" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ПОС ГТУ" />
           </ct:object>
-          <ct:object name="AI_Ta_1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в ангаре (точка 1)" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="SK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="СК" />
           </ct:object>
-          <ct:object name="AI_Ta_2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в ангаре (точка 2)" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="CheckV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль виброаппаратуры ГТУ" />
           </ct:object>
-          <ct:object name="AI_Tatm" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура наружного воздуха" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="Elst" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание электростартера" />
           </ct:object>
-          <ct:object name="AI_Tmbd" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла в МБД ДТ1" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="Starter1" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электростартер" />
           </ct:object>
-          <ct:object name="AI_Tm_outGTD" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла откачки из ГТД ДТ2" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="Starter2" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Повышенная мощность электростартера" />
           </ct:object>
-          <ct:object name="AI_Tm_inTMG" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла перед ТГМ ДТ3" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="ContBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Контроль БЗД" />
           </ct:object>
-          <ct:object name="AI_Tm_outTMG" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла за ТГМ ДТ4" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="DeblBZD" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
           </ct:object>
-          <ct:object name="AI_Tm_inMBD" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла перед МБД ДТ5" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
           </ct:object>
-          <ct:object name="AI_Tg_inF" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура газа перед фильтрами" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
+          <ct:object name="DG" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ДГ" />
           </ct:object>
-          <ct:object name="AI_Tg_outN" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура газа на выходе ЦБК" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_OP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура вкладыша опорного подшипника" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_OUP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура вкладыша опорно-упорного подшипника" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_rk_OUP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура рабочих колодок опорно-упорного подшипника" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_uk_OUP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура установочных колодок опорно-упорного подшипника" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Tw_inUTO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воды на входе в УТО" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Tw_outUTO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воды на выходе из УТО" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_IPTV" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура влагомера ИПТВ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_RH" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Относительная влажность наружного воздуха" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_KST" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления воздуха в КШТ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pvot" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление воздуха в системе охлаждения трансмиссии" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Patm" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление наружного воздуха" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vmbd" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБД" />
-            <attribute type="Attributes.EUnit" value="л" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Pm_otkach" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление масла откачки из ГТД" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_TMG_pos" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Кран байпаса масла ТГМ: положение" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_fbvSGU" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на фильтре барьерного воздуха на входе в СГУ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pbv_inSGU" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление барьерного воздуха после фильтров  " />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Tv_otborGTD" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура отбора воздуха от ГТУ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_sGTD" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на сетке ГТД" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_dPvou" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления воздуха на фильтрах ВОУ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_dPv_inGTD" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Разрежение воздуха перед ГТД" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_dP_BFTG" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на БФТГ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pg_inN" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление газа на входе ЦБК" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pbg_inKIP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление буферного газа на входе в КИП ГДУ" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Tbg_inKIP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура буферного газа на входе в КИП ГДУ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dPbg_FKIP" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на фильтрах буферного газа стойки КИП СГУ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_P_out1SGU_vsas" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление после 1-ой ступени ГДУ со стороны всаса " />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_P_out1SGU_nagn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление после 1-ой ступени ГДУ со стороны нагнетания" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Q_out1SGU_vsas" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход утечек 1-ой ступени ГДУ со стороны всаса" />
-            <attribute type="Attributes.EUnit" value="нм3/ч" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Q_out1SGU_nagn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход утечек 1-ой ступени ГДУ со стороны нагнетания" />
-            <attribute type="Attributes.EUnit" value="нм3/ч" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_1SGU_vsas" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="dP на дросселе (расх. буф. газа на 1-ую ступень ГДУ со ст. вс.)" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_dP_1SGU_nagn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="dP на дросселе (расх. буф. газа на 1-ую ступень ГДУ со ст. Нагн.)" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Tbv_inSGU" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура барьерного воздуха на входе в СГУ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Pzv_inSGU" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление барьерного воздуха на входе в СГУ" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vp_POgor" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Виброперемещение ротора в передней опоре (гориз.)" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vp_POvert" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Виброперемещение ротора в передней опоре (вертик.)" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vm_ZOgor" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Виброперемещение ротора в задней опоре (гориз.)" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vm_ZOvert" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Виброперемещение ротора в задней опоре (вертик.)" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Os_1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Осевой сдвиг ротора 1" />
-            <attribute type="Attributes.EUnit" value="мм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Os_2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Осевой сдвиг ротора 2" />
-            <attribute type="Attributes.EUnit" value="мм" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Vmbn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБК" />
-            <attribute type="Attributes.EUnit" value="л" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Tmbn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла в МБК" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Pmsn_1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление масла на входе в компрессор 1" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Tmsn" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла на входе в компрессор" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_MFN" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на масляном фильтре перед компрессором" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pw_inUTO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление воды на входе в УТО" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pw_outUTO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление воды на выходе из УТО" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Qw_UTO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход воды через УТО" />
-            <attribute type="Attributes.EUnit" value="м3/ч" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_dP_FCBN" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления газа на защитной решетке перед ЦБК" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Pg_Kr2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление газа после крана №160.2" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_P_inFBFTG" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление газа перед фильтрами БФТГ" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_L_F1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Уровень конденсата в фильтре 1" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_L_F2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Уровень конденсата в фильтре 2" />
-            <attribute type="Attributes.EUnit" value="мкм" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Pmsn_2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление масла на входе в компрессор 2" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Tm_inMO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла на входе в МО ЦБК " />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Tm_outMO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура масла на выходе МО ЦБК " />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Tm_secMO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура секции МО ЦБК" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Pm_inMO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление масла на входе в МО ЦБК" />
-            <attribute type="Attributes.EUnit" value="МПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_dPbg_FiltPDE3" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления на фильтрах буферного газа (PDE3)" />
-            <attribute type="Attributes.EUnit" value="кПа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Ttn_inHeaterBG" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура пром.теплоносителя в нагревателе буферного газа" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_KV1_pos" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение регулируемого клапана КВ1 на входе БВ1" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_KV2_pos" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение регулируемого клапана КВ2 на входе БВ1" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_KV4_pos1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение регулируемого клапана КВ4 на выходе КШТ (Привод 1)" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_KV4_pos2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение регулируемого клапана КВ4 на выходе КШТ (Привод 2)" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_KlGG_pos" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение штока регулирующего клапана (перепад «газ-газ»)" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Zs_TUT" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение заслонки ТО1 УТО" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Zs_BUT" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Положение заслонки байпаса УТО" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_U_vv1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на основном питании САУ ~220В " />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_U_BEO" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на основном питании БЭО ~220В" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_U_vv2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на резервном питании САУ =220В" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_U_BEOres" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на резервном питании БЭО =220В" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_U_vv3" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на крановой обвязке ГПА =220В" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_shk1" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура в шкафу №1" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_shk2" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура в шкафу №2" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_T_shk3" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура в шкафу №3" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AI_Qco_A" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Концентрация углекислого газа в ангаре" />
-            <attribute type="Attributes.EUnit" value="мг/м3" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AI_Qco_KST" base-type="Types.AI.PLC_AI" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Концентрация углекислого газа в КШТ" />
-            <attribute type="Attributes.EUnit" value="мг/м3" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-        </ct:object>
-        <ct:object name="AE" access-level="public" >
-          <ct:object name="AE_NARNOM" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Наработка на номинальном режиме" />
-            <attribute type="Attributes.EUnit" value="ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NARMAX" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Наработка на максимальном режиме" />
-            <attribute type="Attributes.EUnit" value="ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NARSUM" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Суммарная наработка" />
-            <attribute type="Attributes.EUnit" value="ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NAREQV" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Эквивалентная наработка" />
-            <attribute type="Attributes.EUnit" value="ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NUMSTART" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Количество запусков" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NUMHP" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Количество ХП" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NUMNO" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Количество НО" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NUMVO" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Количество ВО" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NUMAO" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Количество АО" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_QCOMM" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Коммерческая произв.ЦБН" />
-            <attribute type="Attributes.EUnit" value="КВт" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_N" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Внутренняя мощность ЦБН" />
-            <attribute type="Attributes.EUnit" value="КВт" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_NE" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Мощность на валу ГТУ-ЦБН" />
-            <attribute type="Attributes.EUnit" value="КВт" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_CH" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за текущий час" />
-            <attribute type="Attributes.EUnit" value="тыс.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_LH" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за предыдущий час" />
-            <attribute type="Attributes.EUnit" value="тыс.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_CD" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за текущие сутки" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_LD" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за предыдущие сутки" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_CM" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за текущий месяц" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_LM" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за предыдущий месяц" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_CY" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за текущий год" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_GGAS_LY" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход технологического газа за предыдущий год" />
-            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_Gn" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Массовый расход технологического газа" />
-            <attribute type="Attributes.EUnit" value="кг/ч" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_Kpde" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Эффективный КПД ГТУ" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Qmd" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Расход масла двигателя за час" />
-            <attribute type="Attributes.EUnit" value="л/ч" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AE_Nst_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте СТ до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Ngg_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте ТК до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Tst_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте Тст до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Pk_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте Р за КВД до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Pg_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте Рг на выходе Н до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_E_UP_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте степени сжатия до верхнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Nst_DN_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте СТ до нижнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Ngg_DN_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по частоте ТК до нижнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_PZ_DN_Z" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Запас по ПЗ до нижнего ограничения" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Nst_set" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Задание частоты СТ от регулятора (Рг. Qг. Ст.Сж.)" />
-            <attribute type="Attributes.EUnit" value="об/мин" />
-            <attribute type="Attributes.FracDigits" value="0" />
-          </ct:object>
-          <ct:object name="AE_Tang" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в ангаре" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Pmsn" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Давление масла на входе в компрессор" />
-            <attribute type="Attributes.EUnit" value="Мпа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AE_T_outKST" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура на выходе КШТ" />
-            <attribute type="Attributes.EUnit" value="Мпа" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AE_Vvod1_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на вводе 1 (НКУ)" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_Vvod2_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Напряжение на вводе 2 (НКУ)" />
-            <attribute type="Attributes.EUnit" value="В" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_VOD1_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_VOD2_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_VMON1_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_VMON2_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_VOD3_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_KBV1_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_KBV2_F_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2. Фактич. частота двигателя" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_T_BET_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура в БЭТ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_T_BSAU_NKU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Температура в САУ" />
-            <attribute type="Attributes.EUnit" value="°С" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_KPDP" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Политропный КПД" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="1" />
-          </ct:object>
-          <ct:object name="AE_KNCBN" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Коэффициент технического состояния ЦБН" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-          <ct:object name="AE_KnGTU" base-type="Types.AE.PLC_AE" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Коэффициент технического ГТУ по мощности" />
-            <attribute type="Attributes.EUnit" value="-" />
-            <attribute type="Attributes.FracDigits" value="2" />
-          </ct:object>
-        </ct:object>
-        <ct:object name="DI" access-level="public" >
-          <ct:object name="DI_NO_1" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка НО от ПРУ 1" />
-          </ct:object>
-          <ct:object name="DI_AO_1" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка АО от ПРУ 1" />
-          </ct:object>
-          <ct:object name="DI_EOno_1" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка ЭАО от ПРУ 1 НО" />
-          </ct:object>
-          <ct:object name="DI_EOnz_1" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка ЭАО от ПРУ 1 НЗ" />
-          </ct:object>
-          <ct:object name="DI_NO_2" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка НО от ПРУ 2 (резерв)" />
-          </ct:object>
-          <ct:object name="DI_AO_2" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка АО от ПРУ 2 (резерв)" />
-          </ct:object>
-          <ct:object name="DI_EOno_2" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка ЭАО от ПРУ 2 (резерв) НО" />
-          </ct:object>
-          <ct:object name="DI_EOnz_2" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка ЭАО от ПРУ 2 (резерв) НЗ" />
-          </ct:object>
-          <ct:object name="DI_VOss_fromKC" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ВОCC от САУ КЦ" />
-          </ct:object>
-          <ct:object name="DI_AO_ButtonBlockSAU" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Аварийный останов от кнопки на блоке САУ" />
-          </ct:object>
-          <ct:object name="DI_AObs_fromKC" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АОБС от САУ КЦ " />
-          </ct:object>
-          <ct:object name="DI_AOss_fromKC" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АОСС от САУ КЦ" />
-          </ct:object>
-          <ct:object name="DI_AObs_fromKCr" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АОБС от САУ КЦ (резервный)" />
-          </ct:object>
-          <ct:object name="DI_AOss_fromKCr" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АОСС от САУ КЦ (резервный)" />
-          </ct:object>
-          <ct:object name="DI_VOss_fromKCr" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ВОСС от САУ КЦ (резервный)" />
-          </ct:object>
-          <ct:object name="DI_AVGM_work" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АВГМ в работе" />
-          </ct:object>
-          <ct:object name="DI_AVGM_to_KST" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Началась подача воздуха в КШТ от АВГМ " />
-          </ct:object>
-          <ct:object name="DI_Door_Vsas_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Дверь камеры всасывания открыта" />
-          </ct:object>
-          <ct:object name="DI_Door_lVOU_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Дверь левая ВОУ открыта" />
-          </ct:object>
-          <ct:object name="DI_Door_rVOU_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Дверь правая ВОУ открыта" />
-          </ct:object>
-          <ct:object name="DI_BPu_VOU_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Верхний байпасный клапан ВОУ открыт" />
-          </ct:object>
-          <ct:object name="DI_BPd_VOU_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Нижний байпасный клапан ВОУ открыт" />
-          </ct:object>
-          <ct:object name="DI_TOmg_crs" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Разгерметизация теплообменника «масло–газ»" />
-          </ct:object>
-          <ct:object name="DI_TMG_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Клапан регулирующий открыт" />
-          </ct:object>
-          <ct:object name="DI_TMG_stOff" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Клапан регулирующий закрыт" />
-          </ct:object>
-          <ct:object name="DI_PNS_blk" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Насосы ЦБН блокированы" />
-          </ct:object>
-          <ct:object name="DI_Lm_NB_Hi" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Максимальный уровень масла в маслобаке напорном" />
-          </ct:object>
-          <ct:object name="DI_Pmsn_Low" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Давление масла на входе в компрессор минимальное" />
-          </ct:object>
-          <ct:object name="DI_Vmbn_aH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБК аварийно высокий" />
-          </ct:object>
-          <ct:object name="DI_Vmbn_aL" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБК аварийно низкий" />
-          </ct:object>
-          <ct:object name="DI_Vmbd_aH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБД аварийно высокий" />
-          </ct:object>
-          <ct:object name="DI_Vmbd_aL" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Объем масла в МБД аварийно низкий" />
-          </ct:object>
-          <ct:object name="DI_Vs_wH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Обобщенный сигнал предупреждения виброперемещения" />
-          </ct:object>
-          <ct:object name="DI_Vs_aH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Обобщенный сигнал аварии виброперемещения" />
-          </ct:object>
-          <ct:object name="DI_Os_wH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Обобщенный сигнал предупреждения осевого сдвига" />
-          </ct:object>
-          <ct:object name="DI_Os_aH" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Обобщенный сигнал аварии осевого сдвига" />
-          </ct:object>
-          <ct:object name="DI_VvUTO_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Ввод ~ 380 В УТО включен" />
-          </ct:object>
-          <ct:object name="DI_VvUTO_Ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Ввод ~ 380 В УТО готов" />
-          </ct:object>
-          <ct:object name="DI_Door_BAUTO_On" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Дверь блока арматуры УТО открыта" />
-          </ct:object>
-          <ct:object name="DI_Vn_UTO_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Вентилятор блока УТО готов" />
-          </ct:object>
-          <ct:object name="DI_EN_UTO_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Нагреватели блока УТО готовы" />
-          </ct:object>
-          <ct:object name="DI_Zd_pcw_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи холодной воды готова" />
-          </ct:object>
-          <ct:object name="DI_Zd_phw_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи горячей воды готова" />
-          </ct:object>
-          <ct:object name="DI_Zd_scw_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная холодной воды готова" />
-          </ct:object>
-          <ct:object name="DI_Zd_shw_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная горячей воды готова" />
-          </ct:object>
-          <ct:object name="DI_Zd_bw_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса воды готова" />
-          </ct:object>
-          <ct:object name="DI_ZsTUT_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка секции УТО готова" />
-          </ct:object>
-          <ct:object name="DI_ZsBUT_ready" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса УТО готова" />
-          </ct:object>
-          <ct:object name="DI_PwrUTO_crs" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Питание УТО неисправно" />
-          </ct:object>
-          <ct:object name="DI_dPKr1_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Перепад давления газа на кране 160.1 меньше 0.2 Мпа" />
-          </ct:object>
-          <ct:object name="DI_Door_TB_ON" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Двери турбоблока открыты" />
-          </ct:object>
-          <ct:object name="DI_ASPT_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АСПС и ПТ норма" />
-          </ct:object>
-          <ct:object name="DI_Fire_OD" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Пожар в ОД" />
-          </ct:object>
-          <ct:object name="DI_Fire_A" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Пожар в ангаре" />
-          </ct:object>
-          <ct:object name="DI_Fire_ET" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Пожар в блоке ЭТ" />
-          </ct:object>
-          <ct:object name="DI_Fire_SAU" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Пожар в блоке САУ" />
-          </ct:object>
-          <ct:object name="DI_Fire_AVGM" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Пожар в АВГМ" />
-          </ct:object>
-          <ct:object name="DI_ASKZ_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Система контроля загазованности неисправна" />
-          </ct:object>
-          <ct:object name="DI_Zag_10_OD" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 10 % НКПВ в ОД" />
-          </ct:object>
-          <ct:object name="DI_Zag_20_OD" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 20 % НКПВ в ОД" />
-          </ct:object>
-          <ct:object name="DI_Zag_10_A" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 10 % НКПВ в ангаре" />
-          </ct:object>
-          <ct:object name="DI_Zag_20_A" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 20 % НКПВ в ангаре" />
-          </ct:object>
-          <ct:object name="DI_Zag_10_AVGM" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 10 % НКПВ в АВГМ" />
-          </ct:object>
-          <ct:object name="DI_Zag_20_AVGM" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Загазованность 20 % НКПВ в АВГМ" />
-          </ct:object>
-          <ct:object name="DI_dP_MFO" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Высокий перепад давления на маслофильтре в линии откачки от ГТД" />
-          </ct:object>
-          <ct:object name="DI_KSTG_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Клапан КЭ01 сброса топливного газа на свечу закрыт" />
-          </ct:object>
-          <ct:object name="DI_MSGUvsas_crs" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Разрушена мембрана СГУ со стороны всаса" />
-          </ct:object>
-          <ct:object name="DI_MSGUnagn_crs" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Разрушена мембрана СГУ со стороны нагнетания" />
-          </ct:object>
-          <ct:object name="DI_VvIBP_flt" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ИБП. Нет сети" />
-          </ct:object>
-          <ct:object name="DI_IBPpwr_flt" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ИБП. Глубокий разряд батареи" />
-          </ct:object>
-          <ct:object name="DI_IBP_flt" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Общая неисправность ИБП" />
-          </ct:object>
-          <ct:object name="DI_NsBMA_blk" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Блокировка насосов БМА" />
-          </ct:object>
-          <ct:object name="DI_TEN1_MO_flt" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Перегрев Калорифера МО ЦБК" />
-          </ct:object>
-          <ct:object name="DI_VnMO_flt" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Перегрев ТЭН МО ЦБК" />
-          </ct:object>
-          <ct:object name="DI_Bypass_ON" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Серв. байпас включен" />
-          </ct:object>
-          <ct:object name="DI_ZU_brk" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ИБП. Неисправность ЗУ" />
-          </ct:object>
-          <ct:object name="DI_G101_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G101" />
-          </ct:object>
-          <ct:object name="DI_G102_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G102" />
-          </ct:object>
-          <ct:object name="DI_G103_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G103" />
-          </ct:object>
-          <ct:object name="DI_G104_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G104" />
-          </ct:object>
-          <ct:object name="DI_G105_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G105" />
-          </ct:object>
-          <ct:object name="DI_G106_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G106" />
-          </ct:object>
-          <ct:object name="DI_G201_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G201" />
-          </ct:object>
-          <ct:object name="DI_G202_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G202" />
-          </ct:object>
-          <ct:object name="DI_G203_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G203" />
-          </ct:object>
-          <ct:object name="DI_G204_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G204" />
-          </ct:object>
-          <ct:object name="DI_G205_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G205" />
-          </ct:object>
-          <ct:object name="DI_G206_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G206" />
-          </ct:object>
-          <ct:object name="DI_G1_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G1" />
-          </ct:object>
-          <ct:object name="DI_G2_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G2" />
-          </ct:object>
-          <ct:object name="DI_G3_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G3" />
-          </ct:object>
-          <ct:object name="DI_G4_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G4" />
-          </ct:object>
-          <ct:object name="DI_QF101_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат QF101 включен ~220В" />
-          </ct:object>
-          <ct:object name="DI_QF102_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат QF102 включен ~220В" />
-          </ct:object>
-          <ct:object name="DI_QF201_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат QF201 включен =220В" />
-          </ct:object>
-          <ct:object name="DI_QF202_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат QF202 включен =220В" />
-          </ct:object>
-          <ct:object name="DI_QF301_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат QF301 включен =220В" />
-          </ct:object>
-          <ct:object name="DI_vv1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на вводе 1" />
-          </ct:object>
-          <ct:object name="DI_Pwr_BEO_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на вводе БЭО (основной)" />
-          </ct:object>
-          <ct:object name="DI_vv2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на вводе 2" />
-          </ct:object>
-          <ct:object name="DI_Pwr_BEOres_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на вводе БЭО (резервный)" />
-          </ct:object>
-          <ct:object name="DI_vv3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на вводе 3" />
-          </ct:object>
-          <ct:object name="DI_SF112_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат SF112 включен" />
-          </ct:object>
-          <ct:object name="DI_1S1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S1 включен" />
-          </ct:object>
-          <ct:object name="DI_1S2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S2 включен" />
-          </ct:object>
-          <ct:object name="DI_1S3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S3 включен" />
-          </ct:object>
-          <ct:object name="DI_1S4_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S4 включен" />
-          </ct:object>
-          <ct:object name="DI_1S5_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S5 включен" />
-          </ct:object>
-          <ct:object name="DI_1S6_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S6 включен" />
-          </ct:object>
-          <ct:object name="DI_1S7_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S7 включен" />
-          </ct:object>
-          <ct:object name="DI_1S8_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 1S8 включен" />
-          </ct:object>
-          <ct:object name="DI_2S1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S1 включен" />
-          </ct:object>
-          <ct:object name="DI_2S2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S2 включен" />
-          </ct:object>
-          <ct:object name="DI_2S3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S3 включен" />
-          </ct:object>
-          <ct:object name="DI_2S4_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S4 включен" />
-          </ct:object>
-          <ct:object name="DI_2S5_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S5 включен" />
-          </ct:object>
-          <ct:object name="DI_2S6_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S6 включен" />
-          </ct:object>
-          <ct:object name="DI_2S7_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S7 включен" />
-          </ct:object>
-          <ct:object name="DI_2S8_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S8 включен" />
-          </ct:object>
-          <ct:object name="DI_3S1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 3S1 включен" />
-          </ct:object>
-          <ct:object name="DI_3S2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 3S2 включен" />
-          </ct:object>
-          <ct:object name="DI_3S3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 3S3 включен" />
-          </ct:object>
-          <ct:object name="DI_3S4_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 3S4 включен" />
-          </ct:object>
-          <ct:object name="DI_A1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Реле контроля изоляции А1" />
-          </ct:object>
-          <ct:object name="DI_A2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Реле контроля изоляции А2" />
-          </ct:object>
-          <ct:object name="DI_A3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Реле контроля изоляции А3" />
-          </ct:object>
-          <ct:object name="DI_A4_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Реле контроля изоляции А4" />
-          </ct:object>
-          <ct:object name="DI_SQ1_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ1" />
-          </ct:object>
-          <ct:object name="DI_SQ2_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ2" />
-          </ct:object>
-          <ct:object name="DI_SQ3_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ3" />
-          </ct:object>
-          <ct:object name="DI_SQ4_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ4" />
-          </ct:object>
-          <ct:object name="DI_Deblock_PRU" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка деблокировка от ПРУ" />
-          </ct:object>
-          <ct:object name="DI_Sound_OF_PRU" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка выключить звук от ПРУ" />
-          </ct:object>
-          <ct:object name="DI_RoUp" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка больше от ПРУ" />
-          </ct:object>
-          <ct:object name="DI_RoDown" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка меньше от ПРУ" />
-          </ct:object>
-          <ct:object name="DI_EO_ON" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="ЭО запущен" />
-          </ct:object>
-          <ct:object name="DI_G107_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G107" />
-          </ct:object>
-          <ct:object name="DI_G108_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G108" />
-          </ct:object>
-          <ct:object name="DI_G207_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G207" />
-          </ct:object>
-          <ct:object name="DI_G208_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G208" />
-          </ct:object>
-          <ct:object name="DI_G109_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G109" />
-          </ct:object>
-          <ct:object name="DI_G209_Ok" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения на блоке питания G209" />
-          </ct:object>
-          <ct:object name="DI_BZD_brk" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Неисправность БЗД" />
-          </ct:object>
-          <ct:object name="DI_BZD_alarm" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Авария БЗД" />
-          </ct:object>
-          <ct:object name="DI_AO_BZD" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="АО от БЗД" />
-          </ct:object>
-          <ct:object name="DI_Power_BZD" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Наличие напряжения БЗД" />
-          </ct:object>
-          <ct:object name="DI_SF116_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат SF116 включен" />
-          </ct:object>
-          <ct:object name="DI_2S9_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S9 включен" />
-          </ct:object>
-          <ct:object name="DI_2S10_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S10 включен" />
-          </ct:object>
-          <ct:object name="DI_2S11_stOn" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Автомат 2S11 включен" />
-          </ct:object>
-          <ct:object name="DI_aVent_KSHT" base-type="Types.DI.PLC_DI" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кнопка Включить аварийную вентиляцию КШТ" />
+          <ct:object name="VNA" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ВНА" />
           </ct:object>
         </ct:object>
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="GPA2" >
+  <trei:trei name="PLC_GPA2" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.022" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.022" />
@@ -3966,10 +2926,468 @@
             <attribute type="unit.System.Attributes.Description" value="Кнопка Включить аварийную вентиляцию КШТ" />
           </ct:object>
         </ct:object>
+        <ct:object name="IM" access-level="public" >
+          <ct:object name="AVGM" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пуск АВГМ" />
+          </ct:object>
+          <ct:object name="AVGMprm" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Разрешение работы АВГМ" />
+          </ct:object>
+          <ct:object name="AVGM15" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Режим обогрева ГПА +15" />
+          </ct:object>
+          <ct:object name="GPA_AO" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Аварийный режим ГПА" />
+          </ct:object>
+          <ct:object name="GPA_Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар ГПА" />
+          </ct:object>
+          <ct:object name="AVGM_Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар в блоке АВГМ" />
+          </ct:object>
+          <ct:object name="AVGM_Zag10" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Высокая концентрация СН4 в АВГМ (10 % НКПВ)" />
+          </ct:object>
+          <ct:object name="AVGM_Zag20" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Высокая концентрация СН4 в АВГМ (20 % НКПВ)" />
+          </ct:object>
+          <ct:object name="KlGG" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Регулятор давления «газ-газ»" />
+          </ct:object>
+          <ct:object name="KlGGprm" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Изменение положения регулятора давления «газ–газ» разрешить" />
+          </ct:object>
+          <ct:object name="EN_UTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель блока УТО" />
+          </ct:object>
+          <ct:object name="Vn_UTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор блока арматуры УТО" />
+          </ct:object>
+          <ct:object name="Zd_pcw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи холодной воды" />
+          </ct:object>
+          <ct:object name="Zd_phw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи горячей воды" />
+          </ct:object>
+          <ct:object name="Zd_scw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная холодной воды" />
+          </ct:object>
+          <ct:object name="Zd_shw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная горячей воды" />
+          </ct:object>
+          <ct:object name="Zd_bw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса воды" />
+          </ct:object>
+          <ct:object name="ZsTUT" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка секции УТО" />
+          </ct:object>
+          <ct:object name="ZsBUT" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса УТО" />
+          </ct:object>
+          <ct:object name="EN_KST" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагрев кожуха" />
+          </ct:object>
+          <ct:object name="GPAwork" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ГПА в работе" />
+          </ct:object>
+          <ct:object name="VnOD_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентиляция ОД отключена" />
+          </ct:object>
+          <ct:object name="VnA_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентиляция ангара отключена" />
+          </ct:object>
+          <ct:object name="KlVOD_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапаны воздушные ОД закрыты" />
+          </ct:object>
+          <ct:object name="AVGMwork" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="АВГМ в работе" />
+          </ct:object>
+          <ct:object name="AOGPA" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="АО ГПА" />
+          </ct:object>
+          <ct:object name="AVGM_to_KST" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Началась подача воздуха в КШТ от АВГМ " />
+          </ct:object>
+          <ct:object name="KP7_AVGM" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП7 от АВГМ на входе в укрытие ГПА" />
+          </ct:object>
+          <ct:object name="PE1_KOA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан ПЕ1 вентиляции ангара" />
+          </ct:object>
+          <ct:object name="PE2_KOA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан ПЕ2 вентиляции ангара" />
+          </ct:object>
+          <ct:object name="IPTV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Влагомер ИПТВ" />
+          </ct:object>
+          <ct:object name="TIPTV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Термостат влагомера" />
+          </ct:object>
+          <ct:object name="Kl_inSGU" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан подачи воздуха от ГТД в СГУ" />
+          </ct:object>
+          <ct:object name="SK2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Дополнительный стопорный клапан КЭ02" />
+          </ct:object>
+          <ct:object name="KSK1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан слива конденсата 1 из БФТГ " />
+          </ct:object>
+          <ct:object name="KSK2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан слива конденсата 2 из БФТГ " />
+          </ct:object>
+          <ct:object name="KV3_rKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ3 рециркуляции воздуха КШТ" />
+          </ct:object>
+          <ct:object name="KP1_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП1 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP2_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП2 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP3_outKST1" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 1)" />
+          </ct:object>
+          <ct:object name="KP3_outKST2" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 2)" />
+          </ct:object>
+          <ct:object name="KP3_outKST3" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 3)" />
+          </ct:object>
+          <ct:object name="KP5_Otr" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП5 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KP6_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП6 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP4_AVGM" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП4 подачи воздуха в КШТ от АВГМ" />
+          </ct:object>
+          <ct:object name="Kr1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.1" />
+          </ct:object>
+          <ct:object name="Kr2" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.2" />
+          </ct:object>
+          <ct:object name="Kr4" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.4" />
+          </ct:object>
+          <ct:object name="Kr5" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.5" />
+          </ct:object>
+          <ct:object name="Kr6" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.6" />
+          </ct:object>
+          <ct:object name="Kr9" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.9" />
+          </ct:object>
+          <ct:object name="Kr12" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.12" />
+          </ct:object>
+          <ct:object name="Kr13" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.13" />
+          </ct:object>
+          <ct:object name="Kr14" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.14" />
+          </ct:object>
+          <ct:object name="Kr15" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.15" />
+          </ct:object>
+          <ct:object name="Kr16" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.16" />
+          </ct:object>
+          <ct:object name="Kr18" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.18" />
+          </ct:object>
+          <ct:object name="Kr_MOCBN" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран слива масла из МО ЦБН" />
+          </ct:object>
+          <ct:object name="Kr_OilAcc" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран слива масла из аккумулятора масла" />
+          </ct:object>
+          <ct:object name="EN_MB_GTD" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель маслобака ГТД (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 1)  (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 2) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 3) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 1 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 2 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 3 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_3BIS" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель клапана 3 бис (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Mok500" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана Mokveld Dy 500 (НКУ)" />
+          </ct:object>
+          <ct:object name="VNMON1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 нагревателя маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="VNMON2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 нагревателя маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="ZSPOS" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка противообледенительной системы ВОУ (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_aftN1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран масляный после насоса циркуляционного H1 (КЭ4)" />
+          </ct:object>
+          <ct:object name="Kr_PSGU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи воздуха в СГУ (НКУ)" />
+          </ct:object>
+          <ct:object name="ZsUTO1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка 1 УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="ZsUTO2" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка 2 УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="AZ1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Агрегат зажигания 1 (НКУ)" />
+          </ct:object>
+          <ct:object name="AZ2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Агрегат зажигания 2 (НКУ)" />
+          </ct:object>
+          <ct:object name="Nsm_GTD" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос смазки циркуляционный ГТД (Н3) (НКУ)" />
+          </ct:object>
+          <ct:object name="Nm_CBN" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос масляный циркуляционный ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="V11" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.1 (НКУ)" />
+          </ct:object>
+          <ct:object name="V12" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.2 (НКУ)" />
+          </ct:object>
+          <ct:object name="V2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 2 резервный (НКУ)" />
+          </ct:object>
+          <ct:object name="StartGTU" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Система запуска ГТУ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Обогрев клапанов ВОУ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrMsGTD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrMsGTD2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TmsCBK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ЦБК (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_AVGM" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель линии воздушного подогрева АВГМ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrBg" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель подвода трубопроводов буферного газа (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Rair" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель расходомера воздуха (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Kr_A" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель крыши ангара (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Rtg" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание обогрева расходомера топливного газа (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TPGV" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание обогрева теплогазовычислителя (НКУ)" />
+          </ct:object>
+          <ct:object name="K1_N" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Калорифер 1 маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="K2_N" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Калорифер 2 маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_VUTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопроводов УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_DrK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель дренажных конденсаторов (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_DrT" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель дренажного трубопровода (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TinAngar" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопровода в ангар (НКУ)" />
+          </ct:object>
+          <ct:object name="KBV1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1 (НКУ)" />
+          </ct:object>
+          <ct:object name="KBV2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2 (НКУ)" />
+          </ct:object>
+          <ct:object name="VzgA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор загазованности ангара (НКУ)" />
+          </ct:object>
+          <ct:object name="MNDE" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос прокачки масляный (МНДЭ) ГТУ (H2) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inMGTU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран прокачки масла в маслосистеме ГТУ (КЭ1) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inGTU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи масла в ГТУ (КЭ2) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inMNDE" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи масла в насос прокачки масляный (МНДЭ) ГТУ (КЭ3) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BFTG" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель БФТ)" />
+          </ct:object>
+          <ct:object name="rezerv1" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв" />
+          </ct:object>
+          <ct:object name="EN_Rez1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель)" />
+          </ct:object>
+          <ct:object name="ZsZhAvt" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (заслонка защиты от авторатации)" />
+          </ct:object>
+          <ct:object name="Kr_PMK" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран подачи масла в компрессор)" />
+          </ct:object>
+          <ct:object name="Kr_Rez" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран)" />
+          </ct:object>
+          <ct:object name="VMON3r1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (вентилятор 3 маслоохладителя ЦБН). Пуск" />
+          </ct:object>
+          <ct:object name="VAVGM1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (вентилятор подачи воздуха от АВГМ). Пуск" />
+          </ct:object>
+          <ct:object name="rezD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (двигатель)." />
+          </ct:object>
+          <ct:object name="Heat_Rez1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="Heat_Rez2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="Heat_Rez3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="KrOtbSGU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран отбора воздуха от ГТД на СГУ)" />
+          </ct:object>
+          <ct:object name="rezD3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (эл. двигатель)" />
+          </ct:object>
+          <ct:object name="EK1_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK2_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK3_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK1_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока САУ" />
+          </ct:object>
+          <ct:object name="EK2_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока САУ" />
+          </ct:object>
+          <ct:object name="EK3_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока САУ" />
+          </ct:object>
+          <ct:object name="Light_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Освещение блока электротехнического (рабочее)" />
+          </ct:object>
+          <ct:object name="Light_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Освещение блока САУ (рабочее)" />
+          </ct:object>
+          <ct:object name="Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар" />
+          </ct:object>
+          <ct:object name="VOD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока" />
+          </ct:object>
+          <ct:object name="VOD2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока" />
+          </ct:object>
+          <ct:object name="VOD3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока" />
+          </ct:object>
+          <ct:object name="VMON1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН" />
+          </ct:object>
+          <ct:object name="VMON2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН" />
+          </ct:object>
+          <ct:object name="VOT1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 1" />
+          </ct:object>
+          <ct:object name="VOT2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 2" />
+          </ct:object>
+          <ct:object name="PNS" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос масляный пусковой ЦБН" />
+          </ct:object>
+          <ct:object name="KV5" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ5 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KV6" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ6 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KV1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ1 на входе БВ1" />
+          </ct:object>
+          <ct:object name="KV2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ2 на входе БВ1" />
+          </ct:object>
+          <ct:object name="KV4" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ4 на выходе КШТ" />
+          </ct:object>
+          <ct:object name="Ta" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в ангаре" />
+          </ct:object>
+          <ct:object name="T_KST" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в КШТ" />
+          </ct:object>
+          <ct:object name="KlGGa" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задание положения штока регулирующего клапана (перепад «газ–газ»)" />
+          </ct:object>
+          <ct:object name="AO_VOD1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VOD2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VMON1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VMON2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VOD3" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_KBV1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_KBV2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2. Задание частоты двигателя" />
+          </ct:object>
+        </ct:object>
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="GPA3" >
+  <trei:trei name="PLC_GPA3" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.032" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.032" />
@@ -5129,10 +4547,468 @@
             <attribute type="unit.System.Attributes.Description" value="Кнопка Включить аварийную вентиляцию КШТ" />
           </ct:object>
         </ct:object>
+        <ct:object name="IM" access-level="public" >
+          <ct:object name="AVGM" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пуск АВГМ" />
+          </ct:object>
+          <ct:object name="AVGMprm" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Разрешение работы АВГМ" />
+          </ct:object>
+          <ct:object name="AVGM15" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Режим обогрева ГПА +15" />
+          </ct:object>
+          <ct:object name="GPA_AO" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Аварийный режим ГПА" />
+          </ct:object>
+          <ct:object name="GPA_Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар ГПА" />
+          </ct:object>
+          <ct:object name="AVGM_Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар в блоке АВГМ" />
+          </ct:object>
+          <ct:object name="AVGM_Zag10" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Высокая концентрация СН4 в АВГМ (10 % НКПВ)" />
+          </ct:object>
+          <ct:object name="AVGM_Zag20" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Высокая концентрация СН4 в АВГМ (20 % НКПВ)" />
+          </ct:object>
+          <ct:object name="KlGG" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Регулятор давления «газ-газ»" />
+          </ct:object>
+          <ct:object name="KlGGprm" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Изменение положения регулятора давления «газ–газ» разрешить" />
+          </ct:object>
+          <ct:object name="EN_UTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель блока УТО" />
+          </ct:object>
+          <ct:object name="Vn_UTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор блока арматуры УТО" />
+          </ct:object>
+          <ct:object name="Zd_pcw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи холодной воды" />
+          </ct:object>
+          <ct:object name="Zd_phw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка подачи горячей воды" />
+          </ct:object>
+          <ct:object name="Zd_scw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная холодной воды" />
+          </ct:object>
+          <ct:object name="Zd_shw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка дренажная горячей воды" />
+          </ct:object>
+          <ct:object name="Zd_bw" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса воды" />
+          </ct:object>
+          <ct:object name="ZsTUT" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка секции УТО" />
+          </ct:object>
+          <ct:object name="ZsBUT" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса УТО" />
+          </ct:object>
+          <ct:object name="EN_KST" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагрев кожуха" />
+          </ct:object>
+          <ct:object name="GPAwork" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="ГПА в работе" />
+          </ct:object>
+          <ct:object name="VnOD_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентиляция ОД отключена" />
+          </ct:object>
+          <ct:object name="VnA_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентиляция ангара отключена" />
+          </ct:object>
+          <ct:object name="KlVOD_OF" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапаны воздушные ОД закрыты" />
+          </ct:object>
+          <ct:object name="AVGMwork" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="АВГМ в работе" />
+          </ct:object>
+          <ct:object name="AOGPA" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="АО ГПА" />
+          </ct:object>
+          <ct:object name="AVGM_to_KST" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Началась подача воздуха в КШТ от АВГМ " />
+          </ct:object>
+          <ct:object name="KP7_AVGM" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП7 от АВГМ на входе в укрытие ГПА" />
+          </ct:object>
+          <ct:object name="PE1_KOA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан ПЕ1 вентиляции ангара" />
+          </ct:object>
+          <ct:object name="PE2_KOA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан ПЕ2 вентиляции ангара" />
+          </ct:object>
+          <ct:object name="IPTV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Влагомер ИПТВ" />
+          </ct:object>
+          <ct:object name="TIPTV" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Термостат влагомера" />
+          </ct:object>
+          <ct:object name="Kl_inSGU" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан подачи воздуха от ГТД в СГУ" />
+          </ct:object>
+          <ct:object name="SK2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Дополнительный стопорный клапан КЭ02" />
+          </ct:object>
+          <ct:object name="KSK1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан слива конденсата 1 из БФТГ " />
+          </ct:object>
+          <ct:object name="KSK2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан слива конденсата 2 из БФТГ " />
+          </ct:object>
+          <ct:object name="KV3_rKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ3 рециркуляции воздуха КШТ" />
+          </ct:object>
+          <ct:object name="KP1_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП1 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP2_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП2 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP3_outKST1" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 1)" />
+          </ct:object>
+          <ct:object name="KP3_outKST2" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 2)" />
+          </ct:object>
+          <ct:object name="KP3_outKST3" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП3 на выходе из КШТ (секция 3)" />
+          </ct:object>
+          <ct:object name="KP5_Otr" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП5 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KP6_inKST" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП6 на входе КШТ" />
+          </ct:object>
+          <ct:object name="KP4_AVGM" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КП4 подачи воздуха в КШТ от АВГМ" />
+          </ct:object>
+          <ct:object name="Kr1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.1" />
+          </ct:object>
+          <ct:object name="Kr2" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.2" />
+          </ct:object>
+          <ct:object name="Kr4" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.4" />
+          </ct:object>
+          <ct:object name="Kr5" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.5" />
+          </ct:object>
+          <ct:object name="Kr6" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.6" />
+          </ct:object>
+          <ct:object name="Kr9" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.9" />
+          </ct:object>
+          <ct:object name="Kr12" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.12" />
+          </ct:object>
+          <ct:object name="Kr13" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.13" />
+          </ct:object>
+          <ct:object name="Kr14" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.14" />
+          </ct:object>
+          <ct:object name="Kr15" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.15" />
+          </ct:object>
+          <ct:object name="Kr16" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.16" />
+          </ct:object>
+          <ct:object name="Kr18" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран 160.18" />
+          </ct:object>
+          <ct:object name="Kr_MOCBN" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран слива масла из МО ЦБН" />
+          </ct:object>
+          <ct:object name="Kr_OilAcc" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран слива масла из аккумулятора масла" />
+          </ct:object>
+          <ct:object name="EN_MB_GTD" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель маслобака ГТД (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 1)  (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 2) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BG3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 3) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 1 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 2 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_MBN3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель 3 маслобака ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_3BIS" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель клапана 3 бис (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Mok500" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана Mokveld Dy 500 (НКУ)" />
+          </ct:object>
+          <ct:object name="VNMON1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 нагревателя маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="VNMON2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 нагревателя маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="ZSPOS" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка противообледенительной системы ВОУ (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_aftN1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран масляный после насоса циркуляционного H1 (КЭ4)" />
+          </ct:object>
+          <ct:object name="Kr_PSGU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи воздуха в СГУ (НКУ)" />
+          </ct:object>
+          <ct:object name="ZsUTO1" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка 1 УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="ZsUTO2" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Заслонка 2 УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="AZ1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Агрегат зажигания 1 (НКУ)" />
+          </ct:object>
+          <ct:object name="AZ2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Агрегат зажигания 2 (НКУ)" />
+          </ct:object>
+          <ct:object name="Nsm_GTD" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос смазки циркуляционный ГТД (Н3) (НКУ)" />
+          </ct:object>
+          <ct:object name="Nm_CBN" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос масляный циркуляционный ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="V11" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.1 (НКУ)" />
+          </ct:object>
+          <ct:object name="V12" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.2 (НКУ)" />
+          </ct:object>
+          <ct:object name="V2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 2 резервный (НКУ)" />
+          </ct:object>
+          <ct:object name="StartGTU" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Система запуска ГТУ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Обогрев клапанов ВОУ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrMsGTD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrMsGTD2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TmsCBK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ЦБК (вне помещений) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_AVGM" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель линии воздушного подогрева АВГМ (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TrBg" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель подвода трубопроводов буферного газа (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Rair" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель расходомера воздуха (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Kr_A" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель крыши ангара (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_Rtg" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание обогрева расходомера топливного газа (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TPGV" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Питание обогрева теплогазовычислителя (НКУ)" />
+          </ct:object>
+          <ct:object name="K1_N" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Калорифер 1 маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="K2_N" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Калорифер 2 маслоохладителя ЦБН (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_VUTO" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопроводов УТО (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_DrK" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель дренажных конденсаторов (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_DrT" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Нагреватель дренажного трубопровода (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_TinAngar" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопровода в ангар (НКУ)" />
+          </ct:object>
+          <ct:object name="KBV1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1 (НКУ)" />
+          </ct:object>
+          <ct:object name="KBV2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2 (НКУ)" />
+          </ct:object>
+          <ct:object name="VzgA" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор загазованности ангара (НКУ)" />
+          </ct:object>
+          <ct:object name="MNDE" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос прокачки масляный (МНДЭ) ГТУ (H2) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inMGTU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран прокачки масла в маслосистеме ГТУ (КЭ1) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inGTU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи масла в ГТУ (КЭ2) (НКУ)" />
+          </ct:object>
+          <ct:object name="Kr_Pm_inMNDE" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Кран подачи масла в насос прокачки масляный (МНДЭ) ГТУ (КЭ3) (НКУ)" />
+          </ct:object>
+          <ct:object name="EN_BFTG" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель БФТ)" />
+          </ct:object>
+          <ct:object name="rezerv1" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв" />
+          </ct:object>
+          <ct:object name="EN_Rez1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель)" />
+          </ct:object>
+          <ct:object name="ZsZhAvt" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (заслонка защиты от авторатации)" />
+          </ct:object>
+          <ct:object name="Kr_PMK" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран подачи масла в компрессор)" />
+          </ct:object>
+          <ct:object name="Kr_Rez" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран)" />
+          </ct:object>
+          <ct:object name="VMON3r1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (вентилятор 3 маслоохладителя ЦБН). Пуск" />
+          </ct:object>
+          <ct:object name="VAVGM1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (вентилятор подачи воздуха от АВГМ). Пуск" />
+          </ct:object>
+          <ct:object name="rezD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (двигатель)." />
+          </ct:object>
+          <ct:object name="Heat_Rez1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="Heat_Rez2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="Heat_Rez3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (нагреватель). (НКУ)" />
+          </ct:object>
+          <ct:object name="KrOtbSGU" base-type="Types.IM2x2.IM2x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (кран отбора воздуха от ГТД на СГУ)" />
+          </ct:object>
+          <ct:object name="rezD3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Резерв (эл. двигатель)" />
+          </ct:object>
+          <ct:object name="EK1_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK2_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK3_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока электротехнического" />
+          </ct:object>
+          <ct:object name="EK1_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока САУ" />
+          </ct:object>
+          <ct:object name="EK2_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока САУ" />
+          </ct:object>
+          <ct:object name="EK3_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока САУ" />
+          </ct:object>
+          <ct:object name="Light_BET" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Освещение блока электротехнического (рабочее)" />
+          </ct:object>
+          <ct:object name="Light_BSAU" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Освещение блока САУ (рабочее)" />
+          </ct:object>
+          <ct:object name="Fire" base-type="Types.IM1x0.PLC_IM1x0" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Пожар" />
+          </ct:object>
+          <ct:object name="VOD1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока" />
+          </ct:object>
+          <ct:object name="VOD2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока" />
+          </ct:object>
+          <ct:object name="VOD3" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока" />
+          </ct:object>
+          <ct:object name="VMON1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН" />
+          </ct:object>
+          <ct:object name="VMON2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН" />
+          </ct:object>
+          <ct:object name="VOT1" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 1" />
+          </ct:object>
+          <ct:object name="VOT2" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 2" />
+          </ct:object>
+          <ct:object name="PNS" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Насос масляный пусковой ЦБН" />
+          </ct:object>
+          <ct:object name="KV5" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ5 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KV6" base-type="Types.IM1x2.IM1x2_PLC" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ6 охлаждения трансмиссии" />
+          </ct:object>
+          <ct:object name="KV1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ1 на входе БВ1" />
+          </ct:object>
+          <ct:object name="KV2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ2 на входе БВ1" />
+          </ct:object>
+          <ct:object name="KV4" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Клапан КВ4 на выходе КШТ" />
+          </ct:object>
+          <ct:object name="Ta" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в ангаре" />
+          </ct:object>
+          <ct:object name="T_KST" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Температура воздуха в КШТ" />
+          </ct:object>
+          <ct:object name="KlGGa" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Задание положения штока регулирующего клапана (перепад «газ–газ»)" />
+          </ct:object>
+          <ct:object name="AO_VOD1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VOD2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VMON1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VMON2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_VOD3" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_KBV1" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1. Задание частоты двигателя" />
+          </ct:object>
+          <ct:object name="AO_KBV2" base-type="Types.IM_AO.PLC_IM_AO" aspect="Types.PLC_Aspect" access-level="public" >
+            <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2. Задание частоты двигателя" />
+          </ct:object>
+        </ct:object>
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="DRV21" >
+  <trei:trei name="PLC_DRV21" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.016" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.016" />
@@ -5348,7 +5224,7 @@
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="DRV22" >
+  <trei:trei name="PLC_DRV22" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.026" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.026" />
@@ -5564,7 +5440,7 @@
       </dp:application-object>
     </trei:master-module>
   </trei:trei>
-  <trei:trei name="DRV23" >
+  <trei:trei name="PLC_DRV23" >
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.036" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.036" />

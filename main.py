@@ -23,16 +23,17 @@ all_CPU = []
 pref_IP = []
 sl_object_rus = {}
 sl_object_all = {}
-sl_im_PLC = {'ИМ1Х0': 'IM1x0.PLC_IM1x0', 'ИМ1Х1': 'IM1x1.PLC_IM1x1', 'ИМ1Х2': 'IM1x2.IM1x2_PLC',
-             'ИМ2Х2': 'IM2x2.IM2x2_PLC', 'ИМ2Х4': 'IM2x2.PLC_IM2x4', 'ИМ1Х0и': 'IM1x0.PLC_IM1x0',
-             'ИМ1Х1и': 'IM1x1.PLC_IM1x1', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC'}
+
 
 '''Считываем файл-шаблон для AI и AE'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_AIAE'), 'r') as f:
     tmp_object_AIAE = f.read()
 '''Считываем файл-шаблон для DI'''
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI_IM'), 'r') as f:
-    tmp_object_DI_IM = f.read()
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI'), 'r') as f:
+    tmp_object_DI = f.read()
+'''Считываем файл-шаблон для IM'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_IM'), 'r') as f:
+    tmp_object_IM = f.read()
 '''Считываем файл-шаблон для группы'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_group'), 'r') as f:
     tmp_group = f.read()
@@ -103,7 +104,7 @@ for i in all_CPU:
     sl_CPU_one = is_load_di(i, cells)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_di(sl_CPU_one, tmp_object_DI_IM, 'Types.DI.PLC_DI')
+        tmp_line_ = is_create_objects_di(sl_CPU_one, tmp_object_DI, 'Types.DI.PLC_DI')
 
         with open('file_out_group.txt', 'a') as f:
             f.write(Template(tmp_group).substitute(name_group='DI', objects=tmp_line_))
@@ -113,17 +114,16 @@ for i in all_CPU:
     sheet = book.worksheets[9]
     cells = sheet['A2': 'F' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_im(i, cells)
-    '''
-    for j in sl_CPU_one:
-        print(j, sl_CPU_one[j][1])
-    '''
-    '''
+    '''ИМ АО- объединяем словари с ИМами'''
+    sheet = book.worksheets[8]
+    cells = sheet['A2': 'AA' + str(sheet.max_row + 1)]
+    sl_CPU_one = {**sl_CPU_one, **is_load_im_ao(i, cells)}
+
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_di_im(sl_CPU_one, tmp_object_DI_IM, 'Types.DI.PLC_DI')
+        tmp_line_ = is_create_objects_im(sl_CPU_one, tmp_object_IM)
 
         with open('file_out_group.txt', 'a') as f:
             f.write(Template(tmp_group).substitute(name_group='IM', objects=tmp_line_))
-    '''
 
     '''Формирование выходного файла app'''
     with open('file_out_group.txt', 'r') as f:
@@ -135,15 +135,18 @@ for i in all_CPU:
         tmp_line_ = f.read().rstrip()
 
     '''Для каждого объекта создаём контроллер '''
+    num_obj_plc = 1
     for obj in sl_object_all:
         if i in sl_object_all[obj][0]:
             index_tmp = sl_object_all[obj][0].index(i)
             with open('file_plc.txt', 'a') as f:
-                f.write(Template(tmp_trei).substitute(plc_name=i + obj[-1], plc_name_type='m903e',
+                f.write(Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='m903e',
                                                       ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
                                                       ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
                                                       dp_app=tmp_line_))
+            num_obj_plc += 1
         else:
+            num_obj_plc += 1
             continue
 
     '''чистим файл групп для корректной обработки отсуствия'''
