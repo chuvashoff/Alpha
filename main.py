@@ -34,6 +34,9 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI'), 'r') a
 '''Считываем файл-шаблон для IM'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_IM'), 'r') as f:
     tmp_object_IM = f.read()
+'''Считываем файл-шаблон для BTN'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN'), 'r') as f:
+    tmp_object_BTN = f.read()
 '''Считываем файл-шаблон для группы'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_group'), 'r') as f:
     tmp_group = f.read()
@@ -112,7 +115,7 @@ for i in all_CPU:
     '''ИМ'''
 
     sheet = book.worksheets[9]
-    cells = sheet['A2': 'F' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'T' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_im(i, cells)
     '''ИМ АО- объединяем словари с ИМами'''
     sheet = book.worksheets[8]
@@ -124,6 +127,18 @@ for i in all_CPU:
 
         with open('file_out_group.txt', 'a') as f:
             f.write(Template(tmp_group).substitute(name_group='IM', objects=tmp_line_))
+
+    '''Кнопки(в составе System)'''
+    sheet = book.worksheets[10]
+    cells = sheet['A2': 'C' + str(sheet.max_row + 1)]
+    sl_CPU_one = is_load_btn(i, cells)
+
+    if len(sl_CPU_one) != 0:
+        tmp_line_ = is_create_objects_btn(sl_CPU_one, tmp_object_BTN, 'Types.BTN.PLC_BTN')
+        tmp_subgroup = Template(tmp_group).substitute(name_group='BTN', objects=tmp_line_).rstrip()
+
+        with open('file_out_group.txt', 'a') as f:
+            f.write(Template(tmp_group).substitute(name_group='System', objects=tmp_subgroup))
 
     '''Формирование выходного файла app'''
     with open('file_out_group.txt', 'r') as f:

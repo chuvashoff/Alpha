@@ -2,4 +2,5 @@
             <attribute type="unit.System.Attributes.Description" value="$text_description" />
             <attribute type="Attributes.EUnit" value="$text_eunit" />
             <attribute type="Attributes.FracDigits" value="$text_fracdigits" />
+            <attribute type="Attributes.ShortName" value="$short_name" />
           </ct:object>
