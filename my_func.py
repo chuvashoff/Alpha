@@ -5,7 +5,7 @@ from string import Template
 '''
 
 
-def is_load_ai_ae(controller, cell):
+def is_load_ai_ae_set(controller, cell):
     tmp = {}
     for par in cell:
         if par[2].value == controller:
@@ -28,14 +28,15 @@ def is_load_di(controller, cell):
     return tmp
 
 
-'''Для им держим пока рус наименование, вид има, род и тип има по отображению'''
+'''Для им держим пока рус наименование, вид има, род, тип има по отображению, флаг наработки, флаг перестановки'''
 
 
 def is_load_im(controller, cell):
     tmp = {}
     for par in cell:
         if par[2].value == controller:
-            tmp[par[1].value] = [par[0].value, par[5].value, par[4].value, par[19].value[0]]
+            tmp[par[1].value] = [par[0].value, par[5].value, par[4].value, par[19].value[0], par[14].value,
+                                 par[15].value]
     return tmp
 
 
@@ -54,12 +55,32 @@ def is_load_btn(controller, cell):
             tmp['BTN_' + par[1].value[par[1].value.find('|')+1:]] = [par[0].value]
     return tmp
 
+
+'''Для защит держим рус имя и ед. измерения'''
+
+
+def is_load_pz(controller, cell, num_pz):
+    tmp = {}
+    for par in cell:
+        if par[0].value is None:
+            break
+        if par[4].value not in 'АОссАОбсВОссВОбсАОНО':
+            continue
+        elif par[2].value == controller and par[4].value in 'АОссАОбсВОссВОбсАОНО':
+            '''обработка спецсимволов html в русском наименовании'''
+            tmp_name = par[0].value.replace('<', '&lt;')
+            tmp_name = tmp_name.replace('>', '&gt;')
+            tmp['A' + str(num_pz).zfill(3)] = [tmp_name, par[9].value]
+            num_pz += 1
+    return tmp, num_pz
+
+
 '''
 Создаёт набор объектов возвращает его (ранне клала в промежуточный файл, теперь этого не делает, функция осталась в bk)
 '''
 
 
-def is_create_objects_ai_ae(sl_cpu, template_text, object_type):
+def is_create_objects_ai_ae_set(sl_cpu, template_text, object_type):
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key, object_type=object_type,
@@ -104,11 +125,22 @@ def is_create_objects_im(sl_cpu, template_text):
     return tmp_line_object.rstrip()
 
 
-def is_create_objects_btn(sl_cpu, template_text, object_type):
+def is_create_objects_btn_cnt(sl_cpu, template_text, object_type):
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key, object_type=object_type,
                                                               object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0])
+
+    return tmp_line_object.rstrip()
+
+
+def is_create_objects_pz(sl_cpu, template_text, object_type):
+    tmp_line_object = ''
+    for key, value in sl_cpu.items():
+        tmp_line_object += Template(template_text).substitute(object_name=key, object_type=object_type,
+                                                              object_aspect='Types.PLC_Aspect',
+                                                              text_description=value[0],
+                                                              text_eunit=value[1])
 
     return tmp_line_object.rstrip()
