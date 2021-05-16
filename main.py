@@ -95,7 +95,7 @@ for i in all_CPU:
 
     '''Расчетные'''
     sheet = book['Расчетные']  # .worksheets[4]
-    cells = sheet['A2': 'AE' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'AE' + str(sheet.max_row)]
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
     if len(sl_CPU_one) != 0:
@@ -106,7 +106,7 @@ for i in all_CPU:
 
     '''Дискретные'''
     sheet = book['Входные']  # .worksheets[6]
-    cells = sheet['A2': 'W' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'W' + str(sheet.max_row)]
     sl_CPU_one = is_load_di(i, cells)
 
     if len(sl_CPU_one) != 0:
@@ -118,7 +118,7 @@ for i in all_CPU:
     '''ИМ'''
 
     sheet = book['ИМ']  # .worksheets[9]
-    cells = sheet['A2': 'T' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'T' + str(sheet.max_row)]
     sl_CPU_one = is_load_im(i, cells)
     sl_cnt = {}
     for key, value in sl_CPU_one.items():
@@ -129,7 +129,7 @@ for i in all_CPU:
 
     '''ИМ АО- объединяем словари с ИМами'''
     sheet = book['ИМ(АО)']  # .worksheets[8]
-    cells = sheet['A2': 'AA' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'AA' + str(sheet.max_row)]
     sl_CPU_one = {**sl_CPU_one, **is_load_im_ao(i, cells)}
 
     if len(sl_CPU_one) != 0:
@@ -140,7 +140,7 @@ for i in all_CPU:
 
     '''Кнопки(в составе System)'''
     sheet = book['Кнопки']  # .worksheets[10]
-    cells = sheet['A2': 'C' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'C' + str(sheet.max_row)]
     sl_CPU_one = is_load_btn(i, cells)
 
     tmp_subgroup = ''
@@ -150,7 +150,7 @@ for i in all_CPU:
 
     '''Уставки(в составе System)'''
     sheet = book['Уставки']  # .worksheets[5]
-    cells = sheet['A2': 'AG' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'AG' + str(sheet.max_row)]
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
     if len(sl_CPU_one) != 0:
@@ -164,7 +164,7 @@ for i in all_CPU:
 
     '''Защиты(PZ) в составе System'''
     sheet = book['Сигналы']  # .worksheets[11]
-    cells = sheet['A2': 'N' + str(sheet.max_row + 1)]
+    cells = sheet['A2': 'N' + str(sheet.max_row)]
     sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz)
 
     if len(sl_CPU_one) != 0:
