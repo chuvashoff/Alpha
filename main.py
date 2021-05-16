@@ -55,7 +55,7 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r
 
 book = openpyxl.open(os.path.join(path_config, file_config), read_only=True)
 '''читаем список всех контроллеров'''
-sheet = book.worksheets[1]
+sheet = book['Настройки']  # worksheets[1]
 cells = sheet['B2': 'B22']
 for p in cells:
     if p[0].value is not None:
@@ -83,7 +83,7 @@ ff.close()
 '''Далее для всех контроллеров, что нашли, делаем'''
 for i in all_CPU:
     '''Измеряемые'''
-    sheet = book.worksheets[3]
+    sheet = book['Измеряемые']  # .worksheets[3]
     cells = sheet['A2': 'AE' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
@@ -93,8 +93,8 @@ for i in all_CPU:
         with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='AI', objects=tmp_line_))
 
-    '''Расчётные'''
-    sheet = book.worksheets[4]
+    '''Расчетные'''
+    sheet = book['Расчетные']  # .worksheets[4]
     cells = sheet['A2': 'AE' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
@@ -105,7 +105,7 @@ for i in all_CPU:
             f.write(Template(tmp_group).substitute(name_group='AE', objects=tmp_line_))
 
     '''Дискретные'''
-    sheet = book.worksheets[6]
+    sheet = book['Входные']  # .worksheets[6]
     cells = sheet['A2': 'W' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_di(i, cells)
 
@@ -117,7 +117,7 @@ for i in all_CPU:
 
     '''ИМ'''
 
-    sheet = book.worksheets[9]
+    sheet = book['ИМ']  # .worksheets[9]
     cells = sheet['A2': 'T' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_im(i, cells)
     sl_cnt = {}
@@ -128,7 +128,7 @@ for i in all_CPU:
             sl_cnt[key+'_Swap'] = [value[0]]
 
     '''ИМ АО- объединяем словари с ИМами'''
-    sheet = book.worksheets[8]
+    sheet = book['ИМ(АО)']  # .worksheets[8]
     cells = sheet['A2': 'AA' + str(sheet.max_row + 1)]
     sl_CPU_one = {**sl_CPU_one, **is_load_im_ao(i, cells)}
 
@@ -139,7 +139,7 @@ for i in all_CPU:
             f.write(Template(tmp_group).substitute(name_group='IM', objects=tmp_line_))
 
     '''Кнопки(в составе System)'''
-    sheet = book.worksheets[10]
+    sheet = book['Кнопки']  # .worksheets[10]
     cells = sheet['A2': 'C' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_btn(i, cells)
 
@@ -149,7 +149,7 @@ for i in all_CPU:
         tmp_subgroup += Template(tmp_group).substitute(name_group='BTN', objects=tmp_line_)
 
     '''Уставки(в составе System)'''
-    sheet = book.worksheets[5]
+    sheet = book['Уставки']  # .worksheets[5]
     cells = sheet['A2': 'AG' + str(sheet.max_row + 1)]
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
@@ -163,7 +163,7 @@ for i in all_CPU:
         tmp_subgroup += Template(tmp_group).substitute(name_group='CNT', objects=tmp_line_)
 
     '''Защиты(PZ) в составе System'''
-    sheet = book.worksheets[11]
+    sheet = book['Сигналы']  # .worksheets[11]
     cells = sheet['A2': 'N' + str(sheet.max_row + 1)]
     sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz)
 

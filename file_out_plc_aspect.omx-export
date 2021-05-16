@@ -5756,7 +5756,7 @@
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="EN_Mok500" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана Mokveld Dy 500 (НКУ)" />
+            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана "Mokveld" Dy 500 (НКУ)" />
             <attribute type="Attributes.StartView" value="5" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
@@ -8972,7 +8972,7 @@
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="EN_Mok500" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана Mokveld Dy 500 (НКУ)" />
+            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана "Mokveld" Dy 500 (НКУ)" />
             <attribute type="Attributes.StartView" value="5" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
@@ -12188,7 +12188,7 @@
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="EN_Mok500" base-type="Types.IM1x1.PLC_IM1x1" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана Mokveld Dy 500 (НКУ)" />
+            <attribute type="unit.System.Attributes.Description" value="Электрообогрев клапана "Mokveld" Dy 500 (НКУ)" />
             <attribute type="Attributes.StartView" value="5" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
