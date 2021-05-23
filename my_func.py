@@ -1,4 +1,5 @@
 from string import Template
+import os
 '''
 Читаем и грузим в словарь, где ключ - алг имя, а в значении список - русское наименование
 ед. изм-я, короткое наименование и количество знаков после запятой
@@ -75,6 +76,21 @@ def is_load_pz(controller, cell, num_pz):
     return tmp, num_pz
 
 
+'''В словаре ПС держим текст и важность 40(если что сможем здесь контролировать)'''
+
+
+def is_load_sig(controller, cell):
+    tmp_wrn = {}
+    for par in cell:
+        if par[0].value is None:
+            break
+        if par[2].value == controller:
+            if 'ПС' in par[4].value:
+                tmp_wrn[par[1].value[par[1].value.find('|')+1:]] = [par[0].value, '40']
+
+    return tmp_wrn
+
+
 '''
 Создаёт набор объектов возвращает его (ранне клала в промежуточный файл, теперь этого не делает, функция осталась в bk)
 '''
@@ -143,4 +159,20 @@ def is_create_objects_pz(sl_cpu, template_text, object_type):
                                                               text_description=value[0],
                                                               text_eunit=value[1])
 
+    return tmp_line_object.rstrip()
+
+
+'''Считываем шаблоны для формирования событий параметров'''
+sl_wrn = {}
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_onoff_json'), 'r', encoding='UTF-8') as f:
+    sl_wrn['Да (по наличию)'] = f.readline().rstrip()
+    sl_wrn['Да (по отсутствию)'] = f.readline().rstrip()
+
+
+def is_create_for_types_wrn(sl_cpu, template_text):
+    tmp_line_object = ''
+    for key, value in sl_cpu.items():
+        tmp_line_object += Template(template_text).substitute(socket_par_name=key, socket_par_type='bool',
+                                                              json_message=Template(sl_wrn['Да (по наличию)']).substitute(text_description=value[0], par_severity=value[1]),
+                                                              text_description=value[0])
     return tmp_line_object.rstrip()

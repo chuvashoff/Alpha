@@ -1,5 +1,5 @@
 import openpyxl
-import os
+
 
 import datetime
 from my_func import *
@@ -40,6 +40,12 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN_CNT'), '
 '''Считываем файл-шаблон для PZ'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_PZ'), 'r', encoding='UTF-8') as f:
     tmp_object_PZ = f.read()
+'''Считываем файл-шаблон для параметра в сокете'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_socket_par'), 'r', encoding='UTF-8') as f:
+    tmp_socket_par = f.read()
+'''Считываем файл-шаблон для cp(общая форма, которую можно использовать почти везде)'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_cp'), 'r', encoding='UTF-8') as f:
+    tmp_cp = f.read()
 '''Считываем файл-шаблон для группы'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_group'), 'r', encoding='UTF-8') as f:
     tmp_group = f.read()
@@ -52,6 +58,9 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TREI'), 'r',
 '''Считываем файл-шаблон для global'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
     tmp_global = f.read()
+'''Считываем файл-шаблон для пространства имён'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_namespace'), 'r', encoding='UTF-8') as f:
+    tmp_namespace = f.read()
 
 book = openpyxl.open(os.path.join(path_config, file_config), read_only=True)
 '''читаем список всех контроллеров'''
@@ -80,6 +89,7 @@ for p in cells:
 
 ff = open('file_plc.txt', 'w', encoding='UTF-8')
 ff.close()
+text_type_wrn = ''
 '''Далее для всех контроллеров, что нашли, делаем'''
 for i in all_CPU:
     '''Измеряемые'''
@@ -171,6 +181,14 @@ for i in all_CPU:
         tmp_line_ = is_create_objects_pz(sl_CPU_one, tmp_object_PZ, 'Types.CNT.PLC_CNT')
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
+    '''Предупрждения(WRN) в составе System(формируется простарнство имён для создания типа)'''
+    '''В ветку контроллера будет добавляется только ссылка на типовой объект'''
+    sl_CPU_one = is_load_sig(i, cells)
+
+    if len(sl_CPU_one) != 0:
+        tmp_line_ = is_create_for_types_wrn(sl_CPU_one, tmp_socket_par)
+        text_type_wrn += Template(tmp_cp).substitute(type_ct='socket-type', name_ct='WRN_Signals_' + i, in_ct=tmp_line_)
+
     '''Формируем подгруппу'''
     if tmp_subgroup != '':
         with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
@@ -213,6 +231,11 @@ with open('file_out_plc_aspect.omx-export', 'w', encoding='UTF-8') as f:
 
 
 book.close()
+
+type_wrn = Template(tmp_cp).substitute(type_ct='type', name_ct='WRN', in_ct=text_type_wrn.rstrip())
+with open('file_out_Types_change.omx-export', 'w', encoding='UTF-8') as f:
+    f.write(Template(tmp_namespace).substitute(name_namespace='Types_change', in_space=type_wrn))
+
 print(datetime.datetime.now())
 
 
