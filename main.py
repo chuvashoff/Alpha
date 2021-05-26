@@ -1,5 +1,5 @@
 import openpyxl
-
+import os
 
 import datetime
 from my_func import *
@@ -35,17 +35,11 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI'), 'r', e
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_IM'), 'r', encoding='UTF-8') as f:
     tmp_object_IM = f.read()
 '''Считываем файл-шаблон для BTN CNT'''
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN_CNT'), 'r', encoding='UTF-8') as f:
-    tmp_object_BTN_CNT = f.read()
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN_CNT_sig'), 'r', encoding='UTF-8') as f:
+    tmp_object_BTN_CNT_sig = f.read()
 '''Считываем файл-шаблон для PZ'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_PZ'), 'r', encoding='UTF-8') as f:
     tmp_object_PZ = f.read()
-'''Считываем файл-шаблон для параметра в сокете'''
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_socket_par'), 'r', encoding='UTF-8') as f:
-    tmp_socket_par = f.read()
-'''Считываем файл-шаблон для cp(общая форма, которую можно использовать почти везде)'''
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_cp'), 'r', encoding='UTF-8') as f:
-    tmp_cp = f.read()
 '''Считываем файл-шаблон для группы'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_group'), 'r', encoding='UTF-8') as f:
     tmp_group = f.read()
@@ -58,9 +52,6 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TREI'), 'r',
 '''Считываем файл-шаблон для global'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
     tmp_global = f.read()
-'''Считываем файл-шаблон для пространства имён'''
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_namespace'), 'r', encoding='UTF-8') as f:
-    tmp_namespace = f.read()
 
 book = openpyxl.open(os.path.join(path_config, file_config), read_only=True)
 '''читаем список всех контроллеров'''
@@ -89,7 +80,6 @@ for p in cells:
 
 ff = open('file_plc.txt', 'w', encoding='UTF-8')
 ff.close()
-text_type_wrn = ''
 '''Далее для всех контроллеров, что нашли, делаем'''
 for i in all_CPU:
     '''Измеряемые'''
@@ -98,7 +88,7 @@ for i in all_CPU:
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AI.PLC_AI')
+        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AI.AI_PLC_View')
 
         with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='AI', objects=tmp_line_))
@@ -109,7 +99,7 @@ for i in all_CPU:
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AE.PLC_AE')
+        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AE.AE_PLC_View')
 
         with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='AE', objects=tmp_line_))
@@ -117,10 +107,10 @@ for i in all_CPU:
     '''Дискретные'''
     sheet = book['Входные']  # .worksheets[6]
     cells = sheet['A2': 'W' + str(sheet.max_row)]
-    sl_CPU_one = is_load_di(i, cells)
+    sl_CPU_one, sl_wrn = is_load_di(i, cells)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_di(sl_CPU_one, tmp_object_DI, 'Types.DI.PLC_DI')
+        tmp_line_ = is_create_objects_di(sl_CPU_one, tmp_object_DI, 'Types.DI.DI_PLC_View')
 
         with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='DI', objects=tmp_line_))
@@ -155,7 +145,7 @@ for i in all_CPU:
 
     tmp_subgroup = ''
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_btn_cnt(sl_CPU_one, tmp_object_BTN_CNT, 'Types.BTN.PLC_BTN')
+        tmp_line_ = is_create_objects_btn_cnt(sl_CPU_one, tmp_object_BTN_CNT_sig, 'Types.BTN.BTN_PLC_View')
         tmp_subgroup += Template(tmp_group).substitute(name_group='BTN', objects=tmp_line_)
 
     '''Уставки(в составе System)'''
@@ -164,12 +154,12 @@ for i in all_CPU:
     sl_CPU_one = is_load_ai_ae_set(i, cells)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.SET.PLC_SET')
+        tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.SET.SET_PLC_View')
         tmp_subgroup += Template(tmp_group).substitute(name_group='SET', objects=tmp_line_)
 
     '''Наработки(CNT- прочитали при ИМ) в составе System)'''
     if len(sl_cnt) != 0:
-        tmp_line_ = is_create_objects_btn_cnt(sl_cnt, tmp_object_BTN_CNT, 'Types.CNT.PLC_CNT')
+        tmp_line_ = is_create_objects_btn_cnt(sl_cnt, tmp_object_BTN_CNT_sig, 'Types.CNT.CNT_PLC_View')
         tmp_subgroup += Template(tmp_group).substitute(name_group='CNT', objects=tmp_line_)
 
     '''Защиты(PZ) в составе System'''
@@ -178,16 +168,15 @@ for i in all_CPU:
     sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz)
 
     if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_objects_pz(sl_CPU_one, tmp_object_PZ, 'Types.CNT.PLC_CNT')
+        tmp_line_ = is_create_objects_pz(sl_CPU_one, tmp_object_PZ, 'Types.PZ.PZ_PLC_View')
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
-    '''Предупрждения(WRN) в составе System(формируется простарнство имён для создания типа)'''
-    '''В ветку контроллера будет добавляется только ссылка на типовой объект'''
-    sl_CPU_one = is_load_sig(i, cells)
+    '''ПС(WRN) в составе System, каждая ПС как отдельный объект, дополняем словарь, созданный при анализе DI'''
+    sl_wrn = {**sl_wrn, **is_load_sig(i, cells)}
 
-    if len(sl_CPU_one) != 0:
-        tmp_line_ = is_create_for_types_wrn(sl_CPU_one, tmp_socket_par)
-        text_type_wrn += Template(tmp_cp).substitute(type_ct='socket-type', name_ct='WRN_Signals_' + i, in_ct=tmp_line_)
+    if len(sl_wrn) != 0:
+        tmp_line_ = is_create_objects_sig(sl_wrn, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='WRN', objects=tmp_line_)
 
     '''Формируем подгруппу'''
     if tmp_subgroup != '':
@@ -231,13 +220,7 @@ with open('file_out_plc_aspect.omx-export', 'w', encoding='UTF-8') as f:
 
 
 book.close()
-
-type_wrn = Template(tmp_cp).substitute(type_ct='type', name_ct='WRN', in_ct=text_type_wrn.rstrip())
-with open('file_out_Types_change.omx-export', 'w', encoding='UTF-8') as f:
-    f.write(Template(tmp_namespace).substitute(name_namespace='Types_change', in_space=type_wrn))
-
 print(datetime.datetime.now())
-
 
 os.remove('file_plc.txt')
 os.remove('file_out_group.txt')

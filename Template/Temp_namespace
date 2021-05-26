@@ -1,5 +1,4 @@
-<omx xmlns="system" xmlns:a="automation" xmlns:ct="automation.control" xmlns:r="automation.reference">
   <namespace name="$name_namespace">
 $in_space
   </namespace>
-</omx>
+

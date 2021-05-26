@@ -1,5 +1,5 @@
 from string import Template
-import os
+
 '''
 Читаем и грузим в словарь, где ключ - алг имя, а в значении список - русское наименование
 ед. изм-я, короткое наименование и количество знаков после запятой
@@ -17,16 +17,20 @@ def is_load_ai_ae_set(controller, cell):
 '''
 Функция для чтения обвеса DI, возможно потребуется в список грузить больше информации, пока читаем только алг имя, 
 описание, цвет при наличии(color_on) и цвет при отсутствии(color_off)
+Также собираем словарь ПС -  текст сообщения и держим тип сообщения
 '''
 
 
 def is_load_di(controller, cell):
     tmp = {}
+    tmp_wrn = {}
     for par in cell:
         if par[2].value == controller and par[14].value == 'Нет':
             tmp['_'.join(par[1].value.split('|'))] = [par[0].value, par[19].fill.start_color.index,
                                                       par[20].fill.start_color.index]
-    return tmp
+            if par[21].value != 'Нет':
+                tmp_wrn['_'.join(par[1].value.split('|'))] = [par[22].value, par[21].value]
+    return tmp, tmp_wrn
 
 
 '''Для им держим пока рус наименование, вид има, род, тип има по отображению, флаг наработки, флаг перестановки'''
@@ -76,7 +80,7 @@ def is_load_pz(controller, cell, num_pz):
     return tmp, num_pz
 
 
-'''В словаре ПС держим текст и важность 40(если что сможем здесь контролировать)'''
+'''словарь ПС -  текст сообщения и держим тип сообщения'''
 
 
 def is_load_sig(controller, cell):
@@ -86,7 +90,7 @@ def is_load_sig(controller, cell):
             break
         if par[2].value == controller:
             if 'ПС' in par[4].value:
-                tmp_wrn[par[1].value[par[1].value.find('|')+1:]] = [par[0].value, '40']
+                tmp_wrn[par[1].value[par[1].value.find('|')+1:]] = [par[0].value, 'Да (по наличию)']
 
     return tmp_wrn
 
@@ -121,10 +125,10 @@ def is_create_objects_di(sl_cpu, template_text, object_type):
     return tmp_line_object.rstrip()
 
 
-sl_im_PLC = {'ИМ1Х0': 'IM1x0.PLC_IM1x0', 'ИМ1Х1': 'IM1x1.PLC_IM1x1', 'ИМ1Х2': 'IM1x2.IM1x2_PLC',
-             'ИМ2Х2': 'IM2x2.IM2x2_PLC', 'ИМ2Х4': 'IM2x2.PLC_IM2x4', 'ИМ1Х0и': 'IM1x0.PLC_IM1x0',
-             'ИМ1Х1и': 'IM1x1.PLC_IM1x1', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC',
-             'ИМАО': 'IM_AO.PLC_IM_AO'}
+sl_im_PLC = {'ИМ1Х0': 'IM1x0.IM1x0_PLC_View', 'ИМ1Х1': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2': 'IM1x2.IM1x2_PLC_View',
+             'ИМ2Х2': 'IM2x2.IM2x2_PLC_View', 'ИМ2Х4': 'IM2x2.IM2x4_PLC_View', 'ИМ1Х0и': 'IM1x0.IM1x0_PLC_View',
+             'ИМ1Х1и': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC_View', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC_View',
+             'ИМАО': 'IM_AO.IM_AO_PLC_View'}
 
 sl_gender = {'С': '0', 'М': '1', 'Ж': '2'}
 
@@ -162,17 +166,16 @@ def is_create_objects_pz(sl_cpu, template_text, object_type):
     return tmp_line_object.rstrip()
 
 
-'''Считываем шаблоны для формирования событий параметров'''
-sl_wrn = {}
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_onoff_json'), 'r', encoding='UTF-8') as f:
-    sl_wrn['Да (по наличию)'] = f.readline().rstrip()
-    sl_wrn['Да (по отсутствию)'] = f.readline().rstrip()
+sl_type_wrn = {'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
+               'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View'}
 
 
-def is_create_for_types_wrn(sl_cpu, template_text):
+def is_create_objects_sig(sl_cpu, template_text):
     tmp_line_object = ''
     for key, value in sl_cpu.items():
-        tmp_line_object += Template(template_text).substitute(socket_par_name=key, socket_par_type='bool',
-                                                              json_message=Template(sl_wrn['Да (по наличию)']).substitute(text_description=value[0], par_severity=value[1]),
+        tmp_line_object += Template(template_text).substitute(object_name=key,
+                                                              object_type=sl_type_wrn[value[1]],
+                                                              object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0])
     return tmp_line_object.rstrip()
+
