@@ -1,16 +1,40 @@
 from string import Template
 
+'''Функция для поиска индекса нужно столбца'''
+
+
+def is_f_ind(cell, name_col):
+    for i in range(len(cell)):
+        if cell[i].value.replace('\n', ' ') == name_col:
+            return i
+    return 0
+
+
+'''Функция для замены в строке спецсимволов HTML'''
+
+
+def is_cor_chr(st):
+    sl_chr = {'<': '&lt;', '>': '&gt;', '"': '&quot;'}
+    tmp = list()
+    tmp.extend(st)
+    for i in range(len(tmp)):
+        if tmp[i] in sl_chr:
+            tmp[i] = sl_chr[tmp[i]]
+    return ''.join(tmp)
+
+
 '''
 Читаем и грузим в словарь, где ключ - алг имя, а в значении список - русское наименование
 ед. изм-я, короткое наименование и количество знаков после запятой
 '''
 
 
-def is_load_ai_ae_set(controller, cell):
+def is_load_ai_ae_set(controller, cell, alg_name, name_par, eunit, short_name, f_dig, cpu):
     tmp = {}
     for par in cell:
-        if par[2].value == controller:
-            tmp['_'.join(par[1].value.split('|'))] = [par[0].value, par[28].value, par[29].value, par[30].value]
+        if par[cpu].value == controller:
+            tmp['_'.join(par[alg_name].value.split('|'))] = [is_cor_chr(par[name_par].value),
+                                                             par[eunit].value, par[short_name].value, par[f_dig].value]
     return tmp
 
 
@@ -21,61 +45,71 @@ def is_load_ai_ae_set(controller, cell):
 '''
 
 
-def is_load_di(controller, cell):
+def is_load_di(controller, cell, alg_name, im, name_par, c_on, c_off, ps, ps_msg, cpu):
     tmp = {}
     tmp_wrn = {}
     for par in cell:
-        if par[2].value == controller and par[14].value == 'Нет':
-            tmp['_'.join(par[1].value.split('|'))] = [par[0].value, par[19].fill.start_color.index,
-                                                      par[20].fill.start_color.index]
-            if par[21].value != 'Нет':
-                tmp_wrn['_'.join(par[1].value.split('|'))] = [par[22].value, par[21].value]
+        if par[cpu].value == controller and par[im].value == 'Нет':
+            tmp['_'.join(par[alg_name].value.split('|'))] = [is_cor_chr(par[name_par].value),
+                                                             par[c_on].fill.start_color.index,
+                                                             par[c_off].fill.start_color.index]
+            if par[ps].value != 'Нет':
+                tmp_wrn['_'.join(par[alg_name].value.split('|'))] = [is_cor_chr(par[ps_msg].value), par[ps].value]
     return tmp, tmp_wrn
 
 
 '''Для им держим пока рус наименование, вид има, род, тип има по отображению, флаг наработки, флаг перестановки'''
 
 
-def is_load_im(controller, cell):
+def is_load_im(controller, cell, alg_name, name_par, type_im, gender, w_time, swap, cpu):
     tmp = {}
     for par in cell:
-        if par[2].value == controller:
-            tmp[par[1].value] = [par[0].value, par[5].value, par[4].value, par[19].value[0], par[14].value,
-                                 par[15].value]
+        if par[cpu].value == controller:
+            tmp[par[alg_name].value] = [is_cor_chr(par[name_par].value), par[type_im].value,
+                                        par[gender].value, par[19].value[0], par[w_time].value,
+                                        par[swap].value]
     return tmp
 
 
-def is_load_im_ao(controller, cell):
+def is_load_im_ao(controller, cell, alg_name, name_par, gender, im, cpu):
     tmp = {}
     for par in cell:
-        if par[2].value == controller and par[3].value == 'Да':
-            tmp[par[1].value] = [par[0].value, 'ИМАО', par[25].value, par[26].value[0]]
+        if par[cpu].value == controller and par[im].value == 'Да':
+            tmp[par[alg_name].value] = [is_cor_chr(par[name_par].value), 'ИМАО', par[gender].value, par[26].value[0]]
     return tmp
 
 
-def is_load_btn(controller, cell):
+def is_load_btn(controller, cell, alg_name, name_par, cpu):
     tmp = {}
     for par in cell:
-        if par[2].value == controller:
-            tmp['BTN_' + par[1].value[par[1].value.find('|')+1:]] = [par[0].value]
+        if par[cpu].value == controller:
+            tmp['BTN_' + par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[name_par].value)]
     return tmp
 
 
 '''Для защит держим рус имя и ед. измерения'''
 
 
-def is_load_pz(controller, cell, num_pz):
+def is_load_pz(controller, cell, num_pz, par_name, type_protect, eunit, cpu):
     tmp = {}
     for par in cell:
-        if par[0].value is None:
+        if par[par_name].value is None:
             break
-        if par[4].value not in 'АОссАОбсВОссВОбсАОНО':
+        if par[type_protect].value not in 'АОссАОбсВОссВОбсАОНО':
             continue
-        elif par[2].value == controller and par[4].value in 'АОссАОбсВОссВОбсАОНО':
+        elif par[cpu].value == controller and par[type_protect].value in 'АОссАОбсВОссВОбсАОНО':
             '''обработка спецсимволов html в русском наименовании'''
-            tmp_name = par[0].value.replace('<', '&lt;')
+            '''
+            tmp_name = par[par_name].value.replace('<', '&lt;')
             tmp_name = tmp_name.replace('>', '&gt;')
-            tmp['A' + str(num_pz).zfill(3)] = [tmp_name, par[9].value]
+            '''
+            if par[eunit].value == '-999.0':
+                tmp_eunit = str(par[eunit].comment)[str(par[eunit].comment).find(' ')+1:
+                                                    str(par[eunit].comment).find('by')]
+            else:
+                tmp_eunit = par[eunit].value
+            tmp['A' + str(num_pz).zfill(3)] = [par[type_protect].value + '. ' + is_cor_chr(par[par_name].value),
+                                               tmp_eunit]
             num_pz += 1
     return tmp, num_pz
 
@@ -83,14 +117,15 @@ def is_load_pz(controller, cell, num_pz):
 '''словарь ПС -  текст сообщения и держим тип сообщения'''
 
 
-def is_load_sig(controller, cell):
+def is_load_sig(controller, cell, alg_name, par_name, type_protect, cpu):
     tmp_wrn = {}
     for par in cell:
-        if par[0].value is None:
+        if par[par_name].value is None:
             break
-        if par[2].value == controller:
-            if 'ПС' in par[4].value:
-                tmp_wrn[par[1].value[par[1].value.find('|')+1:]] = [par[0].value, 'Да (по наличию)']
+        if par[cpu].value == controller:
+            if 'ПС' in par[type_protect].value:
+                tmp_wrn[par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[par_name].value),
+                                                                                  'Да (по наличию)']
 
     return tmp_wrn
 
@@ -178,4 +213,3 @@ def is_create_objects_sig(sl_cpu, template_text):
                                                               object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0])
     return tmp_line_object.rstrip()
-

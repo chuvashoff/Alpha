@@ -1,6 +1,5 @@
 import openpyxl
 import os
-
 import datetime
 from my_func import *
 import warnings
@@ -53,14 +52,14 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TREI'), 'r',
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
     tmp_global = f.read()
 
-book = openpyxl.open(os.path.join(path_config, file_config), read_only=True)
+book = openpyxl.open(os.path.join(path_config, file_config))  # , read_only=True
 '''читаем список всех контроллеров'''
 sheet = book['Настройки']  # worksheets[1]
 cells = sheet['B2': 'B22']
 for p in cells:
     if p[0].value is not None:
         all_CPU.append(p[0].value)
-'''Читаем префиксы IP адреса ПЛК'''
+'''Читаем префиксы IP адреса ПЛК(нужно продумать про новые конфигураторы)'''
 cells = sheet['B45': 'B46']
 for p in cells:
     pref_IP.append(p[0].value + '.')
@@ -84,8 +83,13 @@ ff.close()
 for i in all_CPU:
     '''Измеряемые'''
     sheet = book['Измеряемые']  # .worksheets[3]
-    cells = sheet['A2': 'AE' + str(sheet.max_row + 1)]
-    sl_CPU_one = is_load_ai_ae_set(i, cells)
+    cells = sheet['A1': 'AG' + str(sheet.max_row + 1)]
+    sl_CPU_one = is_load_ai_ae_set(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                   is_f_ind(cells[0], 'Наименование параметра'),
+                                   is_f_ind(cells[0], 'Единицы измерения'),
+                                   is_f_ind(cells[0], 'Короткое наименование'),
+                                   is_f_ind(cells[0], 'Количество знаков'),
+                                   is_f_ind(cells[0], 'CPU'))
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AI.AI_PLC_View')
@@ -95,8 +99,13 @@ for i in all_CPU:
 
     '''Расчетные'''
     sheet = book['Расчетные']  # .worksheets[4]
-    cells = sheet['A2': 'AE' + str(sheet.max_row)]
-    sl_CPU_one = is_load_ai_ae_set(i, cells)
+    cells = sheet['A1': 'AE' + str(sheet.max_row)]
+    sl_CPU_one = is_load_ai_ae_set(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                   is_f_ind(cells[0], 'Наименование параметра'),
+                                   is_f_ind(cells[0], 'Единицы измерения'),
+                                   is_f_ind(cells[0], 'Короткое наименование'),
+                                   is_f_ind(cells[0], 'Количество знаков'),
+                                   is_f_ind(cells[0], 'CPU'))
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AE.AE_PLC_View')
@@ -106,8 +115,15 @@ for i in all_CPU:
 
     '''Дискретные'''
     sheet = book['Входные']  # .worksheets[6]
-    cells = sheet['A2': 'W' + str(sheet.max_row)]
-    sl_CPU_one, sl_wrn = is_load_di(i, cells)
+    cells = sheet['A1': 'AC' + str(sheet.max_row)]
+    sl_CPU_one, sl_wrn = is_load_di(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                    is_f_ind(cells[0], 'ИМ'),
+                                    is_f_ind(cells[0], 'Наименование параметра'),
+                                    is_f_ind(cells[0], 'Цвет при наличии'),
+                                    is_f_ind(cells[0], 'Цвет при отсутствии'),
+                                    is_f_ind(cells[0], 'Предупреждение'),
+                                    is_f_ind(cells[0], 'Текст предупреждения'),
+                                    is_f_ind(cells[0], 'CPU'))
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_di(sl_CPU_one, tmp_object_DI, 'Types.DI.DI_PLC_View')
@@ -116,10 +132,15 @@ for i in all_CPU:
             f.write(Template(tmp_group).substitute(name_group='DI', objects=tmp_line_))
 
     '''ИМ'''
-
     sheet = book['ИМ']  # .worksheets[9]
-    cells = sheet['A2': 'T' + str(sheet.max_row)]
-    sl_CPU_one = is_load_im(i, cells)
+    cells = sheet['A1': 'T' + str(sheet.max_row)]
+    sl_CPU_one = is_load_im(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                            is_f_ind(cells[0], 'Наименование параметра'),
+                            is_f_ind(cells[0], 'Тип ИМ'),
+                            is_f_ind(cells[0], 'Род'),
+                            is_f_ind(cells[0], 'Считать наработку'),
+                            is_f_ind(cells[0], 'Считать перестановки'),
+                            is_f_ind(cells[0], 'CPU'))
     sl_cnt = {}
     for key, value in sl_CPU_one.items():
         if value[4] == 'Да':
@@ -129,8 +150,12 @@ for i in all_CPU:
 
     '''ИМ АО- объединяем словари с ИМами'''
     sheet = book['ИМ(АО)']  # .worksheets[8]
-    cells = sheet['A2': 'AA' + str(sheet.max_row)]
-    sl_CPU_one = {**sl_CPU_one, **is_load_im_ao(i, cells)}
+    cells = sheet['A1': 'AA' + str(sheet.max_row)]
+    sl_CPU_one = {**sl_CPU_one, **is_load_im_ao(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                                is_f_ind(cells[0], 'Наименование параметра'),
+                                                is_f_ind(cells[0], 'Род'),
+                                                is_f_ind(cells[0], 'ИМ'),
+                                                is_f_ind(cells[0], 'CPU'))}
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_im(sl_CPU_one, tmp_object_IM)
@@ -140,8 +165,10 @@ for i in all_CPU:
 
     '''Кнопки(в составе System)'''
     sheet = book['Кнопки']  # .worksheets[10]
-    cells = sheet['A2': 'C' + str(sheet.max_row)]
-    sl_CPU_one = is_load_btn(i, cells)
+    cells = sheet['A1': 'C' + str(sheet.max_row)]
+    sl_CPU_one = is_load_btn(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                             is_f_ind(cells[0], 'Наименование параметра'),
+                             is_f_ind(cells[0], 'CPU'))
 
     tmp_subgroup = ''
     if len(sl_CPU_one) != 0:
@@ -150,8 +177,13 @@ for i in all_CPU:
 
     '''Уставки(в составе System)'''
     sheet = book['Уставки']  # .worksheets[5]
-    cells = sheet['A2': 'AG' + str(sheet.max_row)]
-    sl_CPU_one = is_load_ai_ae_set(i, cells)
+    cells = sheet['A1': 'AG' + str(sheet.max_row)]
+    sl_CPU_one = is_load_ai_ae_set(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                   is_f_ind(cells[0], 'Наименование параметра'),
+                                   is_f_ind(cells[0], 'Единицы измерения'),
+                                   is_f_ind(cells[0], 'Короткое наименование'),
+                                   is_f_ind(cells[0], 'Количество знаков'),
+                                   is_f_ind(cells[0], 'CPU'))
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.SET.SET_PLC_View')
@@ -164,15 +196,23 @@ for i in all_CPU:
 
     '''Защиты(PZ) в составе System'''
     sheet = book['Сигналы']  # .worksheets[11]
-    cells = sheet['A2': 'N' + str(sheet.max_row)]
-    sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz)
+    cells = sheet['A1': 'N' + str(sheet.max_row)]
+    sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz,
+                                    is_f_ind(cells[0], 'Наименование параметра'),
+                                    is_f_ind(cells[0], 'Тип защиты'),
+                                    is_f_ind(cells[0], 'Единица измерения'),
+                                    is_f_ind(cells[0], 'CPU'))
 
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_pz(sl_CPU_one, tmp_object_PZ, 'Types.PZ.PZ_PLC_View')
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
     '''ПС(WRN) в составе System, каждая ПС как отдельный объект, дополняем словарь, созданный при анализе DI'''
-    sl_wrn = {**sl_wrn, **is_load_sig(i, cells)}
+    tmp_wrn = is_load_sig(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                          is_f_ind(cells[0], 'Наименование параметра'),
+                          is_f_ind(cells[0], 'Тип защиты'),
+                          is_f_ind(cells[0], 'CPU'))
+    sl_wrn = {**sl_wrn, **tmp_wrn}
 
     if len(sl_wrn) != 0:
         tmp_line_ = is_create_objects_sig(sl_wrn, tmp_object_BTN_CNT_sig)
