@@ -83,7 +83,7 @@ ff.close()
 for i in all_CPU:
     '''Измеряемые'''
     sheet = book['Измеряемые']  # .worksheets[3]
-    cells = sheet['A1': 'AG' + str(sheet.max_row + 1)]
+    cells = sheet['A1': 'AG' + str(sheet.max_row)]
     sl_CPU_one = is_load_ai_ae_set(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
                                    is_f_ind(cells[0], 'Наименование параметра'),
                                    is_f_ind(cells[0], 'Единицы измерения'),
@@ -208,15 +208,25 @@ for i in all_CPU:
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
     '''ПС(WRN) в составе System, каждая ПС как отдельный объект, дополняем словарь, созданный при анализе DI'''
-    tmp_wrn = is_load_sig(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
-                          is_f_ind(cells[0], 'Наименование параметра'),
-                          is_f_ind(cells[0], 'Тип защиты'),
-                          is_f_ind(cells[0], 'CPU'))
+    tmp_wrn, sl_ts, sl_ppu = is_load_sig(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                         is_f_ind(cells[0], 'Наименование параметра'),
+                                         is_f_ind(cells[0], 'Тип защиты'),
+                                         is_f_ind(cells[0], 'CPU'))
     sl_wrn = {**sl_wrn, **tmp_wrn}
 
     if len(sl_wrn) != 0:
         tmp_line_ = is_create_objects_sig(sl_wrn, tmp_object_BTN_CNT_sig)
         tmp_subgroup += Template(tmp_group).substitute(name_group='WRN', objects=tmp_line_)
+
+    '''ТС в составе System, сам словарь загружен ранее вместе с ПС'''
+    if len(sl_ts) != 0:
+        tmp_line_ = is_create_objects_sig(sl_ts, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='TS', objects=tmp_line_)
+
+    '''ППУ в составе System, сам словарь загружен ранее вместе с ПС'''
+    if len(sl_ppu) != 0:
+        tmp_line_ = is_create_objects_sig(sl_ppu, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='PPU', objects=tmp_line_)
 
     '''Формируем подгруппу'''
     if tmp_subgroup != '':

@@ -119,6 +119,9 @@ def is_load_pz(controller, cell, num_pz, par_name, type_protect, eunit, cpu):
 
 def is_load_sig(controller, cell, alg_name, par_name, type_protect, cpu):
     tmp_wrn = {}
+    tmp_alr = {}
+    tmp_ts = {}
+    tmp_ppu = {}
     for par in cell:
         if par[par_name].value is None:
             break
@@ -126,8 +129,14 @@ def is_load_sig(controller, cell, alg_name, par_name, type_protect, cpu):
             if 'ПС' in par[type_protect].value:
                 tmp_wrn[par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[par_name].value),
                                                                                   'Да (по наличию)']
-
-    return tmp_wrn
+            elif par[type_protect].value in 'АОссАОбсВОссВОбсАОНО' or 'АС' in par[type_protect].value:
+                pass
+            elif 'ТС' in par[type_protect].value:
+                tmp_ts[par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[par_name].value), 'ТС']
+            elif par[type_protect].value in ('ГР', 'ХР'):
+                tmp_ppu[par[alg_name].value[par[alg_name].value.find('|') + 1:]] = [is_cor_chr(par[par_name].value),
+                                                                                    'ППУ']
+    return tmp_wrn, tmp_ts, tmp_ppu
 
 
 '''
@@ -201,15 +210,17 @@ def is_create_objects_pz(sl_cpu, template_text, object_type):
     return tmp_line_object.rstrip()
 
 
-sl_type_wrn = {'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
-               'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View'}
+sl_type_sig = {'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
+               'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View',
+               'ТС': 'Types.TS.TS_PLC_View',
+               'ППУ': 'Types.PPU.PPU_PLC_View'}
 
 
 def is_create_objects_sig(sl_cpu, template_text):
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key,
-                                                              object_type=sl_type_wrn[value[1]],
+                                                              object_type=sl_type_sig[value[1]],
                                                               object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0])
     return tmp_line_object.rstrip()
