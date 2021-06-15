@@ -19,6 +19,7 @@ for file in os.listdir(path_config):
 
 
 all_CPU = []
+sl_CPU_spec = {}
 pref_IP = []
 sl_object_rus = {}
 sl_object_all = {}
@@ -76,6 +77,19 @@ for p in cells:
                 tmp0.append(p[i - 10].value)
                 tmp1.append(p[i - 5].value)
         sl_object_all[p[0].value] = [tmp0, tmp1]
+'''Мониторинг ТР и АПР в контроллере'''
+cells = sheet['B1':'L21']
+for p in cells:
+    if p[0].value is None:
+        break
+    else:
+        sl_CPU_spec[p[0].value] = []
+        if p[is_f_ind(cells[0], 'FLR')].value == 'ON':
+            sl_CPU_spec[p[0].value].append('ТР')
+        if p[is_f_ind(cells[0], 'APR')].value == 'ON':
+            sl_CPU_spec[p[0].value].append('АПР')
+for jj in sl_CPU_spec:
+    print(jj, sl_CPU_spec[jj])
 
 ff = open('file_plc.txt', 'w', encoding='UTF-8')
 ff.close()
@@ -208,10 +222,11 @@ for i in all_CPU:
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
     '''ПС(WRN) в составе System, каждая ПС как отдельный объект, дополняем словарь, созданный при анализе DI'''
-    tmp_wrn, sl_ts, sl_ppu = is_load_sig(i, cells, is_f_ind(cells[0], 'Алгоритмическое имя'),
-                                         is_f_ind(cells[0], 'Наименование параметра'),
-                                         is_f_ind(cells[0], 'Тип защиты'),
-                                         is_f_ind(cells[0], 'CPU'))
+    tmp_wrn, sl_ts, sl_ppu, sl_alr, sl_modes = is_load_sig(i, cells,
+                                                           is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                                           is_f_ind(cells[0], 'Наименование параметра'),
+                                                           is_f_ind(cells[0], 'Тип защиты'),
+                                                           is_f_ind(cells[0], 'CPU'))
     sl_wrn = {**sl_wrn, **tmp_wrn}
 
     if len(sl_wrn) != 0:
@@ -227,6 +242,16 @@ for i in all_CPU:
     if len(sl_ppu) != 0:
         tmp_line_ = is_create_objects_sig(sl_ppu, tmp_object_BTN_CNT_sig)
         tmp_subgroup += Template(tmp_group).substitute(name_group='PPU', objects=tmp_line_)
+
+    '''ALR(Защиты и АС) в составе System, сам словарь загружен ранее вместе с ПС'''
+    if len(sl_alr) != 0:
+        tmp_line_ = is_create_objects_sig(sl_alr, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='ALR', objects=tmp_line_)
+
+    '''MODES(Режимы) в составе System, сам словарь загружен ранее вместе с ПС'''
+    if len(sl_modes) != 0:
+        tmp_line_ = is_create_objects_sig(sl_modes, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='MODES', objects=tmp_line_)
 
     '''Формируем подгруппу'''
     if tmp_subgroup != '':

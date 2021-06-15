@@ -122,6 +122,7 @@ def is_load_sig(controller, cell, alg_name, par_name, type_protect, cpu):
     tmp_alr = {}
     tmp_ts = {}
     tmp_ppu = {}
+    tmp_modes = {}
     for par in cell:
         if par[par_name].value is None:
             break
@@ -130,13 +131,25 @@ def is_load_sig(controller, cell, alg_name, par_name, type_protect, cpu):
                 tmp_wrn[par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[par_name].value),
                                                                                   'Да (по наличию)']
             elif par[type_protect].value in 'АОссАОбсВОссВОбсАОНО' or 'АС' in par[type_protect].value:
-                pass
+                if 'АС' in par[type_protect].value:
+                    tmp_alr[par[alg_name].value[par[alg_name].value.find('|') + 1:]] = ['АС. ' +
+                                                                                        is_cor_chr(par[par_name].value),
+                                                                                        'АС']
+                else:
+                    tmp_alr[par[alg_name].value[par[alg_name].value.find('|') + 1:]] = [par[type_protect].value + '. ' +
+                                                                                        is_cor_chr(par[par_name].value),
+                                                                                        'Защита']
             elif 'ТС' in par[type_protect].value:
                 tmp_ts[par[alg_name].value[par[alg_name].value.find('|')+1:]] = [is_cor_chr(par[par_name].value), 'ТС']
             elif par[type_protect].value in ('ГР', 'ХР'):
                 tmp_ppu[par[alg_name].value[par[alg_name].value.find('|') + 1:]] = [is_cor_chr(par[par_name].value),
                                                                                     'ППУ']
-    return tmp_wrn, tmp_ts, tmp_ppu
+            elif 'Режим' in par[type_protect].value:
+                tmp_modes[par[alg_name].value[par[alg_name].value.find('|') + 1:]] = ['Режим &quot;' +
+                                                                                      is_cor_chr(par[par_name].value) +
+                                                                                      '&quot;', 'Режим']
+                tmp_modes['regNum'] = ['Номер режима', 'Номер режима']
+    return tmp_wrn, tmp_ts, tmp_ppu, tmp_alr, tmp_modes
 
 
 '''
@@ -213,7 +226,11 @@ def is_create_objects_pz(sl_cpu, template_text, object_type):
 sl_type_sig = {'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
                'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View',
                'ТС': 'Types.TS.TS_PLC_View',
-               'ППУ': 'Types.PPU.PPU_PLC_View'}
+               'ППУ': 'Types.PPU.PPU_PLC_View',
+               'Защита': 'Types.ALR.ALR_PLC_View',
+               'АС': 'Types.ALR.ALR_PLC_View',
+               'Режим': 'Types.MODES.MODES_PLC_View',
+               'Номер режима': 'Types.MODES.regNum_PLC_View'}
 
 
 def is_create_objects_sig(sl_cpu, template_text):
