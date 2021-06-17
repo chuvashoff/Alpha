@@ -1,5 +1,5 @@
+import copy
 import openpyxl
-import os
 import datetime
 from my_func import *
 import warnings
@@ -36,7 +36,7 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_IM'), 'r', e
     tmp_object_IM = f.read()
 '''Считываем файл-шаблон для BTN CNT'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN_CNT_sig'), 'r', encoding='UTF-8') as f:
-    tmp_object_BTN_CNT_sig = f.read()
+    tmp_object_BTN_CNT_sig = f.read()  # его же используем для диагностики CPU потому что подходит
 '''Считываем файл-шаблон для PZ'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_PZ'), 'r', encoding='UTF-8') as f:
     tmp_object_PZ = f.read()
@@ -52,6 +52,12 @@ with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TREI'), 'r',
 '''Считываем файл-шаблон для global'''
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
     tmp_global = f.read()
+'''Считываем файл-шаблон для топливного регулятора'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TR_ps90'), 'r', encoding='UTF-8') as f:
+    tmp_tr_ps90 = f.read()
+'''Считываем файл-шаблон для АПР'''
+with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_APR'), 'r', encoding='UTF-8') as f:
+    tmp_apr = f.read()
 
 book = openpyxl.open(os.path.join(path_config, file_config))  # , read_only=True
 '''читаем список всех контроллеров'''
@@ -84,17 +90,40 @@ for p in cells:
         break
     else:
         sl_CPU_spec[p[0].value] = []
-        if p[is_f_ind(cells[0], 'FLR')].value == 'ON':
+        if p[is_f_ind(cells[0], 'FLR')].value == 'ON' and p[is_f_ind(cells[0], 'Тип ТР')].value == 'ПС90':
             sl_CPU_spec[p[0].value].append('ТР')
         if p[is_f_ind(cells[0], 'APR')].value == 'ON':
             sl_CPU_spec[p[0].value].append('АПР')
-for jj in sl_CPU_spec:
-    print(jj, sl_CPU_spec[jj])
 
 ff = open('file_plc.txt', 'w', encoding='UTF-8')
 ff.close()
 '''Далее для всех контроллеров, что нашли, делаем'''
 for i in all_CPU:
+    '''Диагностика модулей (DIAG)'''
+    sheet = book['Модули']
+    cells = sheet['A1': 'G' + str(sheet.max_row)]
+    sl_modules_cpu = {}
+    for p in cells:
+        if p[is_f_ind(cells[0], 'CPU')].value == i:
+            aa = copy.copy(sl_modules[p[is_f_ind(cells[0], 'Шифр модуля')].value])
+            sl_modules_cpu[p[is_f_ind(cells[0], 'Имя модуля')].value] = [p[is_f_ind(cells[0], 'Шифр модуля')].value, aa]
+
+    for jj in ['Измеряемые', 'Входные', 'Выходные', 'ИМ(АО)']:
+        sheet_run = book[jj]
+        cells_run = sheet_run['A1': 'O' + str(sheet_run.max_row)]
+        for p in cells_run:
+            if p[is_f_ind(cells_run[0], 'CPU')].value == i and p[is_f_ind(cells_run[0], 'Нестандартный канал')].value == 'Нет':
+                tmp_ind = int(p[is_f_ind(cells_run[0], 'Номер канала')].value) - 1
+                sl_modules_cpu[p[is_f_ind(cells_run[0], 'Номер модуля')].value][1][tmp_ind] = \
+                    is_cor_chr(p[is_f_ind(cells_run[0], 'Наименование параметра')].value)
+
+    if len(sl_modules_cpu) != 0:
+        tmp_line_ = is_create_objects_diag(sl_modules_cpu, tmp_object_BTN_CNT_sig)
+        tmp_line_ = (Template(tmp_group).substitute(name_group='HW', objects=tmp_line_))
+
+        with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
+            f.write(Template(tmp_group).substitute(name_group='Diag', objects=tmp_line_.rstrip()))
+
     '''Измеряемые'''
     sheet = book['Измеряемые']  # .worksheets[3]
     cells = sheet['A1': 'AG' + str(sheet.max_row)]
@@ -108,7 +137,7 @@ for i in all_CPU:
     if len(sl_CPU_one) != 0:
         tmp_line_ = is_create_objects_ai_ae_set(sl_CPU_one, tmp_object_AIAESET, 'Types.AI.AI_PLC_View')
 
-        with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
+        with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='AI', objects=tmp_line_))
 
     '''Расчетные'''
@@ -177,6 +206,11 @@ for i in all_CPU:
         with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
             f.write(Template(tmp_group).substitute(name_group='IM', objects=tmp_line_))
 
+    '''Добавляем АПР, если для данного контроллера указан АПР в настройках'''
+    if 'АПР' in sl_CPU_spec[i]:
+        with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
+            f.write(tmp_apr.rstrip())
+
     '''Кнопки(в составе System)'''
     sheet = book['Кнопки']  # .worksheets[10]
     cells = sheet['A1': 'C' + str(sheet.max_row)]
@@ -222,11 +256,11 @@ for i in all_CPU:
         tmp_subgroup += Template(tmp_group).substitute(name_group='PZ', objects=tmp_line_)
 
     '''ПС(WRN) в составе System, каждая ПС как отдельный объект, дополняем словарь, созданный при анализе DI'''
-    tmp_wrn, sl_ts, sl_ppu, sl_alr, sl_modes = is_load_sig(i, cells,
-                                                           is_f_ind(cells[0], 'Алгоритмическое имя'),
-                                                           is_f_ind(cells[0], 'Наименование параметра'),
-                                                           is_f_ind(cells[0], 'Тип защиты'),
-                                                           is_f_ind(cells[0], 'CPU'))
+    tmp_wrn, sl_ts, sl_ppu, sl_alr, sl_modes, sl_alg = is_load_sig(i, cells,
+                                                                   is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                                                   is_f_ind(cells[0], 'Наименование параметра'),
+                                                                   is_f_ind(cells[0], 'Тип защиты'),
+                                                                   is_f_ind(cells[0], 'CPU'))
     sl_wrn = {**sl_wrn, **tmp_wrn}
 
     if len(sl_wrn) != 0:
@@ -252,6 +286,15 @@ for i in all_CPU:
     if len(sl_modes) != 0:
         tmp_line_ = is_create_objects_sig(sl_modes, tmp_object_BTN_CNT_sig)
         tmp_subgroup += Template(tmp_group).substitute(name_group='MODES', objects=tmp_line_)
+
+    '''ALG в составе System, сам словарь загружен ранее вместе с ПС(позже поддержать новый конфигуратор)'''
+    if len(sl_alg) != 0:
+        tmp_line_ = is_create_objects_sig(sl_alg, tmp_object_BTN_CNT_sig)
+        tmp_subgroup += Template(tmp_group).substitute(name_group='ALG', objects=tmp_line_)
+
+    '''Добавляем топливный регулятор, если для данного контроллера указан ТР ПС90 в настройках'''
+    if 'ТР' in sl_CPU_spec[i]:
+        tmp_subgroup += tmp_tr_ps90.rstrip()
 
     '''Формируем подгруппу'''
     if tmp_subgroup != '':
