@@ -310,6 +310,9 @@ for i in all_CPU:
     with open('file_app_out.txt', 'r', encoding='UTF-8') as f:
         tmp_line_ = f.read().rstrip()
 
+    print(os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')))
+    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
+        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
     '''Для каждого объекта создаём контроллер '''
     num_obj_plc = 1
     for obj in sl_object_all:
@@ -320,6 +323,14 @@ for i in all_CPU:
                                                       ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
                                                       ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
                                                       dp_app=tmp_line_))
+            '''для каждого контроллера создадим отдельный файл для импорта только его одного'''
+            tmp_plc = Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='m903e',
+                                                    ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
+                                                    ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
+                                                    dp_app=tmp_line_)
+            with open(os.path.join(os.path.dirname(__file__), 'File_out', f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                      'w', encoding='UTF-8') as f:
+                f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
             num_obj_plc += 1
         else:
             num_obj_plc += 1

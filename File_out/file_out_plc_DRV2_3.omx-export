@@ -1,0 +1,296 @@
+<omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
+  <trei:trei name="PLC_DRV23" >
+    <trei:master-module name="m903e" >
+      <trei:ethernet-adapter name="Eth1" address="192.168.003.036" />
+      <trei:ethernet-adapter name="Eth2" address="192.168.004.036" />
+      <trei:unet-server name="UnetServer" address-map="" port="6001"/>
+      <dp:application-object name="Tree" access-level="public" >
+        <ct:object name="Diag" access-level="public" >
+        <ct:object name="HW" access-level="public" >
+            <ct:object name="BRRS2" base-type="Types.DIAG_CPU.DIAG_CPU_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика мастер-модуля BRRS2 (M991E)" />
+            </ct:object>
+        </ct:object>
+        </ct:object>
+        <ct:object name="AE" access-level="public" >
+          <ct:object name="AE_QTGM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Массовый рассход топливного газа" />
+            <attribute type="Attributes.EUnit" value="кг/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qтг" />
+          </ct:object>
+          <ct:object name="AE_QTG" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Объемный рассход топливного газа" />
+            <attribute type="Attributes.EUnit" value="м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qтг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_CH" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за текущий час" />
+            <attribute type="Attributes.EUnit" value="тыс.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_LH" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за предыдущий час" />
+            <attribute type="Attributes.EUnit" value="тыс.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_CD" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за текущие сутки" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_LD" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за предыдущие сутки" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_CM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за текущий месяц" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_LM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за предыдущий месяц" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_CY" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за текущий год" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_TGGAS_LY" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Расход топливного газа за предыдущий год" />
+            <attribute type="Attributes.EUnit" value="млн.м3/ч" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Qг" />
+          </ct:object>
+          <ct:object name="AE_Ktg" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Коэффициент технического состояния по топливному газу" />
+            <attribute type="Attributes.EUnit" value="-" />
+            <attribute type="Attributes.FracDigits" value="3" />
+            <attribute type="Attributes.ShortName" value="K" />
+          </ct:object>
+          <ct:object name="AE_UMG1_U_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Линейное напряжение фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UA" />
+          </ct:object>
+          <ct:object name="AE_UMG1_U_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Линейное напряжение фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UB" />
+          </ct:object>
+          <ct:object name="AE_UMG1_U_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Линейное напряжение фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UC" />
+          </ct:object>
+          <ct:object name="AE_UMG1_I_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Ток фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IA" />
+          </ct:object>
+          <ct:object name="AE_UMG1_I_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Ток фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IB" />
+          </ct:object>
+          <ct:object name="AE_UMG1_I_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Ток фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IC" />
+          </ct:object>
+          <ct:object name="AE_UMG1_Freq" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Частота" />
+            <attribute type="Attributes.EUnit" value="Гц" />
+            <attribute type="Attributes.FracDigits" value="3" />
+            <attribute type="Attributes.ShortName" value="F" />
+          </ct:object>
+          <ct:object name="AE_UMG1_Full_P" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Полная активная мощность" />
+            <attribute type="Attributes.EUnit" value="кВт" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Ap" />
+          </ct:object>
+          <ct:object name="AE_UMG1_Full_Q" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Полная реактивная мощность" />
+            <attribute type="Attributes.EUnit" value="кВар" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Rp" />
+          </ct:object>
+          <ct:object name="AE_UMG1_S_ABC" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG1:Полная мощность на всех фазах" />
+            <attribute type="Attributes.EUnit" value="кВА" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Fp" />
+          </ct:object>
+          <ct:object name="AE_UMG2_U_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Линейное напряжение фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UA" />
+          </ct:object>
+          <ct:object name="AE_UMG2_U_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Линейное напряжение фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UB" />
+          </ct:object>
+          <ct:object name="AE_UMG2_U_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Линейное напряжение фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UC" />
+          </ct:object>
+          <ct:object name="AE_UMG2_I_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Ток фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IA" />
+          </ct:object>
+          <ct:object name="AE_UMG2_I_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Ток фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IB" />
+          </ct:object>
+          <ct:object name="AE_UMG2_I_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Ток фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IC" />
+          </ct:object>
+          <ct:object name="AE_UMG2_Freq" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Частота" />
+            <attribute type="Attributes.EUnit" value="Гц" />
+            <attribute type="Attributes.FracDigits" value="3" />
+            <attribute type="Attributes.ShortName" value="F" />
+          </ct:object>
+          <ct:object name="AE_UMG2_Full_P" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Полная активная мощность" />
+            <attribute type="Attributes.EUnit" value="кВт" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Ap" />
+          </ct:object>
+          <ct:object name="AE_UMG2_Full_Q" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Полная реактивная мощность" />
+            <attribute type="Attributes.EUnit" value="кВар" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Rp" />
+          </ct:object>
+          <ct:object name="AE_UMG2_S_ABC" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG2:Полная мощность на всех фазах" />
+            <attribute type="Attributes.EUnit" value="кВА" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Fp" />
+          </ct:object>
+          <ct:object name="AE_UMG3_U_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Линейное напряжение фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UA" />
+          </ct:object>
+          <ct:object name="AE_UMG3_U_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Линейное напряжение фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UB" />
+          </ct:object>
+          <ct:object name="AE_UMG3_U_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Линейное напряжение фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="UC" />
+          </ct:object>
+          <ct:object name="AE_UMG3_I_A" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Ток фазы А" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IA" />
+          </ct:object>
+          <ct:object name="AE_UMG3_I_B" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Ток фазы B" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IB" />
+          </ct:object>
+          <ct:object name="AE_UMG3_I_C" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Ток фазы C" />
+            <attribute type="Attributes.EUnit" value="В" />
+            <attribute type="Attributes.FracDigits" value="2" />
+            <attribute type="Attributes.ShortName" value="IC" />
+          </ct:object>
+          <ct:object name="AE_UMG3_Freq" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Частота" />
+            <attribute type="Attributes.EUnit" value="Гц" />
+            <attribute type="Attributes.FracDigits" value="3" />
+            <attribute type="Attributes.ShortName" value="F" />
+          </ct:object>
+          <ct:object name="AE_UMG3_Full_P" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Полная активная мощность" />
+            <attribute type="Attributes.EUnit" value="кВт" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Ap" />
+          </ct:object>
+          <ct:object name="AE_UMG3_Full_Q" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Полная реактивная мощность" />
+            <attribute type="Attributes.EUnit" value="кВар" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Rp" />
+          </ct:object>
+          <ct:object name="AE_UMG3_S_ABC" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="UMG3:Полная мощность на всех фазах" />
+            <attribute type="Attributes.EUnit" value="кВА" />
+            <attribute type="Attributes.FracDigits" value="0" />
+            <attribute type="Attributes.ShortName" value="Fp" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="System" access-level="public" >
+        <ct:object name="BTN" access-level="public" >
+            <ct:object name="BTN_ResetFG" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Сброс  суммарного расхода топливного газа" />
+            </ct:object>
+        </ct:object>
+        <ct:object name="SET" access-level="public" >
+          <ct:object name="SP_Q_nomm" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Номинальный расход топливного газа" />
+            <attribute type="Attributes.EUnit" value="кг/ч" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="Qnom" />
+          </ct:object>
+        </ct:object>
+        <ct:object name="WRN" access-level="public" >
+            <ct:object name="AVGM_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с АВГМ" />
+            </ct:object>
+            <ct:object name="UMG1_Vvod1NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Ввод 1 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG2_Vvod2NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Ввод 2 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG3_Vvod3NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Ввод 3 ~380В: Напряжение не в норме" />
+            </ct:object>
+        </ct:object>
+        </ct:object>
+      </dp:application-object>
+    </trei:master-module>
+  </trei:trei>
+
+</omx>
