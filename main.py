@@ -187,7 +187,7 @@ for i in all_CPU:
     sl_cnt = {}
     for key, value in sl_CPU_one.items():
         if value[4] == 'Да':
-            sl_cnt[key+'_Worktime'] = [value[0]]
+            sl_cnt[key+'_WorkTime'] = [value[0]]
         if value[5] == 'Да':
             sl_cnt[key+'_Swap'] = [value[0]]
 
@@ -310,7 +310,7 @@ for i in all_CPU:
     with open('file_app_out.txt', 'r', encoding='UTF-8') as f:
         tmp_line_ = f.read().rstrip()
 
-    print(os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')))
+    # print(os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')))
     if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
         os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
     '''Для каждого объекта создаём контроллер '''

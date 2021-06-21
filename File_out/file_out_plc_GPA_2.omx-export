@@ -3485,25 +3485,25 @@
             <ct:object name="KlGG_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Регулятор давления газ-газ" />
             </ct:object>
-            <ct:object name="KlGGprm_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="KlGGprm_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Изменение положения регулятора давления газ–газ разрешить" />
             </ct:object>
-            <ct:object name="EN_UTO_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_UTO_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель блока УТО" />
             </ct:object>
-            <ct:object name="Vn_UTO_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="Vn_UTO_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор блока арматуры УТО" />
             </ct:object>
-            <ct:object name="ZsBUT_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="ZsBUT_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Задвижка байпаса УТО" />
             </ct:object>
-            <ct:object name="EN_KST_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_KST_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагрев кожуха" />
             </ct:object>
-            <ct:object name="VnOD_OF_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VnOD_OF_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентиляция ОД отключена" />
             </ct:object>
-            <ct:object name="VnA_OF_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VnA_OF_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентиляция ангара отключена" />
             </ct:object>
             <ct:object name="KP7_AVGM_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -3515,10 +3515,10 @@
             <ct:object name="PE2_KOA_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Клапан ПЕ2 вентиляции ангара" />
             </ct:object>
-            <ct:object name="IPTV_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="IPTV_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Влагомер ИПТВ" />
             </ct:object>
-            <ct:object name="TIPTV_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="TIPTV_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Термостат влагомера" />
             </ct:object>
             <ct:object name="Kl_inSGU_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -3569,100 +3569,100 @@
             <ct:object name="Kr_OilAcc_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Кран слива масла из аккумулятора масла" />
             </ct:object>
-            <ct:object name="EN_MB_GTD_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_MB_GTD_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель маслобака ГТД (НКУ)" />
             </ct:object>
-            <ct:object name="EN_BG1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_BG1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 1)  (НКУ)" />
             </ct:object>
-            <ct:object name="EN_BG2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_BG2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 2) (НКУ)" />
             </ct:object>
-            <ct:object name="EN_BG3_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_BG3_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель буферного газа (секция 3) (НКУ)" />
             </ct:object>
-            <ct:object name="EN_MBN1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_MBN1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель 1 маслобака ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="EN_MBN2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_MBN2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель 2 маслобака ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="EN_MBN3_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_MBN3_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель 3 маслобака ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="VNMON1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VNMON1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 нагревателя маслоохладителя ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="VNMON2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VNMON2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 нагревателя маслоохладителя ЦБН (НКУ)" />
             </ct:object>
             <ct:object name="Kr_aftN1_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Кран масляный после насоса циркуляционного H1 (КЭ4)" />
             </ct:object>
-            <ct:object name="Nsm_GTD_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="Nsm_GTD_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Насос смазки циркуляционный ГТД (Н3) (НКУ)" />
             </ct:object>
-            <ct:object name="Nm_CBN_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="Nm_CBN_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Насос масляный циркуляционный ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="V11_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="V11_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.1 (НКУ)" />
             </ct:object>
-            <ct:object name="V12_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="V12_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.2 (НКУ)" />
             </ct:object>
-            <ct:object name="V2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="V2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 2 резервный (НКУ)" />
             </ct:object>
-            <ct:object name="EN_BK_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_BK_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Обогрев клапанов ВОУ (НКУ)" />
             </ct:object>
-            <ct:object name="EN_TrMsGTD1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_TrMsGTD1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
             </ct:object>
-            <ct:object name="EN_TrMsGTD2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_TrMsGTD2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ГТД (вне помещений) (НКУ)" />
             </ct:object>
-            <ct:object name="EN_TmsCBK_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_TmsCBK_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель трубопроводов маслосистемы ЦБК (вне помещений) (НКУ)" />
             </ct:object>
-            <ct:object name="EN_AVGM_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_AVGM_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель линии воздушного подогрева АВГМ (НКУ)" />
             </ct:object>
-            <ct:object name="EN_TrBg_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_TrBg_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель подвода трубопроводов буферного газа (НКУ)" />
             </ct:object>
-            <ct:object name="EN_Kr_A_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_Kr_A_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель крыши ангара (НКУ)" />
             </ct:object>
-            <ct:object name="K1_N_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="K1_N_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Калорифер 1 маслоохладителя ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="K2_N_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="K2_N_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Калорифер 2 маслоохладителя ЦБН (НКУ)" />
             </ct:object>
-            <ct:object name="EN_VUTO_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_VUTO_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопроводов УТО (НКУ)" />
             </ct:object>
-            <ct:object name="EN_DrK_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_DrK_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электронагреватель дренажных конденсаторов (НКУ)" />
             </ct:object>
-            <ct:object name="EN_DrT_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_DrT_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нагреватель дренажного трубопровода (НКУ)" />
             </ct:object>
-            <ct:object name="EN_TinAngar_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EN_TinAngar_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электронагреватель водопровода в ангар (НКУ)" />
             </ct:object>
-            <ct:object name="KBV1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="KBV1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 1 (НКУ)" />
             </ct:object>
-            <ct:object name="KBV2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="KBV2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Компрессор СГУ 2 (НКУ)" />
             </ct:object>
-            <ct:object name="VzgA_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VzgA_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор загазованности ангара (НКУ)" />
             </ct:object>
-            <ct:object name="MNDE_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="MNDE_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Насос прокачки масляный (МНДЭ) ГТУ (H2) (НКУ)" />
             </ct:object>
             <ct:object name="Kr_Pm_inMGTU_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -3674,46 +3674,46 @@
             <ct:object name="Kr_Pm_inMNDE_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Кран подачи масла в насос прокачки масляный (МНДЭ) ГТУ (КЭ3) (НКУ)" />
             </ct:object>
-            <ct:object name="EK1_BET_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK1_BET_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока электротехнического" />
             </ct:object>
-            <ct:object name="EK2_BET_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK2_BET_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока электротехнического" />
             </ct:object>
-            <ct:object name="EK3_BET_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK3_BET_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока электротехнического" />
             </ct:object>
-            <ct:object name="EK1_BSAU_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK1_BSAU_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK1 блока САУ" />
             </ct:object>
-            <ct:object name="EK2_BSAU_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK2_BSAU_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK2 блока САУ" />
             </ct:object>
-            <ct:object name="EK3_BSAU_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="EK3_BSAU_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электроконвертор EK3 блока САУ" />
             </ct:object>
-            <ct:object name="VOD1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VOD1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 турбоблока" />
             </ct:object>
-            <ct:object name="VOD2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VOD2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 турбоблока" />
             </ct:object>
-            <ct:object name="VOD3_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VOD3_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 3 турбоблока" />
             </ct:object>
-            <ct:object name="VMON1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VMON1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 1 маслоохладителя ЦБН" />
             </ct:object>
-            <ct:object name="VMON2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VMON2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор 2 маслоохладителя ЦБН" />
             </ct:object>
-            <ct:object name="VOT1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VOT1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 1" />
             </ct:object>
-            <ct:object name="VOT2_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="VOT2_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Вентилятор кожуха трансмисии 2" />
             </ct:object>
-            <ct:object name="PNS_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="PNS_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Насос масляный пусковой ЦБН" />
             </ct:object>
             <ct:object name="KV5_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >

@@ -1301,7 +1301,7 @@
             <ct:object name="SK_Swap" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="СК" />
             </ct:object>
-            <ct:object name="Starter1_Worktime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="Starter1_WorkTime" base-type="Types.CNT.CNT_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Электростартер" />
             </ct:object>
         </ct:object>
