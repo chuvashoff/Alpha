@@ -8,7 +8,10 @@ import warnings
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 
 try:
-    path_config = input('Укажите путь до конфигуратора\n')
+    # path_config = input('Укажите путь до конфигуратора\n')
+    with open('Source_list_config', 'r', encoding='UTF-8') as f:
+        path_config = f.readline().strip()
+
     print(datetime.datetime.now())
 
     file_config = 'UnimodCreate.xlsm'
@@ -25,6 +28,11 @@ try:
     sl_object_rus = {}
     sl_object_all = {}
     num_pz = 0
+    lst_all_wrn = []
+    lst_all_ts = []
+    lst_all_ppu = []
+    lst_all_mod = []
+    lst_all_alg = []
 
     '''Считываем файл-шаблон для AI  AE SET'''
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
@@ -267,16 +275,19 @@ try:
         if len(sl_wrn) != 0:
             tmp_line_ = is_create_objects_sig(sl_wrn, tmp_object_BTN_CNT_sig)
             tmp_subgroup += Template(tmp_group).substitute(name_group='WRN', objects=tmp_line_)
+            lst_all_wrn += list(sl_wrn.keys())
 
         '''ТС в составе System, сам словарь загружен ранее вместе с ПС'''
         if len(sl_ts) != 0:
             tmp_line_ = is_create_objects_sig(sl_ts, tmp_object_BTN_CNT_sig)
             tmp_subgroup += Template(tmp_group).substitute(name_group='TS', objects=tmp_line_)
+            lst_all_ts += list(sl_ts.keys())
 
         '''ППУ в составе System, сам словарь загружен ранее вместе с ПС'''
         if len(sl_ppu) != 0:
             tmp_line_ = is_create_objects_sig(sl_ppu, tmp_object_BTN_CNT_sig)
             tmp_subgroup += Template(tmp_group).substitute(name_group='PPU', objects=tmp_line_)
+            lst_all_ppu += list(sl_ppu.keys())
 
         '''ALR(Защиты и АС) в составе System, сам словарь загружен ранее вместе с ПС'''
         if len(sl_alr) != 0:
@@ -287,11 +298,13 @@ try:
         if len(sl_modes) != 0:
             tmp_line_ = is_create_objects_sig(sl_modes, tmp_object_BTN_CNT_sig)
             tmp_subgroup += Template(tmp_group).substitute(name_group='MODES', objects=tmp_line_)
+            lst_all_mod += list(sl_modes.keys())
 
         '''ALG в составе System, сам словарь загружен ранее вместе с ПС(позже поддержать новый конфигуратор)'''
         if len(sl_alg) != 0:
             tmp_line_ = is_create_objects_sig(sl_alg, tmp_object_BTN_CNT_sig)
             tmp_subgroup += Template(tmp_group).substitute(name_group='ALG', objects=tmp_line_)
+            lst_all_alg += list(sl_alg.keys())
 
         '''Добавляем топливный регулятор, если для данного контроллера указан ТР ПС90 в настройках'''
         if 'ТР' in sl_CPU_spec[i]:
@@ -356,7 +369,7 @@ try:
     os.remove('file_app_out.txt')
     print(datetime.datetime.now())
 
-    create_index()
+    create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn)
     print(datetime.datetime.now())
 
 except (Exception, KeyError):

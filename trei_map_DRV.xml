@@ -10361,4 +10361,28 @@
     <index>305</index>
     <category>DataCategory_DRV_NoArcDiscrete</category>
   </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.AVGM_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>338</index>
+    <category>DataCategory_DRV_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG1_Vvod1NotOk.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3108</index>
+    <category>DataCategory_DRV_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG2_Vvod2NotOk.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3109</index>
+    <category>DataCategory_DRV_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG3_Vvod3NotOk.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3110</index>
+    <category>DataCategory_DRV_NoArcDiscrete</category>
+  </item>
 </root>

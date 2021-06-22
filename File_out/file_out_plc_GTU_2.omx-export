@@ -1716,12 +1716,6 @@
             <ct:object name="R_kt_Tst" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Ограничение по Тст" />
             </ct:object>
-            <ct:object name="NoCheckVibr" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Неисправность виброаппаратуры ГТУ" />
-            </ct:object>
-            <ct:object name="NoCheckBZD" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Неисправность СПО (БЗД)" />
-            </ct:object>
             <ct:object name="R_kt_ogrGt_osn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Верхнее ограничение по расходу топлива" />
             </ct:object>
@@ -1739,6 +1733,9 @@
             </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
+            <ct:object name="CheckBZD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Контроль БЗД" />
+            </ct:object>
             <ct:object name="coolGTU" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Охлаждение ГТУ" />
             </ct:object>

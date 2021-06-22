@@ -135,7 +135,7 @@ def create_group_btn(sl_global_btn, sl_local_btn, template_no_arc_index, source)
     return s_out
 
 
-def create_group_cnt(sl_global_cnt, template_no_arc_index, source):
+def create_group_system_sig(sub_name, sl_global_sig, template_no_arc_index, source):
     sl_data_cat = {
         'R': 'Analog',
         'I': 'Analog',
@@ -147,10 +147,10 @@ def create_group_cnt(sl_global_cnt, template_no_arc_index, source):
         'B': 'Bool'
     }
     s_out = ''
-    for key, value in sl_global_cnt.items():
+    for key, value in sl_global_sig.items():
         a = key
-        pref_arc = f'NoArc{sl_data_cat[value[1]]}'
-        s_out += Template(template_no_arc_index).substitute(name_signal=f'System.CNT.{a}.Value',
+        pref_arc = f'NoArc{sl_data_cat[value[1]]}'  # для проекта Бованенково убрать '.Value'
+        s_out += Template(template_no_arc_index).substitute(name_signal=f'System.{sub_name}.{a}.Value',
                                                             type_signal=sl_type[value[1]], index=value[0],
                                                             data_category=f'DataCategory_{source}_{pref_arc}')
     return s_out
@@ -172,7 +172,7 @@ def create_group_alr(sl_global_alr, template_arc_index, source):
     return s_out
 
 
-def create_index():
+def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn):
     # Считываем шаблоны для карты
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f:
         tmp_ind_arc = f.read()
@@ -216,14 +216,14 @@ def create_index():
         'ceOn', 'coOn', 'caLhBTN', 'pBTN', 'pcoMan'
     )
 
-    with open('Source_list_plc', 'r') as f:
+    with open('Source_list_plc', 'r', encoding='UTF-8') as f:
         while 8:
             line_source = f.readline().strip().split(',')
             if line_source == ['']:
                 break
             sl_global_ai, sl_tmp_ai = {}, {}
             sl_global_ae, sl_tmp_ae = {}, {}
-            sl_global_di, sl_tmp_di = {}, {}
+            sl_global_di, sl_tmp_di, sl_wrn_di = {}, {}, {}  # sl_wrn_di - для сбора ПС по Дискретам
             sl_global_im1x0, sl_tmp_im1x0 = {}, {}
             sl_global_im1x1, sl_tmp_im1x1 = {}, {}
             sl_global_im1x2, sl_tmp_im1x2 = {}, {}
@@ -235,6 +235,11 @@ def create_index():
             set_cnt_im1x0, set_cnt_im1x1, set_cnt_im1x2, set_cnt_im2x2 = set(), set(), set(), set()
             sl_global_alr = {}
             set_tmp_alr = set()
+            sl_global_alg = {}
+            sl_global_mod = {}
+            sl_global_ppu = {}
+            sl_global_ts = {}
+            sl_global_wrn = {}
             sl_global_fast = {}
             s_all = ''
             '''Если есть файл аналогов'''
@@ -283,7 +288,7 @@ def create_index():
             if os.path.isfile(os.path.join(line_source[1], '0_IM_AO.st')):
                 with open(os.path.join(line_source[1], '0_IM_AO.st')) as f_im:
                     text = f_im.read().split('\n')
-                sl_tmp_im_ao = create_sl_im(text)
+                sl_tmp_im_ao, bla_ = create_sl_im(text)
 
             '''Если есть файл кнопок'''
             if os.path.isfile(os.path.join(line_source[1], '0_BTN.st')):
@@ -393,6 +398,30 @@ def create_index():
                             line = line.split(',')
                             sl_global_alr[line[0][line[0].find('_')+1:]] = [max(int(line[9]), int(line[10])), line[1]]
 
+                        elif 'ALG|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            sl_global_alg[f"ALG_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'GRH|' in line and len(line.split(',')) >= 10:  # в новом конфигураторе - в ветку GRH.
+                            line = line.split(',')
+                            sl_global_alg[f"GRH_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'MOD|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            sl_global_mod[line[0][line[0].find('|') + 1:]] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'PPU|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            sl_global_ppu[line[0][line[0].find('|') + 1:]] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'TS|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            sl_global_ts[line[0][line[0].find('|') + 1:]] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'WRN|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            sl_global_wrn[line[0][line[0].find('|') + 1:]] = [max(int(line[9]), int(line[10])), line[1]]
+
                         if 'FAST|' in line:
                             line = line.split(',')
                             '''В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной'''
@@ -400,6 +429,12 @@ def create_index():
             '''В словаре sl_global_ai лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]'''
             sl_global_ai = {key: value for key, value in sl_global_ai.items() if key[:key.find('[')] in lst_ai}
             sl_global_ae = {key: value for key, value in sl_global_ae.items() if key[:key.find('[')] in lst_ae}
+            for key, value in sl_global_di.items():
+                if 'ValueAlg' == key[:key.find('[')]:
+                    var_ = sl_tmp_di.get(int(key[key.find('[')+1:key.find(']')]), 'bla')
+                    if f"DI_{var_[var_.find('_')+1:]}" in lst_wrn:
+                        sl_wrn_di[f"DI_{var_[var_.find('_')+1:]}"] = value
+
             sl_global_di = {key: value for key, value in sl_global_di.items() if key[:key.find('[')] in lst_di}
             sl_global_im1x0 = {key: value for key, value in sl_global_im1x0.items() if key[:key.find('[')] in lst_im1x0}
             sl_global_im1x1 = {key: value for key, value in sl_global_im1x1.items() if key[:key.find('[')] in lst_im1x1}
@@ -407,7 +442,16 @@ def create_index():
             sl_global_im2x2 = {key: value for key, value in sl_global_im2x2.items() if key[:key.find('[')] in lst_im2x2}
             sl_global_im_ao = {key: value for key, value in sl_global_im_ao.items() if key[:key.find('[')] in lst_im_ao}
             sl_global_btn = {key: value for key, value in sl_global_btn.items() if key[:key.find('[')] in lst_btn}
+            # отсуда и далее до нар ориентируемся на то, что есть в конфигураторе, так как в проекте может быть "мусор"
+            # в данных словарях лежит alg имя: [индекс переменной, тип переменной(I, B, R)]
+            sl_global_alg = {key: value for key, value in sl_global_alg.items() if key in lst_alg}
+            sl_global_mod = {key: value for key, value in sl_global_mod.items() if key in lst_mod}
+            sl_global_ppu = {key: value for key, value in sl_global_ppu.items() if key in lst_ppu}
+            sl_global_ts = {key: value for key, value in sl_global_ts.items() if key in lst_ts}
+            sl_global_wrn = {key: value for key, value in sl_global_wrn.items() if key in lst_wrn}
+            sl_global_wrn.update(sl_wrn_di)
 
+            # print(line_source[0], len(sl_global_wrn))
             '''Объединяем множества ИМ в одно для накопления наработок'''
             for jj in [set_cnt_im1x0, set_cnt_im1x1, set_cnt_im1x2, set_cnt_im2x2]:
                 set_all_im.update(jj)
@@ -471,11 +515,36 @@ def create_index():
             '''Обработка и запись в карту наработок'''
 
             if sl_global_cnt:
-                s_all += create_group_cnt(sl_global_cnt, tmp_ind_no_arc, line_source[0])
+                s_all += create_group_system_sig('CNT', sl_global_cnt, tmp_ind_no_arc, line_source[0])
 
             '''Обработка и запись в карту ALR'''
+
             if sl_global_alr:
                 s_all += create_group_alr(sl_global_alr, tmp_ind_arc, line_source[0])
+
+            '''Обработка и запись в карту ALG'''
+
+            if sl_global_alg:
+                s_all += create_group_system_sig('ALG', sl_global_alg, tmp_ind_no_arc, line_source[0])
+
+            '''Обработка и запись в карту Режимы'''
+
+            if sl_global_mod:
+                s_all += create_group_system_sig('MODES', sl_global_mod, tmp_ind_no_arc, line_source[0])
+
+            '''Обработка и запись в карту PPU'''
+
+            if sl_global_ppu:
+                s_all += create_group_system_sig('PPU', sl_global_ppu, tmp_ind_no_arc, line_source[0])
+
+            '''Обработка и запись в карту TS'''
+
+            if sl_global_ts:
+                s_all += create_group_system_sig('TS', sl_global_ts, tmp_ind_no_arc, line_source[0])
+
+            '''Обработка и запись в карту WRN'''
+            if sl_global_wrn:
+                s_all += create_group_system_sig('WRN', sl_global_wrn, tmp_ind_no_arc, line_source[0])
 
             with open(f'trei_map_{line_source[0]}.xml', 'w') as f_out:
                 f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')

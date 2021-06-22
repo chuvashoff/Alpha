@@ -4350,6 +4350,12 @@
             <ct:object name="Error_Embn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Неисправность системы подогрева масла в МБН" />
             </ct:object>
+            <ct:object name="NoCheckVibr" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Неисправность виброаппаратуры ГТУ" />
+            </ct:object>
+            <ct:object name="NoCheckBZD" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Неисправность СПО (БЗД)" />
+            </ct:object>
             <ct:object name="SAR_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Неисправность связи с САР КЦ" />
             </ct:object>
@@ -4423,9 +4429,6 @@
             </ct:object>
             <ct:object name="SystemCoolingGTU" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Охлаждение ГТУ" />
-            </ct:object>
-            <ct:object name="CheckBZD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Контроль БЗД" />
             </ct:object>
             <ct:object name="CheckVIB" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Контроль виброаппаратуры" />
@@ -5745,12 +5748,6 @@
             </ct:object>
             <ct:object name="ALG_CO_AObs" base-type="Types.ALG.ALG_BOOL_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Алгоритм аварийного останова без стравливания" />
-            </ct:object>
-            <ct:object name="RPU_DI_BTN_NOss" base-type="Types.ALG.ALG_BOOL_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Нобмальный останов со стр. по команде оператора из ПРУ" />
-            </ct:object>
-            <ct:object name="RPU_DI_BTN_NObs" base-type="Types.ALG.ALG_BOOL_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Нормальный останов без стр. по команде оператора из ПРУ" />
             </ct:object>
             <ct:object name="ALG_ShowPPU" base-type="Types.ALG.ALG_BOOL_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Отображение экрана ППУ" />
