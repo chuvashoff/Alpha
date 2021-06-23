@@ -33,6 +33,7 @@ try:
     lst_all_ppu = []
     lst_all_mod = []
     lst_all_alg = []
+    sl_all_pz = {}
 
     '''Считываем файл-шаблон для AI  AE SET'''
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
@@ -115,7 +116,8 @@ try:
         for p in cells:
             if p[is_f_ind(cells[0], 'CPU')].value == i:
                 aa = copy.copy(sl_modules[p[is_f_ind(cells[0], 'Шифр модуля')].value])
-                sl_modules_cpu[p[is_f_ind(cells[0], 'Имя модуля')].value] = [p[is_f_ind(cells[0], 'Шифр модуля')].value, aa]
+                sl_modules_cpu[p[is_f_ind(cells[0], 'Имя модуля')].value] = [p[is_f_ind(cells[0], 'Шифр модуля')].value,
+                                                                             aa]
 
         for jj in ['Измеряемые', 'Входные', 'Выходные', 'ИМ(АО)']:
             sheet_run = book[jj]
@@ -254,11 +256,14 @@ try:
         '''Защиты(PZ) в составе System'''
         sheet = book['Сигналы']  # .worksheets[11]
         cells = sheet['A1': 'N' + str(sheet.max_row)]
+        sl_all_pz[i] = [num_pz]
         sl_CPU_one, num_pz = is_load_pz(i, cells, num_pz,
                                         is_f_ind(cells[0], 'Наименование параметра'),
                                         is_f_ind(cells[0], 'Тип защиты'),
                                         is_f_ind(cells[0], 'Единица измерения'),
                                         is_f_ind(cells[0], 'CPU'))
+        if num_pz not in sl_all_pz[i]:
+            sl_all_pz[i].append(num_pz)
 
         if len(sl_CPU_one) != 0:
             tmp_line_ = is_create_objects_pz(sl_CPU_one, tmp_object_PZ, 'Types.PZ.PZ_PLC_View')
@@ -369,7 +374,8 @@ try:
     os.remove('file_app_out.txt')
     print(datetime.datetime.now())
 
-    create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn)
+    create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn,
+                 sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec)
     print(datetime.datetime.now())
 
 except (Exception, KeyError):
