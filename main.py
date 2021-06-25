@@ -68,6 +68,9 @@ try:
     '''Считываем файл-шаблон для АПР'''
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_APR'), 'r', encoding='UTF-8') as f:
         tmp_apr = f.read()
+    '''Считываем файл-шаблон для драйверных параметров'''
+    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_drv_par'), 'r', encoding='UTF-8') as f:
+        tmp_drv_par = f.read()
 
     book = openpyxl.open(os.path.join(path_config, file_config))  # , read_only=True
     '''читаем список всех контроллеров'''
@@ -105,6 +108,17 @@ try:
             if p[is_f_ind(cells[0], 'APR')].value == 'ON':
                 sl_CPU_spec[p[0].value].append('АПР')
 
+    '''Определение заведённых драйверов'''
+    cells = sheet['A1': 'A' + str(sheet.max_row)]
+    drv_eng, drv_rus = [], []
+    for p in cells:
+        if p[0].value == 'Наименование драйвера (Eng)':
+            jj = 1
+            while sheet[p[0].row][jj].value and sheet[p[0].row + 1][jj].value:
+                drv_eng.append(sheet[p[0].row][jj].value)
+                drv_rus.append(sheet[p[0].row + 1][jj].value)
+                jj += 1
+    sl_drv = dict(zip(drv_eng, drv_rus))
     ff = open('file_plc.txt', 'w', encoding='UTF-8')
     ff.close()
     '''Далее для всех контроллеров, что нашли, делаем'''
@@ -315,6 +329,41 @@ try:
         if 'ТР' in sl_CPU_spec[i]:
             tmp_subgroup += tmp_tr_ps90.rstrip()
 
+        '''Драйвера в составе System'''
+        sheet = book['Драйвера']
+        cells = sheet['A1': 'N' + str(sheet.max_row)]
+        '''
+        for jj in range(len(cells[0])):
+            print(jj, multiple_replace(cells[0][jj].value))  #
+        '''
+        sl_CPU_one = is_load_drv(controller=i, cell=cells, alg_name=is_f_ind(cells[0], 'Алгоритмическое имя'),
+                                 name_par=is_f_ind(cells[0], 'Наименование параметра'),
+                                 eunit=is_f_ind(cells[0], 'Единица измерения'),
+                                 type_sig=is_f_ind(cells[0], 'Тип'),
+                                 type_msg=is_f_ind(cells[0], 'Тип сообщения'),
+                                 c_on=is_f_ind(cells[0], 'Цвет при наличии'),
+                                 c_off=is_f_ind(cells[0], 'Цвет при отсутствии'),
+                                 f_dig=is_f_ind(cells[0], 'Число знаков'),
+                                 cpu=is_f_ind(cells[0], 'CPU'))
+        if sl_CPU_one:
+            sl_drv_cpu = {}
+            for key in sl_CPU_one:
+                if key[0] in sl_drv:
+                    v = (key[0], sl_drv[key[0]])
+                    if v not in sl_drv_cpu:
+                        sl_drv_cpu[v] = [[key[1], *sl_CPU_one[key]]]
+                    else:
+                        sl_drv_cpu[v].append([key[1], *sl_CPU_one[key]])
+            # print(sl_drv)
+            # print(sl_drv_cpu[('DRV_EF_Rtg', 'Расходомер ТГ')])
+            tmp_sub_drv = ''
+            for drv in sl_drv_cpu:
+                tmp_line_ = is_create_objects_drv(sl_drv_cpu=sl_drv_cpu, tuple_name_drv=drv,
+                                                  template_text=tmp_drv_par)
+                tmp_sub_drv += Template(tmp_group).substitute(name_group=drv[0], objects=tmp_line_)
+
+            tmp_subgroup += Template(tmp_group).substitute(name_group='DRV', objects=tmp_sub_drv)
+
         '''Формируем подгруппу'''
         if tmp_subgroup != '':
             with open('file_out_group.txt', 'a', encoding='UTF-8') as f:
@@ -380,7 +429,7 @@ try:
 
 except (Exception, KeyError):
 
-    logging.basicConfig(filename='app.log', filemode='a', datefmt='%d.%m.%y %H:%M:%S',
+    logging.basicConfig(filename='error.log', filemode='a', datefmt='%d.%m.%y %H:%M:%S',
                         format='%(levelname)s - %(message)s - %(asctime)s')
     logging.exception("Ошибка выполнения")
     print('Произошла ошибка выполнения')

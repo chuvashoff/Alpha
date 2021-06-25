@@ -40529,4 +40529,1096 @@
     <index>6743</index>
     <category>DataCategory_GTU_NoArcDiscrete</category>
   </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.qboSet</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1666</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.qbiOn</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1667</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.qbiOff</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1668</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl0</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1669</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl1</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1670</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl2</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1671</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl3</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1672</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl4</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1673</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl5</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1674</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl6</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1675</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl7</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1676</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qsl8</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1677</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl0</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1678</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl1</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1679</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl2</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1680</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl3</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1681</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl4</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1682</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl5</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1683</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl6</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1684</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl7</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1685</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Esl8</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1686</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl0</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1687</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl1</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1688</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl2</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1689</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl3</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1690</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl4</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1691</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl5</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1692</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl6</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1693</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl7</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1694</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qrl8</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1695</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl0</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1696</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl1</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1697</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl2</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1698</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl3</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1699</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl4</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1700</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl5</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1701</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl6</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1702</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl7</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1703</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Erl8</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1704</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qdraw</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1707</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Edraw</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1708</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixNst</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1710</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixdPconf</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1711</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixPin</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1712</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixPout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1713</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixSurgeRes</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1714</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixT1n</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1715</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixSET_APK</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1716</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixPOS_APK</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1717</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixE</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1718</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixQ1n</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1719</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixQgdx</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1720</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixEgdx</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1721</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixNnorm</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1722</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fixRo_in</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1723</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.SA_dNst</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1724</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.SA_ddPconf</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1725</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Pos</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1734</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Nst</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1735</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.dPconf</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1737</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Pout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1738</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Pin</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1739</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.T1n</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1740</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.LowLimSR</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1743</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.HiLimP</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1744</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.HiLimE</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1745</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.SurRes</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1746</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.PR</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1747</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qn</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1748</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Qgdx</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1749</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.NstNorm</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1750</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.SetRU</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1751</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.Set</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1752</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.sSetRU</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1756</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fPos</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>448</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.pFastOpen</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>459</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.pMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>462</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.pDraw</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>463</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.pRiseUp</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>464</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.aSurge</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>465</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.aPreSurge</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>466</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wMainF</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>467</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wRes1F</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>468</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wRes2F</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>469</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wAprF</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>470</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wSABrk</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>471</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wTest</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>472</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wFastOpen</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>473</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wMaxDropSR</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>474</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wMaxRaisePout</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>475</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wLowSR</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>476</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wDSRCalcBrk</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>477</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wDPCalcBrk</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>478</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wDownLimSR</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>479</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wUpLimPout</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>480</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wUpLimE</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>481</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wInit_SR</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>482</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wInit_P</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>483</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wInit_E</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>484</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wRiseUpMode</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>485</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wRiseUpBrk</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>486</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wLowSRtoM</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>487</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wLowNSTtoM</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>488</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wDistortAPK</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>489</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wRU</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>490</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stWork</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>491</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.fFlt</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>492</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>493</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stOff</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>494</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stOng</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>495</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stOffg</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>496</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.TurnUp</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>497</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coFastOpen</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>499</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coHeatOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>500</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coHeatOff</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>501</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coRiseUpOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>502</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coRiseUpOff</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>503</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coSurgeTestBegin</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>504</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coSurgeTestEnd</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>505</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coManOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>506</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.coManOff</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>507</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.sStartDraw</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>508</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.sResDraw</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>509</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.sAPKFeedBack</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>512</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.sSAsignOR</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>514</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.wPinF</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>522</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K2main.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1838</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K1main.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1839</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K0main.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1840</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K2res1.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1841</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K1res1.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1842</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K0res1.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1843</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K2res2.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1844</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K1res2.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1845</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.K0res2.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1846</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Kconf.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1847</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Nnom.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1848</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Dv.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1849</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Mv.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1850</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxNstNorm.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1851</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MinNstNorm.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1852</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Set_SurgeRes.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1853</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxRatedPconf.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1854</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxRateNst.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1855</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.DZ_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1859</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Set_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1860</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.UpDZ_P.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1861</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Decline_P.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1862</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Set_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1863</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.UpDZ_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1864</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Decline_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1865</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxDropSR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1866</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step1APK_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1867</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step2APK_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1868</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxRaisePout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1869</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step1APK_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1870</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step2APK_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1871</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxLowSR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1872</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step1APK_LowSR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1873</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Step2APK_LowSR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1874</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Kp_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1875</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Ti_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1876</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Td_SR.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1877</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Kp_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1878</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Ti_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1879</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Td_Pout.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1880</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Kp_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1881</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Ti_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1882</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Td_E.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1883</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.DZ_APK.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1884</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeOpenRU.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1885</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeCloseRU.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1886</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeCloseTest.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1887</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeCloseRiseUp.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1888</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.MaxNstRiseUp.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1889</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.RiseUpZone.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1890</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeOpenAuto.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1891</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.TimeCloseAuto.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1892</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.Tuning.Nst_MIN.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1898</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.qbiHeat</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>6915</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.qboHeat</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>6916</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>APR.IM.stHeat</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>6375</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
 </root>

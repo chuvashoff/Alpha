@@ -177,6 +177,34 @@ def create_group_tr(sl_global, template_no_arc_index, pref_par, source):
     return s_out
 
 
+def create_group_apr(sl_global, sl_global_fast, template_no_arc_index, template_arc_index, pref_par, source):
+    sl_data_cat = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Discrete'
+    }
+    sl_type = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Bool'
+    }
+    s_out = ''
+    for key, value in sl_global.items():
+        if f'FAST|AO_APR_{key}' in sl_global_fast:
+            value[0] = sl_global_fast[f'FAST|AO_APR_{key}']
+            a = key
+            temp = template_arc_index
+            pref_arc = 'Arc'
+        else:
+            a = key
+            temp = template_no_arc_index
+            pref_arc = f'NoArc{sl_data_cat[value[1]]}'
+        s_out += Template(temp).substitute(name_signal=f'{pref_par}.{a}',
+                                           type_signal=sl_type[value[1]], index=value[0],
+                                           data_category=f'DataCategory_{source}_{pref_arc}')
+    return s_out
+
+
 def create_group_alr(sl_global_alr, template_arc_index, source):
     sl_type = {
         'R': 'Analog',
@@ -304,11 +332,16 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             s_all = ''
 
             lst_tr_par = []
+            lst_apr_par = []
             sl_global_tr = {}
+            sl_global_apr = {}
 
             if 'ТР' in sl_cpu_spec[line_source[0]]:
                 with open(os.path.join(os.path.dirname(__file__), 'Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
                     lst_tr_par = f_tr.read().split('\n')
+            if 'АПР' in sl_cpu_spec[line_source[0]]:
+                with open(os.path.join(os.path.dirname(__file__), 'Template', 'APR_par'), 'r', encoding='UTF-8') as f_:
+                    lst_apr_par = f_.read().split('\n')
 
             '''Если есть файл аналогов'''
             if os.path.isfile(os.path.join(line_source[1], '0_par_A.st')):
@@ -515,6 +548,17 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                             if f"DIS.{line[0][line[0].find('|') + 1:]}" in lst_tr_par:
                                 sl_global_tr[f"DIS.{line[0][line[0].find('|') + 1:]}"] = [max(int(line[9]),
                                                                                               int(line[10])), line[1]]
+                        elif 'APR|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            if line[0][line[0].find('|') + 1:].replace('[', '').replace(']', '') in lst_apr_par:
+                                key_apr = f"IM.{line[0][line[0].find('|') + 1:].replace('[', '').replace(']', '')}"
+                                sl_global_apr[key_apr] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'sTunings' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            if f"Tuning.{line[0][line[0].find('|') + 1:]}" in lst_apr_par:
+                                key_apr = f"Tuning.{line[0][line[0].find('|') + 1:]}.Value"
+                                sl_global_apr[key_apr] = [max(int(line[9]), int(line[10])), line[1]]
 
                         if 'FAST|' in line:
                             line = line.split(',')
@@ -548,114 +592,102 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             sl_global_wrn.update(sl_wrn_di)
 
             # print(line_source[0], len(sl_global_pz))
-            '''Объединяем множества ИМ в одно для накопления наработок'''
+            # Объединяем множества ИМ в одно для накопления наработок
             for jj in [set_cnt_im1x0, set_cnt_im1x1, set_cnt_im1x2, set_cnt_im2x2]:
                 set_all_im.update(jj)
             sl_global_cnt = {key: value for key, value in sl_global_cnt.items() if key in set_all_im}
 
             sl_global_alr = {key: value for key, value in sl_global_alr.items() if key in set_tmp_alr}
 
-            '''Обработка и запись в карту аналогов'''
-
+            # Обработка и запись в карту аналогов
             if sl_global_ai and sl_tmp_ai:
                 s_all += create_group_par(sl_global_ai, sl_tmp_ai, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                           'AI', line_source[0])
 
-            '''Обработка и запись в карту расчётных'''
-
+            # Обработка и запись в карту расчётных
             if sl_global_ae and sl_tmp_ae:
                 s_all += create_group_par(sl_global_ae, sl_tmp_ae, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                           'AE', line_source[0])
 
-            '''Обработка и запись в карту дискретных'''
-
+            # Обработка и запись в карту дискретных
             if sl_global_di and sl_tmp_di:
                 s_all += create_group_par(sl_global_di, sl_tmp_di, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                           'DI', line_source[0])
 
-            '''Обработка и запись в карту ИМ1x0'''
+            # Обработка и запись в карту ИМ1x0
 
             if sl_global_im1x0 and sl_tmp_im1x0:
                 s_all += create_group_im(sl_global_im1x0, sl_tmp_im1x0, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                          line_source[0])
 
-            '''Обработка и запись в карту ИМ1x1'''
-
+            # Обработка и запись в карту ИМ1x1
             if sl_global_im1x1 and sl_tmp_im1x1:
                 s_all += create_group_im(sl_global_im1x1, sl_tmp_im1x1, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                          line_source[0])
 
-            '''Обработка и запись в карту ИМ1x2'''
-
+            # Обработка и запись в карту ИМ1x2
             if sl_global_im1x2 and sl_tmp_im1x2:
                 s_all += create_group_im(sl_global_im1x2, sl_tmp_im1x2, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                          line_source[0])
 
-            '''Обработка и запись в карту ИМ2x2'''
-
+            # Обработка и запись в карту ИМ2x2
             if sl_global_im2x2 and sl_tmp_im2x2:
                 s_all += create_group_im(sl_global_im2x2, sl_tmp_im2x2, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                          line_source[0])
 
-            '''Обработка и запись в карту ИМ_АО'''
-
+            # Обработка и запись в карту ИМ_АО
             if sl_global_im_ao and sl_tmp_im_ao:
                 s_all += create_group_im(sl_global_im_ao, sl_tmp_im_ao, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                          line_source[0])
 
-            '''Обработка и запись в карту кнопок'''
-
+            # Обработка и запись в карту кнопок
             if sl_global_btn and sl_tmp_btn:
                 s_all += create_group_btn(sl_global_btn, sl_tmp_btn, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту наработок'''
-
+            # Обработка и запись в карту наработок
             if sl_global_cnt:
                 s_all += create_group_system_sig('CNT', sl_global_cnt, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту ALR'''
-
+            # Обработка и запись в карту ALR
             if sl_global_alr:
                 s_all += create_group_alr(sl_global_alr, tmp_ind_arc, line_source[0])
 
-            '''Обработка и запись в карту ALG'''
-
+            # Обработка и запись в карту ALG
             if sl_global_alg:
                 s_all += create_group_system_sig('ALG', sl_global_alg, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту Режимы'''
-
+            # Обработка и запись в карту Режимы
             if sl_global_mod:
                 s_all += create_group_system_sig('MODES', sl_global_mod, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту PPU'''
-
+            # Обработка и запись в карту PPU
             if sl_global_ppu:
                 s_all += create_group_system_sig('PPU', sl_global_ppu, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту TS'''
-
+            # Обработка и запись в карту TS
             if sl_global_ts:
                 s_all += create_group_system_sig('TS', sl_global_ts, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту WRN'''
-
+            # Обработка и запись в карту WRN
             if sl_global_wrn:
                 s_all += create_group_system_sig('WRN', sl_global_wrn, tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту Защит(PZ)'''
-
+            # Обработка и запись в карту Защит(PZ)
             if sl_global_pz and len(sl_pz_anum[line_source[0]]) != 1:
                 s_all += create_group_pz(sl_global_pz, lst_pz, sl_pz_anum[line_source[0]], tmp_ind_no_arc, line_source[0])
 
-            '''Обработка и запись в карту уставок'''
+            # Обработка и запись в карту уставок
             if sl_global_set and sl_tmp_set:
                 s_all += create_group_par(sl_global_set, sl_tmp_set, sl_global_fast, tmp_ind_arc, tmp_ind_no_arc,
                                           'System.SET', line_source[0])
 
-            '''Обработка и запись в карту ТР'''
+            # Обработка и запись в карту ТР
             if sl_global_tr:
                 s_all += create_group_tr(sl_global_tr, tmp_ind_no_arc, 'System.TR', line_source[0])
+
+            if sl_global_apr:
+                s_all += create_group_apr(sl_global_apr, sl_global_fast, tmp_ind_no_arc, tmp_ind_arc, 'APR',
+                                          line_source[0])
 
             with open(f'trei_map_{line_source[0]}.xml', 'w') as f_out:
                 f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')
