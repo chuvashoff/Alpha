@@ -16,7 +16,7 @@ try:
 
     file_config = 'UnimodCreate.xlsm'
 
-    '''Ищем файл конфигуратора в указанном каталоге'''
+    # Ищем файл конфигуратора в указанном каталоге
     for file in os.listdir(path_config):
         if file.endswith('.xlsm') or file.endswith('.xls'):
             file_config = file
@@ -34,6 +34,7 @@ try:
     lst_all_mod = []
     lst_all_alg = []
     sl_all_pz = {}
+    sl_for_diag = {}
 
     '''Считываем файл-шаблон для AI  AE SET'''
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
@@ -137,7 +138,8 @@ try:
             sheet_run = book[jj]
             cells_run = sheet_run['A1': 'O' + str(sheet_run.max_row)]
             for p in cells_run:
-                if p[is_f_ind(cells_run[0], 'CPU')].value == i and p[is_f_ind(cells_run[0], 'Нестандартный канал')].value == 'Нет':
+                if p[is_f_ind(cells_run[0], 'CPU')].value == i and \
+                        p[is_f_ind(cells_run[0], 'Нестандартный канал')].value == 'Нет':
                     tmp_ind = int(p[is_f_ind(cells_run[0], 'Номер канала')].value) - 1
                     sl_modules_cpu[p[is_f_ind(cells_run[0], 'Номер модуля')].value][1][tmp_ind] = \
                         is_cor_chr(p[is_f_ind(cells_run[0], 'Наименование параметра')].value)
@@ -148,6 +150,12 @@ try:
 
             with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
                 f.write(Template(tmp_group).substitute(name_group='Diag', objects=tmp_line_.rstrip()))
+
+            # для каждого контроллера сначала создаём пустой словарь в словаре
+            sl_for_diag[i] = {}
+            # далее проходим по локальному словарю и для каждого модуля грузим {алг.имя модуля: тип модуля}
+            for jj in sl_modules_cpu:
+                sl_for_diag[i].update({jj: sl_modules_cpu[jj][0]})
 
         '''Измеряемые'''
         sheet = book['Измеряемые']  # .worksheets[3]
@@ -396,7 +404,8 @@ try:
                                                         ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
                                                         ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
                                                         dp_app=tmp_line_)
-                with open(os.path.join(os.path.dirname(__file__), 'File_out', f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                with open(os.path.join(os.path.dirname(__file__), 'File_out',
+                                       f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
                           'w', encoding='UTF-8') as f:
                     f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
                 num_obj_plc += 1
@@ -422,9 +431,11 @@ try:
     '''os.remove('file_out_objects.txt')'''
     os.remove('file_app_out.txt')
     print(datetime.datetime.now())
-
+    # for k in sl_for_diag:
+    #    print(k, sl_for_diag[k])
+    # print()
     create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn,
-                 sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec)
+                 sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag)
     print(datetime.datetime.now())
 
 except (Exception, KeyError):

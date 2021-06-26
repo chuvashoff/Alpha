@@ -328,7 +328,7 @@ sl_modules = {
     'M903E': 'CPU',
     'M991E': 'CPU'
 }
-'''Считываем файлы-шаблоны для диагностики модулей'''
+# Считываем файлы-шаблоны для диагностики модулей
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_m547a'), 'r', encoding='UTF-8') as f:
     tmp_m547a = f.read()
 with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_m537v_m932c_2n'), 'r', encoding='UTF-8') as f:
@@ -348,7 +348,7 @@ sl_type_modules = {
     'M991E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
     'M547A': 'Types.DIAG_M547A.DIAG_M547A_PLC_View',
     'M537V': 'Types.DIAG_M537V.DIAG_M537V_PLC_View',
-    'M932C_2N': 'Types.DIAG_M537V.DIAG_M537V_PLC_View',
+    'M932C_2N': 'Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View',
     'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
     'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View'
 }

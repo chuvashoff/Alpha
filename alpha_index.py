@@ -13,7 +13,7 @@ def create_sl(text, str_check):
                 sl_tmp[i[:i.find('(')]] = int(i[i.rfind('(') + 1:i.rfind(')')])
 
     sl_tmp = {key: value for key, value in sl_tmp.items() if f'FAST|{key}' not in sl_tmp}
-    '''В словаре sl_tmp лежит индекс массива: алг имя (в том числе FAST|+)'''
+    # В словаре sl_tmp лежит индекс массива: алг имя (в том числе FAST|+)
     sl_tmp = {value: key for key, value in sl_tmp.items()}
     return sl_tmp
 
@@ -28,7 +28,7 @@ def create_sl_im(text):
         if 'IM|' in i and '//' not in i and ('WorkTime' in i or 'Swap' in i) and 'TCycle' not in i:
             aa = i.split(':=')[0].strip()
             cnt_set.add(aa[aa.find('|')+1:])
-    '''В словаре sl_tmp лежит индекс массива: алг имя; в cnt_set лежат используемые наработки'''
+    # В словаре sl_tmp лежит индекс массива: алг имя; в cnt_set лежат используемые наработки
     return sl_tmp, cnt_set
 
 
@@ -38,7 +38,7 @@ def create_sl_pz(text):
         if 'FAST|ALR_' in i and '//' not in i:
             a = i.split(':=')[0].strip()
             tmp_set.add(a[a.find('_') + 1:])
-    '''в множестве tmp_set лежат используемые аварии'''
+    # в множестве tmp_set лежат используемые аварии
     return tmp_set
 
 
@@ -251,7 +251,29 @@ def create_group_pz(sl_global_pz, lst_pz, sl_pz_anum, template_no_arc_index, sou
     return s_out
 
 
-def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec):
+def create_group_diag(diag_sl, template_no_arc_index, source):
+    sl_data_cat = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Discrete'
+    }
+    sl_type = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Bool'
+    }
+    s_out = ''
+    for key, value in diag_sl.items():
+        module = key[0]
+        signal = key[1]
+        pref_arc = f'NoArc{sl_data_cat[value[1]]}'
+        s_out += Template(template_no_arc_index).substitute(name_signal=f'Diag.HW.{module}.{signal}',
+                                                            type_signal=sl_type[value[1]], index=value[0],
+                                                            data_category=f'DataCategory_{source}_{pref_arc}')
+    return s_out
+
+
+def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec, sl_diag):
     # Считываем шаблоны для карты
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f:
         tmp_ind_arc = f.read()
@@ -301,6 +323,20 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
     lst_set = (
         'ceSP', 'seSP', 'soSP', 'Value', 'caRegOn', 'fParam', 'NoLink', 'sHighLim', 'sLowLim', 'vPar'
     )
+    sl_module_diag_sig = {
+        'M547A': ('Canal_', 'Err_Canal_', 'Err_izm_AC', 'Err_kalib_AC', 'Err_line_AC', 'Err_voltage_AC', 'Line1_E',
+                  'Line2_E', 'Err_lin', 'Metro_Canal_', 'No_powe', 'Parameter_Canal_', 'Work_Ti', 'Reset_co', 'Timeo'),
+        'M537V': ('Canal_', 'Err_Canal_', 'Metro_Canal_', 'Err_lin', 'Line1_E', 'Line2_E', 'Parameter_Canal_',
+                  'Work_Ti', 'Reset_co', 'Timeo', 'Err_C', 'No_powe', 'Default_Canal_'),
+        'M557D': ('Canal_', 'Work_Ti', 'Reset_co', 'Timeo', 'Err_lin', 'Line1_E', 'Line2_E', 'No_powe'),
+        'M557O': ('Canal_', 'Work_Ti', 'Reset_co', 'Timeo', 'Err_lin', 'Line1_E', 'Line2_E', 'Default_Canal_', 'Peregr',
+                  'No_Canal_pow', 'No_powe'),
+        'M932C_2N': ('Err_lin', 'Line1_E', 'Line2_E', 'Err_U1_C01', 'Err_U2_C01', 'Err_U3_C01',
+                     'Err_U4_C01', 'Err_U5_C01', 'Err_U6_C01', 'Err_U7_C01', 'Err_U8_C01', 'Err_ha', 'Metro_Unit_01',
+                     'Metro_Unit_02', 'Metro_Unit_03', 'Metro_Unit_04', 'Metro_Unit_05', 'Metro_Unit_06',
+                     'Metro_Unit_07', 'Metro_Unit_08', 'U1_C01', 'U2_C01', 'U2_C01', 'U3_C01', 'U4_C01', 'U4_C01',
+                     'U5_C01', 'U5_C01', 'U6_C01', 'U7_C01', 'U8_C01', 'Work_Ti', 'Reset_co', 'Timeo')
+    }
 
     with open('Source_list_plc', 'r', encoding='UTF-8') as f:
         while 8:
@@ -335,6 +371,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             lst_apr_par = []
             sl_global_tr = {}
             sl_global_apr = {}
+            sl_gloabal_diag = {}
 
             if 'ТР' in sl_cpu_spec[line_source[0]]:
                 with open(os.path.join(os.path.dirname(__file__), 'Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
@@ -343,55 +380,55 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                 with open(os.path.join(os.path.dirname(__file__), 'Template', 'APR_par'), 'r', encoding='UTF-8') as f_:
                     lst_apr_par = f_.read().split('\n')
 
-            '''Если есть файл аналогов'''
+            # Если есть файл аналогов
             if os.path.isfile(os.path.join(line_source[1], '0_par_A.st')):
                 with open(os.path.join(line_source[1], '0_par_A.st')) as f_par_a:
                     text = f_par_a.read().split('\n')
                 sl_tmp_ai = create_sl(text, 'AI_')
 
-            '''Если есть файл расчётных'''
+            # Если есть файл расчётных
             if os.path.isfile(os.path.join(line_source[1], '0_par_Evl.st')):
                 with open(os.path.join(line_source[1], '0_par_Evl.st')) as f_par_evl:
                     text = f_par_evl.read().split('\n')
                 sl_tmp_ae = create_sl(text, 'AE_')
 
-            '''Если есть файл дискретных'''
+            # Если есть файл дискретных
             if os.path.isfile(os.path.join(line_source[1], '0_par_D.st')):
                 with open(os.path.join(line_source[1], '0_par_D.st')) as f_par_d:
                     text = f_par_d.read().split('\n')
                 sl_tmp_di = create_sl(text, 'DI_')
 
-            '''Если есть файл ИМ_1x0'''
+            # Если есть файл ИМ_1x0
             if os.path.isfile(os.path.join(line_source[1], '0_IM_1x0.st')):
                 with open(os.path.join(line_source[1], '0_IM_1x0.st')) as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x0, set_cnt_im1x0 = create_sl_im(text)
 
-            '''Если есть файл ИМ_1x1'''
+            # Если есть файл ИМ_1x1
             if os.path.isfile(os.path.join(line_source[1], '0_IM_1x1.st')):
                 with open(os.path.join(line_source[1], '0_IM_1x1.st')) as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x1, set_cnt_im1x1 = create_sl_im(text)
 
-            '''Если есть файл ИМ_1x2'''
+            # Если есть файл ИМ_1x2
             if os.path.isfile(os.path.join(line_source[1], '0_IM_1x2.st')):
                 with open(os.path.join(line_source[1], '0_IM_1x2.st')) as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x2, set_cnt_im1x2 = create_sl_im(text)
 
-            '''Если есть файл ИМ_2x2'''
+            # Если есть файл ИМ_2x2
             if os.path.isfile(os.path.join(line_source[1], '0_IM_2x2.st')):
                 with open(os.path.join(line_source[1], '0_IM_2x2.st')) as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im2x2, set_cnt_im2x2 = create_sl_im(text)
 
-            '''Если есть файл ИМ_АО'''
+            # Если есть файл ИМ_АО
             if os.path.isfile(os.path.join(line_source[1], '0_IM_AO.st')):
                 with open(os.path.join(line_source[1], '0_IM_AO.st')) as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im_ao, bla_ = create_sl_im(text)
 
-            '''Если есть файл кнопок'''
+            # Если есть файл кнопок
             if os.path.isfile(os.path.join(line_source[1], '0_BTN.st')):
                 with open(os.path.join(line_source[1], '0_BTN.st')) as f_btn:
                     text = f_btn.read().split('\n')
@@ -400,25 +437,23 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                         a = i.split(',')[0]
                         sl_tmp_btn[int(a[a.find('(')+1:])] = a[:a.find('(')]
 
-            '''Если есть файл защит PZ'''
+            # Если есть файл защит PZ
             if os.path.isfile(os.path.join(line_source[1], '0_PZ.st')):
                 with open(os.path.join(line_source[1], '0_PZ.st')) as f_pz:
                     text = f_pz.read().split('\n')
                 set_tmp_alr = create_sl_pz(text)
 
-            '''Если есть файл уставок'''
+            # Если есть файл уставок
             if os.path.isfile(os.path.join(line_source[1], '0_Par_Set.st')):
                 with open(os.path.join(line_source[1], '0_Par_Set.st')) as f_set:
                     text = f_set.read().split('\n')
                 sl_tmp_set = create_sl(text, 'SP_')
 
-            '''Если есть глобальный словарь'''
+            # Если есть глобальный словарь
             if os.path.isfile(os.path.join(line_source[1], 'global0.var')):
                 with open(os.path.join(line_source[1], 'global0.var')) as f_global:
-                    while 8:
-                        line = f_global.readline().strip()
-                        if not line:
-                            break
+                    for line in f_global:
+                        line = line.strip()
                         if 'A_INP|' in line and len(line.split(',')) >= 10:
                             line = line.split(',')
                             if 'msg' not in line[0]:
@@ -507,11 +542,13 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
 
                         elif 'ALG|' in line and len(line.split(',')) >= 10:
                             line = line.split(',')
-                            sl_global_alg[f"ALG_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])), line[1]]
+                            sl_global_alg[f"ALG_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])),
+                                                                                     line[1]]
 
                         elif 'GRH|' in line and len(line.split(',')) >= 10:  # в новом конфигураторе - в ветку GRH.
                             line = line.split(',')
-                            sl_global_alg[f"GRH_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])), line[1]]
+                            sl_global_alg[f"GRH_{line[0][line[0].find('|')+1:]}"] = [max(int(line[9]), int(line[10])),
+                                                                                     line[1]]
 
                         elif 'MOD|' in line and len(line.split(',')) >= 10:
                             line = line.split(',')
@@ -562,9 +599,9 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
 
                         if 'FAST|' in line:
                             line = line.split(',')
-                            '''В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной'''
+                            # В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной
                             sl_global_fast[line[0][1:]] = max(int(line[9]), int(line[10]))
-            '''В словаре sl_global_ai лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]'''
+            # В словаре sl_global_ai лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]
             sl_global_ai = {key: value for key, value in sl_global_ai.items() if key[:key.find('[')] in lst_ai}
             sl_global_ae = {key: value for key, value in sl_global_ae.items() if key[:key.find('[')] in lst_ae}
             for key, value in sl_global_di.items():
@@ -674,7 +711,8 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
 
             # Обработка и запись в карту Защит(PZ)
             if sl_global_pz and len(sl_pz_anum[line_source[0]]) != 1:
-                s_all += create_group_pz(sl_global_pz, lst_pz, sl_pz_anum[line_source[0]], tmp_ind_no_arc, line_source[0])
+                s_all += create_group_pz(sl_global_pz, lst_pz, sl_pz_anum[line_source[0]], tmp_ind_no_arc,
+                                         line_source[0])
 
             # Обработка и запись в карту уставок
             if sl_global_set and sl_tmp_set:
@@ -685,9 +723,37 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             if sl_global_tr:
                 s_all += create_group_tr(sl_global_tr, tmp_ind_no_arc, 'System.TR', line_source[0])
 
+            # Обработка и запись в карту АПР
             if sl_global_apr:
                 s_all += create_group_apr(sl_global_apr, sl_global_fast, tmp_ind_no_arc, tmp_ind_arc, 'APR',
                                           line_source[0])
+
+            # повторно открываем глобальный словарь контроллера для сбора диагностики (здесь немного по-другому читаем)
+            if os.path.isfile(os.path.join(line_source[1], 'global0.var')):
+                with open(os.path.join(line_source[1], 'global0.var')) as f_global:
+                    while 8:
+                        line = f_global.readline().strip()
+                        if not line:
+                            break
+                        if line.split(',')[0][1:] in sl_diag[line_source[0]]:
+                            module = line.split(',')[0][1:]
+                            while 8:
+                                tmp_line = f_global.readline().strip()
+                                if tmp_line == '/':  # конец описания модуля отделяется двумя строками по / в каждой
+                                    tmp_line = f_global.readline().strip()
+                                    if tmp_line == '/':
+                                        break
+                                curr_module = sl_diag[line_source[0]][module]
+                                if tmp_line.split(',')[0][1:-2] in sl_module_diag_sig[curr_module] or \
+                                        tmp_line.split(',')[0][1:] in sl_module_diag_sig[curr_module]:
+
+                                    # в словаре диагностики (алг.имя модуля, имя пер) : [инд. пер, тип пер]
+                                    sl_gloabal_diag[(module, tmp_line.split(',')[0][1:])] = \
+                                        [max(int(tmp_line.split(',')[9]), int(tmp_line.split(',')[10])),
+                                         tmp_line.split(',')[1]]
+            if sl_gloabal_diag:
+                s_all += create_group_diag(diag_sl=sl_gloabal_diag, template_no_arc_index=tmp_ind_no_arc,
+                                           source=line_source[0])
 
             with open(f'trei_map_{line_source[0]}.xml', 'w') as f_out:
                 f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')

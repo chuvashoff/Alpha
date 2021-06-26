@@ -41621,4 +41621,3118 @@
     <index>6375</index>
     <category>DataCategory_GTU_NoArcDiscrete</category>
   </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3465</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3466</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3467</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3468</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3469</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3470</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3471</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3472</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3473</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3474</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3475</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3476</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3477</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3478</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3479</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3480</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3481</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3482</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3483</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Metro_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3484</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3485</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3486</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3487</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3488</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3489</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3490</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3491</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3492</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3493</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3494</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3495</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3496</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3497</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3498</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3499</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Parameter_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3500</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3502</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2085</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2086</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2087</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2088</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_izm_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2092</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_kalib_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2093</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_line_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2094</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_voltage_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2095</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_izm_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2096</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_kalib_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2097</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_line_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2098</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_voltage_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2099</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3503</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3504</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3505</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3506</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3507</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3508</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3509</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3510</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3511</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3512</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3513</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3514</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3515</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3516</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3517</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3518</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3519</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3520</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3521</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3522</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3523</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3524</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3525</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3526</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3527</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3528</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3529</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3530</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3531</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3532</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3533</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_2.Err_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3534</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3556</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3557</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3558</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3559</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3560</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3561</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3562</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3563</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3564</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3565</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3566</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3567</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3568</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3569</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3570</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3571</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3572</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3573</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3574</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Metro_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3575</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3576</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3577</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3578</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3579</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3580</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3581</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3582</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3583</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3584</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3585</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3586</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3587</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3588</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3589</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3590</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Parameter_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3591</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3593</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2101</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2102</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2103</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2104</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_izm_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2108</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_kalib_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2109</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_line_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2110</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_voltage_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2111</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_izm_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2112</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_kalib_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2113</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_line_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2114</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_voltage_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2115</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3594</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3595</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3596</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3597</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3598</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3599</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3600</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3601</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3602</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3603</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3604</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3605</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3606</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3607</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3608</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3609</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3610</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3611</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3612</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3613</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3614</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3615</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3616</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3617</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3618</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3619</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3620</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3621</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3622</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3623</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3624</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_3.Err_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3625</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3647</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3648</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3649</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3650</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3651</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3652</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3653</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3654</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3655</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3656</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3657</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3658</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3659</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3660</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3661</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3662</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3663</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3664</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3665</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Metro_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3666</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3667</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3668</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3669</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3670</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3671</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3672</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3673</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3674</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3675</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3676</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3677</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3678</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3679</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3680</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3681</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Parameter_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3682</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3684</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2117</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2118</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2119</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2120</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_izm_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2124</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_kalib_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2125</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_line_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2126</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_voltage_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2127</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_izm_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2128</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_kalib_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2129</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_line_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2130</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_voltage_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2131</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3685</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3686</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3687</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3688</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3689</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3690</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3691</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3692</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3693</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3694</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3695</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3696</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3697</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3698</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3699</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3700</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3701</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3702</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3703</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3704</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3705</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3706</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3707</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3708</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3709</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3710</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3711</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3712</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3713</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3714</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3715</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_5.Err_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3716</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3740</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3741</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3742</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3743</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3744</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3745</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3746</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3747</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3748</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3749</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3750</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Metro_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3751</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3752</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3753</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3754</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3755</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3756</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3757</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3758</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Parameter_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3759</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3760</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3761</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3762</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3763</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3764</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3765</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3766</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Default_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3767</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3768</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2133</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2134</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2135</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2136</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_CAP</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2137</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3769</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3770</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3771</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3772</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3773</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3774</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3775</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Err_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3776</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3777</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3778</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3779</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3780</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3781</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3782</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3783</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_6.Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3784</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3804</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3805</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3806</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3807</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3872</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2141</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2142</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2143</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2144</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_01</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2148</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_02</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2149</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_03</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2150</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_04</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2151</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_05</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2152</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_06</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2153</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_07</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2154</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_08</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2155</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_09</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2156</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_10</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2157</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_11</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2158</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_12</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2159</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_13</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2160</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_14</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2161</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_15</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2162</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_16</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2163</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_17</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2164</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_18</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2165</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_19</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2166</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_20</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2167</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_21</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2168</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_22</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2169</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_23</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2170</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_24</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2171</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_25</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2172</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_26</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2173</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_27</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2174</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_28</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2175</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_29</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2176</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_30</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2177</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_31</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2178</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_7.Canal_32</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2179</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3894</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3895</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3896</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3897</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_01</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2180</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_02</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2181</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_03</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2182</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_04</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2183</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_05</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2184</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_06</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2185</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_07</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2186</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_08</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2187</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_09</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2188</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_10</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2189</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_11</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2190</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_12</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2191</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_13</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2192</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_14</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2193</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_15</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2194</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_16</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2195</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_17</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2196</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_18</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2197</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_19</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2198</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_20</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2199</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_21</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2200</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_22</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2201</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_23</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2202</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_24</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2203</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_25</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2204</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_26</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2205</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_27</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2206</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_28</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2207</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_29</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2208</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_30</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2209</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_31</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2210</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Default_Canal_32</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2211</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3898</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2213</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2214</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2215</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2216</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Peregruz</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2217</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Peregrev</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2218</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.No_Canal_power</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2219</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_01</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2220</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_02</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2221</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_03</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2222</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_04</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2223</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_05</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2224</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_06</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2225</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_07</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2226</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_08</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2227</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_09</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2228</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_10</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2229</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_11</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2230</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_12</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2231</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_13</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2232</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_14</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2233</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_15</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2234</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_16</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2235</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_17</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2236</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_18</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2237</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_19</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2238</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_20</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2239</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_21</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2240</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_22</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2241</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_23</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2242</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_24</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2243</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_25</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2244</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_26</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2245</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_27</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2246</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_28</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2247</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_29</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2248</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_30</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2249</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_31</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2250</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_8.Canal_32</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2251</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3920</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3921</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3922</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3923</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3924</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3925</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3926</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3927</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3928</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3929</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3930</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3931</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3932</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3933</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3934</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3935</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3936</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3937</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3938</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Metro_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3939</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3940</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3941</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3942</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3943</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3944</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3945</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3946</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3947</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3948</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3949</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3950</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3951</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3952</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3953</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3954</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Parameter_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3955</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3957</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.No_power1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2253</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.No_power2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2254</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2255</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2256</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_izm_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2260</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_kalib_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2261</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_line_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2262</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_voltage_ACP1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2263</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_izm_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2264</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_kalib_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2265</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_line_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2266</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_voltage_ACP2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>2267</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3958</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3959</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3960</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3961</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3962</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3963</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3964</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3965</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3966</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3967</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3968</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3969</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3970</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3971</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3972</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3973</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3974</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3975</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3976</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3977</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3978</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3979</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3980</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3981</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_09</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3982</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_10</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3983</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_11</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3984</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_12</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3985</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_13</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3986</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_14</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3987</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_15</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3988</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_4.Err_Canal_16</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3989</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Work_Time</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7172</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Line1_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7173</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Line2_Err</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7174</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Reset_code</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7175</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7176</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_02</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7177</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_03</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7178</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_04</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7179</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_05</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7180</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_06</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7181</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_07</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7182</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Metro_Unit_08</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7183</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Timeout</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7208</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_line1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>6886</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_line2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>6887</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_hard</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>6890</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U1_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7306</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U2_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7311</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U3_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7316</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U6_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7321</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U7_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7326</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.Err_U8_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7331</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U1_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7337</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U2_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7342</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U3_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7347</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U6_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7352</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U7_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7357</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_1.U8_C01</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7362</index>
+    <category>DataCategory_GTU_NoArcAnalog</category>
+  </item>
 </root>
