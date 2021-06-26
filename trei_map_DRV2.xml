@@ -10445,4 +10445,196 @@
     <index>1137</index>
     <category>DataCategory_DRV2_NoArcAnalog</category>
   </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_9_5</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>446</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_9_4</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>447</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_9_3</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>448</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_9_0</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>449</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_8</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>336</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_24</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>450</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_12</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>451</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_11</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>452</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_7</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>453</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_6</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>454</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_5</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>455</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>456</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_7_0</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>457</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_7</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>458</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_6</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>459</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_5</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>460</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_4</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>461</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_3</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>462</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>463</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_6_0</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>464</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_5_1</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>465</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_5_0</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>466</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_10</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>467</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_9</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>468</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_8</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>469</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_7</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>470</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_6</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>471</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_5</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>472</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_4</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>473</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_3</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>474</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.System44_1_2</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>475</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.CONSUM</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>337</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
 </root>

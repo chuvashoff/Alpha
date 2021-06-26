@@ -337,6 +337,18 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                      'Metro_Unit_07', 'Metro_Unit_08', 'U1_C01', 'U2_C01', 'U2_C01', 'U3_C01', 'U4_C01', 'U4_C01',
                      'U5_C01', 'U5_C01', 'U6_C01', 'U7_C01', 'U8_C01', 'Work_Ti', 'Reset_co', 'Timeo')
     }
+    sl_diag_cpu_sig = {
+        'CHECK_SUM': 'CONSUM', 'RestartCode': 'System44_8', 'CheckSumErr': 'System44_1_2',
+        'DataSizeErr': 'System44_1_3', 'SoftVerErr': 'System44_1_4', 'ValueErr': 'System44_1_5',
+        'FBErr': 'System44_1_6', 'FileErr': 'System44_1_7', 'WriteErr': 'System44_1_8', 'ReadErr': 'System44_1_9',
+        'CPUBlock': 'System44_1_10', 'LowPower': 'System44_5_0', 'LowBatteryPower': 'System44_5_1',
+        'ModErr': 'System44_6_0', 'ChanErr': 'System44_6_1', 'ZerkErr': 'System44_6_3', 'ConfigErr': 'System44_6_4',
+        'RSErr': 'System44_6_5', 'EthernetErr': 'System44_6_6', 'STbusErr': 'System44_6_7',
+        'RuntimeErr': 'System44_7_0', 'ResetMod': 'System44_7_1', 'HWErr': 'System44_7_5',
+        'HWConfErr': 'System44_7_6', 'HWUnitErr': 'System44_7_7', 'ExtComErr': 'System44_7_11',
+        'IntComErr': 'System44_7_12', 'ModuleComErr': 'System44_7_24', 'SoftOk': 'System44_9_0',
+        'SoftStop': 'System44_9_3', 'SoftBlock': 'System44_9_4', 'SoftReserve': 'System44_9_5'
+    }
 
     with open('Source_list_plc', 'r', encoding='UTF-8') as f:
         while 8:
@@ -371,7 +383,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             lst_apr_par = []
             sl_global_tr = {}
             sl_global_apr = {}
-            sl_gloabal_diag = {}
+            sl_global_diag = {}
 
             if 'ТР' in sl_cpu_spec[line_source[0]]:
                 with open(os.path.join(os.path.dirname(__file__), 'Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
@@ -591,11 +603,28 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                                 key_apr = f"IM.{line[0][line[0].find('|') + 1:].replace('[', '').replace(']', '')}"
                                 sl_global_apr[key_apr] = [max(int(line[9]), int(line[10])), line[1]]
 
-                        elif 'sTunings' in line and len(line.split(',')) >= 10:
+                        elif 'sTunings|' in line and len(line.split(',')) >= 10:
                             line = line.split(',')
                             if f"Tuning.{line[0][line[0].find('|') + 1:]}" in lst_apr_par:
                                 key_apr = f"Tuning.{line[0][line[0].find('|') + 1:]}.Value"
                                 sl_global_apr[key_apr] = [max(int(line[9]), int(line[10])), line[1]]
+
+                        elif 'DIAG|' in line and len(line.split(',')) >= 10:
+                            line = line.split(',')
+                            if line[0][line[0].find('|')+1:] in sl_diag_cpu_sig:
+                                module_cpu = sl_diag[line_source[0]]['CPU']
+                                signal_name = sl_diag_cpu_sig[line[0][line[0].find('|')+1:]]
+                                # (алг.имя CPU, имя пер- через словарь соответствия) : [инд. пер, тип пер]
+                                sl_global_diag[(module_cpu, signal_name)] = [max(int(line[9]), int(line[10])), line[1]]
+                            elif 'MODSTAT' in line[0][line[0].find('|')+1:] or \
+                                    'MODERR' in line[0][line[0].find('|')+1:]:
+                                tmp_obr = line[0][line[0].find('|')+1:]
+                                curr_module = tmp_obr[tmp_obr.find('_')+1:]
+                                # доп проверка наличия модуля во входном словаре
+                                if curr_module in sl_diag[line_source[0]]:
+                                    signal_name = tmp_obr[:tmp_obr.find('_')]
+                                    sl_global_diag[(curr_module, signal_name)] = [max(int(line[9]),
+                                                                                      int(line[10])), line[1]]
 
                         if 'FAST|' in line:
                             line = line.split(',')
@@ -736,23 +765,23 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                         if not line:
                             break
                         if line.split(',')[0][1:] in sl_diag[line_source[0]]:
-                            module = line.split(',')[0][1:]
+                            module = line.split(',')[0][1:]  # алгоритмическое имя модуля
                             while 8:
                                 tmp_line = f_global.readline().strip()
                                 if tmp_line == '/':  # конец описания модуля отделяется двумя строками по / в каждой
                                     tmp_line = f_global.readline().strip()
                                     if tmp_line == '/':
                                         break
-                                curr_module = sl_diag[line_source[0]][module]
+                                curr_module = sl_diag[line_source[0]][module]  # тип модуля
                                 if tmp_line.split(',')[0][1:-2] in sl_module_diag_sig[curr_module] or \
                                         tmp_line.split(',')[0][1:] in sl_module_diag_sig[curr_module]:
 
                                     # в словаре диагностики (алг.имя модуля, имя пер) : [инд. пер, тип пер]
-                                    sl_gloabal_diag[(module, tmp_line.split(',')[0][1:])] = \
+                                    sl_global_diag[(module, tmp_line.split(',')[0][1:])] = \
                                         [max(int(tmp_line.split(',')[9]), int(tmp_line.split(',')[10])),
                                          tmp_line.split(',')[1]]
-            if sl_gloabal_diag:
-                s_all += create_group_diag(diag_sl=sl_gloabal_diag, template_no_arc_index=tmp_ind_no_arc,
+            if sl_global_diag:
+                s_all += create_group_diag(diag_sl=sl_global_diag, template_no_arc_index=tmp_ind_no_arc,
                                            source=line_source[0])
 
             with open(f'trei_map_{line_source[0]}.xml', 'w') as f_out:
