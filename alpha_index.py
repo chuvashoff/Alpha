@@ -1,5 +1,6 @@
 import os
 import re
+# import difflib
 from string import Template
 
 
@@ -416,56 +417,56 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                     lst_apr_par = f_.read().split('\n')
 
             # Если есть файл аналогов
-            if os.path.isfile(os.path.join(line_source[1], '0_par_A.st')):
-                with open(os.path.join(line_source[1], '0_par_A.st')) as f_par_a:
+            if os.path.exists(os.path.join(line_source[1], '0_par_A.st')):
+                with open(os.path.join(line_source[1], '0_par_A.st'), 'rt') as f_par_a:
                     text = f_par_a.read().split('\n')
                 sl_tmp_ai = create_sl(text, 'AI_')
 
             # Если есть файл расчётных
-            if os.path.isfile(os.path.join(line_source[1], '0_par_Evl.st')):
-                with open(os.path.join(line_source[1], '0_par_Evl.st')) as f_par_evl:
+            if os.path.exists(os.path.join(line_source[1], '0_par_Evl.st')):
+                with open(os.path.join(line_source[1], '0_par_Evl.st'), 'rt') as f_par_evl:
                     text = f_par_evl.read().split('\n')
                 sl_tmp_ae = create_sl(text, 'AE_')
 
             # Если есть файл дискретных
-            if os.path.isfile(os.path.join(line_source[1], '0_par_D.st')):
-                with open(os.path.join(line_source[1], '0_par_D.st')) as f_par_d:
+            if os.path.exists(os.path.join(line_source[1], '0_par_D.st')):
+                with open(os.path.join(line_source[1], '0_par_D.st'), 'rt') as f_par_d:
                     text = f_par_d.read().split('\n')
                 sl_tmp_di = create_sl(text, 'DI_')
 
             # Если есть файл ИМ_1x0
-            if os.path.isfile(os.path.join(line_source[1], '0_IM_1x0.st')):
-                with open(os.path.join(line_source[1], '0_IM_1x0.st')) as f_im:
+            if os.path.exists(os.path.join(line_source[1], '0_IM_1x0.st')):
+                with open(os.path.join(line_source[1], '0_IM_1x0.st'), 'rt') as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x0, set_cnt_im1x0 = create_sl_im(text)
 
             # Если есть файл ИМ_1x1
-            if os.path.isfile(os.path.join(line_source[1], '0_IM_1x1.st')):
-                with open(os.path.join(line_source[1], '0_IM_1x1.st')) as f_im:
+            if os.path.exists(os.path.join(line_source[1], '0_IM_1x1.st')):
+                with open(os.path.join(line_source[1], '0_IM_1x1.st'), 'rt') as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x1, set_cnt_im1x1 = create_sl_im(text)
 
             # Если есть файл ИМ_1x2
-            if os.path.isfile(os.path.join(line_source[1], '0_IM_1x2.st')):
-                with open(os.path.join(line_source[1], '0_IM_1x2.st')) as f_im:
+            if os.path.exists(os.path.join(line_source[1], '0_IM_1x2.st')):
+                with open(os.path.join(line_source[1], '0_IM_1x2.st'), 'rt') as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im1x2, set_cnt_im1x2 = create_sl_im(text)
 
             # Если есть файл ИМ_2x2
-            if os.path.isfile(os.path.join(line_source[1], '0_IM_2x2.st')):
-                with open(os.path.join(line_source[1], '0_IM_2x2.st')) as f_im:
+            if os.path.exists(os.path.join(line_source[1], '0_IM_2x2.st')):
+                with open(os.path.join(line_source[1], '0_IM_2x2.st'), 'rt') as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im2x2, set_cnt_im2x2 = create_sl_im(text)
 
             # Если есть файл ИМ_АО
-            if os.path.isfile(os.path.join(line_source[1], '0_IM_AO.st')):
-                with open(os.path.join(line_source[1], '0_IM_AO.st')) as f_im:
+            if os.path.exists(os.path.join(line_source[1], '0_IM_AO.st')):
+                with open(os.path.join(line_source[1], '0_IM_AO.st'), 'rt') as f_im:
                     text = f_im.read().split('\n')
                 sl_tmp_im_ao, bla_ = create_sl_im(text)
 
             # Если есть файл кнопок
-            if os.path.isfile(os.path.join(line_source[1], '0_BTN.st')):
-                with open(os.path.join(line_source[1], '0_BTN.st')) as f_btn:
+            if os.path.exists(os.path.join(line_source[1], '0_BTN.st')):
+                with open(os.path.join(line_source[1], '0_BTN.st'), 'rt') as f_btn:
                     text = f_btn.read().split('\n')
                 for i in text:
                     if 'BTN_' in i and '(' in i:
@@ -473,20 +474,20 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                         sl_tmp_btn[int(a[a.find('(')+1:])] = a[:a.find('(')]
 
             # Если есть файл защит PZ
-            if os.path.isfile(os.path.join(line_source[1], '0_PZ.st')):
-                with open(os.path.join(line_source[1], '0_PZ.st')) as f_pz:
+            if os.path.exists(os.path.join(line_source[1], '0_PZ.st')):
+                with open(os.path.join(line_source[1], '0_PZ.st'), 'rt') as f_pz:
                     text = f_pz.read().split('\n')
                 set_tmp_alr = create_sl_pz(text)
 
             # Если есть файл уставок
-            if os.path.isfile(os.path.join(line_source[1], '0_Par_Set.st')):
-                with open(os.path.join(line_source[1], '0_Par_Set.st')) as f_set:
+            if os.path.exists(os.path.join(line_source[1], '0_Par_Set.st')):
+                with open(os.path.join(line_source[1], '0_Par_Set.st'), 'rt') as f_set:
                     text = f_set.read().split('\n')
                 sl_tmp_set = create_sl(text, 'SP_')
 
             # Если есть глобальный словарь
-            if os.path.isfile(os.path.join(line_source[1], 'global0.var')):
-                with open(os.path.join(line_source[1], 'global0.var')) as f_global:
+            if os.path.exists(os.path.join(line_source[1], 'global0.var')):
+                with open(os.path.join(line_source[1], 'global0.var'), 'rt') as f_global:
                     for line in f_global:
                         line = line.strip()
                         if 'A_INP|' in line and len(line.split(',')) >= 10:
@@ -802,8 +803,8 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                                           source=line_source[0])
 
             # повторно открываем глобальный словарь контроллера для сбора диагностики (здесь немного по-другому читаем)
-            if os.path.isfile(os.path.join(line_source[1], 'global0.var')):
-                with open(os.path.join(line_source[1], 'global0.var')) as f_global:
+            if os.path.exists(os.path.join(line_source[1], 'global0.var')):
+                with open(os.path.join(line_source[1], 'global0.var'), 'rt') as f_global:
                     while 8:
                         line = f_global.readline().strip()
                         if not line:
@@ -828,5 +829,48 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                 s_all += create_group_diag(diag_sl=sl_global_diag, template_no_arc_index=tmp_ind_no_arc,
                                            source=line_source[0])
 
-            with open(f'trei_map_{line_source[0]}.xml', 'w') as f_out:
-                f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')
+            # Если нет папки карт, то создаём её
+            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps')):
+                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps'))
+
+            # Если в папке карт уже есть какой-то файл с именем генерируемой карты
+            if os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
+                                           f'trei_map_{line_source[0]}.xml')):
+                # то формируем новую версию карты
+                new_map_file = '<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>'
+
+                # считываем уже существующую карту
+                with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
+                                       f'trei_map_{line_source[0]}.xml'), 'r', encoding='UTF-8') as f_read_check:
+                    old_map_file = f_read_check.read()
+                print('YES' if new_map_file == old_map_file else 'NO')
+
+                # Если новая и старая карты отличаются
+                if new_map_file != old_map_file:
+                    # Если нет папки Old, то создаём её
+                    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old')):
+                        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old'))
+                    # Переносим старую карту в папку Old
+                    os.replace(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
+                                            f'trei_map_{line_source[0]}.xml'),
+                               os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old',
+                                            f'trei_map_{line_source[0]}.xml'))
+                    # Записываем новую карту
+                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
+                                           f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
+                        f_out.write(new_map_file)
+                    print(f'Требуется заменить карту контроллера {line_source[0]}')
+                # совместно с модулем difflib можно в будущем определить отличающиеся строки - на будущее
+                # new_map_file = new_map_file.splitlines(keepends=True)
+                # old_map_file = f_read_check.read().splitlines(keepends=True)
+                # diff = difflib.ndiff(new_map_file, old_map_file)
+                # dd = ''.join(diff)
+                # print('NO' if '- ' in dd or '+ ' in dd else 'YES')
+                # for j in dd.split('\n'):
+                #    if '- ' in j or '+ ' in j:
+                #        print(j)
+            # Если в папке карт нет файла с именем генерируемой карты, то создаём
+            else:
+                with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
+                                       f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
+                    f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')

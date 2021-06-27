@@ -405,8 +405,11 @@ try:
             tmp_line_ = f.read().rstrip()
 
         # print(os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')))
+        # Если нет папки File_out, то создадим её
         if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
             os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+        if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain')):
+            os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain'))
         # Для каждого объекта создаём контроллер
         num_obj_plc = 1
         for obj in sl_object_all:
@@ -422,10 +425,44 @@ try:
                                                         ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
                                                         ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
                                                         dp_app=tmp_line_)
-                with open(os.path.join(os.path.dirname(__file__), 'File_out',
-                                       f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
-                          'w', encoding='UTF-8') as f:
-                    f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
+                # Если в выходной папке ПЛК-аспектов уже есть формируемый файл
+                if os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
+                                               f'file_out_plc_{i}_{num_obj_plc}.omx-export')):
+                    # то формируем новую версию файла
+                    new_tmp_plc = Template(tmp_global).substitute(dp_node=tmp_plc)
+                    # считываем имеющейся файл
+                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
+                                           f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                              'r', encoding='UTF-8') as f_check:
+                        tmp_plc_check = f_check.read()
+                    print('YES' if new_tmp_plc == tmp_plc_check else 'NO')
+
+                    # Если новый и старый файл отличаются
+                    if new_tmp_plc != tmp_plc_check:
+                        # Если нет папки Old, то создаём её
+                        if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out',
+                                                           'PLC_Aspect_importDomain', 'Old')):
+                            os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out',
+                                                  'PLC_Aspect_importDomain', 'Old'))
+                        # Переносим старую файл в папку Old
+                        os.replace(os.path.join(os.path.dirname(__file__), 'File_out',
+                                                'PLC_Aspect_importDomain',
+                                                f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                                   os.path.join(os.path.dirname(__file__), 'File_out',
+                                                'PLC_Aspect_importDomain', 'Old',
+                                                f'file_out_plc_{i}_{num_obj_plc}.omx-export'))
+                        # Записываем новый файл
+                        with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
+                                               f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                                  'w', encoding='UTF-8') as f:
+                            f.write(new_tmp_plc)
+                # Если в выходной папке ПЛК-аспектов нет формируемого файла, то создаём есо
+                else:
+                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
+                                           f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
+                              'w', encoding='UTF-8') as f:
+                        f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
+                # прибавляем номер объекта для формирования следующего файла
                 num_obj_plc += 1
             else:
                 num_obj_plc += 1
@@ -461,6 +498,10 @@ try:
     print(datetime.datetime.now())
 
 except (Exception, KeyError):
+    # в случае возникновения какой-либо ошибки, чистим возможные промежуточные файлы
+    for file_error_clear in ('file_plc.txt', 'file_out_group.txt', 'file_app_out.txt', 'file_app_out.txt'):
+        if os.path.exists(file_error_clear):
+            os.remove(file_error_clear)
 
     logging.basicConfig(filename='error.log', filemode='a', datefmt='%d.%m.%y %H:%M:%S',
                         format='%(levelname)s - %(message)s - %(asctime)s')
