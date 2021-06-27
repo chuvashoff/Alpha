@@ -843,7 +843,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                 with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
                                        f'trei_map_{line_source[0]}.xml'), 'r', encoding='UTF-8') as f_read_check:
                     old_map_file = f_read_check.read()
-                print('YES' if new_map_file == old_map_file else 'NO')
+                # print('YES' if new_map_file == old_map_file else 'NO')
 
                 # Если новая и старая карты отличаются
                 if new_map_file != old_map_file:
@@ -859,6 +859,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                     with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
                                            f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
                         f_out.write(new_map_file)
+                    # и пишем, что надо заменить
                     print(f'Требуется заменить карту контроллера {line_source[0]}')
                 # совместно с модулем difflib можно в будущем определить отличающиеся строки - на будущее
                 # new_map_file = new_map_file.splitlines(keepends=True)
@@ -869,8 +870,9 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                 # for j in dd.split('\n'):
                 #    if '- ' in j or '+ ' in j:
                 #        print(j)
-            # Если в папке карт нет файла с именем генерируемой карты, то создаём
+            # Если в папке карт нет файла с именем генерируемой карты, то создаём и пишем, что надо заменить
             else:
                 with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
                                        f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
                     f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')
+                print(f'Требуется заменить карту контроллера {line_source[0]}')

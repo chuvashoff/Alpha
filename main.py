@@ -398,6 +398,7 @@ try:
         # Формирование выходного файла app
         with open('file_out_group.txt', 'r', encoding='UTF-8') as f:
             tmp_line_ = f.read().rstrip()
+            tmp_line_ += '\n<trei:unet-address-map name="UnetAddressMap" />\n'
         with open('file_app_out.txt', 'w', encoding='UTF-8') as f:
             f.write(Template(tmp_app).substitute(name_app='Tree', ct_object=tmp_line_))
 
@@ -435,7 +436,7 @@ try:
                                            f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
                               'r', encoding='UTF-8') as f_check:
                         tmp_plc_check = f_check.read()
-                    print('YES' if new_tmp_plc == tmp_plc_check else 'NO')
+                    # print('YES' if new_tmp_plc == tmp_plc_check else 'NO')
 
                     # Если новый и старый файл отличаются
                     if new_tmp_plc != tmp_plc_check:
@@ -456,12 +457,15 @@ try:
                                                f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
                                   'w', encoding='UTF-8') as f:
                             f.write(new_tmp_plc)
-                # Если в выходной папке ПЛК-аспектов нет формируемого файла, то создаём есо
+                        # пишем, что надо заменить
+                        print(f'Требуется заменить карту ПЛК-аспект {i}_{num_obj_plc}')
+                # Если в выходной папке ПЛК-аспектов нет формируемого файла, то создаём его и пишем, что заменить
                 else:
                     with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
                                            f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
                               'w', encoding='UTF-8') as f:
                         f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
+                    print(f'Требуется заменить карту ПЛК-аспект {i}_{num_obj_plc}')
                 # прибавляем номер объекта для формирования следующего файла
                 num_obj_plc += 1
             else:
