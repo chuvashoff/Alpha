@@ -273,7 +273,29 @@ def create_group_diag(diag_sl, template_no_arc_index, source):
     return s_out
 
 
-def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec, sl_diag):
+def create_group_drv(drv_sl, template_no_arc_index, source):
+    sl_data_cat = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Discrete'
+    }
+    sl_type = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Bool'
+    }
+    s_out = ''
+    for key, value in drv_sl.items():
+        name_drv = key[0]
+        name_signal = key[1]
+        pref_arc = f'NoArc{sl_data_cat[value[1]]}'
+        s_out += Template(template_no_arc_index).substitute(name_signal=f'System.DRV.{name_drv}.{name_signal}.Value',
+                                                            type_signal=sl_type[value[1]], index=value[0],
+                                                            data_category=f'DataCategory_{source}_{pref_arc}')
+    return s_out
+
+
+def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec, sl_diag, sl_cpu_drv_signal):
     # Считываем шаблоны для карты
     with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f:
         tmp_ind_arc = f.read()
@@ -384,6 +406,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             sl_global_tr = {}
             sl_global_apr = {}
             sl_global_diag = {}
+            sl_global_drv = {}
 
             if 'ТР' in sl_cpu_spec[line_source[0]]:
                 with open(os.path.join(os.path.dirname(__file__), 'Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
@@ -626,10 +649,26 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                                     sl_global_diag[(curr_module, signal_name)] = [max(int(line[9]),
                                                                                       int(line[10])), line[1]]
 
-                        if 'FAST|' in line:
+                        elif 'FAST|' in line:
                             line = line.split(',')
                             # В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной
                             sl_global_fast[line[0][1:]] = max(int(line[9]), int(line[10]))
+
+                        # если в текущем контроллере объявлены драйвера и строка явно содержит индекс
+                        elif line_source[0] in sl_cpu_drv_signal and len(line.split(',')) >= 10:
+                            tmp_check = line.split(',')[0]
+                            # если в считанной строке-переменной есть признак какого- либо драйвера
+                            if tmp_check[1:tmp_check.find('|')] in sl_cpu_drv_signal[line_source[0]]:
+                                tmp_check_drv = tmp_check[1:tmp_check.find('|')]
+                                # если в считанной строке с признаком драйвера обнаружена объявленная переменная
+                                if tmp_check[tmp_check.find('|')+1:] in \
+                                        sl_cpu_drv_signal[line_source[0]][tmp_check_drv]:
+                                    tmp_drv_signal = tmp_check[tmp_check.find('|')+1:]
+                                    # {(алг. имя драйвера, алг. имя переменной): (инд.пер, тип переменной) }
+                                    sl_global_drv[(tmp_check_drv, tmp_drv_signal)] = (max(int(line.split(',')[9]),
+                                                                                          int(line.split(',')[10])),
+                                                                                      line.split(',')[1])
+
             # В словаре sl_global_ai лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]
             sl_global_ai = {key: value for key, value in sl_global_ai.items() if key[:key.find('[')] in lst_ai}
             sl_global_ae = {key: value for key, value in sl_global_ae.items() if key[:key.find('[')] in lst_ae}
@@ -756,6 +795,11 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             if sl_global_apr:
                 s_all += create_group_apr(sl_global_apr, sl_global_fast, tmp_ind_no_arc, tmp_ind_arc, 'APR',
                                           line_source[0])
+
+            # Обработка и запись в карту драйверных переменных
+            if sl_global_drv:
+                s_all += create_group_drv(drv_sl=sl_global_drv, template_no_arc_index=tmp_ind_no_arc,
+                                          source=line_source[0])
 
             # повторно открываем глобальный словарь контроллера для сбора диагностики (здесь немного по-другому читаем)
             if os.path.isfile(os.path.join(line_source[1], 'global0.var')):

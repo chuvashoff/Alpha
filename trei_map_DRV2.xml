@@ -10446,6 +10446,1068 @@
     <category>DataCategory_DRV2_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_MassFlowRate.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>1</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_VolumeFlowRate.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>2</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_Density.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>3</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_Temperarure.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>4</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_ReferenceDensity.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>5</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_CorrectedVolumeFlow.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>6</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_Pressure.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>7</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_MassFlowUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>8</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_VolumeFlowUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>9</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_CorrectedVolumeFlowUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>10</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_DensityUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>11</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_ReferenceDensityUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>12</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_TemperatureUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>13</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.TG_PressureUnit.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>14</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.DevAddress.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>15</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.BaudIndex.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>16</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.Parity.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>17</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.WriteProtection.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>18</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.FloatMapMode.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>19</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.DRV_EF_Rtg.ModbusMapMode.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>20</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_so.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>301</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_bk101.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>302</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_TE4.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>303</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_TO1.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>304</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_TO2.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>305</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tgas.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>306</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tnair_A.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>307</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_SO.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>308</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_KST.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>309</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_A.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>310</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_GTD.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>311</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_angar.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>312</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_KST.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>313</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_outReg.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>314</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_in.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>315</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_freqVO1.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>316</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_freqVO2.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>317</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tin_box_AVGM.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>318</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SP_KST.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>319</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_TE5.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>320</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Qgas_work.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>321</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Qgas_stand.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>322</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_counter.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>325</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_counter.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>326</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_counter.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>327</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_counter.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>328</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.RU.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>348</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.vent_nag.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>349</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.TG1_2.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>350</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.TE4.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>351</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>352</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>353</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>354</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>355</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>356</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>357</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>358</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>359</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>360</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>361</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>362</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>363</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_heat_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>364</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_heat_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>365</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_heat_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>366</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>367</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>368</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>369</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV2_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>370</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV2_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>371</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV2_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>372</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Mb_vlv_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>373</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Mb_vlv_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>374</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Mb_vlv_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>375</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_vlv_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>376</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_vlv_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>377</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_vlv_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>378</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.OGK_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>379</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.OGK_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>380</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.OGK_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>381</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv1_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>382</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv1_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>383</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv1_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>384</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv2_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>385</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv2_stOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>386</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv2_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>387</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>388</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_air_start.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>389</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Em_power_off.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>390</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Fault.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>391</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Btn_Start_on.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>392</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Btn_Stop_on.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>393</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Btn_eStop_on.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>394</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.U220_1L1_on.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>395</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.RKF_power.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>396</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.pWork.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>397</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pusk.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>398</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_air_on.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>399</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Zagaz_so_1.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>400</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Zagaz_so_2.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>401</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Zagaz_so_m_1.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>402</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Zagaz_so_m_2.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>403</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Fire_GPA.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>404</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Fire_AVGM.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>405</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.dP_TG1.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>406</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.dP_TG2.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>407</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tso_alarm.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>408</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_to1_wH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>409</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_to1_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>410</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_to2_wH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>411</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_to2_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>412</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_gas_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>413</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_gas_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>414</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_so_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>415</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_so_wH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>416</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_so_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>417</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Thair_A_wH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>418</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Thair_A_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>419</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_kst_wH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>420</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_kst_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>421</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_angar_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>422</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_angar_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>423</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_KST_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>424</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_KST_aH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>425</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_in_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>426</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_in_wL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>427</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_outReg_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>428</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_outReg_wL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>429</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_TO1_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>430</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_TO2_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>431</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tgas_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>432</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Thair_A_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>433</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_so_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>434</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_KST_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>435</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_A_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>436</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pair_vv_KST_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>437</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_outReg_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>438</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pgas_in_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>439</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KG_net_f.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>440</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Deblock.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>441</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Ready.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>442</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_Af.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>443</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Tair_GTDf.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>444</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Pusk_AVGM.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>445</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.K_G_PW.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>329</index>
+    <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_reset.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>899</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_reset.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>900</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Torch2_reset.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>901</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Torch1_reset.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>902</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>927</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch1_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>928</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>929</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.torch2_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>930</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>931</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO1_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>932</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>933</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VO2_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>934</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_heat_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>935</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_heat_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>936</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>937</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>938</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV2_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>939</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV2_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>940</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Mb_vlv_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>941</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Mb_vlv_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>942</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_vlv_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>943</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.KST_vlv_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>944</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.OGK_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>945</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.OGK_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>946</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv1_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>947</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv1_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>948</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv2_oOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>949</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.SO_vlv2_oOff.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>950</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Kvitir.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>952</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.T_kst_AOH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>955</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.Thair_A_AOH.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>956</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.DRV.AVGM.VV1_2.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>958</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>Diag.HW.BRRS2.System44_9_5</node-path>
     <protocoltype>Bool</protocoltype>
     <index>446</index>
