@@ -1,7 +1,8 @@
-import os
+# import os
 import re
 # import difflib
-from string import Template
+# from string import Template
+from my_func import *
 
 
 def create_sl(text, str_check):
@@ -298,10 +299,12 @@ def create_group_drv(drv_sl, template_no_arc_index, source):
 
 def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec, sl_diag, sl_cpu_drv_signal):
     # Считываем шаблоны для карты
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f:
-        tmp_ind_arc = f.read()
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f:
-        tmp_ind_no_arc = f.read()
+    with open(os.path.join(os.path.dirname(__file__), 'Template',
+                           'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f_arc:
+        tmp_ind_arc = f_arc.read()
+    with open(os.path.join(os.path.dirname(__file__), 'Template',
+                           'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
+        tmp_ind_no_arc = f_no_arc.read()
 
     lst_ae = (
         'coSim', 'coRepair', 'coUpdRepair', 'Message.msg_fBreak', 'Message.msg_qbiValue', 'Value', 'fValue', 'iValue',
@@ -373,9 +376,9 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
         'SoftStop': 'System44_9_3', 'SoftBlock': 'System44_9_4', 'SoftReserve': 'System44_9_5'
     }
 
-    with open('Source_list_plc', 'r', encoding='UTF-8') as f:
+    with open('Source_list_plc.txt', 'r', encoding='UTF-8') as f_source:
         while 8:
-            line_source = f.readline().strip().split(',')
+            line_source = f_source.readline().strip().split(',')
             if line_source == ['']:
                 break
             sl_global_ai, sl_tmp_ai = {}, {}
@@ -828,51 +831,18 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             if sl_global_diag:
                 s_all += create_group_diag(diag_sl=sl_global_diag, template_no_arc_index=tmp_ind_no_arc,
                                            source=line_source[0])
+            # Проверка изменений, и если есть изменения, то запись
 
-            # Если нет папки карт, то создаём её
-            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps')):
-                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps'))
-
-            # Если в папке карт уже есть какой-то файл с именем генерируемой карты
-            if os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
-                                           f'trei_map_{line_source[0]}.xml')):
-                # то формируем новую версию карты
-                new_map_file = '<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>'
-
-                # считываем уже существующую карту
-                with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
-                                       f'trei_map_{line_source[0]}.xml'), 'r', encoding='UTF-8') as f_read_check:
-                    old_map_file = f_read_check.read()
-                # print('YES' if new_map_file == old_map_file else 'NO')
-
-                # Если новая и старая карты отличаются
-                if new_map_file != old_map_file:
-                    # Если нет папки Old, то создаём её
-                    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old')):
-                        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old'))
-                    # Переносим старую карту в папку Old
-                    os.replace(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
-                                            f'trei_map_{line_source[0]}.xml'),
-                               os.path.join(os.path.dirname(__file__), 'File_out', 'Maps', 'Old',
-                                            f'trei_map_{line_source[0]}.xml'))
-                    # Записываем новую карту
-                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
-                                           f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
-                        f_out.write(new_map_file)
-                    # и пишем, что надо заменить
-                    print(f'Требуется заменить карту контроллера {line_source[0]}')
-                # совместно с модулем difflib можно в будущем определить отличающиеся строки - на будущее
-                # new_map_file = new_map_file.splitlines(keepends=True)
-                # old_map_file = f_read_check.read().splitlines(keepends=True)
-                # diff = difflib.ndiff(new_map_file, old_map_file)
-                # dd = ''.join(diff)
-                # print('NO' if '- ' in dd or '+ ' in dd else 'YES')
-                # for j in dd.split('\n'):
-                #    if '- ' in j or '+ ' in j:
-                #        print(j)
-            # Если в папке карт нет файла с именем генерируемой карты, то создаём и пишем, что надо заменить
-            else:
-                with open(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps',
-                                       f'trei_map_{line_source[0]}.xml'), 'w', encoding='UTF-8') as f_out:
-                    f_out.write('<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>')
-                print(f'Требуется заменить карту контроллера {line_source[0]}')
+            check_diff_file(check_path=os.path.join('File_out', 'Maps'),
+                            file_name=f'trei_map_{line_source[0]}.xml',
+                            new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
+                            message_print=f'Требуется заменить карту контроллера {line_source[0]}')
+            # совместно с модулем difflib можно в будущем определить отличающиеся строки - на будущее
+            # new_map_file = new_map_file.splitlines(keepends=True)
+            # old_map_file = f_read_check.read().splitlines(keepends=True)
+            # diff = difflib.ndiff(new_map_file, old_map_file)
+            # dd = ''.join(diff)
+            # print('NO' if '- ' in dd or '+ ' in dd else 'YES')
+            # for j in dd.split('\n'):
+            #    if '- ' in j or '+ ' in j:
+            #        print(j)

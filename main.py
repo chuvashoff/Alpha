@@ -9,7 +9,7 @@ warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 
 try:
     # path_config = input('Укажите путь до конфигуратора\n')
-    with open('Source_list_config', 'r', encoding='UTF-8') as f:
+    with open('Source_list_config.txt', 'r', encoding='UTF-8') as f:
         path_config = f.readline().strip()
 
     print(datetime.datetime.now())
@@ -125,6 +125,7 @@ try:
     ff.close()
     # Далее для всех контроллеров, что нашли, делаем
     for i in all_CPU:
+        sl_CPU_one = {}
         # Диагностика модулей (DIAG)
         sheet = book['Модули']
         cells = sheet['A1': 'G' + str(sheet.max_row)]
@@ -426,46 +427,11 @@ try:
                                                         ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
                                                         ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
                                                         dp_app=tmp_line_)
-                # Если в выходной папке ПЛК-аспектов уже есть формируемый файл
-                if os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
-                                               f'file_out_plc_{i}_{num_obj_plc}.omx-export')):
-                    # то формируем новую версию файла
-                    new_tmp_plc = Template(tmp_global).substitute(dp_node=tmp_plc)
-                    # считываем имеющейся файл
-                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
-                                           f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
-                              'r', encoding='UTF-8') as f_check:
-                        tmp_plc_check = f_check.read()
-                    # print('YES' if new_tmp_plc == tmp_plc_check else 'NO')
-
-                    # Если новый и старый файл отличаются
-                    if new_tmp_plc != tmp_plc_check:
-                        # Если нет папки Old, то создаём её
-                        if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out',
-                                                           'PLC_Aspect_importDomain', 'Old')):
-                            os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out',
-                                                  'PLC_Aspect_importDomain', 'Old'))
-                        # Переносим старую файл в папку Old
-                        os.replace(os.path.join(os.path.dirname(__file__), 'File_out',
-                                                'PLC_Aspect_importDomain',
-                                                f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
-                                   os.path.join(os.path.dirname(__file__), 'File_out',
-                                                'PLC_Aspect_importDomain', 'Old',
-                                                f'file_out_plc_{i}_{num_obj_plc}.omx-export'))
-                        # Записываем новый файл
-                        with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
-                                               f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
-                                  'w', encoding='UTF-8') as f:
-                            f.write(new_tmp_plc)
-                        # пишем, что надо заменить
-                        print(f'Требуется заменить карту ПЛК-аспект {i}_{num_obj_plc}')
-                # Если в выходной папке ПЛК-аспектов нет формируемого файла, то создаём его и пишем, что заменить
-                else:
-                    with open(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain',
-                                           f'file_out_plc_{i}_{num_obj_plc}.omx-export'),
-                              'w', encoding='UTF-8') as f:
-                        f.write(Template(tmp_global).substitute(dp_node=tmp_plc))
-                    print(f'Требуется заменить карту ПЛК-аспект {i}_{num_obj_plc}')
+                # Проверка изменений, и если есть изменения, то запись
+                check_diff_file(check_path=os.path.join('File_out', 'PLC_Aspect_importDomain'),
+                                file_name=f'file_out_plc_{i}_{num_obj_plc}.omx-export',
+                                new_data=Template(tmp_global).substitute(dp_node=tmp_plc),
+                                message_print=f'Требуется заменить ПЛК-аспект {i}_{num_obj_plc}')
                 # прибавляем номер объекта для формирования следующего файла
                 num_obj_plc += 1
             else:
@@ -496,10 +462,55 @@ try:
     # for k in sl_cpu_drv_signal:
     #    print(k, sl_cpu_drv_signal[k])
     # print()
+    path_nku = ''
+    # Если есть файл-источник конфигуратора НКУ
+    if os.path.exists('Source_NKU.txt'):
+        with open('Source_NKU.txt', 'r', encoding='UTF-8') as f_nku:
+            path_nku = f_nku.readline().strip()
+    # Если считан путь к конфигуратору НКУ
+    if path_nku:
+        # Даём по умолчанию название конфигуратору
+        config_nku = 'UnimodCreate v.4.4.xlsm'
+        # Ищем файл конфигуратора NKU в указанном каталоге
+        for file in os.listdir(path_nku):
+            if file.endswith('.xlsm') or file.endswith('.xls'):
+                config_nku = file
+                break
+        # Считываем файл-шаблон для DI_NKU
+        with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI_NKU'), 'r', encoding='UTF-8') as f:
+            tmp_object_DI_NKU = f.read()
+
+        book_nku = openpyxl.open(os.path.join(path_nku, config_nku))  # , read_only=True
+        # Дискретные
+        sheet_nku = book_nku['Входные']  # .worksheets[6]
+        cells_npu = sheet_nku['A1': 'AC' + str(sheet_nku.max_row)]
+
+        sl_CPU_nku, sl_wrn_nku = is_load_di_nku('GPA', cells_npu, is_f_ind(cells_npu[0], 'Алгоритмическое имя'),
+                                                is_f_ind(cells_npu[0], 'ИМ'),
+                                                is_f_ind(cells_npu[0], 'Наименование параметра'),
+                                                is_f_ind(cells_npu[0], 'Цвет при наличии'),
+                                                is_f_ind(cells_npu[0], 'Цвет при отсутствии'),
+                                                is_f_ind(cells_npu[0], 'Предупреждение'),
+                                                is_f_ind(cells_npu[0], 'Текст предупреждения'),
+                                                is_f_ind(cells_npu[0], 'CPU'))
+        book_nku.close()
+
+        # Если словарь НКУ сигналов не пустой
+        if sl_CPU_nku:
+            tmp_line_ = is_create_objects_di_nku(sl_CPU_nku, tmp_object_DI_NKU, 'Types.DI_NKU.DI_NKU_PLC_View',
+                                                 sl_wrn_nku)
+            tmp_group_nku = Template(tmp_group).substitute(name_group='NKU', objects=tmp_line_)
+
+            check_diff_file(check_path=os.path.join('File_out', 'PLC_Aspect_importDomain'),
+                            file_name=f'file_out_plc_NKU_inGPA.omx-export',
+                            new_data=Template(tmp_global).substitute(dp_node=tmp_group_nku),
+                            message_print=f'Требуется заменить Сигналы НКУ в аспекте ПЛК')
+
     create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn,
                  sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
                  sl_cpu_drv_signal=sl_cpu_drv_signal)
     print(datetime.datetime.now())
+    # input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
 
 except (Exception, KeyError):
     # в случае возникновения какой-либо ошибки, чистим возможные промежуточные файлы

@@ -41,10 +41,11 @@ def is_cor_chr(st):
 
 def is_load_ai_ae_set(controller, cell, alg_name, name_par, eunit, short_name, f_dig, cpu):
     tmp = {}
+    reserve_cel = is_f_ind(cell[0], 'Резервный')
     for par in cell:
         if par[name_par].value is None:
             break
-        if par[cpu].value == controller:
+        if par[cpu].value == controller and par[reserve_cel].value == 'Нет':
             tmp['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[name_par].value),
                                                              par[eunit].value, par[short_name].value, par[f_dig].value)
     return tmp
@@ -57,15 +58,36 @@ def is_load_ai_ae_set(controller, cell, alg_name, name_par, eunit, short_name, f
 def is_load_di(controller, cell, alg_name, im, name_par, c_on, c_off, ps, ps_msg, cpu):
     tmp = {}
     tmp_wrn = {}
+    reserve_cel = is_f_ind(cell[0], 'Резервный')
     for par in cell:
         if par[name_par].value is None:
             break
-        if par[cpu].value == controller and par[im].value == 'Нет':
+        if par[cpu].value == controller and par[im].value == 'Нет' and par[reserve_cel].value == 'Нет':
             tmp['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[name_par].value),
                                                              par[c_on].fill.start_color.index,
                                                              par[c_off].fill.start_color.index)
             if par[ps].value != 'Нет':
                 tmp_wrn['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[ps_msg].value), par[ps].value)
+    return tmp, tmp_wrn
+
+# добавлена функция для чтения дискретов НКУ
+
+
+def is_load_di_nku(controller, cell, alg_name, im, name_par, c_on, c_off, ps, ps_msg, cpu):
+    tmp = {}
+    tmp_wrn = {}
+    reserve_cel = is_f_ind(cell[0], 'Резервный')
+    for par in cell:
+        if par[name_par].value is None:
+            break
+        if par[cpu].value == controller and par[im].value == 'Нет' and par[reserve_cel].value == 'Нет':
+            tmp['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[name_par].value),
+                                                             par[c_on].fill.start_color.index,
+                                                             par[c_off].fill.start_color.index)
+            if par[ps].value != 'Нет':
+                tmp_wrn['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[ps_msg].value), par[ps].value)
+            else:
+                tmp_wrn['_'.join(par[alg_name].value.split('|'))] = (is_cor_chr(par[ps_msg].value), 'Нет')
     return tmp, tmp_wrn
 
 
@@ -194,6 +216,23 @@ def is_create_objects_di(sl_cpu, template_text, object_type):
                                                               object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0], color_on=sl_color_di[value[1]],
                                                               color_off=sl_color_di[value[2]])
+
+    return tmp_line_object.rstrip()
+
+
+def is_create_objects_di_nku(sl_cpu, template_text, object_type, sl_wrn_nku):
+    tmp_line_object = ''
+    for key, value in sl_cpu.items():
+        if sl_wrn_nku[key][1] == 'Нет':
+            text_msg = 'Нет сообщения'
+        else:
+            text_msg = sl_wrn_nku[key][0]
+        tmp_line_object += Template(template_text).substitute(object_name=key, object_type=object_type,
+                                                              object_aspect='Types.PLC_Aspect',
+                                                              text_description=value[0], color_on=sl_color_di[value[1]],
+                                                              color_off=sl_color_di[value[2]],
+                                                              text_msg=text_msg,
+                                                              type_wrn=sl_wrn_nku[key][1])
 
     return tmp_line_object.rstrip()
 
@@ -434,3 +473,31 @@ def is_create_objects_diag(sl, template_text_cpu):
                                                                               Channel_31=value[1][30],
                                                                               Channel_32=value[1][31])
     return tmp_line_object.rstrip()
+
+
+def check_diff_file(check_path, file_name, new_data, message_print):
+    # Если в целевой(указанной) папке уже есть формируемый файл
+    if os.path.exists(os.path.join(os.path.dirname(__file__), check_path, file_name)):
+        # Формирурем новый
+        # new_out_nku = Template(tmp_global).substitute(dp_node=tmp_group_nku)
+        # считываем имеющейся файл
+        with open(os.path.join(os.path.dirname(__file__), check_path, file_name), 'r', encoding='UTF-8') as f_check:
+            old_data = f_check.read()
+        # Если отличаются
+        if new_data != old_data:
+            # Если нет папки Old, то создаём её
+            if not os.path.exists(os.path.join(os.path.dirname(__file__), check_path, 'Old')):
+                os.mkdir(os.path.join(os.path.dirname(__file__), check_path, 'Old'))
+            # Переносим старую файл в папку Old
+            os.replace(os.path.join(os.path.dirname(__file__), check_path, file_name),
+                       os.path.join(os.path.dirname(__file__), check_path, 'Old', file_name))
+            # Записываем новый файл
+            with open(os.path.join(os.path.dirname(__file__),  check_path, file_name), 'w', encoding='UTF-8') as f_wr:
+                f_wr.write(new_data)
+            # пишем, что надо заменить
+            print(message_print)
+    # Если в целевой(указанной) папке нет формируемого файла, то создаём его и пишем, что заменить
+    else:
+        with open(os.path.join(os.path.dirname(__file__), check_path, file_name), 'w', encoding='UTF-8') as f_wr:
+            f_wr.write(new_data)
+        print(message_print)
