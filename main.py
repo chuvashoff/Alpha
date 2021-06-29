@@ -450,6 +450,85 @@ try:
     with open('file_out_plc_aspect.omx-export', 'w', encoding='UTF-8') as f:
         f.write(Template(tmp_global).substitute(dp_node=tmp_line_))
 
+    '''ТРЕНДЫ- JSON'''
+    # Если нет папки File_out, то создадим её
+    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
+        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+    # Если нет папки File_out/Trends, то создадим её
+    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Trends')):
+        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Trends'))
+
+    # Считываем файл-шаблон для сигнала тренда
+    with open(os.path.join(os.path.dirname(__file__), 'Template',
+                           'Temp_signal_trends'), 'r', encoding='UTF-8') as f_trends:
+        tmp_signal_trends = f_trends.read()
+
+    # Определение объявленных мнемосхем с листа настроек
+    sheet = book['Настройки']
+    cells = sheet['A1': 'A' + str(sheet.max_row)]
+    tuple_node_trends = tuple()
+    for p in cells:
+        if p[0].value == 'Наименование мнемосхемы':
+            jj = 1
+            while sheet[p[0].row][jj].value:
+                tuple_node_trends += (sheet[p[0].row][jj].value,)
+                jj += 1
+    # print(tuple_node_trends)
+    # Словарь соответствия листов конфигуратора и имени группы на трендах
+    sl_group_trends = {
+        'Измеряемые': 'Аналоговые входные',
+        'Расчетные': 'Расчетные параметры',
+        'Входные': 'Дискретные входные'
+    }
+    sl_group_tag_trends = {
+        'Измеряемые': 'AI',
+        'Расчетные': 'AE',
+        'Входные': 'DI'
+    }
+
+    # Для каждого объекта, прочитанного ранее
+    for obj in sl_object_all:
+        s_trends = ''
+        # Для каждого листа конфигуратора в словаре групп для трендов(ключи словаря опрделили
+        # по объявленным мнемосхемам)
+        for list_config in sl_group_trends:
+            # для каждой группы создаём словарь с пустыми словарями для каждого узла
+            sl_node_trends = {node: {} for node in tuple_node_trends}
+            # Выбираем лист
+            sheet = book[list_config]
+            # Устанавливаем Диапазон считывания для первой строки (узнать индексы столбцов)
+            cells_name = sheet['A1': 'AG1']
+            rus_par_ind = is_f_ind(cells_name[0], 'Наименование параметра')
+            alg_name_ind = is_f_ind(cells_name[0], 'Алгоритмическое имя')
+            eunit_ind = is_f_ind(cells_name[0], 'Единицы измерения')
+            node_name_ind = is_f_ind(cells_name[0], 'Узел')
+
+            # Устанавливаем диапазон для чтения параметров
+            cells_read = sheet['A2': 'AG' + str(sheet.max_row)]
+            # пробегаемся по параметрам листа
+            for par in cells_read:
+                # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
+                sl_par_trends = {par[rus_par_ind].value: (par[alg_name_ind].value.replace('|', '_'),
+                                                          par[eunit_ind].value)}
+                # добавляем словарь параметра в словарь узла
+                sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
+            # для каждого узла...
+            for node in sl_node_trends:
+                # ...для параметра по отсортированному словарю...
+                for param in sorted(sl_node_trends[node]):
+                    # print(node, param, sl_node_trends[node][param])
+                    s_trends += Template(tmp_signal_trends).substitute(name_group=sl_group_trends[list_config],
+                                                                       name_node=node, discr=param, object_tag=obj,
+                                                                       group_tag=sl_group_tag_trends[list_config],
+                                                                       signal_tag=f'{sl_node_trends[node][param][0]}.Value',
+                                                                       signal_unit=sl_node_trends[node][param][1])
+        # Проверка изменений, и если есть изменения, то запись
+        s_trends = s_trends.rstrip()
+        check_diff_file(check_path=os.path.join('File_out', 'Trends'),
+                        file_name=f'Tree{obj}.json',
+                        new_data=f"{{\n  \"UserTree\": [\n{s_trends.rstrip(',')}\n ]\n}}",
+                        message_print=f'Требуется заменить файл Tree{obj}.json')
+
     book.close()
 
     os.remove('file_plc.txt')
@@ -457,12 +536,7 @@ try:
     # os.remove('file_out_objects.txt')
     os.remove('file_app_out.txt')
     print(datetime.datetime.now())
-    # for k in sl_for_diag:
-    #    print(k, sl_for_diag[k])
-    # print()
-    # for k in sl_cpu_drv_signal:
-    #    print(k, sl_cpu_drv_signal[k])
-    # print()
+
     path_nku = ''
     # Если есть файл-источник конфигуратора НКУ
     if os.path.exists('Source_NKU.txt'):
@@ -482,7 +556,7 @@ try:
             tmp_object_DI_NKU = f.read()
 
         book_nku = openpyxl.open(os.path.join(path_nku, config_nku))  # , read_only=True
-        # Дискретные
+        # Дискретные НКУ
         sheet_nku = book_nku['Входные']  # .worksheets[6]
         cells_npu = sheet_nku['A1': 'AC' + str(sheet_nku.max_row)]
 
