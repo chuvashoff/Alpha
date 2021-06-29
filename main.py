@@ -2,7 +2,7 @@ import copy
 import openpyxl
 import datetime
 import logging
-from my_func import *
+# from my_func import *
 from alpha_index import *
 import warnings
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
@@ -410,6 +410,7 @@ try:
         # Если нет папки File_out, то создадим её
         if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
             os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+        # Если нет папки File_out/PLC_Aspect_importDomain, то создадим её
         if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain')):
             os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain'))
         # Для каждого объекта создаём контроллер
@@ -506,6 +507,8 @@ try:
                             new_data=Template(tmp_global).substitute(dp_node=tmp_group_nku),
                             message_print=f'Требуется заменить Сигналы НКУ в аспекте ПЛК')
 
+            create_index_nku(name_plc_nku='GPA', sl_signal_nku=sl_CPU_nku)
+
     create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn,
                  sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
                  sl_cpu_drv_signal=sl_cpu_drv_signal)
@@ -522,3 +525,5 @@ except (Exception, KeyError):
                         format='%(levelname)s - %(message)s - %(asctime)s')
     logging.exception("Ошибка выполнения")
     print('Произошла ошибка выполнения')
+
+# input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')

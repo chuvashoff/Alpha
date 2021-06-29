@@ -10,9 +10,9 @@ def create_sl(text, str_check):
     for i in text:
         if str_check in i and '//' not in i and str_check.replace('_', '|') not in i:
             if 'FAST|' in i:
-                sl_tmp[i[:i.find(' ')]] = int(i[i.rfind('[') + 1:i.rfind(']')])
+                sl_tmp[i[:i.find(':=')].strip()] = int(i[i.rfind('[') + 1:i.rfind(']')])
             else:
-                sl_tmp[i[:i.find('(')]] = int(i[i.rfind('(') + 1:i.rfind(')')])
+                sl_tmp[i[:i.find('(')].strip()] = int(i[i.rfind('(') + 1:i.rfind(')')])
 
     sl_tmp = {key: value for key, value in sl_tmp.items() if f'FAST|{key}' not in sl_tmp}
     # В словаре sl_tmp лежит индекс массива: алг имя (в том числе FAST|+)
@@ -474,7 +474,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                 for i in text:
                     if 'BTN_' in i and '(' in i:
                         a = i.split(',')[0]
-                        sl_tmp_btn[int(a[a.find('(')+1:])] = a[:a.find('(')]
+                        sl_tmp_btn[int(a[a.find('(')+1:].strip())] = a[:a.find('(')].strip()
 
             # Если есть файл защит PZ
             if os.path.exists(os.path.join(line_source[1], '0_PZ.st')):
@@ -831,8 +831,14 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             if sl_global_diag:
                 s_all += create_group_diag(diag_sl=sl_global_diag, template_no_arc_index=tmp_ind_no_arc,
                                            source=line_source[0])
-            # Проверка изменений, и если есть изменения, то запись
 
+            # Проверка изменений, и если есть изменения, то запись
+            # Если нет папки File_out, то создадим её
+            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
+                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+            # Если нет папки File_out/Maps, то создадим её
+            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps')):
+                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps'))
             check_diff_file(check_path=os.path.join('File_out', 'Maps'),
                             file_name=f'trei_map_{line_source[0]}.xml',
                             new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
@@ -846,3 +852,96 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             # for j in dd.split('\n'):
             #    if '- ' in j or '+ ' in j:
             #        print(j)
+
+
+def create_sl_nku(text, str_check, sl_sig_nku):
+    sl_tmp = {}
+    for i in text:
+        str_i = i.strip()
+        if str_check in str_i:
+            sl_tmp[str_i[str_i.find('D'):str_i.find(':=')].strip().replace('|', '_')] = int(str_i[str_i.rfind('[') +
+                                                                                                  1:str_i.rfind(']')])
+    # В словаре sl_tmp лежит индекс массива: алг имя
+    sl_tmp = {value: key for key, value in sl_tmp.items() if key in sl_sig_nku}
+    return sl_tmp
+
+
+def create_index_nku(name_plc_nku, sl_signal_nku):
+    s_all = ''
+    # Считываем шаблон для карты
+    with open(os.path.join(os.path.dirname(__file__), 'Template',
+                           'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
+        tmp_ind_no_arc = f_no_arc.read()
+    lst_signal_nku = (
+        'Value', 'sSimValue', 'Sim', 'coSim'
+    )
+
+    # Считываем название контроллера и путь до проекта из списка источника
+    # Для сигналов НКУ это гпа контроллер - ищем его
+    with open('Source_list_plc.txt', 'r', encoding='UTF-8') as f_source:
+        while 8:
+            line_source_nku = f_source.readline().strip().split(',')
+            if line_source_nku[0] == name_plc_nku:
+                break
+            if line_source_nku == ['']:
+                print(f'В списке источников не найден контроллер, в котором должны быть сигналы нку - {name_plc_nku}')
+                break
+        sl_global_nku, sl_tmp_nku = {}, {}
+
+        # Если есть файл обработки НКУ
+        if os.path.exists(os.path.join(line_source_nku[1], '0_Par_D_NKU.st')):
+            with open(os.path.join(line_source_nku[1], '0_Par_D_NKU.st'), 'rt') as f_par_nku:
+                text = f_par_nku.read().split('\n')
+            sl_tmp_nku = create_sl_nku(text, 'DI|', sl_signal_nku)
+
+    # Если есть глобальный словарь
+    if os.path.exists(os.path.join(line_source_nku[1], 'global0.var')):
+        with open(os.path.join(line_source_nku[1], 'global0.var'), 'rt') as f_global:
+            for line in f_global:
+                line = line.strip()
+                if 'D_INP_NKU|' in line and len(line.split(',')) >= 10:
+                    line = line.split(',')
+                    sl_global_nku[line[0][line[0].find('|')+1:]] = [max(int(line[9]), int(line[10])),
+                                                                    line[1]]
+    # В словаре лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]
+    sl_global_nku = {key: value for key, value in sl_global_nku.items() if key[:key.find('[')] in lst_signal_nku}
+    # доп обработка словаря, отсекам те, которые не указаны в локальном
+    sl_global_nku = {key: value for key, value in sl_global_nku.items()
+                     if int(key[key.find('[')+1:key.find(']')]) in sl_tmp_nku}
+
+    # Обработка и запись в карту наработок
+    if sl_global_nku:
+        s_all = create_group_nku(sl_global_par=sl_global_nku,
+                                 sl_local_par=sl_tmp_nku,
+                                 template_no_arc_index=tmp_ind_no_arc,
+                                 pref_par='NKU',
+                                 source=line_source_nku[0])
+    check_diff_file(check_path=os.path.join('File_out', 'Maps'),
+                    file_name=f'trei_map_NKU_{line_source_nku[0]}.xml',
+                    new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
+                    message_print=f'Требуется заменить карту НКУ контроллера {line_source_nku[0]}')
+
+
+def create_group_nku(sl_global_par, sl_local_par, template_no_arc_index, pref_par, source):
+    sl_data_cat = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Discrete'
+    }
+    sl_type = {
+        'R': 'Analog',
+        'I': 'Analog',
+        'B': 'Bool'
+    }
+    s_out = ''
+    for key, value in sl_global_par.items():
+        tmp_i = int(key[key.find('[')+1:key.find(']')])
+        tmp_sub_name = key[:key.find('[')]
+        if tmp_i not in sl_local_par:
+            continue
+        a = sl_local_par[tmp_i][sl_local_par[tmp_i].find('|')+1:]
+        temp = template_no_arc_index
+        pref_arc = f'NoArc{sl_data_cat[value[1]]}'
+        s_out += Template(temp).substitute(name_signal=f'{pref_par}.{a}.{tmp_sub_name}', type_signal=sl_type[value[1]],
+                                           index=value[0], data_category=f'DataCategory_{source}_{pref_arc}')
+    return s_out
