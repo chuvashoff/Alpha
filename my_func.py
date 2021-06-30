@@ -206,10 +206,8 @@ def is_create_objects_ai_ae_set(sl_cpu, template_text, object_type):
     return tmp_line_object.rstrip()
 
 
-sl_color_di = {'FF969696': '0', 'FF00B050': '1', 'FFFFFF00': '2', 'FFFF0000': '3'}
-
-
 def is_create_objects_di(sl_cpu, template_text, object_type):
+    sl_color_di = {'FF969696': '0', 'FF00B050': '1', 'FFFFFF00': '2', 'FFFF0000': '3'}
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key, object_type=object_type,
@@ -221,6 +219,7 @@ def is_create_objects_di(sl_cpu, template_text, object_type):
 
 
 def is_create_objects_di_nku(sl_cpu, template_text, object_type, sl_wrn_nku):
+    sl_color_di = {'FF969696': '0', 'FF00B050': '1', 'FFFFFF00': '2', 'FFFF0000': '3'}
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         if sl_wrn_nku[key][1] == 'Нет':
@@ -237,14 +236,13 @@ def is_create_objects_di_nku(sl_cpu, template_text, object_type, sl_wrn_nku):
     return tmp_line_object.rstrip()
 
 
-sl_type_drv = {
-    'FLOAT': 'Types.DRV_AI.DRV_AI_PLC_View',
-    'INT': 'Types.DRV_INT.DRV_INT_PLC_View',
-    'BOOL': 'Types.DRV_DI.DRV_DI_PLC_View'
-}
-
-
 def is_create_objects_drv(sl_drv_cpu, tuple_name_drv, template_text):
+    sl_color_di = {'FF969696': '0', 'FF00B050': '1', 'FFFFFF00': '2', 'FFFF0000': '3'}
+    sl_type_drv = {
+        'FLOAT': 'Types.DRV_AI.DRV_AI_PLC_View',
+        'INT': 'Types.DRV_INT.DRV_INT_PLC_View',
+        'BOOL': 'Types.DRV_DI.DRV_DI_PLC_View'
+    }
     tmp_line_object = ''
     for par in sl_drv_cpu[tuple_name_drv]:
         if par[2] == 'FLOAT':
@@ -291,15 +289,14 @@ def is_load_drv(controller, cell, alg_name, name_par, eunit, type_sig, type_msg,
     return tmp
 
 
-sl_im_PLC = {'ИМ1Х0': 'IM1x0.IM1x0_PLC_View', 'ИМ1Х1': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2': 'IM1x2.IM1x2_PLC_View',
-             'ИМ2Х2': 'IM2x2.IM2x2_PLC_View', 'ИМ2Х4': 'IM2x2.IM2x4_PLC_View', 'ИМ1Х0и': 'IM1x0.IM1x0_PLC_View',
-             'ИМ1Х1и': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC_View', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC_View',
-             'ИМАО': 'IM_AO.IM_AO_PLC_View'}
-
-sl_gender = {'С': '0', 'М': '1', 'Ж': '2'}
-
-
 def is_create_objects_im(sl_cpu, template_text):
+    sl_im_PLC = {'ИМ1Х0': 'IM1x0.IM1x0_PLC_View', 'ИМ1Х1': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2': 'IM1x2.IM1x2_PLC_View',
+                 'ИМ2Х2': 'IM2x2.IM2x2_PLC_View', 'ИМ2Х4': 'IM2x2.IM2x4_PLC_View', 'ИМ1Х0и': 'IM1x0.IM1x0_PLC_View',
+                 'ИМ1Х1и': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC_View', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC_View',
+                 'ИМАО': 'IM_AO.IM_AO_PLC_View'}
+
+    sl_gender = {'С': '0', 'М': '1', 'Ж': '2'}
+
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key,
@@ -332,22 +329,20 @@ def is_create_objects_pz(sl_cpu, template_text, object_type):
     return tmp_line_object.rstrip()
 
 
-sl_type_sig = {
-    'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
-    'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View',
-    'ТС': 'Types.TS.TS_PLC_View',
-    'ППУ': 'Types.PPU.PPU_PLC_View',
-    'Защита': 'Types.ALR.ALR_PLC_View',
-    'АС': 'Types.ALR.ALR_PLC_View',
-    'Режим': 'Types.MODES.MODES_PLC_View',
-    'Номер режима': 'Types.MODES.regNum_PLC_View',
-    'ALG_BOOL': 'Types.ALG.ALG_BOOL_PLC_View',
-    'ALG_INT': 'Types.ALG.ALG_INT_PLC_View',
-    'ALG_FLOAT': 'Types.ALG.ALG_FLOAT_PLC_View'
-}
-
-
 def is_create_objects_sig(sl_cpu, template_text):
+    sl_type_sig = {
+        'Да (по наличию)': 'Types.WRN_On.WRN_On_PLC_View',
+        'Да (по отсутствию)': 'Types.WRN_Off.WRN_Off_PLC_View',
+        'ТС': 'Types.TS.TS_PLC_View',
+        'ППУ': 'Types.PPU.PPU_PLC_View',
+        'Защита': 'Types.ALR.ALR_PLC_View',
+        'АС': 'Types.ALR.ALR_PLC_View',
+        'Режим': 'Types.MODES.MODES_PLC_View',
+        'Номер режима': 'Types.MODES.regNum_PLC_View',
+        'ALG_BOOL': 'Types.ALG.ALG_BOOL_PLC_View',
+        'ALG_INT': 'Types.ALG.ALG_INT_PLC_View',
+        'ALG_FLOAT': 'Types.ALG.ALG_FLOAT_PLC_View'
+    }
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key,
@@ -357,43 +352,31 @@ def is_create_objects_sig(sl_cpu, template_text):
     return tmp_line_object.rstrip()
 
 
-'''Словарь модулей'''
-sl_modules = {
-    'M547A': ['Резерв'] * 16,
-    'M537V': ['Резерв'] * 8,
-    'M557D': ['Резерв'] * 32,
-    'M557O': ['Резерв'] * 32,
-    'M932C_2N': ['Резерв'] * 8,
-    'M903E': 'CPU',
-    'M991E': 'CPU'
-}
-# Считываем файлы-шаблоны для диагностики модулей
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_m547a'), 'r', encoding='UTF-8') as f:
-    tmp_m547a = f.read()
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_m537v_m932c_2n'), 'r', encoding='UTF-8') as f:
-    tmp_m537v = f.read()
-with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_m557d_m557o'), 'r', encoding='UTF-8') as f:
-    tmp_m557d = f.read()
-
-sl_modules_temp = {
-    'M547A': tmp_m547a,
-    'M537V': tmp_m537v,
-    'M557D': tmp_m557d,
-    'M557O': tmp_m557d,
-    'M932C_2N': tmp_m537v
-}
-sl_type_modules = {
-    'M903E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
-    'M991E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
-    'M547A': 'Types.DIAG_M547A.DIAG_M547A_PLC_View',
-    'M537V': 'Types.DIAG_M537V.DIAG_M537V_PLC_View',
-    'M932C_2N': 'Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View',
-    'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
-    'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View'
-}
-
-
 def is_create_objects_diag(sl, template_text_cpu):
+    # Считываем файлы-шаблоны для диагностики модулей
+    with open(os.path.join('Template', 'Temp_m547a'), 'r', encoding='UTF-8') as f:
+        tmp_m547a = f.read()
+    with open(os.path.join('Template', 'Temp_m537v_m932c_2n'), 'r', encoding='UTF-8') as f:
+        tmp_m537v = f.read()
+    with open(os.path.join('Template', 'Temp_m557d_m557o'), 'r', encoding='UTF-8') as f:
+        tmp_m557d = f.read()
+
+    sl_modules_temp = {
+        'M547A': tmp_m547a,
+        'M537V': tmp_m537v,
+        'M557D': tmp_m557d,
+        'M557O': tmp_m557d,
+        'M932C_2N': tmp_m537v
+    }
+    sl_type_modules = {
+        'M903E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
+        'M991E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
+        'M547A': 'Types.DIAG_M547A.DIAG_M547A_PLC_View',
+        'M537V': 'Types.DIAG_M537V.DIAG_M537V_PLC_View',
+        'M932C_2N': 'Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View',
+        'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
+        'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View'
+    }
     tmp_line_object = ''
     for key, value in sl.items():
         if value[0] in ['M903E', 'M991E']:
@@ -477,27 +460,27 @@ def is_create_objects_diag(sl, template_text_cpu):
 
 def check_diff_file(check_path, file_name, new_data, message_print):
     # Если в целевой(указанной) папке уже есть формируемый файл
-    if os.path.exists(os.path.join(os.path.dirname(__file__), check_path, file_name)):
+    if os.path.exists(os.path.join(check_path, file_name)):
         # Формирурем новый
         # new_out_nku = Template(tmp_global).substitute(dp_node=tmp_group_nku)
         # считываем имеющейся файл
-        with open(os.path.join(os.path.dirname(__file__), check_path, file_name), 'r', encoding='UTF-8') as f_check:
+        with open(os.path.join(check_path, file_name), 'r', encoding='UTF-8') as f_check:
             old_data = f_check.read()
         # Если отличаются
         if new_data != old_data:
             # Если нет папки Old, то создаём её
-            if not os.path.exists(os.path.join(os.path.dirname(__file__), check_path, 'Old')):
-                os.mkdir(os.path.join(os.path.dirname(__file__), check_path, 'Old'))
+            if not os.path.exists(os.path.join(check_path, 'Old')):
+                os.mkdir(os.path.join(check_path, 'Old'))
             # Переносим старую файл в папку Old
-            os.replace(os.path.join(os.path.dirname(__file__), check_path, file_name),
-                       os.path.join(os.path.dirname(__file__), check_path, 'Old', file_name))
+            os.replace(os.path.join(check_path, file_name),
+                       os.path.join(check_path, 'Old', file_name))
             # Записываем новый файл
-            with open(os.path.join(os.path.dirname(__file__),  check_path, file_name), 'w', encoding='UTF-8') as f_wr:
+            with open(os.path.join(check_path, file_name), 'w', encoding='UTF-8') as f_wr:
                 f_wr.write(new_data)
             # пишем, что надо заменить
             print(message_print)
     # Если в целевой(указанной) папке нет формируемого файла, то создаём его и пишем, что заменить
     else:
-        with open(os.path.join(os.path.dirname(__file__), check_path, file_name), 'w', encoding='UTF-8') as f_wr:
+        with open(os.path.join(check_path, file_name), 'w', encoding='UTF-8') as f_wr:
             f_wr.write(new_data)
         print(message_print)

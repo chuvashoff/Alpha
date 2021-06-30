@@ -299,11 +299,9 @@ def create_group_drv(drv_sl, template_no_arc_index, source):
 
 def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_spec, sl_diag, sl_cpu_drv_signal):
     # Считываем шаблоны для карты
-    with open(os.path.join(os.path.dirname(__file__), 'Template',
-                           'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f_arc:
+    with open(os.path.join('Template', 'Temp_map_index_Arc'), 'r', encoding='UTF-8') as f_arc:
         tmp_ind_arc = f_arc.read()
-    with open(os.path.join(os.path.dirname(__file__), 'Template',
-                           'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
+    with open(os.path.join('Template', 'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
         tmp_ind_no_arc = f_no_arc.read()
 
     lst_ae = (
@@ -413,10 +411,10 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             sl_global_drv = {}
 
             if 'ТР' in sl_cpu_spec[line_source[0]]:
-                with open(os.path.join(os.path.dirname(__file__), 'Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
+                with open(os.path.join('Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
                     lst_tr_par = f_tr.read().split('\n')
             if 'АПР' in sl_cpu_spec[line_source[0]]:
-                with open(os.path.join(os.path.dirname(__file__), 'Template', 'APR_par'), 'r', encoding='UTF-8') as f_:
+                with open(os.path.join('Template', 'APR_par'), 'r', encoding='UTF-8') as f_:
                     lst_apr_par = f_.read().split('\n')
 
             # Если есть файл аналогов
@@ -834,11 +832,11 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
 
             # Проверка изменений, и если есть изменения, то запись
             # Если нет папки File_out, то создадим её
-            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
-                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+            if not os.path.exists('File_out'):
+                os.mkdir('File_out')
             # Если нет папки File_out/Maps, то создадим её
-            if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps')):
-                os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Maps'))
+            if not os.path.exists(os.path.join('File_out', 'Maps')):
+                os.mkdir(os.path.join('File_out', 'Maps'))
             check_diff_file(check_path=os.path.join('File_out', 'Maps'),
                             file_name=f'trei_map_{line_source[0]}.xml',
                             new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
@@ -869,8 +867,7 @@ def create_sl_nku(text, str_check, sl_sig_nku):
 def create_index_nku(name_plc_nku, sl_signal_nku):
     s_all = ''
     # Считываем шаблон для карты
-    with open(os.path.join(os.path.dirname(__file__), 'Template',
-                           'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
+    with open(os.path.join('Template', 'Temp_map_index_noArc'), 'r', encoding='UTF-8') as f_no_arc:
         tmp_ind_no_arc = f_no_arc.read()
     lst_signal_nku = (
         'Value', 'sSimValue', 'Sim', 'coSim'

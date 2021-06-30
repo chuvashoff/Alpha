@@ -36,42 +36,51 @@ try:
     sl_all_pz = {}
     sl_for_diag = {}
     sl_cpu_drv_signal = {}
-
+    '''Словарь модулей'''
+    sl_modules = {
+        'M547A': ['Резерв'] * 16,
+        'M537V': ['Резерв'] * 8,
+        'M557D': ['Резерв'] * 32,
+        'M557O': ['Резерв'] * 32,
+        'M932C_2N': ['Резерв'] * 8,
+        'M903E': 'CPU',
+        'M991E': 'CPU'
+    }
     # Считываем файл-шаблон для AI  AE SET
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
         tmp_object_AIAESET = f.read()
     # Считываем файл-шаблон для DI
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_DI'), 'r', encoding='UTF-8') as f:
         tmp_object_DI = f.read()
     # Считываем файл-шаблон для IM
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_IM'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_IM'), 'r', encoding='UTF-8') as f:
         tmp_object_IM = f.read()
     # Считываем файл-шаблон для BTN CNT
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_BTN_CNT_sig'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_BTN_CNT_sig'), 'r', encoding='UTF-8') as f:
         tmp_object_BTN_CNT_sig = f.read()  # его же используем для диагностики CPU потому что подходит
     # Считываем файл-шаблон для PZ
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_PZ'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_PZ'), 'r', encoding='UTF-8') as f:
         tmp_object_PZ = f.read()
     # Считываем файл-шаблон для группы
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_group'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_group'), 'r', encoding='UTF-8') as f:
         tmp_group = f.read()
     # Считываем файл-шаблон для app
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_app'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_app'), 'r', encoding='UTF-8') as f:
         tmp_app = f.read()
     # Считываем файл-шаблон для контроллера
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TREI'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_TREI'), 'r', encoding='UTF-8') as f:
         tmp_trei = f.read()
     # Считываем файл-шаблон для global
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_global'), 'r', encoding='UTF-8') as f:
         tmp_global = f.read()
     # Считываем файл-шаблон для топливного регулятора
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_TR_ps90'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_TR_ps90'), 'r', encoding='UTF-8') as f:
         tmp_tr_ps90 = f.read()
     # Считываем файл-шаблон для АПР
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_APR'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_APR'), 'r', encoding='UTF-8') as f:
         tmp_apr = f.read()
     # Считываем файл-шаблон для драйверных параметров
-    with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_drv_par'), 'r', encoding='UTF-8') as f:
+    with open(os.path.join('Template', 'Temp_drv_par'), 'r', encoding='UTF-8') as f:
         tmp_drv_par = f.read()
 
     book = openpyxl.open(os.path.join(path_config, file_config))  # , read_only=True
@@ -406,13 +415,12 @@ try:
         with open('file_app_out.txt', 'r', encoding='UTF-8') as f:
             tmp_line_ = f.read().rstrip()
 
-        # print(os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')))
         # Если нет папки File_out, то создадим её
-        if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
-            os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+        if not os.path.exists('File_out'):
+            os.mkdir('File_out')
         # Если нет папки File_out/PLC_Aspect_importDomain, то создадим её
-        if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain')):
-            os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'PLC_Aspect_importDomain'))
+        if not os.path.exists(os.path.join('File_out', 'PLC_Aspect_importDomain')):
+            os.mkdir(os.path.join('File_out', 'PLC_Aspect_importDomain'))
         # Для каждого объекта создаём контроллер
         num_obj_plc = 1
         for obj in sl_object_all:
@@ -452,15 +460,14 @@ try:
 
     '''ТРЕНДЫ- JSON'''
     # Если нет папки File_out, то создадим её
-    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out')):
-        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out'))
+    if not os.path.exists('File_out'):
+        os.mkdir('File_out')
     # Если нет папки File_out/Trends, то создадим её
-    if not os.path.exists(os.path.join(os.path.dirname(__file__), 'File_out', 'Trends')):
-        os.mkdir(os.path.join(os.path.dirname(__file__), 'File_out', 'Trends'))
+    if not os.path.exists(os.path.join('File_out', 'Trends')):
+        os.mkdir(os.path.join('File_out', 'Trends'))
 
     # Считываем файл-шаблон для сигнала тренда
-    with open(os.path.join(os.path.dirname(__file__), 'Template',
-                           'Temp_signal_trends'), 'r', encoding='UTF-8') as f_trends:
+    with open(os.path.join('Template', 'Temp_signal_trends'), 'r', encoding='UTF-8') as f_trends:
         tmp_signal_trends = f_trends.read()
 
     # Определение объявленных мнемосхем с листа настроек
@@ -747,7 +754,7 @@ try:
                 config_nku = file
                 break
         # Считываем файл-шаблон для DI_NKU
-        with open(os.path.join(os.path.dirname(__file__), 'Template', 'Temp_DI_NKU'), 'r', encoding='UTF-8') as f:
+        with open(os.path.join('Template', 'Temp_DI_NKU'), 'r', encoding='UTF-8') as f:
             tmp_object_DI_NKU = f.read()
 
         book_nku = openpyxl.open(os.path.join(path_nku, config_nku))  # , read_only=True
@@ -782,7 +789,7 @@ try:
                  sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
                  sl_cpu_drv_signal=sl_cpu_drv_signal)
     print(datetime.datetime.now(), 'Окончание сборки карт индексов')
-    # input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
+    input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
 
 except (Exception, KeyError):
     # в случае возникновения какой-либо ошибки, чистим возможные промежуточные файлы
@@ -793,6 +800,5 @@ except (Exception, KeyError):
     logging.basicConfig(filename='error.log', filemode='a', datefmt='%d.%m.%y %H:%M:%S',
                         format='%(levelname)s - %(message)s - %(asctime)s')
     logging.exception("Ошибка выполнения")
-    print('Произошла ошибка выполнения')
-
-input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
+    # print('Произошла ошибка выполнения')
+    input('Во время сборки произошла ошибка сформирован файл error.log. Нажмите Enter для выхода...')
