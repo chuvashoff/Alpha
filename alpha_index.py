@@ -913,6 +913,12 @@ def create_index_nku(name_plc_nku, sl_signal_nku):
                                  template_no_arc_index=tmp_ind_no_arc,
                                  pref_par='NKU',
                                  source=line_source_nku[0])
+    # Если нет папки File_out, то создадим её
+    if not os.path.exists('File_out'):
+        os.mkdir('File_out')
+    # Если нет папки File_out/Maps, то создадим её
+    if not os.path.exists(os.path.join('File_out', 'Maps')):
+        os.mkdir(os.path.join('File_out', 'Maps'))
     check_diff_file(check_path=os.path.join('File_out', 'Maps'),
                     file_name=f'trei_map_NKU_{line_source_nku[0]}.xml',
                     new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
