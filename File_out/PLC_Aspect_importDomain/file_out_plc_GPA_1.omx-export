@@ -1,17 +1,19 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_GPA1" >
     <trei:master-module name="m903e" >
-      <trei:ethernet-adapter name="Eth1" address="192.168.003.012" />
-      <trei:ethernet-adapter name="Eth2" address="192.168.004.012" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.012" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.012" />
       <trei:unet-server name="UnetServer" address-map="PLC_GPA1.m903e.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
             <ct:object name="BR2_0" base-type="Types.DIAG_CPU.DIAG_CPU_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика мастер-модуля BR2_0 (M903E)" />
+              <attribute type="Attributes.ShortName" value="BR2_0" />
             </ct:object>
             <ct:object name="BR2_1" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_1 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_1" />
               <attribute type="Attributes.Channel_1" value="Температура воздуха 1 в сбросном воздуховоде КШТ" />
               <attribute type="Attributes.Channel_10" value="Температура масла откачки из ГТД ДТ2" />
               <attribute type="Attributes.Channel_11" value="Температура масла перед ТГМ ДТ3" />
@@ -31,6 +33,7 @@
             </ct:object>
             <ct:object name="BR2_2" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_2 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_2" />
               <attribute type="Attributes.Channel_1" value="Резерв" />
               <attribute type="Attributes.Channel_10" value="Резерв" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -50,6 +53,7 @@
             </ct:object>
             <ct:object name="BR2_3" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_3 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_3" />
               <attribute type="Attributes.Channel_1" value="Резерв" />
               <attribute type="Attributes.Channel_10" value="Концентрация углекислого газа в КШТ" />
               <attribute type="Attributes.Channel_11" value="Давление наружного воздуха" />
@@ -69,6 +73,7 @@
             </ct:object>
             <ct:object name="BR2_4" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_4 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_4" />
               <attribute type="Attributes.Channel_1" value="Давление барьерного воздуха после фильтров  " />
               <attribute type="Attributes.Channel_10" value="Давление буферного газа на входе в КИП ГДУ" />
               <attribute type="Attributes.Channel_11" value="Температура буферного газа на входе в КИП ГДУ" />
@@ -88,6 +93,7 @@
             </ct:object>
             <ct:object name="BR2_5" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_5 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_5" />
               <attribute type="Attributes.Channel_1" value="dP на дросселе (расх. буф. газа на 1-ую ступень ГДУ со ст. вс.)" />
               <attribute type="Attributes.Channel_10" value="Виброперемещение ротора в задней опоре (вертик.)" />
               <attribute type="Attributes.Channel_11" value="Осевой сдвиг ротора 1" />
@@ -107,6 +113,7 @@
             </ct:object>
             <ct:object name="BR2_6" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_6 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_6" />
               <attribute type="Attributes.Channel_1" value="Перепад давления на масляном фильтре перед компрессором" />
               <attribute type="Attributes.Channel_10" value="Давление газа перед фильтрами БФТГ" />
               <attribute type="Attributes.Channel_11" value="Уровень конденсата в фильтре 1" />
@@ -126,6 +133,7 @@
             </ct:object>
             <ct:object name="BR2_7" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_7 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_7" />
               <attribute type="Attributes.Channel_1" value="Давление масла на входе в МО ЦБК" />
               <attribute type="Attributes.Channel_10" value="Резерв" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -145,6 +153,7 @@
             </ct:object>
             <ct:object name="BR2_8" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_8 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_8" />
               <attribute type="Attributes.Channel_1" value="Положение регулируемого клапана КВ1 на входе БВ1" />
               <attribute type="Attributes.Channel_10" value="Резерв" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -164,6 +173,7 @@
             </ct:object>
             <ct:object name="BR2_9" base-type="Types.DIAG_M537V.DIAG_M537V_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_9 (M537V)" />
+              <attribute type="Attributes.ShortName" value="BR2_9" />
               <attribute type="Attributes.Channel_1" value="Клапан КВ1 на входе БВ1" />
               <attribute type="Attributes.Channel_2" value="Клапан КВ2 на входе БВ1" />
               <attribute type="Attributes.Channel_3" value="Клапан КВ4 на выходе КШТ" />
@@ -175,6 +185,7 @@
             </ct:object>
             <ct:object name="BR2_10" base-type="Types.DIAG_M537V.DIAG_M537V_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_10 (M537V)" />
+              <attribute type="Attributes.ShortName" value="BR2_10" />
               <attribute type="Attributes.Channel_1" value="Резерв" />
               <attribute type="Attributes.Channel_2" value="Резерв" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -186,6 +197,7 @@
             </ct:object>
             <ct:object name="BR2_11" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_11 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_11" />
               <attribute type="Attributes.Channel_1" value="Клапан КВ3 рециркуляции воздуха КШТ открыт" />
               <attribute type="Attributes.Channel_2" value="Клапан КВ3 рециркуляции воздуха КШТ закрыт" />
               <attribute type="Attributes.Channel_3" value="Клапан КП1 на входе КШТ открыт" />
@@ -221,6 +233,7 @@
             </ct:object>
             <ct:object name="BR2_12" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_12 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_12" />
               <attribute type="Attributes.Channel_1" value="Клапан КП6 на входе КШТ закрыт" />
               <attribute type="Attributes.Channel_2" value="Клапан КП4 подачи воздуха в КШТ от АВГМ открыт" />
               <attribute type="Attributes.Channel_3" value="Клапан КП4 подачи воздуха в КШТ от АВГМ закрыт" />
@@ -256,6 +269,7 @@
             </ct:object>
             <ct:object name="BR2_13" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_13 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_13" />
               <attribute type="Attributes.Channel_1" value="Дверь камеры всасывания открыта" />
               <attribute type="Attributes.Channel_2" value="Дверь левая ВОУ открыта" />
               <attribute type="Attributes.Channel_3" value="Дверь правая ВОУ открыта" />
@@ -291,6 +305,7 @@
             </ct:object>
             <ct:object name="BR2_14" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_14 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_14" />
               <attribute type="Attributes.Channel_1" value="Задвижка секции УТО открыта" />
               <attribute type="Attributes.Channel_2" value="Задвижка секции УТО закрыта" />
               <attribute type="Attributes.Channel_3" value="Задвижка секции УТО готова" />
@@ -326,6 +341,7 @@
             </ct:object>
             <ct:object name="BR2_15" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_15 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_15" />
               <attribute type="Attributes.Channel_1" value="Кран 160.1 открыт" />
               <attribute type="Attributes.Channel_2" value="Кран 160.2 открыт" />
               <attribute type="Attributes.Channel_3" value="Кран 160.4 открыт" />
@@ -361,6 +377,7 @@
             </ct:object>
             <ct:object name="BR2_16" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_16 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_16" />
               <attribute type="Attributes.Channel_1" value="Обобщенный сигнал аварии осевого сдвига" />
               <attribute type="Attributes.Channel_2" value="Резерв" />
               <attribute type="Attributes.Channel_3" value="Пожар в ОД" />
@@ -396,6 +413,7 @@
             </ct:object>
             <ct:object name="BR2_17" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_17 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_17" />
               <attribute type="Attributes.Channel_1" value="Кран 160.13 закрыт" />
               <attribute type="Attributes.Channel_2" value="Резерв" />
               <attribute type="Attributes.Channel_3" value="Кран 160.14 открыт" />
@@ -431,6 +449,7 @@
             </ct:object>
             <ct:object name="BR2_18" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_18 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_18" />
               <attribute type="Attributes.Channel_1" value="АОСС от САУ КЦ (резервный)" />
               <attribute type="Attributes.Channel_2" value="Резерв" />
               <attribute type="Attributes.Channel_3" value="ВОСС от САУ КЦ (резервный)" />
@@ -466,6 +485,7 @@
             </ct:object>
             <ct:object name="BR2_19" base-type="Types.DIAG_M557O.DIAG_M557O_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_19 (M557O)" />
+              <attribute type="Attributes.ShortName" value="BR2_19" />
               <attribute type="Attributes.Channel_1" value="Влагомер ИПТВ включить" />
               <attribute type="Attributes.Channel_2" value="Термостат влагомера включить" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -501,6 +521,7 @@
             </ct:object>
             <ct:object name="BR2_20" base-type="Types.DIAG_M557O.DIAG_M557O_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_20 (M557O)" />
+              <attribute type="Attributes.ShortName" value="BR2_20" />
               <attribute type="Attributes.Channel_1" value="Изменение положения регулятора давления газ–газ разрешить" />
               <attribute type="Attributes.Channel_2" value="Нагреватели блока УТО включить" />
               <attribute type="Attributes.Channel_3" value="Вентилятор блока арматуры УТО включить" />
@@ -536,6 +557,7 @@
             </ct:object>
             <ct:object name="BR2_21" base-type="Types.DIAG_M557O.DIAG_M557O_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_21 (M557O)" />
+              <attribute type="Attributes.ShortName" value="BR2_21" />
               <attribute type="Attributes.Channel_1" value="Кран 160.1 закрыть" />
               <attribute type="Attributes.Channel_2" value="Кран 160.2 закрыть" />
               <attribute type="Attributes.Channel_3" value="Кран 160.4 закрыть" />
@@ -571,6 +593,7 @@
             </ct:object>
             <ct:object name="BR2_22" base-type="Types.DIAG_M557O.DIAG_M557O_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_22 (M557O)" />
+              <attribute type="Attributes.ShortName" value="BR2_22" />
               <attribute type="Attributes.Channel_1" value="Клапан КП7 от АВГМ на входе в укрытие ГПА открыть" />
               <attribute type="Attributes.Channel_2" value="Клапан ПЕ1 вентиляции ангара открыть" />
               <attribute type="Attributes.Channel_3" value="Клапан ПЕ2 вентиляции ангара открыть" />
@@ -606,6 +629,7 @@
             </ct:object>
             <ct:object name="BR2_23" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_23 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_23" />
               <attribute type="Attributes.Channel_1" value="Резерв" />
               <attribute type="Attributes.Channel_2" value="Резерв" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -641,6 +665,7 @@
             </ct:object>
             <ct:object name="BR2_24" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_24 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_24" />
               <attribute type="Attributes.Channel_1" value="Наличие напряжения на блоке питания G105" />
               <attribute type="Attributes.Channel_2" value="Наличие напряжения на блоке питания G205" />
               <attribute type="Attributes.Channel_3" value="Наличие напряжения на блоке питания G107" />
@@ -676,6 +701,7 @@
             </ct:object>
             <ct:object name="BR2_25" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_25 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_25" />
               <attribute type="Attributes.Channel_1" value="Наличие напряжения на блоке питания G206" />
               <attribute type="Attributes.Channel_2" value="Автомат 1S3 включен" />
               <attribute type="Attributes.Channel_3" value="Автомат 1S4 включен" />
@@ -711,6 +737,7 @@
             </ct:object>
             <ct:object name="BR2_26" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_26 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR2_26" />
               <attribute type="Attributes.Channel_1" value="Напряжение на основном питании САУ ~220В " />
               <attribute type="Attributes.Channel_10" value="Резерв" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -730,6 +757,7 @@
             </ct:object>
             <ct:object name="BR2_27" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_27 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR2_27" />
               <attribute type="Attributes.Channel_1" value="Наличие напряжения на блоке питания G203" />
               <attribute type="Attributes.Channel_2" value="Наличие напряжения на блоке питания G204" />
               <attribute type="Attributes.Channel_3" value="Резерв" />

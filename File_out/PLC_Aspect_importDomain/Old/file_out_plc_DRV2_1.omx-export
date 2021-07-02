@@ -3,7 +3,7 @@
     <trei:master-module name="m903e" >
       <trei:ethernet-adapter name="Eth1" address="192.168.003.016" />
       <trei:ethernet-adapter name="Eth2" address="192.168.004.016" />
-      <trei:unet-server name="UnetServer" address-map="PLC_DRV21.m903e1.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_DRV21.m903e.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >

@@ -352,7 +352,7 @@ def is_create_objects_sig(sl_cpu, template_text):
     return tmp_line_object.rstrip()
 
 
-def is_create_objects_diag(sl, template_text_cpu):
+def is_create_objects_diag(sl):
     # Считываем файлы-шаблоны для диагностики модулей
     with open(os.path.join('Template', 'Temp_m547a'), 'r', encoding='UTF-8') as f:
         tmp_m547a = f.read()
@@ -360,6 +360,8 @@ def is_create_objects_diag(sl, template_text_cpu):
         tmp_m537v = f.read()
     with open(os.path.join('Template', 'Temp_m557d_m557o'), 'r', encoding='UTF-8') as f:
         tmp_m557d = f.read()
+    with open(os.path.join('Template', 'Temp_cpu'), 'r', encoding='UTF-8') as f:
+        template_text_cpu = f.read()
 
     sl_modules_temp = {
         'M547A': tmp_m547a,
@@ -383,12 +385,14 @@ def is_create_objects_diag(sl, template_text_cpu):
             tmp_line_object += Template(template_text_cpu).substitute(object_name=key,
                                                                       object_type=sl_type_modules[value[0]],
                                                                       object_aspect='Types.PLC_Aspect',
-                                                                      text_description=f'Диагностика мастер-модуля {key} ({value[0]})')
+                                                                      text_description=f'Диагностика мастер-модуля {key} ({value[0]})',
+                                                                      short_name=key)
         elif value[0] in ['M547A']:
             tmp_line_object += Template(sl_modules_temp[value[0]]).substitute(object_name=key,
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',
                                                                               text_description=f'Диагностика модуля {key} ({value[0]})',
+                                                                              short_name=key,
                                                                               Channel_1=value[1][0],
                                                                               Channel_2=value[1][1],
                                                                               Channel_3=value[1][2],
@@ -410,6 +414,7 @@ def is_create_objects_diag(sl, template_text_cpu):
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',
                                                                               text_description=f'Диагностика модуля {key} ({value[0]})',
+                                                                              short_name=key,
                                                                               Channel_1=value[1][0],
                                                                               Channel_2=value[1][1],
                                                                               Channel_3=value[1][2],
@@ -423,6 +428,7 @@ def is_create_objects_diag(sl, template_text_cpu):
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',
                                                                               text_description=f'Диагностика модуля {key} ({value[0]})',
+                                                                              short_name=key,
                                                                               Channel_1=value[1][0],
                                                                               Channel_2=value[1][1],
                                                                               Channel_3=value[1][2],

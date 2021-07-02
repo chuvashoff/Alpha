@@ -156,7 +156,7 @@ try:
                         is_cor_chr(p[is_f_ind(cells_run[0], 'Наименование параметра')].value)
 
         if len(sl_modules_cpu) != 0:
-            tmp_line_ = is_create_objects_diag(sl_modules_cpu, tmp_object_BTN_CNT_sig)
+            tmp_line_ = is_create_objects_diag(sl_modules_cpu)
             tmp_line_ = (Template(tmp_group).substitute(name_group='HW', objects=tmp_line_))
 
             with open('file_out_group.txt', 'w', encoding='UTF-8') as f:
