@@ -398,7 +398,7 @@ try:
                                                   template_text=tmp_drv_par)
                 tmp_sub_drv += Template(tmp_group).substitute(name_group=drv[0], objects=tmp_line_)
 
-            tmp_subgroup += Template(tmp_group).substitute(name_group='DRV', objects=tmp_sub_drv)
+            tmp_subgroup += Template(tmp_group).substitute(name_group='DRV', objects=tmp_sub_drv.rstrip())
 
         # Формируем подгруппу
         if tmp_subgroup != '':
@@ -408,9 +408,9 @@ try:
         # Формирование выходного файла app
         with open('file_out_group.txt', 'r', encoding='UTF-8') as f:
             tmp_line_ = f.read().rstrip()
-            tmp_line_ += '\n<trei:unet-address-map name="UnetAddressMap" />\n'
+            tmp_line_ += '\n\t<trei:unet-address-map name="UnetAddressMap" />\n'
         with open('file_app_out.txt', 'w', encoding='UTF-8') as f:
-            f.write(Template(tmp_app).substitute(name_app='Tree', ct_object=tmp_line_))
+            f.write(Template(tmp_app).substitute(name_app='Tree', ct_object=tmp_line_.rstrip()))
 
         with open('file_app_out.txt', 'r', encoding='UTF-8') as f:
             tmp_line_ = f.read().rstrip()

@@ -268,7 +268,7 @@ def is_create_objects_drv(sl_drv_cpu, tuple_name_drv, template_text):
                                                               text_description=par[1], type_msg=typ_msg,
                                                               color_off=s_off, color_on=s_on, text_eunit=unit,
                                                               text_fracdigits=f_dig)
-    return tmp_line_object
+    return tmp_line_object.rstrip()
 
 
 # В словаре ДРВ - (драйвер, алг. имя) : рус наим, тип пер., ед. измер, чило знаков, цвет наличия, цвет отсутствия,
