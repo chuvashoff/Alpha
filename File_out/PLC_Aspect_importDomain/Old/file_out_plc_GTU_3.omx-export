@@ -1,17 +1,19 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_GTU3" >
     <trei:master-module name="m903e" >
-      <trei:ethernet-adapter name="Eth1" address="192.168.003.030" />
-      <trei:ethernet-adapter name="Eth2" address="192.168.004.030" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.030" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.030" />
       <trei:unet-server name="UnetServer" address-map="PLC_GTU3.m903e.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
             <ct:object name="BR1_0" base-type="Types.DIAG_CPU.DIAG_CPU_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика мастер-модуля BR1_0 (M903E)" />
+              <attribute type="Attributes.ShortName" value="BR1_0" />
             </ct:object>
             <ct:object name="BR1_1" base-type="Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_1 (M932C_2N)" />
+              <attribute type="Attributes.ShortName" value="BR1_1" />
               <attribute type="Attributes.Channel_1" value="Частота 1 вращения ротора ГТД (обмотка 1 датчика 1)" />
               <attribute type="Attributes.Channel_2" value="Частота 1 вращения ротора СТ (обмотка 1 датчика 1)" />
               <attribute type="Attributes.Channel_3" value="Фаза ротора ЦБК" />
@@ -23,6 +25,7 @@
             </ct:object>
             <ct:object name="BR1_2" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_2 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR1_2" />
               <attribute type="Attributes.Channel_1" value="Температура газа за турбиной ГГ на запуске (канал 1)" />
               <attribute type="Attributes.Channel_10" value="Температура газа за турбиной СТ  (канал 6)" />
               <attribute type="Attributes.Channel_11" value="Температура газа за турбиной СТ  (канал 7)" />
@@ -42,6 +45,7 @@
             </ct:object>
             <ct:object name="BR1_3" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_3 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR1_3" />
               <attribute type="Attributes.Channel_1" value="Температура выхлопных газов на входе УТО" />
               <attribute type="Attributes.Channel_10" value="Температура масла на выходе из опор СТ" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -61,6 +65,7 @@
             </ct:object>
             <ct:object name="BR1_4" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_4 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR1_4" />
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
               <attribute type="Attributes.Channel_10" value="Частота электростартера" />
               <attribute type="Attributes.Channel_11" value="Момент электростартера" />
@@ -80,6 +85,7 @@
             </ct:object>
             <ct:object name="BR1_5" base-type="Types.DIAG_M547A.DIAG_M547A_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_5 (M547A)" />
+              <attribute type="Attributes.ShortName" value="BR1_5" />
               <attribute type="Attributes.Channel_1" value="Резерв" />
               <attribute type="Attributes.Channel_10" value="Резерв" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
@@ -99,6 +105,7 @@
             </ct:object>
             <ct:object name="BR1_6" base-type="Types.DIAG_M537V.DIAG_M537V_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_6 (M537V)" />
+              <attribute type="Attributes.ShortName" value="BR1_6" />
               <attribute type="Attributes.Channel_1" value="ДГ" />
               <attribute type="Attributes.Channel_2" value="Кран 160.6р" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -110,6 +117,7 @@
             </ct:object>
             <ct:object name="BR1_7" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_7 (M557D)" />
+              <attribute type="Attributes.ShortName" value="BR1_7" />
               <attribute type="Attributes.Channel_1" value="СК закрыт" />
               <attribute type="Attributes.Channel_2" value="Электростартер готов" />
               <attribute type="Attributes.Channel_3" value="Электростартер неисправен" />
@@ -134,10 +142,10 @@
               <attribute type="Attributes.Channel_22" value="Стружка в масле откачки от СТ" />
               <attribute type="Attributes.Channel_23" value="Резерв" />
               <attribute type="Attributes.Channel_24" value="Резерв" />
-              <attribute type="Attributes.Channel_25" value="Резерв" />
-              <attribute type="Attributes.Channel_26" value="Резерв" />
-              <attribute type="Attributes.Channel_27" value="Резерв" />
-              <attribute type="Attributes.Channel_28" value="Резерв" />
+              <attribute type="Attributes.Channel_25" value="Контроль цепи сигнала КПВ открыть " />
+              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала КПВЗ и КПГ открыть" />
+              <attribute type="Attributes.Channel_27" value="Контроль цепи сигнала ПОС ГТУ открыть" />
+              <attribute type="Attributes.Channel_28" value="Контроль цепи сигнала СК открыть " />
               <attribute type="Attributes.Channel_29" value="Резерв" />
               <attribute type="Attributes.Channel_30" value="Резерв" />
               <attribute type="Attributes.Channel_31" value="Резерв" />
@@ -145,6 +153,7 @@
             </ct:object>
             <ct:object name="BR1_8" base-type="Types.DIAG_M557O.DIAG_M557O_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_8 (M557O)" />
+              <attribute type="Attributes.ShortName" value="BR1_8" />
               <attribute type="Attributes.Channel_1" value="КПВ открыть " />
               <attribute type="Attributes.Channel_2" value="КПВЗ и КПГ открыть" />
               <attribute type="Attributes.Channel_3" value="ПОС ГТУ открыть" />
@@ -180,6 +189,7 @@
             </ct:object>
             <ct:object name="BR1_20" base-type="Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_20 (M932C_2N)" />
+              <attribute type="Attributes.ShortName" value="BR1_20" />
               <attribute type="Attributes.Channel_1" value="Частота 2 вращения ротора ГТД (обмотка 1 датчики 2)" />
               <attribute type="Attributes.Channel_2" value="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -2165,8 +2175,7 @@
           <ct:object name="SVK" base-type="Types.TR_SVK.TR_SVK_PLC_View" aspect="Types.PLC_Aspect" access-level="public" />
         </ct:object>
         </ct:object>
-<trei:unet-address-map name="UnetAddressMap" />
-
+	<trei:unet-address-map name="UnetAddressMap" />
       </dp:application-object>
     </trei:master-module>
   </trei:trei>

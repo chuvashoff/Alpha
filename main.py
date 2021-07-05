@@ -144,16 +144,25 @@ try:
                 aa = copy.copy(sl_modules[p[is_f_ind(cells[0], 'Шифр модуля')].value])
                 sl_modules_cpu[p[is_f_ind(cells[0], 'Имя модуля')].value] = [p[is_f_ind(cells[0], 'Шифр модуля')].value,
                                                                              aa]
-
+        # пробегаемся по листам, где могут быть указаны каналы модулей
         for jj in ['Измеряемые', 'Входные', 'Выходные', 'ИМ(АО)']:
             sheet_run = book[jj]
             cells_run = sheet_run['A1': 'O' + str(sheet_run.max_row)]
+            # пробегаемся по параметрам на листе
             for p in cells_run:
+                # если параметр принадлежит текущему ПЛК и не указан НЕстандартный канал, то вносим в список
                 if p[is_f_ind(cells_run[0], 'CPU')].value == i and \
                         p[is_f_ind(cells_run[0], 'Нестандартный канал')].value == 'Нет':
                     tmp_ind = int(p[is_f_ind(cells_run[0], 'Номер канала')].value) - 1
                     sl_modules_cpu[p[is_f_ind(cells_run[0], 'Номер модуля')].value][1][tmp_ind] = \
                         is_cor_chr(p[is_f_ind(cells_run[0], 'Наименование параметра')].value)
+                # если выбран контроль цепи и контроль стандартный, то также добавляем в список
+                if p[is_f_ind(cells_run[0], 'CPU')].value == i and \
+                        p[is_f_ind(cells_run[0], 'Контроль цепи')].value == 'Да' and \
+                        p[is_f_ind(cells_run[0], 'Нестандартный канал КЦ')].value == 'Нет':
+                    ind_tmp = int(p[is_f_ind(cells_run[0], 'Номер канала контроля')].value) - 1
+                    sl_modules_cpu[p[is_f_ind(cells_run[0], 'Номер модуля контроля')].value][1][ind_tmp] = \
+                        f"КЦ: {is_cor_chr(p[is_f_ind(cells_run[0], 'Наименование параметра')].value)}"
 
         if len(sl_modules_cpu) != 0:
             tmp_line_ = is_create_objects_diag(sl_modules_cpu)
