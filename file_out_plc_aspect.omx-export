@@ -69,8 +69,8 @@
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
               <attribute type="Attributes.Channel_10" value="Частота электростартера" />
               <attribute type="Attributes.Channel_11" value="Момент электростартера" />
-              <attribute type="Attributes.Channel_12" value="Тестовый сигнал А" />
-              <attribute type="Attributes.Channel_13" value="Тестовый сигнал Б" />
+              <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
+              <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
               <attribute type="Attributes.Channel_15" value="Положение крана 160.6р" />
               <attribute type="Attributes.Channel_16" value="Температура газа на входе ЦБК" />
@@ -519,18 +519,6 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="T" />
-          </ct:object>
-          <ct:object name="AI_test_A" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал А" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_A" />
-          </ct:object>
-          <ct:object name="AI_test_B" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал Б" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_B" />
           </ct:object>
         </ct:object>
         <ct:object name="AE" access-level="public" >
@@ -2249,8 +2237,8 @@
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
               <attribute type="Attributes.Channel_10" value="Частота электростартера" />
               <attribute type="Attributes.Channel_11" value="Момент электростартера" />
-              <attribute type="Attributes.Channel_12" value="Тестовый сигнал А" />
-              <attribute type="Attributes.Channel_13" value="Тестовый сигнал Б" />
+              <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
+              <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
               <attribute type="Attributes.Channel_15" value="Положение крана 160.6р" />
               <attribute type="Attributes.Channel_16" value="Температура газа на входе ЦБК" />
@@ -2699,18 +2687,6 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="T" />
-          </ct:object>
-          <ct:object name="AI_test_A" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал А" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_A" />
-          </ct:object>
-          <ct:object name="AI_test_B" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал Б" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_B" />
           </ct:object>
         </ct:object>
         <ct:object name="AE" access-level="public" >
@@ -4429,8 +4405,8 @@
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
               <attribute type="Attributes.Channel_10" value="Частота электростартера" />
               <attribute type="Attributes.Channel_11" value="Момент электростартера" />
-              <attribute type="Attributes.Channel_12" value="Тестовый сигнал А" />
-              <attribute type="Attributes.Channel_13" value="Тестовый сигнал Б" />
+              <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
+              <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
               <attribute type="Attributes.Channel_15" value="Положение крана 160.6р" />
               <attribute type="Attributes.Channel_16" value="Температура газа на входе ЦБК" />
@@ -4879,18 +4855,6 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="T" />
-          </ct:object>
-          <ct:object name="AI_test_A" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал А" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_A" />
-          </ct:object>
-          <ct:object name="AI_test_B" base-type="Types.AI.AI_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Тестовый сигнал Б" />
-            <attribute type="Attributes.EUnit" value="%" />
-            <attribute type="Attributes.FracDigits" value="2" />
-            <attribute type="Attributes.ShortName" value="Test_B" />
           </ct:object>
         </ct:object>
         <ct:object name="AE" access-level="public" >

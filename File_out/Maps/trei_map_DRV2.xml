@@ -10338,9 +10338,69 @@
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO2_reset.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3363</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO1_reset.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3364</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch2_reset.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3365</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch1_reset.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3366</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Kvitir.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3367</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_ResetFG.caLhBTN</node-path>
     <protocoltype>Bool</protocoltype>
     <index>300</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO2_reset.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3368</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO1_reset.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3369</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch2_reset.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3370</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch1_reset.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3371</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Kvitir.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3372</index>
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -10350,15 +10410,105 @@
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO2_reset.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3378</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO1_reset.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3379</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch2_reset.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3380</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch1_reset.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3381</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Kvitir.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3382</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_ResetFG.coOn</node-path>
     <protocoltype>Bool</protocoltype>
     <index>304</index>
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO2_reset.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3388</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO1_reset.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3389</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch2_reset.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3390</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch1_reset.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3391</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Kvitir.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3392</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_ResetFG.ceOn</node-path>
     <protocoltype>Bool</protocoltype>
     <index>305</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO2_reset.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3393</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_VO1_reset.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3394</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch2_reset.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3395</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Torch1_reset.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3396</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Kvitir.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>3397</index>
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">

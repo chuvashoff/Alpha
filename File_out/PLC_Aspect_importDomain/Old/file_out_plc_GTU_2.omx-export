@@ -142,10 +142,10 @@
               <attribute type="Attributes.Channel_22" value="Стружка в масле откачки от СТ" />
               <attribute type="Attributes.Channel_23" value="Резерв" />
               <attribute type="Attributes.Channel_24" value="Резерв" />
-              <attribute type="Attributes.Channel_25" value="Контроль цепи сигнала КПВ открыть " />
-              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала КПВЗ и КПГ открыть" />
-              <attribute type="Attributes.Channel_27" value="Контроль цепи сигнала ПОС ГТУ открыть" />
-              <attribute type="Attributes.Channel_28" value="Контроль цепи сигнала СК открыть " />
+              <attribute type="Attributes.Channel_25" value="КЦ: КПВ открыть " />
+              <attribute type="Attributes.Channel_26" value="КЦ: КПВЗ и КПГ открыть" />
+              <attribute type="Attributes.Channel_27" value="КЦ: ПОС ГТУ открыть" />
+              <attribute type="Attributes.Channel_28" value="КЦ: СК открыть " />
               <attribute type="Attributes.Channel_29" value="Резерв" />
               <attribute type="Attributes.Channel_30" value="Резерв" />
               <attribute type="Attributes.Channel_31" value="Резерв" />

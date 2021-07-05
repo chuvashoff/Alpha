@@ -122,22 +122,6 @@
   },
   {
    "Signal": {
-    "UserTree": "Аналоговые входные/Главная/Тестовый сигнал А",
-    "OpcTag": "GPA1.AI.AI_test_A.Value",
-    "EUnit": "%",
-    "Description": "Тестовый сигнал А"
-   }
-  },
-  {
-   "Signal": {
-    "UserTree": "Аналоговые входные/Главная/Тестовый сигнал Б",
-    "OpcTag": "GPA1.AI.AI_test_B.Value",
-    "EUnit": "%",
-    "Description": "Тестовый сигнал Б"
-   }
-  },
-  {
-   "Signal": {
     "UserTree": "Аналоговые входные/Главная/Частота электростартера",
     "OpcTag": "GPA1.AI.AI_N_est.Value",
     "EUnit": "об/мин",
@@ -9542,22 +9526,6 @@
     "OpcTag": "GPA1.AI.AI_TginDG.fValue",
     "EUnit": "°С",
     "Description": "Отказ - Температура топливного газа перед ДГ"
-   }
-  },
-  {
-   "Signal": {
-    "UserTree": "Отказы аналоговых входных/Главная/Отказ - Тестовый сигнал А",
-    "OpcTag": "GPA1.AI.AI_test_A.fValue",
-    "EUnit": "%",
-    "Description": "Отказ - Тестовый сигнал А"
-   }
-  },
-  {
-   "Signal": {
-    "UserTree": "Отказы аналоговых входных/Главная/Отказ - Тестовый сигнал Б",
-    "OpcTag": "GPA1.AI.AI_test_B.fValue",
-    "EUnit": "%",
-    "Description": "Отказ - Тестовый сигнал Б"
    }
   },
   {

@@ -1,6 +1,6 @@
 <root format-version="0">
   <item Binding="Introduced">
-    <node-path>AE.AE_QTGMQQ.coSim</node-path>
+    <node-path>AE.AE_QTGM.coSim</node-path>
     <protocoltype>Bool</protocoltype>
     <index>29</index>
     <category>DataCategory_DRV2_NoArcDiscrete</category>

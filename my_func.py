@@ -1,5 +1,6 @@
 from string import Template
 import os
+import datetime
 
 # Функция для замены нескольких значений
 
@@ -485,8 +486,12 @@ def check_diff_file(check_path, file_name, new_data, message_print):
                 f_wr.write(new_data)
             # пишем, что надо заменить
             print(message_print)
+            with open('Required_change.txt', 'a', encoding='UTF-8') as f_change:
+                f_change.write(f'{datetime.datetime.now()} - {message_print}\n')
     # Если в целевой(указанной) папке нет формируемого файла, то создаём его и пишем, что заменить
     else:
         with open(os.path.join(check_path, file_name), 'w', encoding='UTF-8') as f_wr:
             f_wr.write(new_data)
         print(message_print)
+        with open('Required_change.txt', 'a', encoding='UTF-8') as f_change:
+            f_change.write(f'{datetime.datetime.now()} - {message_print}\n')

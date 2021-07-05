@@ -1920,12 +1920,6 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
-    <node-path>NKU.DI_ZSPOS_aOff.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>26708</index>
-    <category>DataCategory_GPA_NoArcDiscrete</category>
-  </item>
-  <item Binding="Introduced">
     <node-path>NKU.DI_U_VV4_OK.sSimValue</node-path>
     <protocoltype>Bool</protocoltype>
     <index>26709</index>
@@ -3843,12 +3837,6 @@
     <node-path>NKU.DI_Light_doorBSAU_aOff.sSimValue</node-path>
     <protocoltype>Bool</protocoltype>
     <index>27065</index>
-    <category>DataCategory_GPA_NoArcDiscrete</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>NKU.DI_ZSPOS_aOff.sSimValue</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>27083</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -5772,12 +5760,6 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
-    <node-path>NKU.DI_ZSPOS_aOff.Sim</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>27458</index>
-    <category>DataCategory_GPA_NoArcDiscrete</category>
-  </item>
-  <item Binding="Introduced">
     <node-path>NKU.DI_U_VV4_OK.coSim</node-path>
     <protocoltype>Bool</protocoltype>
     <index>27459</index>
@@ -7695,12 +7677,6 @@
     <node-path>NKU.DI_Light_doorBSAU_aOff.coSim</node-path>
     <protocoltype>Bool</protocoltype>
     <index>27815</index>
-    <category>DataCategory_GPA_NoArcDiscrete</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>NKU.DI_ZSPOS_aOff.coSim</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>27833</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
 </root>
