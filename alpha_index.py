@@ -192,8 +192,8 @@ def create_group_apr(sl_global, sl_global_fast, template_no_arc_index, template_
     }
     s_out = ''
     for key, value in sl_global.items():
-        if f'FAST|AO_APR_{key}' in sl_global_fast:
-            value[0] = sl_global_fast[f'FAST|AO_APR_{key}']
+        if f"FAST|AO_APR_{key[key.find('.')+1:]}" in sl_global_fast:
+            value[0] = sl_global_fast[f"FAST|AO_APR_{key[key.find('.')+1:]}"]
             a = key
             temp = template_arc_index
             pref_arc = 'Arc'
@@ -574,8 +574,10 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                             sl_global_cnt[line[0][line[0].find('|')+1:]] = [max(int(line[9]), int(line[10])),
                                                                             line[1]]
                         elif 'FAST|ALR_' in line and len(line.split(',')) >= 10:
-                            line = line.split(',')
-                            sl_global_alr[line[0][line[0].find('_')+1:]] = [max(int(line[9]), int(line[10])), line[1]]
+                            line_alr = line.split(',')
+                            sl_global_alr[line_alr[0][line_alr[0].find('_')+1:]] = [max(int(line_alr[9]),
+                                                                                        int(line_alr[10])),
+                                                                                    line_alr[1]]
 
                         elif 'ALG|' in line and len(line.split(',')) >= 10:
                             line = line.split(',')
@@ -651,11 +653,6 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                                     sl_global_diag[(curr_module, signal_name)] = [max(int(line[9]),
                                                                                       int(line[10])), line[1]]
 
-                        elif 'FAST|' in line:
-                            line = line.split(',')
-                            # В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной
-                            sl_global_fast[line[0][1:]] = max(int(line[9]), int(line[10]))
-
                         # если в текущем контроллере объявлены драйвера и строка явно содержит индекс
                         elif line_source[0] in sl_cpu_drv_signal and len(line.split(',')) >= 10:
                             tmp_check = line.split(',')[0]
@@ -670,6 +667,10 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
                                     sl_global_drv[(tmp_check_drv, tmp_drv_signal)] = (max(int(line.split(',')[9]),
                                                                                           int(line.split(',')[10])),
                                                                                       line.split(',')[1])
+                        if 'FAST|' in line:
+                            line = line.split(',')
+                            # В словаре sl_global_fast лежит  алг имя(FAST|): индекс переменной
+                            sl_global_fast[line[0][1:]] = max(int(line[9]), int(line[10]))
 
             # В словаре sl_global_ai лежит подимя[индекс массива]: [индекс переменной, тип переменной(I, B, R)]
             sl_global_ai = {key: value for key, value in sl_global_ai.items() if key[:key.find('[')] in lst_ai}

@@ -107,7 +107,7 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_6 (M537V)" />
               <attribute type="Attributes.ShortName" value="BR1_6" />
               <attribute type="Attributes.Channel_1" value="ДГ" />
-              <attribute type="Attributes.Channel_2" value="Кран 160.6р" />
+              <attribute type="Attributes.Channel_2" value="АПК" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
               <attribute type="Attributes.Channel_4" value="Резерв" />
               <attribute type="Attributes.Channel_5" value="Резерв" />
@@ -930,11 +930,6 @@
           <ct:object name="DeblBZD" base-type="Types.IM1x0.IM1x0_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
             <attribute type="Attributes.StartView" value="0" />
-            <attribute type="Attributes.Gender" value="1" />
-          </ct:object>
-          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
-            <attribute type="Attributes.StartView" value="1" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="DG" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -2275,7 +2270,7 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_6 (M537V)" />
               <attribute type="Attributes.ShortName" value="BR1_6" />
               <attribute type="Attributes.Channel_1" value="ДГ" />
-              <attribute type="Attributes.Channel_2" value="Кран 160.6р" />
+              <attribute type="Attributes.Channel_2" value="АПК" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
               <attribute type="Attributes.Channel_4" value="Резерв" />
               <attribute type="Attributes.Channel_5" value="Резерв" />
@@ -3098,11 +3093,6 @@
           <ct:object name="DeblBZD" base-type="Types.IM1x0.IM1x0_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
             <attribute type="Attributes.StartView" value="0" />
-            <attribute type="Attributes.Gender" value="1" />
-          </ct:object>
-          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
-            <attribute type="Attributes.StartView" value="1" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="DG" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -4443,7 +4433,7 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_6 (M537V)" />
               <attribute type="Attributes.ShortName" value="BR1_6" />
               <attribute type="Attributes.Channel_1" value="ДГ" />
-              <attribute type="Attributes.Channel_2" value="Кран 160.6р" />
+              <attribute type="Attributes.Channel_2" value="АПК" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
               <attribute type="Attributes.Channel_4" value="Резерв" />
               <attribute type="Attributes.Channel_5" value="Резерв" />
@@ -5266,11 +5256,6 @@
           <ct:object name="DeblBZD" base-type="Types.IM1x0.IM1x0_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
             <attribute type="Attributes.StartView" value="0" />
-            <attribute type="Attributes.Gender" value="1" />
-          </ct:object>
-          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
-            <attribute type="Attributes.StartView" value="1" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="DG" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -25577,6 +25562,21 @@
             <ct:object name="BTN_ResetFG" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Сброс  суммарного расхода топливного газа" />
             </ct:object>
+            <ct:object name="BTN_VO2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_VO1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Kvitir" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Квитирование тревог и аварий АВГМ" />
+            </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
           <ct:object name="SP_Q_nomm" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -27294,6 +27294,21 @@
             <ct:object name="BTN_ResetFG" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Сброс  суммарного расхода топливного газа" />
             </ct:object>
+            <ct:object name="BTN_VO2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_VO1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Kvitir" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Квитирование тревог и аварий АВГМ" />
+            </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
           <ct:object name="SP_Q_nomm" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -29010,6 +29025,21 @@
         <ct:object name="BTN" access-level="public" >
             <ct:object name="BTN_ResetFG" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Сброс  суммарного расхода топливного газа" />
+            </ct:object>
+            <ct:object name="BTN_VO2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_VO1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Kvitir" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Квитирование тревог и аварий АВГМ" />
             </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
