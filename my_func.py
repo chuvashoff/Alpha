@@ -1,6 +1,7 @@
 from string import Template
 import os
 import datetime
+from time import sleep
 
 # Функция для замены нескольких значений
 
@@ -481,6 +482,7 @@ def check_diff_file(check_path, file_name, new_data, message_print):
             # Переносим старую файл в папку Old
             os.replace(os.path.join(check_path, file_name),
                        os.path.join(check_path, 'Old', file_name))
+            sleep(0.1)
             # Записываем новый файл
             with open(os.path.join(check_path, file_name), 'w', encoding='UTF-8') as f_wr:
                 f_wr.write(new_data)

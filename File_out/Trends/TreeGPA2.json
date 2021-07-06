@@ -6338,6 +6338,22 @@
   },
   {
    "Signal": {
+    "UserTree": "Исполнительные механизмы/Главная/АПРК. Задание",
+    "OpcTag": "GPA2.APR.IM.Set",
+    "EUnit": "%",
+    "Description": "АПРК. Задание"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Исполнительные механизмы/Главная/АПРК. Положение",
+    "OpcTag": "GPA2.APR.IM.Pos",
+    "EUnit": "%",
+    "Description": "АПРК. Положение"
+   }
+  },
+  {
+   "Signal": {
     "UserTree": "Исполнительные механизмы/Главная/ВНА. Задание",
     "OpcTag": "GPA2.IM.VNA.Set",
     "EUnit": "%",

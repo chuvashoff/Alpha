@@ -648,6 +648,17 @@ try:
                     else:  # иначе обновляем словарь, который есть
                         sl_node_drv[drv_].update(sl_drv_trends)
 
+            if list_config == 'ИМ(АО)':
+                if 'АПР' in [item for sublist in [i for i in sl_CPU_spec.values() if i] for item in sublist]:
+                    sl_tmp = {'Set': 'Задание', 'Pos': 'Положение'}
+                    for par_pref in sl_tmp:
+                        s_trends += Template(tmp_signal_trends).substitute(name_group='Исполнительные механизмы',
+                                                                           name_node='Главная/',
+                                                                           discr=f'АПРК. {sl_tmp[par_pref]}',
+                                                                           object_tag=obj,
+                                                                           group_tag='APR.IM',
+                                                                           signal_tag=par_pref,
+                                                                           signal_unit='%')
             # для каждого узла(мнемосхемы)...
             for node in sl_node_trends:
                 # ...для каждого параметра по отсортированному словарю параметров в узле...
