@@ -292,7 +292,7 @@ def is_load_drv(controller, cell, alg_name, name_par, eunit, type_sig, type_msg,
 
 
 def is_create_objects_im(sl_cpu, template_text):
-    sl_im_PLC = {'ИМ1Х0': 'IM1x0.IM1x0_PLC_View', 'ИМ1Х1': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2': 'IM1x2.IM1x2_PLC_View',
+    sl_im_plc = {'ИМ1Х0': 'IM1x0.IM1x0_PLC_View', 'ИМ1Х1': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2': 'IM1x2.IM1x2_PLC_View',
                  'ИМ2Х2': 'IM2x2.IM2x2_PLC_View', 'ИМ2Х4': 'IM2x2.IM2x4_PLC_View', 'ИМ1Х0и': 'IM1x0.IM1x0_PLC_View',
                  'ИМ1Х1и': 'IM1x1.IM1x1_PLC_View', 'ИМ1Х2и': 'IM1x2.IM1x2_PLC_View', 'ИМ2Х2с': 'IM2x2.IM2x2_PLC_View',
                  'ИМАО': 'IM_AO.IM_AO_PLC_View'}
@@ -302,7 +302,7 @@ def is_create_objects_im(sl_cpu, template_text):
     tmp_line_object = ''
     for key, value in sl_cpu.items():
         tmp_line_object += Template(template_text).substitute(object_name=key,
-                                                              object_type='Types.' + sl_im_PLC[value[1]],
+                                                              object_type='Types.' + sl_im_plc[value[1]],
                                                               object_aspect='Types.PLC_Aspect',
                                                               text_description=value[0], gender=sl_gender[value[2]],
                                                               start_view=value[3])
@@ -383,13 +383,13 @@ def is_create_objects_diag(sl):
     }
     tmp_line_object = ''
     for key, value in sl.items():
-        if value[0] in ['M903E', 'M991E']:
+        if value[0] in ('M903E', 'M991E'):
             tmp_line_object += Template(template_text_cpu).substitute(object_name=key,
                                                                       object_type=sl_type_modules[value[0]],
                                                                       object_aspect='Types.PLC_Aspect',
                                                                       text_description=f'Диагностика мастер-модуля {key} ({value[0]})',
                                                                       short_name=key)
-        elif value[0] in ['M547A']:
+        elif value[0] in ('M547A',):
             tmp_line_object += Template(sl_modules_temp[value[0]]).substitute(object_name=key,
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',
@@ -411,7 +411,7 @@ def is_create_objects_diag(sl):
                                                                               Channel_14=value[1][13],
                                                                               Channel_15=value[1][14],
                                                                               Channel_16=value[1][15])
-        elif value[0] in ['M537V', 'M932C_2N']:
+        elif value[0] in ('M537V', 'M932C_2N'):
             tmp_line_object += Template(sl_modules_temp[value[0]]).substitute(object_name=key,
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',
@@ -425,7 +425,7 @@ def is_create_objects_diag(sl):
                                                                               Channel_6=value[1][5],
                                                                               Channel_7=value[1][6],
                                                                               Channel_8=value[1][7])
-        elif value[0] in ['M557D', 'M557O']:
+        elif value[0] in ('M557D', 'M557O'):
             tmp_line_object += Template(sl_modules_temp[value[0]]).substitute(object_name=key,
                                                                               object_type=sl_type_modules[value[0]],
                                                                               object_aspect='Types.PLC_Aspect',

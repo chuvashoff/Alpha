@@ -637,7 +637,8 @@ try:
                                                                  '.Value', '-')
                 # при условии, что парсим лист Драйверов
                 elif list_config in ('Драйвера',):
-                    sl_type_unit = {'BOOL': '-', 'INT': par[eunit_drv_ind].value, 'FLOAT': par[eunit_drv_ind].value}
+                    sl_type_unit = {'BOOL': '-', 'INT': par[eunit_drv_ind].value, 'FLOAT': par[eunit_drv_ind].value,
+                                    'IEC': '-', 'Daily': '-'}
                     drv_ = par[is_f_ind(cells_name[0], 'Драйвер')].value
                     # создаём промежуточный словарь сигнала драйвера {рус.имя: (алг.имя, единицы измерения - '-')}
                     sl_drv_trends = {f'{par[rus_par_ind].value}': (par[alg_name_ind].value + '.Value',
@@ -647,7 +648,7 @@ try:
                         sl_node_drv[drv_] = sl_drv_trends
                     else:  # иначе обновляем словарь, который есть
                         sl_node_drv[drv_].update(sl_drv_trends)
-
+            # на этапе парсинга листа ИМАО добавляем в тренды АПР
             if list_config == 'ИМ(АО)':
                 if 'АПР' in [item for sublist in [i for i in sl_CPU_spec.values() if i] for item in sublist]:
                     sl_tmp = {'Set': 'Задание', 'Pos': 'Положение'}
@@ -677,12 +678,15 @@ try:
                 # ... для каждого сигнала драйвера по отсортированному словарю сигналов в узле-драйвере
                 for sig_drv in sorted(sl_node_drv[drv]):
                     # ...собираем json
-                    s_trends += Template(tmp_signal_trends).substitute(name_group=sl_group_trends['Драйвера'][0],
-                                                                       name_node=f'{sl_all_drv[drv]}/', discr=sig_drv,
-                                                                       object_tag=obj,
-                                                                       group_tag=sl_group_trends['Драйвера'][1],
-                                                                       signal_tag=sl_node_drv[drv][sig_drv][0],
-                                                                       signal_unit=sl_node_drv[drv][sig_drv][1])
+                    # дополнительная проверка наличия драйвера в объявленных
+                    if drv in sl_all_drv:
+                        s_trends += Template(tmp_signal_trends).substitute(name_group=sl_group_trends['Драйвера'][0],
+                                                                           name_node=f'{sl_all_drv[drv]}/',
+                                                                           discr=sig_drv,
+                                                                           object_tag=obj,
+                                                                           group_tag=sl_group_trends['Драйвера'][1],
+                                                                           signal_tag=sl_node_drv[drv][sig_drv][0],
+                                                                           signal_unit=sl_node_drv[drv][sig_drv][1])
 
             # для каждого типа аварии в остортированном словаре типов аварий...
             for node in sorted(sl_node_alr):

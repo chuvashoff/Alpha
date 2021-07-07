@@ -410,10 +410,10 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             sl_global_diag = {}
             sl_global_drv = {}
 
-            if 'ТР' in sl_cpu_spec[line_source[0]]:
+            if 'ТР' in sl_cpu_spec.get(line_source[0], 'None'):
                 with open(os.path.join('Template', 'TR_par'), 'r', encoding='UTF-8') as f_tr:
                     lst_tr_par = f_tr.read().split('\n')
-            if 'АПР' in sl_cpu_spec[line_source[0]]:
+            if 'АПР' in sl_cpu_spec.get(line_source[0], 'None'):
                 with open(os.path.join('Template', 'APR_par'), 'r', encoding='UTF-8') as f_:
                     lst_apr_par = f_.read().split('\n')
 
@@ -841,7 +841,7 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
             check_diff_file(check_path=os.path.join('File_out', 'Maps'),
                             file_name=f'trei_map_{line_source[0]}.xml',
                             new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
-                            message_print=f'Требуется заменить карту контроллера {line_source[0]}')
+                            message_print=f'Требуется заменить карту адресов контроллера {line_source[0]}')
             # совместно с модулем difflib можно в будущем определить отличающиеся строки - на будущее
             # new_map_file = new_map_file.splitlines(keepends=True)
             # old_map_file = f_read_check.read().splitlines(keepends=True)
@@ -923,7 +923,7 @@ def create_index_nku(name_plc_nku, sl_signal_nku):
     check_diff_file(check_path=os.path.join('File_out', 'Maps'),
                     file_name=f'trei_map_NKU_{line_source_nku[0]}.xml',
                     new_data='<root format-version=\"0\">\n' + s_all.rstrip() + '\n</root>',
-                    message_print=f'Требуется заменить карту НКУ контроллера {line_source_nku[0]}')
+                    message_print=f'Требуется заменить карту адресов НКУ контроллера {line_source_nku[0]}')
 
 
 def create_group_nku(sl_global_par, sl_local_par, template_no_arc_index, pref_par, source):
