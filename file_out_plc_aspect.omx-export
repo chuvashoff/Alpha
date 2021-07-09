@@ -1,6 +1,6 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_GTU1" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.010" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.010" />
       <trei:unet-server name="UnetServer" address-map="PLC_GTU1.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -2163,7 +2163,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_GTU2" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.020" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.020" />
       <trei:unet-server name="UnetServer" address-map="PLC_GTU2.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -4326,7 +4326,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_GTU3" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.030" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.030" />
       <trei:unet-server name="UnetServer" address-map="PLC_GTU3.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -6489,7 +6489,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_GPA1" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.012" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.012" />
       <trei:unet-server name="UnetServer" address-map="PLC_GPA1.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -12758,7 +12758,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_GPA2" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.022" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.022" />
       <trei:unet-server name="UnetServer" address-map="PLC_GPA2.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -19027,7 +19027,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_GPA3" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.032" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.032" />
       <trei:unet-server name="UnetServer" address-map="PLC_GPA3.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -25296,7 +25296,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_DRV21" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.014" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.014" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV21.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -27028,7 +27028,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_DRV22" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.024" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.024" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV22.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -28760,7 +28760,7 @@
     </trei:master-module>
   </trei:trei>
   <trei:trei name="PLC_DRV23" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.034" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.034" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV23.m903e.Tree.UnetAddressMap" port="6001"/>

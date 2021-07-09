@@ -1,6 +1,6 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_GTU1" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="cpu" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.010" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.010" />
       <trei:unet-server name="UnetServer" address-map="PLC_GTU1.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -107,7 +107,7 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_6 (M537V)" />
               <attribute type="Attributes.ShortName" value="BR1_6" />
               <attribute type="Attributes.Channel_1" value="ДГ" />
-              <attribute type="Attributes.Channel_2" value="Кран 160.6р" />
+              <attribute type="Attributes.Channel_2" value="АПК" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
               <attribute type="Attributes.Channel_4" value="Резерв" />
               <attribute type="Attributes.Channel_5" value="Резерв" />
@@ -930,11 +930,6 @@
           <ct:object name="DeblBZD" base-type="Types.IM1x0.IM1x0_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Деблокировка БЗД" />
             <attribute type="Attributes.StartView" value="0" />
-            <attribute type="Attributes.Gender" value="1" />
-          </ct:object>
-          <ct:object name="Kr_160_6p" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-            <attribute type="unit.System.Attributes.Description" value="Кран 160.6р" />
-            <attribute type="Attributes.StartView" value="1" />
             <attribute type="Attributes.Gender" value="1" />
           </ct:object>
           <ct:object name="DG" base-type="Types.IM_AO.IM_AO_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >

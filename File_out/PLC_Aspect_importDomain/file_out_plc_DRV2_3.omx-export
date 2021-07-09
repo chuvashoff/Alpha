@@ -1,6 +1,6 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_DRV23" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.034" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.034" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV23.m903e.Tree.UnetAddressMap" port="6001"/>

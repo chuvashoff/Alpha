@@ -91,9 +91,13 @@ try:
         if p[0].value is not None:
             all_CPU.append(p[0].value)
     # Читаем префиксы IP адреса ПЛК(нужно продумать про новые конфигураторы)
-    cells = sheet['B45': 'B46']
+    cells = sheet['A1': 'B' + str(sheet.max_row)]
     for p in cells:
-        pref_IP.append(p[0].value + '.')
+        if p[0].value == 'Cетевая часть адреса основной сети (связь с CPU)':
+            pref_IP.append(p[1].value + '.')
+        if p[0].value == 'Cетевая часть адреса резервной сети (связь с CPU)':
+            pref_IP.append(p[1].value + '.')
+            break
 
     # Читаем состав объектов
     cells = sheet['B24': 'R38']
@@ -436,14 +440,17 @@ try:
             if i in sl_object_all[obj][0]:
                 index_tmp = sl_object_all[obj][0].index(i)
                 with open('file_plc.txt', 'a', encoding='UTF-8') as f:
-                    f.write(Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='m903e',
-                                                          ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
-                                                          ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
+                    last_dig_ip = sl_object_all[obj][1][index_tmp]
+                    tmp_dig_ip1 = (last_dig_ip if '(' not in last_dig_ip else last_dig_ip[:last_dig_ip.find('(')])
+                    tmp_dig_ip2 = (last_dig_ip if '(' not in last_dig_ip else last_dig_ip[last_dig_ip.find('(') + 1:-1])
+                    f.write(Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='CPU',
+                                                          ip_eth1=pref_IP[0] + tmp_dig_ip1,
+                                                          ip_eth2=pref_IP[1] + tmp_dig_ip2,
                                                           dp_app=tmp_line_))
                 # Для каждого контроллера создадим отдельный файл для импорта только его одного
-                tmp_plc = Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='m903e',
-                                                        ip_eth1=pref_IP[0] + sl_object_all[obj][1][index_tmp],
-                                                        ip_eth2=pref_IP[1] + sl_object_all[obj][1][index_tmp],
+                tmp_plc = Template(tmp_trei).substitute(plc_name='PLC_' + i + str(num_obj_plc), plc_name_type='CPU',
+                                                        ip_eth1=pref_IP[0] + tmp_dig_ip1,
+                                                        ip_eth2=pref_IP[1] + tmp_dig_ip2,
                                                         dp_app=tmp_line_)
                 # Проверка изменений, и если есть изменения, то запись
                 check_diff_file(check_path=os.path.join('File_out', 'PLC_Aspect_importDomain'),

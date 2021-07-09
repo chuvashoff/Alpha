@@ -1,6 +1,6 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_DRV23" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="cpu" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.034" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.034" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV23.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -265,6 +265,21 @@
         <ct:object name="BTN" access-level="public" >
             <ct:object name="BTN_ResetFG" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Сброс  суммарного расхода топливного газа" />
+            </ct:object>
+            <ct:object name="BTN_VO2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_VO1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ВО1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch2_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 2 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Torch1_reset" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Горелка 1 сброс наработки" />
+            </ct:object>
+            <ct:object name="BTN_Kvitir" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Квитирование тревог и аварий АВГМ" />
             </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >

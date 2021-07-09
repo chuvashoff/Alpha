@@ -1,6 +1,6 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_GPA2" >
-    <trei:master-module name="m903e" >
+    <trei:master-module name="cpu" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.022" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.022" />
       <trei:unet-server name="UnetServer" address-map="PLC_GPA2.m903e.Tree.UnetAddressMap" port="6001"/>
@@ -359,70 +359,70 @@
               <attribute type="Attributes.Channel_16" value="Резерв" />
               <attribute type="Attributes.Channel_9" value="Кран 160.14 закрыт" />
               <attribute type="Attributes.Channel_17" value="Давление масла на входе в компрессор минимальное" />
-              <attribute type="Attributes.Channel_18" value="Контроль цепи сигнала Давление масла на входе в компрессор минимальное" />
+              <attribute type="Attributes.Channel_18" value="КЦ: Давление масла на входе в компрессор минимальное" />
               <attribute type="Attributes.Channel_19" value="Объем масла в МБК аварийно высокий" />
-              <attribute type="Attributes.Channel_20" value="Контроль цепи сигнала Объем масла в МБК аварийно высокий" />
+              <attribute type="Attributes.Channel_20" value="КЦ: Объем масла в МБК аварийно высокий" />
               <attribute type="Attributes.Channel_21" value="Объем масла в МБК аварийно низкий" />
-              <attribute type="Attributes.Channel_22" value="Контроль цепи сигнала Объем масла в МБК аварийно низкий" />
+              <attribute type="Attributes.Channel_22" value="КЦ: Объем масла в МБК аварийно низкий" />
               <attribute type="Attributes.Channel_23" value="Объем масла в МБД аварийно высокий" />
-              <attribute type="Attributes.Channel_24" value="Контроль цепи сигнала Объем масла в МБД аварийно высокий" />
+              <attribute type="Attributes.Channel_24" value="КЦ: Объем масла в МБД аварийно высокий" />
               <attribute type="Attributes.Channel_25" value="Объем масла в МБД аварийно низкий" />
-              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала Объем масла в МБД аварийно низкий" />
+              <attribute type="Attributes.Channel_26" value="КЦ: Объем масла в МБД аварийно низкий" />
               <attribute type="Attributes.Channel_27" value="Обобщенный сигнал предупреждения виброперемещения" />
-              <attribute type="Attributes.Channel_28" value="Контроль цепи сигнала Обобщенный сигнал предупреждения виброперемещения" />
+              <attribute type="Attributes.Channel_28" value="КЦ: Обобщенный сигнал предупреждения виброперемещения" />
               <attribute type="Attributes.Channel_29" value="Обобщенный сигнал аварии виброперемещения" />
-              <attribute type="Attributes.Channel_30" value="Контроль цепи сигнала Обобщенный сигнал аварии виброперемещения" />
+              <attribute type="Attributes.Channel_30" value="КЦ: Обобщенный сигнал аварии виброперемещения" />
               <attribute type="Attributes.Channel_31" value="Обобщенный сигнал предупреждения осевого сдвига" />
-              <attribute type="Attributes.Channel_32" value="Контроль цепи сигнала Обобщенный сигнал предупреждения осевого сдвига" />
+              <attribute type="Attributes.Channel_32" value="КЦ: Обобщенный сигнал предупреждения осевого сдвига" />
             </ct:object>
             <ct:object name="BR2_16" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_16 (M557D)" />
               <attribute type="Attributes.ShortName" value="BR2_16" />
               <attribute type="Attributes.Channel_1" value="Обобщенный сигнал аварии осевого сдвига" />
-              <attribute type="Attributes.Channel_2" value="Контроль цепи сигнала Обобщенный сигнал аварии осевого сдвига" />
+              <attribute type="Attributes.Channel_2" value="КЦ: Обобщенный сигнал аварии осевого сдвига" />
               <attribute type="Attributes.Channel_3" value="Пожар в ОД" />
-              <attribute type="Attributes.Channel_4" value="Контроль цепи сигнала Пожар в ОД" />
+              <attribute type="Attributes.Channel_4" value="КЦ: Пожар в ОД" />
               <attribute type="Attributes.Channel_5" value="Пожар в ангаре" />
-              <attribute type="Attributes.Channel_6" value="Контроль цепи сигнала Пожар в ангаре" />
+              <attribute type="Attributes.Channel_6" value="КЦ: Пожар в ангаре" />
               <attribute type="Attributes.Channel_7" value="Пожар в блоке ЭТ" />
-              <attribute type="Attributes.Channel_8" value="Контроль цепи сигнала Пожар в блоке ЭТ" />
-              <attribute type="Attributes.Channel_10" value="Контроль цепи сигнала Пожар в блоке САУ" />
+              <attribute type="Attributes.Channel_8" value="КЦ: Пожар в блоке ЭТ" />
+              <attribute type="Attributes.Channel_10" value="КЦ: Пожар в блоке САУ" />
               <attribute type="Attributes.Channel_11" value="Пожар в АВГМ" />
-              <attribute type="Attributes.Channel_12" value="Контроль цепи сигнала Пожар в АВГМ" />
+              <attribute type="Attributes.Channel_12" value="КЦ: Пожар в АВГМ" />
               <attribute type="Attributes.Channel_13" value="Загазованность 20 % НКПВ в ОД" />
-              <attribute type="Attributes.Channel_14" value="Контроль цепи сигнала Загазованность 20 % НКПВ в ОД" />
+              <attribute type="Attributes.Channel_14" value="КЦ: Загазованность 20 % НКПВ в ОД" />
               <attribute type="Attributes.Channel_15" value="Загазованность 20 % НКПВ в ангаре" />
-              <attribute type="Attributes.Channel_16" value="Контроль цепи сигнала Загазованность 20 % НКПВ в ангаре" />
+              <attribute type="Attributes.Channel_16" value="КЦ: Загазованность 20 % НКПВ в ангаре" />
               <attribute type="Attributes.Channel_9" value="Пожар в блоке САУ" />
               <attribute type="Attributes.Channel_17" value="Загазованность 20 % НКПВ в АВГМ" />
-              <attribute type="Attributes.Channel_18" value="Контроль цепи сигнала Загазованность 20 % НКПВ в АВГМ" />
+              <attribute type="Attributes.Channel_18" value="КЦ: Загазованность 20 % НКПВ в АВГМ" />
               <attribute type="Attributes.Channel_19" value="Кран 160.1 закрыт" />
-              <attribute type="Attributes.Channel_20" value="Контроль цепи сигнала Кран 160.1 закрыт" />
+              <attribute type="Attributes.Channel_20" value="КЦ: Кран 160.1 закрыт" />
               <attribute type="Attributes.Channel_21" value="Кран 160.2 закрыт" />
-              <attribute type="Attributes.Channel_22" value="Контроль цепи сигнала Кран 160.2 закрыт" />
+              <attribute type="Attributes.Channel_22" value="КЦ: Кран 160.2 закрыт" />
               <attribute type="Attributes.Channel_23" value="Кран 160.4 закрыт" />
-              <attribute type="Attributes.Channel_24" value="Контроль цепи сигнала Кран 160.4 закрыт" />
+              <attribute type="Attributes.Channel_24" value="КЦ: Кран 160.4 закрыт" />
               <attribute type="Attributes.Channel_25" value="Кран 160.5 открыт" />
-              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала Кран 160.5 открыт" />
+              <attribute type="Attributes.Channel_26" value="КЦ: Кран 160.5 открыт" />
               <attribute type="Attributes.Channel_27" value="Кран 160.6 закрыт" />
-              <attribute type="Attributes.Channel_28" value="Контроль цепи сигнала Кран 160.6 закрыт" />
+              <attribute type="Attributes.Channel_28" value="КЦ: Кран 160.6 закрыт" />
               <attribute type="Attributes.Channel_29" value="Кран 160.9 открыт" />
-              <attribute type="Attributes.Channel_30" value="Контроль цепи сигнала Кран 160.9 открыт" />
+              <attribute type="Attributes.Channel_30" value="КЦ: Кран 160.9 открыт" />
               <attribute type="Attributes.Channel_31" value="Кран 160.12 закрыт" />
-              <attribute type="Attributes.Channel_32" value="Контроль цепи сигнала Кран 160.12 закрыт" />
+              <attribute type="Attributes.Channel_32" value="КЦ: Кран 160.12 закрыт" />
             </ct:object>
             <ct:object name="BR2_17" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_17 (M557D)" />
               <attribute type="Attributes.ShortName" value="BR2_17" />
               <attribute type="Attributes.Channel_1" value="Кран 160.13 закрыт" />
-              <attribute type="Attributes.Channel_2" value="Контроль цепи сигнала Кран 160.13 закрыт" />
+              <attribute type="Attributes.Channel_2" value="КЦ: Кран 160.13 закрыт" />
               <attribute type="Attributes.Channel_3" value="Кран 160.14 открыт" />
-              <attribute type="Attributes.Channel_4" value="Контроль цепи сигнала Кран 160.14 открыт" />
+              <attribute type="Attributes.Channel_4" value="КЦ: Кран 160.14 открыт" />
               <attribute type="Attributes.Channel_5" value="Кран 160.15 закрыт" />
-              <attribute type="Attributes.Channel_6" value="Контроль цепи сигнала Кран 160.15 закрыт" />
+              <attribute type="Attributes.Channel_6" value="КЦ: Кран 160.15 закрыт" />
               <attribute type="Attributes.Channel_7" value="Кран 160.16 открыт" />
-              <attribute type="Attributes.Channel_8" value="Контроль цепи сигнала Кран 160.16 открыт" />
-              <attribute type="Attributes.Channel_10" value="Контроль цепи сигнала Кран 160.18 открыт" />
+              <attribute type="Attributes.Channel_8" value="КЦ: Кран 160.16 открыт" />
+              <attribute type="Attributes.Channel_10" value="КЦ: Кран 160.18 открыт" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Резерв" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
@@ -439,35 +439,35 @@
               <attribute type="Attributes.Channel_23" value="Резерв" />
               <attribute type="Attributes.Channel_24" value="Резерв" />
               <attribute type="Attributes.Channel_25" value="Аварийный останов от кнопки на блоке САУ" />
-              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала Аварийный останов от кнопки на блоке САУ" />
+              <attribute type="Attributes.Channel_26" value="КЦ: Аварийный останов от кнопки на блоке САУ" />
               <attribute type="Attributes.Channel_27" value="АОБС от САУ КЦ " />
-              <attribute type="Attributes.Channel_28" value="Контроль цепи сигнала АОБС от САУ КЦ " />
+              <attribute type="Attributes.Channel_28" value="КЦ: АОБС от САУ КЦ " />
               <attribute type="Attributes.Channel_29" value="АОСС от САУ КЦ" />
-              <attribute type="Attributes.Channel_30" value="Контроль цепи сигнала АОСС от САУ КЦ" />
+              <attribute type="Attributes.Channel_30" value="КЦ: АОСС от САУ КЦ" />
               <attribute type="Attributes.Channel_31" value="АОБС от САУ КЦ (резервный)" />
-              <attribute type="Attributes.Channel_32" value="Контроль цепи сигнала АОБС от САУ КЦ (резервный)" />
+              <attribute type="Attributes.Channel_32" value="КЦ: АОБС от САУ КЦ (резервный)" />
             </ct:object>
             <ct:object name="BR2_18" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_18 (M557D)" />
               <attribute type="Attributes.ShortName" value="BR2_18" />
               <attribute type="Attributes.Channel_1" value="АОСС от САУ КЦ (резервный)" />
-              <attribute type="Attributes.Channel_2" value="Контроль цепи сигнала АОСС от САУ КЦ (резервный)" />
+              <attribute type="Attributes.Channel_2" value="КЦ: АОСС от САУ КЦ (резервный)" />
               <attribute type="Attributes.Channel_3" value="ВОСС от САУ КЦ (резервный)" />
-              <attribute type="Attributes.Channel_4" value="Контроль цепи сигнала ВОСС от САУ КЦ (резервный)" />
+              <attribute type="Attributes.Channel_4" value="КЦ: ВОСС от САУ КЦ (резервный)" />
               <attribute type="Attributes.Channel_5" value="Кнопка ЭАО от ПРУ 2 (резерв) НО" />
-              <attribute type="Attributes.Channel_6" value="Контроль цепи сигнала Кнопка ЭАО от ПРУ 2 (резерв) НО" />
+              <attribute type="Attributes.Channel_6" value="КЦ: Кнопка ЭАО от ПРУ 2 (резерв) НО" />
               <attribute type="Attributes.Channel_7" value="Кнопка ЭАО от ПРУ 2 (резерв) НЗ" />
-              <attribute type="Attributes.Channel_8" value="Контроль цепи сигнала Кнопка ЭАО от ПРУ 2 (резерв) НЗ" />
-              <attribute type="Attributes.Channel_10" value="Контроль цепи сигнала Кнопка НО от ПРУ 1" />
+              <attribute type="Attributes.Channel_8" value="КЦ: Кнопка ЭАО от ПРУ 2 (резерв) НЗ" />
+              <attribute type="Attributes.Channel_10" value="КЦ: Кнопка НО от ПРУ 1" />
               <attribute type="Attributes.Channel_11" value="ВОCC от САУ КЦ" />
-              <attribute type="Attributes.Channel_12" value="Контроль цепи сигнала ВОCC от САУ КЦ" />
+              <attribute type="Attributes.Channel_12" value="КЦ: ВОCC от САУ КЦ" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
               <attribute type="Attributes.Channel_14" value="Резерв" />
               <attribute type="Attributes.Channel_15" value="Резерв" />
               <attribute type="Attributes.Channel_16" value="Резерв" />
               <attribute type="Attributes.Channel_9" value="Кнопка НО от ПРУ 1" />
               <attribute type="Attributes.Channel_17" value="Высокий перепад давления на маслофильтре в линии откачки от ГТД" />
-              <attribute type="Attributes.Channel_18" value="Контроль цепи сигнала Высокий перепад давления на маслофильтре в линии откачки от ГТД" />
+              <attribute type="Attributes.Channel_18" value="КЦ: Высокий перепад давления на маслофильтре в линии откачки от ГТД" />
               <attribute type="Attributes.Channel_19" value="Разрушена мембрана СГУ со стороны всаса" />
               <attribute type="Attributes.Channel_20" value="Резерв" />
               <attribute type="Attributes.Channel_21" value="Разрушена мембрана СГУ со стороны нагнетания" />
@@ -630,22 +630,22 @@
             <ct:object name="BR2_23" base-type="Types.DIAG_M557D.DIAG_M557D_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR2_23 (M557D)" />
               <attribute type="Attributes.ShortName" value="BR2_23" />
-              <attribute type="Attributes.Channel_1" value="Контроль цепи сигнала Кран 160.1 закрыть" />
-              <attribute type="Attributes.Channel_2" value="Контроль цепи сигнала Кран 160.2 закрыть" />
-              <attribute type="Attributes.Channel_3" value="Контроль цепи сигнала Кран 160.4 закрыть" />
-              <attribute type="Attributes.Channel_4" value="Контроль цепи сигнала Кран 160.5 открыть" />
-              <attribute type="Attributes.Channel_5" value="Контроль цепи сигнала Кран 160.6 закрыть" />
-              <attribute type="Attributes.Channel_6" value="Контроль цепи сигнала Кран 160.9 открыть" />
-              <attribute type="Attributes.Channel_7" value="Контроль цепи сигнала Кран 160.12 закрыть" />
-              <attribute type="Attributes.Channel_8" value="Контроль цепи сигнала Кран 160.13 закрыть" />
-              <attribute type="Attributes.Channel_10" value="Контроль цепи сигнала Кран 160.15 закрыть" />
-              <attribute type="Attributes.Channel_11" value="Контроль цепи сигнала Кран 160.16 открыть" />
-              <attribute type="Attributes.Channel_12" value="Контроль цепи сигнала Кран 160.18 открыть" />
+              <attribute type="Attributes.Channel_1" value="КЦ: Кран 160.1 закрыть" />
+              <attribute type="Attributes.Channel_2" value="КЦ: Кран 160.2 закрыть" />
+              <attribute type="Attributes.Channel_3" value="КЦ: Кран 160.4 закрыть" />
+              <attribute type="Attributes.Channel_4" value="КЦ: Кран 160.5 открыть" />
+              <attribute type="Attributes.Channel_5" value="КЦ: Кран 160.6 закрыть" />
+              <attribute type="Attributes.Channel_6" value="КЦ: Кран 160.9 открыть" />
+              <attribute type="Attributes.Channel_7" value="КЦ: Кран 160.12 закрыть" />
+              <attribute type="Attributes.Channel_8" value="КЦ: Кран 160.13 закрыть" />
+              <attribute type="Attributes.Channel_10" value="КЦ: Кран 160.15 закрыть" />
+              <attribute type="Attributes.Channel_11" value="КЦ: Кран 160.16 открыть" />
+              <attribute type="Attributes.Channel_12" value="КЦ: Кран 160.18 открыть" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
               <attribute type="Attributes.Channel_14" value="Резерв" />
               <attribute type="Attributes.Channel_15" value="Резерв" />
               <attribute type="Attributes.Channel_16" value="Резерв" />
-              <attribute type="Attributes.Channel_9" value="Контроль цепи сигнала Кран 160.14 открыть" />
+              <attribute type="Attributes.Channel_9" value="КЦ: Кран 160.14 открыть" />
               <attribute type="Attributes.Channel_17" value="Резерв" />
               <attribute type="Attributes.Channel_18" value="Резерв" />
               <attribute type="Attributes.Channel_19" value="Резерв" />
@@ -653,9 +653,9 @@
               <attribute type="Attributes.Channel_21" value="Резерв" />
               <attribute type="Attributes.Channel_22" value="Резерв" />
               <attribute type="Attributes.Channel_23" value="Резерв" />
-              <attribute type="Attributes.Channel_24" value="Контроль цепи сигнала Высокая концентрация СН4 в АВГМ (20 % НКПВ)" />
-              <attribute type="Attributes.Channel_25" value="Контроль цепи сигнала Пуск/стоп воздуходувки БВП" />
-              <attribute type="Attributes.Channel_26" value="Контроль цепи сигнала Пуск/стоп компрессорной установки КС-22Ш БВП" />
+              <attribute type="Attributes.Channel_24" value="КЦ: Высокая концентрация СН4 в АВГМ (20 % НКПВ)" />
+              <attribute type="Attributes.Channel_25" value="КЦ: Пуск/стоп воздуходувки БВП" />
+              <attribute type="Attributes.Channel_26" value="КЦ: Пуск/стоп компрессорной установки КС-22Ш БВП" />
               <attribute type="Attributes.Channel_27" value="Резерв" />
               <attribute type="Attributes.Channel_28" value="Резерв" />
               <attribute type="Attributes.Channel_29" value="Резерв" />
