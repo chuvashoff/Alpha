@@ -806,12 +806,12 @@ try:
                             file_name=f'file_out_plc_NKU_inGPA.omx-export',
                             new_data=Template(tmp_global).substitute(dp_node=tmp_group_nku),
                             message_print=f'Требуется заменить Сигналы НКУ в аспекте ПЛК')
-
-            create_index_nku(name_plc_nku='GPA', sl_signal_nku=sl_CPU_nku)
-
-    create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts, lst_wrn=lst_all_wrn,
-                 sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
-                 sl_cpu_drv_signal=sl_cpu_drv_signal)
+            if os.path.exists('Source_list_plc.txt'):
+                create_index_nku(name_plc_nku='GPA', sl_signal_nku=sl_CPU_nku)
+    if os.path.exists('Source_list_plc.txt'):
+        create_index(lst_alg=lst_all_alg, lst_mod=lst_all_mod, lst_ppu=lst_all_ppu, lst_ts=lst_all_ts,
+                     lst_wrn=lst_all_wrn, sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
+                     sl_cpu_drv_signal=sl_cpu_drv_signal)
     print(datetime.datetime.now(), 'Окончание сборки карт индексов')
     input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
 
