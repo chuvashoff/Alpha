@@ -3,6 +3,18 @@ import os
 import datetime
 from time import sleep
 
+# Функция для очистки русской строки от лишних символов в русской строке для json
+
+
+def f_ind_json(target_str):
+    replace_values = {'\"': '', '\'': ''}
+    # получаем заменяемое: подставляемое из словаря в цикле
+    for i, j in replace_values.items():
+        # меняем все target_str на подставляемое
+        target_str = target_str.replace(i, j)
+    return target_str
+
+
 # Функция для замены нескольких значений
 
 

@@ -5,6 +5,7 @@ import logging
 # from my_func import *
 from alpha_index import *
 import warnings
+import json
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 
 try:
@@ -525,7 +526,7 @@ try:
 
     # Для каждого объекта, прочитанного ранее
     for obj in sl_object_all:
-        s_trends = ''
+        lst_json = []
         # Для каждого листа конфигуратора в словаре групп для трендов(ключи словаря опрделили
         # по объявленным мнемосхемам)
         for list_config in sl_group_trends:
@@ -557,8 +558,8 @@ try:
                 if list_config in ('Измеряемые', 'Расчетные') or \
                         list_config == 'Входные' and par[is_f_ind(cells_name[0], 'ИМ')].value == 'Нет':
                     # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                    sl_par_trends = {par[rus_par_ind].value: (par[alg_name_ind].value.replace('|', '_') + '.Value',
-                                                              par[eunit_ind].value)}
+                    sl_par_trends = {f_ind_json(par[rus_par_ind].value): (par[alg_name_ind].value.replace('|', '_') +
+                                                                          '.Value', par[eunit_ind].value)}
                     # добавляем словарь параметра в словарь узла
                     sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
                 # при условии, что парсим лист ИМов
@@ -567,7 +568,8 @@ try:
                     if par[is_f_ind(cells_name[0], 'Тип ИМ')].value in ('ИМ1Х0', 'ИМ1Х0и'):
                         move_ = par[is_f_ind(cells_name[0], 'Вкл./откр.')].value  # определяем тип открытия
                         # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                        sl_par_trends = {f'{par[rus_par_ind].value}. {move_}': (par[alg_name_ind].value + '.oOn', '-')}
+                        sl_par_trends = \
+                            {f'{f_ind_json(par[rus_par_ind].value)}. {move_}': (par[alg_name_ind].value + '.oOn', '-')}
                         # добавляем словарь параметра в словарь узла
                         sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
 
@@ -579,7 +581,8 @@ try:
                         sl_tmp = {'.oOn': move_, '.stOn': sl_state_im_gender[move_][gender_]}
                         for par_pref in sl_tmp:
                             # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                            sl_par_trends = {f'{par[rus_par_ind].value}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
+                            sl_par_trends = \
+                                {f"{f_ind_json(par[rus_par_ind].value)}. {sl_tmp[par_pref]}": (par[alg_name_ind].value +
                                                                                                par_pref, '-')}
                             # добавляем словарь параметра в словарь узла
                             sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
@@ -593,7 +596,8 @@ try:
                                   '.stOff': sl_state_im_gender[move_ + '_off'][gender_]}
                         for par_pref in sl_tmp:
                             # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                            sl_par_trends = {f'{par[rus_par_ind].value}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
+                            sl_par_trends = \
+                                {f'{f_ind_json(par[rus_par_ind].value)}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
                                                                                                par_pref, '-')}
                             # добавляем словарь параметра в словарь узла
                             sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
@@ -608,7 +612,8 @@ try:
                                   '.stOff': sl_state_im_gender[move_ + '_off'][gender_]}
                         for par_pref in sl_tmp:
                             # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                            sl_par_trends = {f'{par[rus_par_ind].value}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
+                            sl_par_trends = \
+                                {f'{f_ind_json(par[rus_par_ind].value)}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
                                                                                                par_pref, '-')}
                             # добавляем словарь параметра в словарь узла
                             sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
@@ -618,7 +623,8 @@ try:
                     sl_tmp = {'.Set': 'Задание', '.iPos': 'Положение'}
                     for par_pref in sl_tmp:
                         # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                        sl_par_trends = {f'{par[rus_par_ind].value}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
+                        sl_par_trends = \
+                            {f'{f_ind_json(par[rus_par_ind].value)}. {sl_tmp[par_pref]}': (par[alg_name_ind].value +
                                                                                            par_pref,
                                                                                            par[eunit_ind].value)}
                         # добавляем словарь параметра в словарь узла
@@ -630,7 +636,8 @@ try:
                     # Если увидели аварию
                     if type_prot in 'АОссАОбсВОссВОбсАОНО':
                         # создаём промежуточный словарь аварии {рус.имя: (алг.имя, единицы измерения - '-')}
-                        sl_alr_trends = {f'{par[rus_par_ind].value}': (par[alg_name_ind].value.replace('|', '.') +
+                        sl_alr_trends = \
+                            {f'{f_ind_json(par[rus_par_ind].value)}': (par[alg_name_ind].value.replace('|', '.') +
                                                                        '.Value', '-')}
                         # если в словаре аварий отсутвует такая авария, то создаём
                         if type_prot not in sl_node_alr:
@@ -640,15 +647,16 @@ try:
                     # Если увидели режим
                     elif type_prot in ('Режим',):
                         # то добавляем в словарь режимов с ключом рус имени аварии : (алг.имя, единицы измерения - '-')
-                        sl_node_modes[par[rus_par_ind].value] = (par[alg_name_ind].value.replace('MOD|', '') +
-                                                                 '.Value', '-')
+                        sl_node_modes[f_ind_json(par[rus_par_ind].value)] = \
+                            (par[alg_name_ind].value.replace('MOD|', '') + '.Value', '-')
                 # при условии, что парсим лист Драйверов
                 elif list_config in ('Драйвера',):
                     sl_type_unit = {'BOOL': '-', 'INT': par[eunit_drv_ind].value, 'FLOAT': par[eunit_drv_ind].value,
                                     'IEC': '-', 'Daily': '-'}
                     drv_ = par[is_f_ind(cells_name[0], 'Драйвер')].value
                     # создаём промежуточный словарь сигнала драйвера {рус.имя: (алг.имя, единицы измерения - '-')}
-                    sl_drv_trends = {f'{par[rus_par_ind].value}': (par[alg_name_ind].value + '.Value',
+                    sl_drv_trends = \
+                        {f'{f_ind_json(par[rus_par_ind].value)}': (par[alg_name_ind].value + '.Value',
                                                                    sl_type_unit[par[t_sig_drv_ind].value])}
                     # если в словаре драйверов отсутвует такой драйвер, то создаём
                     if drv_ not in sl_node_drv:
@@ -660,25 +668,23 @@ try:
                 if 'АПР' in [item for sublist in [i for i in sl_CPU_spec.values() if i] for item in sublist]:
                     sl_tmp = {'Set': 'Задание', 'Pos': 'Положение'}
                     for par_pref in sl_tmp:
-                        s_trends += Template(tmp_signal_trends).substitute(name_group='Исполнительные механизмы',
-                                                                           name_node='Главная/',
-                                                                           discr=f'АПРК. {sl_tmp[par_pref]}',
-                                                                           object_tag=obj,
-                                                                           group_tag='APR.IM',
-                                                                           signal_tag=par_pref,
-                                                                           signal_unit='%')
+                        lst_json.append(
+                            {"Signal": {"UserTree": f'Исполнительные механизмы/Главная/АПРК. {sl_tmp[par_pref]}',
+                                        "OpcTag": f'{obj}.APR.IM.{par_pref}',
+                                        "EUnit": '%',
+                                        "Description": f'АПРК. {sl_tmp[par_pref]}'}})
             # для каждого узла(мнемосхемы)...
             for node in sl_node_trends:
                 # ...для каждого параметра по отсортированному словарю параметров в узле...
                 for param in sorted(sl_node_trends[node]):
                     # ...собираем json
                     # print(node, param, sl_node_trends[node][param])
-                    s_trends += Template(tmp_signal_trends).substitute(name_group=sl_group_trends[list_config][0],
-                                                                       name_node=f'{node}/', discr=param,
-                                                                       object_tag=obj,
-                                                                       group_tag=sl_group_trends[list_config][1],
-                                                                       signal_tag=sl_node_trends[node][param][0],
-                                                                       signal_unit=sl_node_trends[node][param][1])
+                    lst_json.append(
+                        {"Signal": {"UserTree": f'{sl_group_trends[list_config][0]}/{node}/{param}',
+                                    "OpcTag":
+                                        f'{obj}.{sl_group_trends[list_config][1]}.{sl_node_trends[node][param][0]}',
+                                    "EUnit": sl_node_trends[node][param][1],
+                                    "Description": param}})
 
             # для каждого узла-драйвера в отсортированном словаре драйверов...
             for drv in sorted(sl_node_drv):
@@ -687,33 +693,34 @@ try:
                     # ...собираем json
                     # дополнительная проверка наличия драйвера в объявленных
                     if drv in sl_all_drv:
-                        s_trends += Template(tmp_signal_trends).substitute(name_group=sl_group_trends['Драйвера'][0],
-                                                                           name_node=f'{sl_all_drv[drv]}/',
-                                                                           discr=sig_drv,
-                                                                           object_tag=obj,
-                                                                           group_tag=sl_group_trends['Драйвера'][1],
-                                                                           signal_tag=sl_node_drv[drv][sig_drv][0],
-                                                                           signal_unit=sl_node_drv[drv][sig_drv][1])
+                        lst_json.append(
+                            {"Signal": {"UserTree": f"{sl_group_trends['Драйвера'][0]}/{sl_all_drv[drv]}/{sig_drv}",
+                                        "OpcTag":
+                                            f"{obj}.{sl_group_trends['Драйвера'][1]}.{sl_node_drv[drv][sig_drv][0]}",
+                                        "EUnit": sl_node_drv[drv][sig_drv][1],
+                                        "Description": sig_drv}})
 
             # для каждого типа аварии в остортированном словаре типов аварий...
             for node in sorted(sl_node_alr):
                 # ...для каждой аварии по отсортированному словарю аварий в узле(типе)...
                 for alr in sorted(sl_node_alr[node]):
                     # ...собираем json
-                    s_trends += Template(tmp_signal_trends).substitute(name_group='Аварии',
-                                                                       name_node=f'{node}/', discr=f'{node}. {alr}',
-                                                                       object_tag=obj,
-                                                                       group_tag='System',
-                                                                       signal_tag=sl_node_alr[node][alr][0],
-                                                                       signal_unit=sl_node_alr[node][alr][1])
+                    lst_json.append(
+                        {"Signal": {"UserTree": f"Аварии/{node}/{node}. {alr}",
+                                    "OpcTag":
+                                        f"{obj}.System.{sl_node_alr[node][alr][0]}",
+                                    "EUnit": sl_node_alr[node][alr][1],
+                                    "Description": f'{node}. {alr}'}})
             # для каждого режима в отсортированном словаре режимов
             for mode in sorted(sl_node_modes):
-                s_trends += Template(tmp_signal_trends).substitute(name_group='Режимы',
-                                                                   name_node='Режим ', discr=mode,
-                                                                   object_tag=obj,
-                                                                   group_tag='System.MODES',
-                                                                   signal_tag=sl_node_modes[mode][0],
-                                                                   signal_unit=sl_node_modes[mode][1])
+                # ...собираем json
+                lst_json.append(
+                    {"Signal": {"UserTree": f"Режимы/Режим {mode}",
+                                "OpcTag":
+                                    f"{obj}.System.MODES.{sl_node_modes[mode][0]}",
+                                "EUnit": sl_node_modes[mode][1],
+                                "Description": mode}})
+
         # Дополнительный перебор для сбора отказов
         for list_config in sl_brk_group_trends:
             # для каждой группы создаём словарь с пустыми словарями для каждого узла
@@ -738,7 +745,8 @@ try:
                 if list_config in ('Измеряемые', 'Расчетные') or \
                         list_config == 'Входные' and par[is_f_ind(cells_name[0], 'ИМ')].value == 'Нет':
                     # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
-                    sl_par_trends = {par[rus_par_ind].value: (par[alg_name_ind].value.replace('|', '_') + '.fValue',
+                    sl_par_trends = \
+                        {f_ind_json(par[rus_par_ind].value): (par[alg_name_ind].value.replace('|', '_') + '.fValue',
                                                               par[eunit_ind].value)}
                     # добавляем словарь параметра в словарь узла
                     sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
@@ -748,18 +756,17 @@ try:
                 # ...для каждого параметра по отсортированному словарю параметров в узле...
                 for param in sorted(sl_node_trends[node]):
                     # ...собираем json
-                    s_trends += Template(tmp_signal_trends).substitute(name_group=sl_brk_group_trends[list_config][0],
-                                                                       name_node=f'{node}/', discr=f'Отказ - {param}',
-                                                                       object_tag=obj,
-                                                                       group_tag=sl_brk_group_trends[list_config][1],
-                                                                       signal_tag=sl_node_trends[node][param][0],
-                                                                       signal_unit=sl_node_trends[node][param][1])
+                    lst_json.append(
+                        {"Signal": {"UserTree": f'{sl_brk_group_trends[list_config][0]}/{node}/Отказ - {param}',
+                                    "OpcTag":
+                                        f'{obj}.{sl_brk_group_trends[list_config][1]}.{sl_node_trends[node][param][0]}',
+                                    "EUnit": sl_node_trends[node][param][1],
+                                    "Description": f'Отказ - {param}'}})
 
         # Проверка изменений, и если есть изменения, то запись файла json
-        s_trends = s_trends.rstrip()
         check_diff_file(check_path=os.path.join('File_out', 'Trends'),
                         file_name=f'Tree{obj}.json',
-                        new_data=f"{{\n  \"UserTree\": [\n{s_trends.rstrip(',')}\n ]\n}}",
+                        new_data=json.dumps({"UserTree": lst_json}, indent=1, ensure_ascii=False),
                         message_print=f'Требуется заменить файл Tree{obj}.json')
 
     book.close()
