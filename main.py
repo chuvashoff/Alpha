@@ -5,7 +5,7 @@ import logging
 # from my_func import *
 from alpha_index import *
 import warnings
-import json
+from json import dumps as json_dumps
 warnings.filterwarnings('ignore', category=UserWarning, module='openpyxl')
 
 try:
@@ -766,7 +766,7 @@ try:
         # Проверка изменений, и если есть изменения, то запись файла json
         check_diff_file(check_path=os.path.join('File_out', 'Trends'),
                         file_name=f'Tree{obj}.json',
-                        new_data=json.dumps({"UserTree": lst_json}, indent=1, ensure_ascii=False),
+                        new_data=json_dumps({"UserTree": lst_json}, indent=1, ensure_ascii=False),
                         message_print=f'Требуется заменить файл Tree{obj}.json')
 
     book.close()
@@ -827,6 +827,13 @@ try:
                      lst_wrn=lst_all_wrn, sl_pz_anum=sl_all_pz, sl_cpu_spec=sl_CPU_spec, sl_diag=sl_for_diag,
                      sl_cpu_drv_signal=sl_cpu_drv_signal)
     print(datetime.datetime.now(), 'Окончание сборки карт индексов')
+    # добавление отсечки в файл изменений, чтобы разные сборки не сливались
+    if os.path.exists('Required_change.txt'):
+        with open('Required_change.txt', 'r') as f_test:
+            check_test = f_test.readlines()[-1]
+        if check_test != '-' * 70 + '\n':
+            with open('Required_change.txt', 'a') as f_test:
+                f_test.write('-' * 70 + '\n')
     input(f'{datetime.datetime.now()} - Сборка файлов завершена успешно. Нажмите Enter для выхода...')
 
 except (Exception, KeyError):

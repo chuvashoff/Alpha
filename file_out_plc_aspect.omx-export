@@ -3,7 +3,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.010" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.010" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GTU1.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GTU1.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -2166,7 +2166,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.020" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.020" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GTU2.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GTU2.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -4329,7 +4329,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.030" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.030" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GTU3.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GTU3.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -6492,7 +6492,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.012" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.012" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GPA1.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GPA1.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -12761,7 +12761,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.022" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.022" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GPA2.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GPA2.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -19030,7 +19030,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.032" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.032" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GPA3.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GPA3.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -25299,7 +25299,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.014" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.014" />
-      <trei:unet-server name="UnetServer" address-map="PLC_DRV21.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_DRV21.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -27031,7 +27031,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.024" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.024" />
-      <trei:unet-server name="UnetServer" address-map="PLC_DRV22.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_DRV22.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
@@ -28763,7 +28763,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.034" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.034" />
-      <trei:unet-server name="UnetServer" address-map="PLC_DRV23.m903e.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_DRV23.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >
