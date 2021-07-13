@@ -371,7 +371,11 @@ def create_index(lst_alg, lst_mod, lst_ppu, lst_ts, lst_wrn, sl_pz_anum, sl_cpu_
         'RuntimeErr': 'System44_7_0', 'ResetMod': 'System44_7_1', 'HWErr': 'System44_7_5',
         'HWConfErr': 'System44_7_6', 'HWUnitErr': 'System44_7_7', 'ExtComErr': 'System44_7_11',
         'IntComErr': 'System44_7_12', 'ModuleComErr': 'System44_7_24', 'SoftOk': 'System44_9_0',
-        'SoftStop': 'System44_9_3', 'SoftBlock': 'System44_9_4', 'SoftReserve': 'System44_9_5'
+        'SoftStop': 'System44_9_3', 'SoftBlock': 'System44_9_4', 'SoftReserve': 'System44_9_5',
+        'LAN1_Error': 'LAN1_Error', 'LAN2_Error': 'LAN2_Error', 'LAN3_Error': 'LAN3_Error', 'LAN4_Error': 'LAN4_Error',
+        'SFP1_Error': 'SFP1_Error', 'SFP2_Error': 'SFP2_Error',
+        'LAN1_NoLink': 'LAN1_NoLink', 'LAN2_NoLink': 'LAN2_NoLink', 'LAN3_NoLink': 'LAN3_NoLink',
+        'LAN4_NoLink': 'LAN4_NoLink', 'SFP1_NoLink': 'SFP1_NoLink', 'SFP2_NoLink': 'SFP2_NoLink'
     }
 
     with open('Source_list_plc.txt', 'r', encoding='UTF-8') as f_source:

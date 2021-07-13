@@ -40260,8 +40260,10 @@
   <item Binding="Introduced">
     <node-path>APR.IM.Set</node-path>
     <protocoltype>Analog</protocoltype>
-    <index>1752</index>
-    <category>DataCategory_GTU_NoArcAnalog</category>
+    <index>7125</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GTU_Arc</category>
   </item>
   <item Binding="Introduced">
     <node-path>APR.IM.sSetRU</node-path>
