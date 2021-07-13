@@ -560,7 +560,9 @@ try:
                         list_config == 'Входные' and par[is_f_ind(cells_name[0], 'ИМ')].value == 'Нет':
                     # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
                     sl_par_trends = {f_ind_json(par[rus_par_ind].value): (par[alg_name_ind].value.replace('|', '_') +
-                                                                          '.Value', par[eunit_ind].value)}
+                                                                          '.Value',
+                                                                          ('-' if list_config == 'Входные' else
+                                                                           par[eunit_ind].value))}
                     # добавляем словарь параметра в словарь узла
                     sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
                 # при условии, что парсим лист ИМов
