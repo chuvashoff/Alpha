@@ -391,11 +391,12 @@ def is_create_objects_diag(sl):
         'M537V': 'Types.DIAG_M537V.DIAG_M537V_PLC_View',
         'M932C_2N': 'Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View',
         'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
-        'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View'
+        'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View',
+        'M915E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
     }
     tmp_line_object = ''
     for key, value in sl.items():
-        if value[0] in ('M903E', 'M991E'):
+        if value[0] in ('M903E', 'M991E', 'M915E'):
             tmp_line_object += Template(template_text_cpu).substitute(object_name=key,
                                                                       object_type=sl_type_modules[value[0]],
                                                                       object_aspect='Types.PLC_Aspect',
