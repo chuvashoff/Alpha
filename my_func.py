@@ -392,7 +392,7 @@ def is_create_objects_diag(sl):
         'M932C_2N': 'Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View',
         'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
         'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View',
-        'M915E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
+        'M915E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View'
     }
     tmp_line_object = ''
     for key, value in sl.items():
