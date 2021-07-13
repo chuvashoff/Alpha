@@ -750,7 +750,7 @@ try:
                     # создаём промежуточный словарь {рус.имя: (алг.имя, единицы измерения)}
                     sl_par_trends = \
                         {f_ind_json(par[rus_par_ind].value): (par[alg_name_ind].value.replace('|', '_') + '.fValue',
-                                                              par[eunit_ind].value)}
+                                                              '-')}
                     # добавляем словарь параметра в словарь узла
                     sl_node_trends[par[node_name_ind].value].update(sl_par_trends)
 
