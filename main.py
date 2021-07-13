@@ -45,7 +45,8 @@ try:
         'M557O': ['Резерв'] * 32,
         'M932C_2N': ['Резерв'] * 8,
         'M903E': 'CPU',
-        'M991E': 'CPU'
+        'M991E': 'CPU',
+        'M915E': 'CPU'
     }
     # Считываем файл-шаблон для AI  AE SET
     with open(os.path.join('Template', 'Temp_AIAESET'), 'r', encoding='UTF-8') as f:
