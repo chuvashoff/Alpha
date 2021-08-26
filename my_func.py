@@ -1,7 +1,7 @@
 from string import Template
 import os
 import datetime
-from time import sleep
+# from time import sleep
 
 # Функция для очистки русской строки от лишних символов в русской строке для json
 
@@ -155,7 +155,7 @@ def is_load_pz(controller, cell, num_pz, name_par, type_protect, eunit, cpu):
             else:
                 tmp_eunit = par[eunit].value
             tmp['A' + str(num_pz).zfill(3)] = (par[type_protect].value + '. ' + is_cor_chr(par[name_par].value),
-                                               tmp_eunit)
+                                               tmp_eunit.strip())
             num_pz += 1
     return tmp, num_pz
 
@@ -390,8 +390,8 @@ def is_create_objects_diag(sl):
         'M557D': 'Types.DIAG_M557D.DIAG_M557D_PLC_View',
         'M557O': 'Types.DIAG_M557O.DIAG_M557O_PLC_View',
         'M915E': 'Types.DIAG_CPU.DIAG_CPU_PLC_View',
-        'M531I': 'Types.DIAG_M531I.DIAG_CPU_M531I_PLC_View',
-        'M543G': 'Types.DIAG_M543G.DIAG_CPU_M543G_PLC_View'
+        'M531I': 'Types.DIAG_M531I.DIAG_M531I_PLC_View',
+        'M543G': 'Types.DIAG_M543G.DIAG_M543G_PLC_View'
     }
     tmp_line_object = ''
     for key, value in sl.items():
@@ -494,7 +494,7 @@ def check_diff_file(check_path, file_name, new_data, message_print):
             # Переносим старую файл в папку Old
             os.replace(os.path.join(check_path, file_name),
                        os.path.join(check_path, 'Old', file_name))
-            sleep(0.1)
+            # sleep(0.1)
             # Записываем новый файл
             with open(os.path.join(check_path, file_name), 'w', encoding='UTF-8') as f_wr:
                 f_wr.write(new_data)

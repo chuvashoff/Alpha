@@ -797,7 +797,7 @@ try:
     # Если есть файл-источник конфигуратора НКУ
     if os.path.exists('Source_NKU.txt'):
         with open('Source_NKU.txt', 'r', encoding='UTF-8') as f_nku:
-            path_nku = f_nku.readline().strip()
+            path_nku = f_nku.readline().strip().split(',')[1]
     # Если считан путь к конфигуратору НКУ
     if path_nku:
         # Даём по умолчанию название конфигуратору

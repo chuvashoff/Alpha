@@ -1,1 +1,1 @@
-C:\Users\a_chuvashov\Desktop\проект Python\python_ALPHA\Конфигуратор НКУ
+GPA,C:\Users\a_chuvashov\Desktop\проект Python\python_ALPHA\Конфигуратор НКУ
