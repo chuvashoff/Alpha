@@ -23832,6 +23832,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.coSim</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53833</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.coRepair</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3326</index>
@@ -24135,6 +24141,12 @@
     <node-path>AE.AE_Qcomm_hour.coRepair</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51632</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.coRepair</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53834</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -24444,6 +24456,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.coUpdRepair</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53835</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sEnRate</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3422</index>
@@ -24747,6 +24765,12 @@
     <node-path>AE.AE_Qcomm_hour.sEnRate</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51635</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnRate</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53836</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -25056,6 +25080,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnaH</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53837</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sEnwH</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3518</index>
@@ -25359,6 +25389,12 @@
     <node-path>AE.AE_Qcomm_hour.sEnwH</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51637</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnwH</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53838</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -25668,6 +25704,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnwL</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53839</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sEnaL</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3614</index>
@@ -25971,6 +26013,12 @@
     <node-path>AE.AE_Qcomm_hour.sEnaL</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51639</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnaL</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53840</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -26280,6 +26328,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sEnRepair</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53841</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sChlType</node-path>
     <protocoltype>Analog</protocoltype>
     <index>4378</index>
@@ -26583,6 +26637,12 @@
     <node-path>AE.AE_Qcomm_hour.sChlType</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23351</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sChlType</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24021</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -26892,6 +26952,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sLowLim</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24022</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sHighLim</node-path>
     <protocoltype>Analog</protocoltype>
     <index>4474</index>
@@ -27195,6 +27261,12 @@
     <node-path>AE.AE_Qcomm_hour.sHighLim</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23353</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sHighLim</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24023</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -27504,6 +27576,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.iValue</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24026</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.qbiValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>4666</index>
@@ -27807,6 +27885,12 @@
     <node-path>AE.AE_Qcomm_hour.qbiValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23357</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.qbiValue</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24027</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -28116,6 +28200,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sHys</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24028</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sBndRate</node-path>
     <protocoltype>Analog</protocoltype>
     <index>4762</index>
@@ -28419,6 +28509,12 @@
     <node-path>AE.AE_Qcomm_hour.sBndRate</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23359</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sBndRate</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24029</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -28728,6 +28824,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sTaH</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24031</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sTwH</node-path>
     <protocoltype>Analog</protocoltype>
     <index>4906</index>
@@ -29031,6 +29133,12 @@
     <node-path>AE.AE_Qcomm_hour.sTwH</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23362</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sTwH</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24032</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -29340,6 +29448,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sTwL</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24033</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sTaL</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5002</index>
@@ -29643,6 +29757,12 @@
     <node-path>AE.AE_Qcomm_hour.sTaL</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23364</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sTaL</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24034</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -29952,6 +30072,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sBndaH</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24035</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sBndwH</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5098</index>
@@ -30255,6 +30381,12 @@
     <node-path>AE.AE_Qcomm_hour.sBndwH</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23366</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sBndwH</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24036</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -30564,6 +30696,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sBndwL</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24037</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sBndaL</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5194</index>
@@ -30867,6 +31005,12 @@
     <node-path>AE.AE_Qcomm_hour.sBndaL</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23368</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sBndaL</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24038</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -31176,6 +31320,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.sTRepair</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24039</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.sSimValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5290</index>
@@ -31479,6 +31629,12 @@
     <node-path>AE.AE_Qcomm_hour.sSimValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23370</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.sSimValue</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24040</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -31788,6 +31944,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.Repair</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53845</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.TRepair</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5386</index>
@@ -32091,6 +32253,12 @@
     <node-path>AE.AE_Qcomm_hour.TRepair</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23372</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.TRepair</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24042</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -32400,6 +32568,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.Sim</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53846</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.Value</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5434</index>
@@ -32703,6 +32877,12 @@
     <node-path>AE.AE_Qcomm_hour.Value</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23373</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24043</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -33012,6 +33192,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.fValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53847</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.aH</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3998</index>
@@ -33315,6 +33501,12 @@
     <node-path>AE.AE_Qcomm_hour.aH</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51647</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.aH</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53848</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -33624,6 +33816,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.wH</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53849</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.wL</node-path>
     <protocoltype>Bool</protocoltype>
     <index>4094</index>
@@ -33927,6 +34125,12 @@
     <node-path>AE.AE_Qcomm_hour.wL</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51649</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.wL</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53850</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -34236,6 +34440,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.aL</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53851</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.fOverhigh</node-path>
     <protocoltype>Bool</protocoltype>
     <index>4238</index>
@@ -34539,6 +34749,12 @@
     <node-path>AE.AE_Qcomm_hour.fOverhigh</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51652</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.fOverhigh</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53853</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -34848,6 +35064,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.fOverlow</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53854</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.fHighspeed</node-path>
     <protocoltype>Bool</protocoltype>
     <index>4334</index>
@@ -35151,6 +35373,12 @@
     <node-path>AE.AE_Qcomm_hour.fHighspeed</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51654</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.fHighspeed</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53855</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -35460,6 +35688,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.fParam</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53856</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.Value100</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5482</index>
@@ -35763,6 +35997,12 @@
     <node-path>AE.AE_Qcomm_hour.Value100</node-path>
     <protocoltype>Analog</protocoltype>
     <index>23374</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.Value100</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>24044</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -36072,6 +36312,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>AE.AE_RH.Message.msg_qbiValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53857</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>AE.AE_NARNOM.Message.msg_fBreak</node-path>
     <protocoltype>Bool</protocoltype>
     <index>4478</index>
@@ -36375,6 +36621,12 @@
     <node-path>AE.AE_Qcomm_hour.Message.msg_fBreak</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51657</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>AE.AE_RH.Message.msg_fBreak</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53858</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -44482,7 +44734,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_AO_ButtonBlockSAU.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>29310</index>
+    <index>28920</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44490,7 +44742,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_AObs_fromKC.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28920</index>
+    <index>28921</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44498,7 +44750,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_AOss_fromKC.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28921</index>
+    <index>28922</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44506,7 +44758,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_AObs_fromKCr.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28922</index>
+    <index>28923</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44514,7 +44766,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_AOss_fromKCr.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28923</index>
+    <index>28924</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44522,7 +44774,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_VOss_fromKCr.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28924</index>
+    <index>28925</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44752,7 +45004,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Fire_OD.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28925</index>
+    <index>28926</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44760,7 +45012,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Fire_A.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28926</index>
+    <index>28927</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44768,7 +45020,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Fire_ET.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28927</index>
+    <index>28928</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44776,7 +45028,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Fire_SAU.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28928</index>
+    <index>28929</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44784,7 +45036,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Fire_AVGM.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28929</index>
+    <index>28930</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44804,7 +45056,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Zag_20_OD.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28930</index>
+    <index>28931</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -44818,7 +45070,7 @@
   <item Binding="Introduced">
     <node-path>DI.DI_Zag_20_A.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28931</index>
+    <index>28932</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -89826,6 +90078,36 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Man.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51712</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Auto.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51713</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_SAVE_WORK.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51714</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_READ_WORK.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51715</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Continue_KPK.pBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51716</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_UNLOCK.caLhBTN</node-path>
     <protocoltype>Bool</protocoltype>
     <index>11636</index>
@@ -90075,6 +90357,36 @@
     <node-path>System.BTN.BTN_StopAVGM.caLhBTN</node-path>
     <protocoltype>Bool</protocoltype>
     <index>11677</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Man.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51717</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Auto.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51718</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_SAVE_WORK.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51719</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_READ_WORK.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51720</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Continue_KPK.caLhBTN</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51721</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -90330,6 +90642,36 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Man.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51727</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Auto.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51728</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_SAVE_WORK.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51729</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_READ_WORK.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51730</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Continue_KPK.pcoMan</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51731</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_UNLOCK.coOn</node-path>
     <protocoltype>Bool</protocoltype>
     <index>11804</index>
@@ -90582,6 +90924,36 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Man.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51737</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Auto.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51738</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_SAVE_WORK.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51739</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_READ_WORK.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51740</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Continue_KPK.coOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51741</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.BTN.BTN_UNLOCK.ceOn</node-path>
     <protocoltype>Bool</protocoltype>
     <index>11846</index>
@@ -90831,6 +91203,36 @@
     <node-path>System.BTN.BTN_StopAVGM.ceOn</node-path>
     <protocoltype>Bool</protocoltype>
     <index>11887</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Man.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51742</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_UTO_Auto.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51743</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_SAVE_WORK.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51744</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_READ_WORK.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51745</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.BTN.BTN_Continue_KPK.ceOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51746</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -91316,7 +91718,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.BZD_AO.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28932</index>
+    <index>28933</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91324,7 +91726,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vmbd_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28933</index>
+    <index>28934</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91332,7 +91734,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vmbd_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28934</index>
+    <index>28935</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91340,7 +91742,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.T_OP_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28935</index>
+    <index>28936</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91348,7 +91750,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.T_OUP_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28936</index>
+    <index>28937</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91356,7 +91758,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.T_rk_OUP_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28937</index>
+    <index>28938</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91364,7 +91766,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.T_uk_OUP_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28938</index>
+    <index>28939</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91372,7 +91774,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vp_Pogor_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28939</index>
+    <index>28940</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91380,7 +91782,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vp_Povert_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28940</index>
+    <index>28941</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91388,7 +91790,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vm_Zogor_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28941</index>
+    <index>28942</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91396,7 +91798,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vm_Zovert_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28942</index>
+    <index>28943</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91404,7 +91806,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.OSRn1_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28943</index>
+    <index>28944</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91412,7 +91814,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.OSRnt2_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28944</index>
+    <index>28945</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91420,7 +91822,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Vmbn_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28945</index>
+    <index>28946</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91428,7 +91830,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Pmsn_1_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28946</index>
+    <index>28947</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91436,7 +91838,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.P_out1SGU_vsas_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28947</index>
+    <index>28948</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91444,7 +91846,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.P_out1SGU_vsas_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28948</index>
+    <index>28949</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91452,7 +91854,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.P_out1SGU_nagn_aH.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28949</index>
+    <index>28950</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91460,7 +91862,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.P_out1SGU_nagn_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28950</index>
+    <index>28951</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91468,7 +91870,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Pbv_inSGU_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28951</index>
+    <index>28952</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91476,7 +91878,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.MSGUvsas_crs.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28952</index>
+    <index>28953</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91484,7 +91886,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.MSGUnagn_crs.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28953</index>
+    <index>28954</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91492,7 +91894,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Pvot_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28954</index>
+    <index>28955</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91500,7 +91902,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.IBPpwr_flt.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28955</index>
+    <index>28956</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91508,7 +91910,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.AO_ButtonBlockSAU.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28956</index>
+    <index>28957</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91516,7 +91918,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.AO_PRU.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28957</index>
+    <index>28958</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91524,199 +91926,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.NO_PRU.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>28958</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.CO_AOss.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28960</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.CO_AObs.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28961</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.PRU_AOss.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28962</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.PRU_AObs.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28963</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Fire_OD.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28964</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Fire_A.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28965</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Fire_ET.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28966</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Fire_SAU.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28967</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Fire_AVGM.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28968</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Zag_20_OD.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28969</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Zag_20_A.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28970</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Kr1_wnotOn.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28971</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Kr2_wnotOn.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28972</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.NolinkGTU.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28973</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.EO_ON.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28974</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.AOss_fromKC.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28975</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.AObs_fromKC.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28976</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.NolinkUVDNKU.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28977</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.NolinkUVDNKUAVO.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28978</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.PRU_NOss.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28979</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.PRU_NObs.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28980</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.Pmsn_2_aL.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>28982</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.NOss_PRU.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>29261</index>
-    <buffer-length>50</buffer-length>
-    <archivation-period>1</archivation-period>
-    <category>DataCategory_GPA_Arc</category>
-  </item>
-  <item Binding="Introduced">
-    <node-path>System.ALR.NOss_ARM.Value</node-path>
-    <protocoltype>Bool</protocoltype>
-    <index>29262</index>
+    <index>28959</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91724,7 +91934,199 @@
   <item Binding="Introduced">
     <node-path>System.ALR.VOss_fromKC.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>29311</index>
+    <index>28960</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.CO_AOss.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28961</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.CO_AObs.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28962</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.PRU_AOss.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28963</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.PRU_AObs.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28964</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Fire_OD.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28965</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Fire_A.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28966</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Fire_ET.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28967</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Fire_SAU.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28968</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Fire_AVGM.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28969</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Zag_20_OD.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28970</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Zag_20_A.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28971</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Kr1_wnotOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28972</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Kr2_wnotOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28973</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.NolinkGTU.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28974</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.EO_ON.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28975</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.AOss_fromKC.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28976</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.AObs_fromKC.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28977</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.NolinkUVDNKU.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28978</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.NolinkUVDNKUAVO.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28979</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.PRU_NOss.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28980</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.PRU_NObs.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>28982</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.Pmsn_2_aL.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>29261</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.NOss_PRU.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>29262</index>
+    <buffer-length>50</buffer-length>
+    <archivation-period>1</archivation-period>
+    <category>DataCategory_GPA_Arc</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.ALR.NOss_ARM.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>29310</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91732,7 +92134,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.dP_1SGU_nagn_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50807</index>
+    <index>29311</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91740,7 +92142,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.dP_1SGU_vsas_aL.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50808</index>
+    <index>50807</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91748,7 +92150,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Zag_20_AVGM.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50809</index>
+    <index>50808</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91756,7 +92158,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Kr6_wnotOn.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50810</index>
+    <index>50809</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91764,7 +92166,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Kr5_wnotOff.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50811</index>
+    <index>50810</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91772,7 +92174,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Kr13_wnotOn.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50812</index>
+    <index>50811</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91780,7 +92182,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Kr14_wnotOff.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>50813</index>
+    <index>50812</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91788,7 +92190,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Brk_Volt12.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>51010</index>
+    <index>50813</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91796,7 +92198,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Brk_Volt125.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>51011</index>
+    <index>51010</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91804,7 +92206,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Brk_Volt46.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>51012</index>
+    <index>51011</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -91812,7 +92214,7 @@
   <item Binding="Introduced">
     <node-path>System.ALR.Brk_Volt3.Value</node-path>
     <protocoltype>Bool</protocoltype>
-    <index>51013</index>
+    <index>51012</index>
     <buffer-length>50</buffer-length>
     <archivation-period>1</archivation-period>
     <category>DataCategory_GPA_Arc</category>
@@ -95160,6 +95562,54 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.TS.UTO_Man.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51706</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.MSD_MSN_Ready.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51757</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_LAN1_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53865</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_LAN2_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53866</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_LAN3_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53867</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_LAN4_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53868</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_SFP1_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53869</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BR2_0_SFP2_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53870</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.WRN.Qm_MBD_wL.Value</node-path>
     <protocoltype>Bool</protocoltype>
     <index>21138</index>
@@ -95379,6 +95829,66 @@
     <node-path>System.WRN.PRU_NoLink.Value</node-path>
     <protocoltype>Bool</protocoltype>
     <index>51411</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.aVent_KSHT.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51669</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.GPA_Work_BP_stOn.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51670</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.IPTV_flt.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51672</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.PSOGTD_OnKPK_AVGM.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51754</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_LAN1_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53830</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_LAN2_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53860</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_LAN3_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53861</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_LAN4_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53862</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_SFP5_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53863</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BR2_0_SFP2_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>53864</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -101088,6 +101598,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.vPar</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23447</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.SET.SP_Metan.NoLink</node-path>
     <protocoltype>Bool</protocoltype>
     <index>27867</index>
@@ -101307,6 +101823,12 @@
     <node-path>System.SET.SP_Tout_Uto.NoLink</node-path>
     <protocoltype>Bool</protocoltype>
     <index>27903</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51013</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -101532,6 +102054,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.caRegOn</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51773</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.SET.SP_Metan.Value</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9431</index>
@@ -101751,6 +102279,12 @@
     <node-path>System.SET.SP_Tout_Uto.Value</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9467</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.Value</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23448</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -101976,6 +102510,12 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.fParam</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51775</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.SET.SP_Metan.soSP</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9468</index>
@@ -102195,6 +102735,12 @@
     <node-path>System.SET.SP_Tout_Uto.soSP</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9504</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.soSP</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23449</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
@@ -102420,6 +102966,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.seSP</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23450</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.SET.SP_Metan.ceSP</node-path>
     <protocoltype>Bool</protocoltype>
     <index>28015</index>
@@ -102639,6 +103191,12 @@
     <node-path>System.SET.SP_Tout_Uto.ceSP</node-path>
     <protocoltype>Bool</protocoltype>
     <index>28051</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.ceSP</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51776</index>
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -102864,6 +103422,12 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.sLowLim</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23451</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.SET.SP_Metan.sHighLim</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9579</index>
@@ -103083,6 +103647,12 @@
     <node-path>System.SET.SP_Tout_Uto.sHighLim</node-path>
     <protocoltype>Analog</protocoltype>
     <index>9615</index>
+    <category>DataCategory_GPA_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.SET.SP_AVGM_OFF.sHighLim</node-path>
+    <protocoltype>Analog</protocoltype>
+    <index>23452</index>
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">

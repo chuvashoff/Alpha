@@ -10512,6 +10512,24 @@
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>System.TS.BRRS2_LAN1_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1011</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BRRS2_LAN2_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1012</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.TS.BRRS2_LAN3_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1013</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>System.WRN.AVGM_NoLink.Value</node-path>
     <protocoltype>Bool</protocoltype>
     <index>338</index>
@@ -10533,6 +10551,42 @@
     <node-path>System.WRN.UMG3_Vvod3NotOk.Value</node-path>
     <protocoltype>Bool</protocoltype>
     <index>3110</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG1_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>998</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG2_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>999</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.UMG3_NoLink.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1000</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BRRS2_LAN1_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1008</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BRRS2_LAN2_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1009</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>System.WRN.BRRS2_LAN3_Error.Value</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1010</index>
     <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
@@ -11848,5 +11902,41 @@
     <protocoltype>Analog</protocoltype>
     <index>337</index>
     <category>DataCategory_DRV2_NoArcAnalog</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN1_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1002</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN2_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1003</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN3_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1004</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN1_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1005</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN2_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1006</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BRRS2.LAN3_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>1007</index>
+    <category>DataCategory_DRV2_NoArcDiscrete</category>
   </item>
 </root>

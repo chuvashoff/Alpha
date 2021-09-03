@@ -1,8 +1,8 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_DRV21" >
     <trei:master-module name="CPU" >
-      <trei:ethernet-adapter name="Eth1" address="200.001.013.014" />
-      <trei:ethernet-adapter name="Eth2" address="200.001.014.014" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.016" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.016" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV21.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
@@ -15,13 +15,13 @@
         </ct:object>
         <ct:object name="AE" access-level="public" >
           <ct:object name="AE_QTGM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Массовый рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Массовый расход топливного газа" />
             <attribute type="Attributes.EUnit" value="кг/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
           </ct:object>
           <ct:object name="AE_QTG" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объемный рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Объемный расход топливного газа" />
             <attribute type="Attributes.EUnit" value="м3/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
@@ -302,6 +302,35 @@
             </ct:object>
             <ct:object name="UMG3_Vvod3NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Ввод 3 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG1_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 1" />
+            </ct:object>
+            <ct:object name="UMG2_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 2" />
+            </ct:object>
+            <ct:object name="UMG3_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 3" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Ошибка порта" />
+            </ct:object>
+        </ct:object>
+        <ct:object name="TS" access-level="public" >
+            <ct:object name="BRRS2_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="DRV" access-level="public" >

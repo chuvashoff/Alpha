@@ -3,7 +3,7 @@
     <trei:master-module name="CPU" >
       <trei:ethernet-adapter name="Eth1" address="200.001.013.032" />
       <trei:ethernet-adapter name="Eth2" address="200.001.014.032" />
-      <trei:unet-server name="UnetServer" address-map="PLC_GPA3.cpu.Tree.UnetAddressMap" port="6001"/>
+      <trei:unet-server name="UnetServer" address-map="PLC_GPA3.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
         <ct:object name="HW" access-level="public" >

@@ -103602,6 +103602,78 @@
     <category>DataCategory_GPA_NoArcAnalog</category>
   </item>
   <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN1_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>21153</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN2_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>21641</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN3_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51659</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN4_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51660</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.SFP1_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51661</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.SFP2_Error</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51662</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN1_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51663</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN2_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51664</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN3_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51665</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.LAN4_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51666</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.SFP1_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51667</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>Diag.HW.BR2_0.SFP2_NoLink</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>51668</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>Diag.HW.BR2_1.Work_Time</node-path>
     <protocoltype>Analog</protocoltype>
     <index>22</index>

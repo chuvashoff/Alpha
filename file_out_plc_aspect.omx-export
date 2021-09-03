@@ -67,8 +67,8 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_4 (M547A)" />
               <attribute type="Attributes.ShortName" value="BR1_4" />
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
-              <attribute type="Attributes.Channel_10" value="Частота электростартера" />
-              <attribute type="Attributes.Channel_11" value="Момент электростартера" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
               <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
@@ -162,7 +162,7 @@
               <attribute type="Attributes.Channel_6" value="Питание электростартера включить" />
               <attribute type="Attributes.Channel_7" value="Электростартер включить" />
               <attribute type="Attributes.Channel_8" value="Повышенную мощность электростартера включить" />
-              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Переключение ВНА" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Резерв" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
@@ -187,9 +187,9 @@
               <attribute type="Attributes.Channel_31" value="Резерв" />
               <attribute type="Attributes.Channel_32" value="Резерв" />
             </ct:object>
-            <ct:object name="BR1_20" base-type="Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_20 (M932C_2N)" />
-              <attribute type="Attributes.ShortName" value="BR1_20" />
+            <ct:object name="BR1_9" base-type="Types.DIAG_M531I.DIAG_M531I_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_9 (M531I)" />
+              <attribute type="Attributes.ShortName" value="BR1_9" />
               <attribute type="Attributes.Channel_1" value="Частота 2 вращения ротора ГТД (обмотка 1 датчики 2)" />
               <attribute type="Attributes.Channel_2" value="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -198,6 +198,26 @@
               <attribute type="Attributes.Channel_6" value="Резерв" />
               <attribute type="Attributes.Channel_7" value="Резерв" />
               <attribute type="Attributes.Channel_8" value="Резерв" />
+            </ct:object>
+            <ct:object name="BR1_10" base-type="Types.DIAG_M543G.DIAG_M543G_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_10 (M543G)" />
+              <attribute type="Attributes.ShortName" value="BR1_10" />
+              <attribute type="Attributes.Channel_1" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
+              <attribute type="Attributes.Channel_12" value="Резерв" />
+              <attribute type="Attributes.Channel_13" value="Резерв" />
+              <attribute type="Attributes.Channel_14" value="Резерв" />
+              <attribute type="Attributes.Channel_15" value="Резерв" />
+              <attribute type="Attributes.Channel_16" value="Резерв" />
+              <attribute type="Attributes.Channel_2" value="Резерв" />
+              <attribute type="Attributes.Channel_3" value="Резерв" />
+              <attribute type="Attributes.Channel_4" value="Резерв" />
+              <attribute type="Attributes.Channel_5" value="Резерв" />
+              <attribute type="Attributes.Channel_6" value="Резерв" />
+              <attribute type="Attributes.Channel_7" value="Резерв" />
+              <attribute type="Attributes.Channel_8" value="Резерв" />
+              <attribute type="Attributes.Channel_9" value="Резерв" />
             </ct:object>
         </ct:object>
         </ct:object>
@@ -798,6 +818,12 @@
             <attribute type="Attributes.FracDigits" value="3" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_MINZ_up" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Минимальный запас до верхнего ограничения" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="ЗП" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_ElSt_ready" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -1120,10 +1146,10 @@
               <attribute type="unit.System.Attributes.Description" value="Стабилизацию СТ отключить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_ON" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим включить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим включить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_OFF" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим отключить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим отключить" />
             </ct:object>
             <ct:object name="BTN_TurnDown" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="РЧВ вниз" />
@@ -1532,7 +1558,7 @@
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A058" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A059" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -1724,6 +1750,24 @@
             <ct:object name="APK_notOff_M" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АПК не закрыт в магистрали" />
             </ct:object>
+            <ct:object name="BR1_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="CheckBZD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -1731,6 +1775,24 @@
             </ct:object>
             <ct:object name="coolGTU" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Охлаждение ГТУ" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -2043,7 +2105,7 @@
               <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВ" />
             </ct:object>
             <ct:object name="A_KPGIMBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             </ct:object>
             <ct:object name="A_DozBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АОбс. Отказ канала управления ДГ" />
@@ -2230,8 +2292,8 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_4 (M547A)" />
               <attribute type="Attributes.ShortName" value="BR1_4" />
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
-              <attribute type="Attributes.Channel_10" value="Частота электростартера" />
-              <attribute type="Attributes.Channel_11" value="Момент электростартера" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
               <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
@@ -2325,7 +2387,7 @@
               <attribute type="Attributes.Channel_6" value="Питание электростартера включить" />
               <attribute type="Attributes.Channel_7" value="Электростартер включить" />
               <attribute type="Attributes.Channel_8" value="Повышенную мощность электростартера включить" />
-              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Переключение ВНА" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Резерв" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
@@ -2350,9 +2412,9 @@
               <attribute type="Attributes.Channel_31" value="Резерв" />
               <attribute type="Attributes.Channel_32" value="Резерв" />
             </ct:object>
-            <ct:object name="BR1_20" base-type="Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_20 (M932C_2N)" />
-              <attribute type="Attributes.ShortName" value="BR1_20" />
+            <ct:object name="BR1_9" base-type="Types.DIAG_M531I.DIAG_M531I_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_9 (M531I)" />
+              <attribute type="Attributes.ShortName" value="BR1_9" />
               <attribute type="Attributes.Channel_1" value="Частота 2 вращения ротора ГТД (обмотка 1 датчики 2)" />
               <attribute type="Attributes.Channel_2" value="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -2361,6 +2423,26 @@
               <attribute type="Attributes.Channel_6" value="Резерв" />
               <attribute type="Attributes.Channel_7" value="Резерв" />
               <attribute type="Attributes.Channel_8" value="Резерв" />
+            </ct:object>
+            <ct:object name="BR1_10" base-type="Types.DIAG_M543G.DIAG_M543G_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_10 (M543G)" />
+              <attribute type="Attributes.ShortName" value="BR1_10" />
+              <attribute type="Attributes.Channel_1" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
+              <attribute type="Attributes.Channel_12" value="Резерв" />
+              <attribute type="Attributes.Channel_13" value="Резерв" />
+              <attribute type="Attributes.Channel_14" value="Резерв" />
+              <attribute type="Attributes.Channel_15" value="Резерв" />
+              <attribute type="Attributes.Channel_16" value="Резерв" />
+              <attribute type="Attributes.Channel_2" value="Резерв" />
+              <attribute type="Attributes.Channel_3" value="Резерв" />
+              <attribute type="Attributes.Channel_4" value="Резерв" />
+              <attribute type="Attributes.Channel_5" value="Резерв" />
+              <attribute type="Attributes.Channel_6" value="Резерв" />
+              <attribute type="Attributes.Channel_7" value="Резерв" />
+              <attribute type="Attributes.Channel_8" value="Резерв" />
+              <attribute type="Attributes.Channel_9" value="Резерв" />
             </ct:object>
         </ct:object>
         </ct:object>
@@ -2961,6 +3043,12 @@
             <attribute type="Attributes.FracDigits" value="3" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_MINZ_up" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Минимальный запас до верхнего ограничения" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="ЗП" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_ElSt_ready" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -3283,10 +3371,10 @@
               <attribute type="unit.System.Attributes.Description" value="Стабилизацию СТ отключить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_ON" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим включить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим включить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_OFF" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим отключить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим отключить" />
             </ct:object>
             <ct:object name="BTN_TurnDown" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="РЧВ вниз" />
@@ -3695,7 +3783,7 @@
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A058" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A059" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -3887,6 +3975,24 @@
             <ct:object name="APK_notOff_M" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АПК не закрыт в магистрали" />
             </ct:object>
+            <ct:object name="BR1_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="CheckBZD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -3894,6 +4000,24 @@
             </ct:object>
             <ct:object name="coolGTU" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Охлаждение ГТУ" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -4206,7 +4330,7 @@
               <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВ" />
             </ct:object>
             <ct:object name="A_KPGIMBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             </ct:object>
             <ct:object name="A_DozBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АОбс. Отказ канала управления ДГ" />
@@ -4393,8 +4517,8 @@
               <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_4 (M547A)" />
               <attribute type="Attributes.ShortName" value="BR1_4" />
               <attribute type="Attributes.Channel_1" value="Перепад между атмосферным и полным давлением газа за СТ" />
-              <attribute type="Attributes.Channel_10" value="Частота электростартера" />
-              <attribute type="Attributes.Channel_11" value="Момент электростартера" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Положение дозирующей иглы ДГ" />
               <attribute type="Attributes.Channel_13" value="Давление газа на выходе ЦБК" />
               <attribute type="Attributes.Channel_14" value="Перепад давления на конфузоре нагнетателя" />
@@ -4488,7 +4612,7 @@
               <attribute type="Attributes.Channel_6" value="Питание электростартера включить" />
               <attribute type="Attributes.Channel_7" value="Электростартер включить" />
               <attribute type="Attributes.Channel_8" value="Повышенную мощность электростартера включить" />
-              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Переключение ВНА" />
               <attribute type="Attributes.Channel_11" value="Резерв" />
               <attribute type="Attributes.Channel_12" value="Резерв" />
               <attribute type="Attributes.Channel_13" value="Резерв" />
@@ -4513,9 +4637,9 @@
               <attribute type="Attributes.Channel_31" value="Резерв" />
               <attribute type="Attributes.Channel_32" value="Резерв" />
             </ct:object>
-            <ct:object name="BR1_20" base-type="Types.DIAG_M932C2_N.DIAG_M932C2_N_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_20 (M932C_2N)" />
-              <attribute type="Attributes.ShortName" value="BR1_20" />
+            <ct:object name="BR1_9" base-type="Types.DIAG_M531I.DIAG_M531I_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_9 (M531I)" />
+              <attribute type="Attributes.ShortName" value="BR1_9" />
               <attribute type="Attributes.Channel_1" value="Частота 2 вращения ротора ГТД (обмотка 1 датчики 2)" />
               <attribute type="Attributes.Channel_2" value="Частота 2 вращения ротора СТ (обмотка 1 датчика 2)" />
               <attribute type="Attributes.Channel_3" value="Резерв" />
@@ -4524,6 +4648,26 @@
               <attribute type="Attributes.Channel_6" value="Резерв" />
               <attribute type="Attributes.Channel_7" value="Резерв" />
               <attribute type="Attributes.Channel_8" value="Резерв" />
+            </ct:object>
+            <ct:object name="BR1_10" base-type="Types.DIAG_M543G.DIAG_M543G_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Диагностика модуля BR1_10 (M543G)" />
+              <attribute type="Attributes.ShortName" value="BR1_10" />
+              <attribute type="Attributes.Channel_1" value="Резерв" />
+              <attribute type="Attributes.Channel_10" value="Резерв" />
+              <attribute type="Attributes.Channel_11" value="Резерв" />
+              <attribute type="Attributes.Channel_12" value="Резерв" />
+              <attribute type="Attributes.Channel_13" value="Резерв" />
+              <attribute type="Attributes.Channel_14" value="Резерв" />
+              <attribute type="Attributes.Channel_15" value="Резерв" />
+              <attribute type="Attributes.Channel_16" value="Резерв" />
+              <attribute type="Attributes.Channel_2" value="Резерв" />
+              <attribute type="Attributes.Channel_3" value="Резерв" />
+              <attribute type="Attributes.Channel_4" value="Резерв" />
+              <attribute type="Attributes.Channel_5" value="Резерв" />
+              <attribute type="Attributes.Channel_6" value="Резерв" />
+              <attribute type="Attributes.Channel_7" value="Резерв" />
+              <attribute type="Attributes.Channel_8" value="Резерв" />
+              <attribute type="Attributes.Channel_9" value="Резерв" />
             </ct:object>
         </ct:object>
         </ct:object>
@@ -5124,6 +5268,12 @@
             <attribute type="Attributes.FracDigits" value="3" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_MINZ_up" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Минимальный запас до верхнего ограничения" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="ЗП" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_ElSt_ready" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -5446,10 +5596,10 @@
               <attribute type="unit.System.Attributes.Description" value="Стабилизацию СТ отключить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_ON" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим включить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим включить" />
             </ct:object>
             <ct:object name="BTN_MaxReg_OFF" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Максиамльный режим отключить" />
+              <attribute type="unit.System.Attributes.Description" value="Максимальный режим отключить" />
             </ct:object>
             <ct:object name="BTN_TurnDown" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="РЧВ вниз" />
@@ -5858,7 +6008,7 @@
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A058" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+            <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             <attribute type="Attributes.EUnit" value="-" />
           </ct:object>
           <ct:object name="A059" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -6050,6 +6200,24 @@
             <ct:object name="APK_notOff_M" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АПК не закрыт в магистрали" />
             </ct:object>
+            <ct:object name="BR1_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="CheckBZD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -6057,6 +6225,24 @@
             </ct:object>
             <ct:object name="coolGTU" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Охлаждение ГТУ" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR1_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR1 (GTU) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -6369,7 +6555,7 @@
               <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВ" />
             </ct:object>
             <ct:object name="A_KPGIMBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала канала управления КПВЗ и КПГ" />
+              <attribute type="unit.System.Attributes.Description" value="АОбс. Неисправность канала управления КПВЗ и КПГ" />
             </ct:object>
             <ct:object name="A_DozBrk" base-type="Types.ALR.ALR_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="АОбс. Отказ канала управления ДГ" />
@@ -8125,6 +8311,12 @@
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_RH" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Относительная влажность наружного воздуха" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="RH" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_NO_1" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -9763,6 +9955,21 @@
             <ct:object name="BTN_StopAVGM" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Останов АВГМ" />
             </ct:object>
+            <ct:object name="BTN_UTO_Man" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="BTN_UTO_Auto" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в автоматическом режиме" />
+            </ct:object>
+            <ct:object name="BTN_SAVE_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Сохранить наработку в файл" />
+            </ct:object>
+            <ct:object name="BTN_READ_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Считать наработку из файла" />
+            </ct:object>
+            <ct:object name="BTN_Continue_KPK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Продолжить КПК" />
+            </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
           <ct:object name="SP_Metan" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -9986,6 +10193,12 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="-" />
+          </ct:object>
+          <ct:object name="SP_AVGM_OFF" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Уставка выключения АВГМ по Ткшт" />
+            <attribute type="Attributes.EUnit" value="°С" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="Т" />
           </ct:object>
         </ct:object>
         <ct:object name="CNT" access-level="public" >
@@ -10237,27 +10450,27 @@
           </ct:object>
           <ct:object name="A085" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно-высокий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A086" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A087" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A088" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A089" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла рабочих колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A090" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла установочных колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A091" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокое виброперемещение ротора со стороны ОП по горизонтальному направлению" />
@@ -10277,11 +10490,11 @@
           </ct:object>
           <ct:object name="A095" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 1" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A096" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 2" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A097" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в МБК (Б1)" />
@@ -10881,6 +11094,36 @@
             <ct:object name="PRU_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нет связи с ПРУ" />
             </ct:object>
+            <ct:object name="aVent_KSHT" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Запущена аварийная вентиляция КШТ" />
+            </ct:object>
+            <ct:object name="GPA_Work_BP_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ГПА работает при открытом байпасном клапане 1 или 2 более 20 часов в этом году" />
+            </ct:object>
+            <ct:object name="IPTV_flt" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Влажность наружного воздуха недостоверна" />
+            </ct:object>
+            <ct:object name="PSOGTD_OnKPK_AVGM" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Подача воздуха в КШТ от АВГМ отсутствует" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="Zh_MSD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -11161,6 +11404,30 @@
             </ct:object>
             <ct:object name="PRU_Repair" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нажата кнопка Ремонт на ПРУ" />
+            </ct:object>
+            <ct:object name="UTO_Man" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="MSD_MSN_Ready" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Маслосистемы ГТД и нагнетателя к проверке готовы" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -14394,6 +14661,12 @@
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_RH" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Относительная влажность наружного воздуха" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="RH" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_NO_1" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -16032,6 +16305,21 @@
             <ct:object name="BTN_StopAVGM" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Останов АВГМ" />
             </ct:object>
+            <ct:object name="BTN_UTO_Man" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="BTN_UTO_Auto" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в автоматическом режиме" />
+            </ct:object>
+            <ct:object name="BTN_SAVE_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Сохранить наработку в файл" />
+            </ct:object>
+            <ct:object name="BTN_READ_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Считать наработку из файла" />
+            </ct:object>
+            <ct:object name="BTN_Continue_KPK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Продолжить КПК" />
+            </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
           <ct:object name="SP_Metan" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -16255,6 +16543,12 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="-" />
+          </ct:object>
+          <ct:object name="SP_AVGM_OFF" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Уставка выключения АВГМ по Ткшт" />
+            <attribute type="Attributes.EUnit" value="°С" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="Т" />
           </ct:object>
         </ct:object>
         <ct:object name="CNT" access-level="public" >
@@ -16506,27 +16800,27 @@
           </ct:object>
           <ct:object name="A085" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно-высокий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A086" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A087" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A088" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A089" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла рабочих колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A090" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла установочных колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A091" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокое виброперемещение ротора со стороны ОП по горизонтальному направлению" />
@@ -16546,11 +16840,11 @@
           </ct:object>
           <ct:object name="A095" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 1" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A096" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 2" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A097" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в МБК (Б1)" />
@@ -17150,6 +17444,36 @@
             <ct:object name="PRU_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нет связи с ПРУ" />
             </ct:object>
+            <ct:object name="aVent_KSHT" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Запущена аварийная вентиляция КШТ" />
+            </ct:object>
+            <ct:object name="GPA_Work_BP_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ГПА работает при открытом байпасном клапане 1 или 2 более 20 часов в этом году" />
+            </ct:object>
+            <ct:object name="IPTV_flt" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Влажность наружного воздуха недостоверна" />
+            </ct:object>
+            <ct:object name="PSOGTD_OnKPK_AVGM" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Подача воздуха в КШТ от АВГМ отсутствует" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="Zh_MSD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -17430,6 +17754,30 @@
             </ct:object>
             <ct:object name="PRU_Repair" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нажата кнопка Ремонт на ПРУ" />
+            </ct:object>
+            <ct:object name="UTO_Man" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="MSD_MSN_Ready" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Маслосистемы ГТД и нагнетателя к проверке готовы" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -20663,6 +21011,12 @@
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="-" />
           </ct:object>
+          <ct:object name="AE_RH" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Относительная влажность наружного воздуха" />
+            <attribute type="Attributes.EUnit" value="%" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="RH" />
+          </ct:object>
         </ct:object>
         <ct:object name="DI" access-level="public" >
           <ct:object name="DI_NO_1" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -22301,6 +22655,21 @@
             <ct:object name="BTN_StopAVGM" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Останов АВГМ" />
             </ct:object>
+            <ct:object name="BTN_UTO_Man" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="BTN_UTO_Auto" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в автоматическом режиме" />
+            </ct:object>
+            <ct:object name="BTN_SAVE_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Сохранить наработку в файл" />
+            </ct:object>
+            <ct:object name="BTN_READ_WORK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Считать наработку из файла" />
+            </ct:object>
+            <ct:object name="BTN_Continue_KPK" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Продолжить КПК" />
+            </ct:object>
         </ct:object>
         <ct:object name="SET" access-level="public" >
           <ct:object name="SP_Metan" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
@@ -22524,6 +22893,12 @@
             <attribute type="Attributes.EUnit" value="°С" />
             <attribute type="Attributes.FracDigits" value="1" />
             <attribute type="Attributes.ShortName" value="-" />
+          </ct:object>
+          <ct:object name="SP_AVGM_OFF" base-type="Types.SET.SET_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
+            <attribute type="unit.System.Attributes.Description" value="Уставка выключения АВГМ по Ткшт" />
+            <attribute type="Attributes.EUnit" value="°С" />
+            <attribute type="Attributes.FracDigits" value="1" />
+            <attribute type="Attributes.ShortName" value="Т" />
           </ct:object>
         </ct:object>
         <ct:object name="CNT" access-level="public" >
@@ -22775,27 +23150,27 @@
           </ct:object>
           <ct:object name="A085" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно-высокий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A086" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в маслобаке" />
-            <attribute type="Attributes.EUnit" value="мм" />
+            <attribute type="Attributes.EUnit" value="л" />
           </ct:object>
           <ct:object name="A087" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A088" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла вкладыша ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A089" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла рабочих колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A090" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокая температура металла установочных колодок ОУП ЦБК" />
-            <attribute type="Attributes.EUnit" value="ºС" />
+            <attribute type="Attributes.EUnit" value="°С" />
           </ct:object>
           <ct:object name="A091" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно высокое виброперемещение ротора со стороны ОП по горизонтальному направлению" />
@@ -22815,11 +23190,11 @@
           </ct:object>
           <ct:object name="A095" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 1" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A096" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="АОсс. Аварийно-высокий осевой сдвиг ротора 2" />
-            <attribute type="Attributes.EUnit" value="мкм" />
+            <attribute type="Attributes.EUnit" value="мм" />
           </ct:object>
           <ct:object name="A097" base-type="Types.PZ.PZ_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
             <attribute type="unit.System.Attributes.Description" value="ВОбс. Аварийно низкий объём масла в МБК (Б1)" />
@@ -23419,6 +23794,36 @@
             <ct:object name="PRU_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нет связи с ПРУ" />
             </ct:object>
+            <ct:object name="aVent_KSHT" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Запущена аварийная вентиляция КШТ" />
+            </ct:object>
+            <ct:object name="GPA_Work_BP_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="ГПА работает при открытом байпасном клапане 1 или 2 более 20 часов в этом году" />
+            </ct:object>
+            <ct:object name="IPTV_flt" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Влажность наружного воздуха недостоверна" />
+            </ct:object>
+            <ct:object name="PSOGTD_OnKPK_AVGM" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Подача воздуха в КШТ от АВГМ отсутствует" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP5_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Ошибка порта" />
+            </ct:object>
         </ct:object>
         <ct:object name="TS" access-level="public" >
             <ct:object name="Zh_MSD" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -23699,6 +24104,30 @@
             </ct:object>
             <ct:object name="PRU_Repair" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Нажата кнопка Ремонт на ПРУ" />
+            </ct:object>
+            <ct:object name="UTO_Man" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Уставка УТО в ручном режиме" />
+            </ct:object>
+            <ct:object name="MSD_MSN_Ready" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Маслосистемы ГТД и нагнетателя к проверке готовы" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN3 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_LAN4_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) LAN4 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BR2_0_SFP2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="1BR2 (GPA) SFP2 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="PPU" access-level="public" >
@@ -25297,8 +25726,8 @@
   </trei:trei>
   <trei:trei name="PLC_DRV21" >
     <trei:master-module name="CPU" >
-      <trei:ethernet-adapter name="Eth1" address="200.001.013.014" />
-      <trei:ethernet-adapter name="Eth2" address="200.001.014.014" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.016" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.016" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV21.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
@@ -25311,13 +25740,13 @@
         </ct:object>
         <ct:object name="AE" access-level="public" >
           <ct:object name="AE_QTGM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Массовый рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Массовый расход топливного газа" />
             <attribute type="Attributes.EUnit" value="кг/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
           </ct:object>
           <ct:object name="AE_QTG" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объемный рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Объемный расход топливного газа" />
             <attribute type="Attributes.EUnit" value="м3/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
@@ -25598,6 +26027,35 @@
             </ct:object>
             <ct:object name="UMG3_Vvod3NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Ввод 3 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG1_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 1" />
+            </ct:object>
+            <ct:object name="UMG2_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 2" />
+            </ct:object>
+            <ct:object name="UMG3_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 3" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Ошибка порта" />
+            </ct:object>
+        </ct:object>
+        <ct:object name="TS" access-level="public" >
+            <ct:object name="BRRS2_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="DRV" access-level="public" >
@@ -27029,8 +27487,8 @@
   </trei:trei>
   <trei:trei name="PLC_DRV22" >
     <trei:master-module name="CPU" >
-      <trei:ethernet-adapter name="Eth1" address="200.001.013.024" />
-      <trei:ethernet-adapter name="Eth2" address="200.001.014.024" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.026" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.026" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV22.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
@@ -27043,13 +27501,13 @@
         </ct:object>
         <ct:object name="AE" access-level="public" >
           <ct:object name="AE_QTGM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Массовый рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Массовый расход топливного газа" />
             <attribute type="Attributes.EUnit" value="кг/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
           </ct:object>
           <ct:object name="AE_QTG" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объемный рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Объемный расход топливного газа" />
             <attribute type="Attributes.EUnit" value="м3/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
@@ -27330,6 +27788,35 @@
             </ct:object>
             <ct:object name="UMG3_Vvod3NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Ввод 3 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG1_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 1" />
+            </ct:object>
+            <ct:object name="UMG2_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 2" />
+            </ct:object>
+            <ct:object name="UMG3_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 3" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Ошибка порта" />
+            </ct:object>
+        </ct:object>
+        <ct:object name="TS" access-level="public" >
+            <ct:object name="BRRS2_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="DRV" access-level="public" >
@@ -28761,8 +29248,8 @@
   </trei:trei>
   <trei:trei name="PLC_DRV23" >
     <trei:master-module name="CPU" >
-      <trei:ethernet-adapter name="Eth1" address="200.001.013.034" />
-      <trei:ethernet-adapter name="Eth2" address="200.001.014.034" />
+      <trei:ethernet-adapter name="Eth1" address="200.001.013.036" />
+      <trei:ethernet-adapter name="Eth2" address="200.001.014.036" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV23.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
@@ -28775,13 +29262,13 @@
         </ct:object>
         <ct:object name="AE" access-level="public" >
           <ct:object name="AE_QTGM" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Массовый рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Массовый расход топливного газа" />
             <attribute type="Attributes.EUnit" value="кг/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
           </ct:object>
           <ct:object name="AE_QTG" base-type="Types.AE.AE_PLC_View" aspect="Types.PLC_Aspect" access-level="public">
-            <attribute type="unit.System.Attributes.Description" value="Объемный рассход топливного газа" />
+            <attribute type="unit.System.Attributes.Description" value="Объемный расход топливного газа" />
             <attribute type="Attributes.EUnit" value="м3/ч" />
             <attribute type="Attributes.FracDigits" value="0" />
             <attribute type="Attributes.ShortName" value="Qтг" />
@@ -29062,6 +29549,35 @@
             </ct:object>
             <ct:object name="UMG3_Vvod3NotOk" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Ввод 3 ~380В: Напряжение не в норме" />
+            </ct:object>
+            <ct:object name="UMG1_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 1" />
+            </ct:object>
+            <ct:object name="UMG2_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 2" />
+            </ct:object>
+            <ct:object name="UMG3_NoLink" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="Нет связи с анализатором сети ввода 3" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN1_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Ошибка порта" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_Error" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Ошибка порта" />
+            </ct:object>
+        </ct:object>
+        <ct:object name="TS" access-level="public" >
+            <ct:object name="BRRS2_LAN1_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN1 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN2_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN2 Кабель не подключен" />
+            </ct:object>
+            <ct:object name="BRRS2_LAN3_NoLink" base-type="Types.TS.TS_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+              <attribute type="unit.System.Attributes.Description" value="BRRS2 (DRV2) LAN3 Кабель не подключен" />
             </ct:object>
         </ct:object>
         <ct:object name="DRV" access-level="public" >
