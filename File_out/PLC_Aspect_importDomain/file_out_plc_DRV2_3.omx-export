@@ -1,8 +1,8 @@
 <omx xmlns="system" xmlns:dp="automation.deployment" xmlns:trei="trei" xmlns:ct="automation.control">
   <trei:trei name="PLC_DRV23" >
     <trei:master-module name="CPU" >
-      <trei:ethernet-adapter name="Eth1" address="200.001.013.036" />
-      <trei:ethernet-adapter name="Eth2" address="200.001.014.036" />
+      <trei:ethernet-adapter name="Eth1" address="200.1.13.36" />
+      <trei:ethernet-adapter name="Eth2" address="200.1.14.36" />
       <trei:unet-server name="UnetServer" address-map="PLC_DRV23.CPU.Tree.UnetAddressMap" port="6001"/>
       <dp:application-object name="Tree" access-level="public" >
         <ct:object name="Diag" access-level="public" >
@@ -740,752 +740,752 @@
               <ct:object name="torch1_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка1. Включена" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch1_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка1. Выключена" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch1_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка1. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch2_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка2. Включена" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch2_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка2. Выключена" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch2_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка2. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува1. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува1. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува1. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO2_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува2. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO2_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува2. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO2_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува2. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_heat_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Электрообогрев СО. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_heat_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Электрообогрев СО. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_heat_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Электрообогрев СО. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной1. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной1. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной1. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV2_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной2. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV2_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной2. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV2_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной2. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Mb_vlv_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Межблочный клапан. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Mb_vlv_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Межблочный клапан. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Mb_vlv_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Межблочный клапан. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_vlv_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан на КШТ. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_vlv_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан на КШТ. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_vlv_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан на КШТ. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="OGK_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Отсченой газовый клапан. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="OGK_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Отсченой газовый клапан. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="OGK_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Отсченой газовый клапан. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv1_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 1 отбора воздуха на обогрев СО. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv1_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 1 отбора воздуха на обогрев СО. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv1_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 1 отбора воздуха на обогрев СО. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv2_stOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 2 отбора воздуха на обогрев СО. Включен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv2_stOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 2 отбора воздуха на обогрев СО. Выключен" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv2_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 2 отбора воздуха на обогрев СО. Авария" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: АВГМ. В работе / останове" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_air_start" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Началась Подача воздуха в КШТ от АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Em_power_off" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Аварийное выключение питания" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Fault" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Неисправность АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Btn_Start_on" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Нажата кнопка ПУСК" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Btn_Stop_on" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Нажата кнопка ОСТАНОВ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Btn_eStop_on" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Нажата кнопка ЭКСТРЕННЫЙ ОСТАНОВ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="U220_1L1_on" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Наличие питания 230В (фаза 1L2)" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="RKF_power" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Реле контроля фаз .Питание не в норме" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="pWork" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Разрешение работы / Останов" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pusk" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Пуск АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_air_on" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Подача воздуха в КШТ от АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Zagaz_so_1" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Загазованность СО. Порог 1" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Zagaz_so_2" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Загазованность СО. Порог 2" />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Zagaz_so_m_1" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Загазованность секции обслуживания по метанолу. Порог 1" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Zagaz_so_m_2" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Загазованность секции обслуживания по метанолу. Порог 2" />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Fire_GPA" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Пожар в ГПА" />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Fire_AVGM" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Пожар в блоке АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="dP_TG1" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Перепад давления в ТГ1" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="dP_TG2" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Перепад давления в ТГ2" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tso_alarm" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура в СО выше или ниже нормы" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_to1_wH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 1. Верхняя пред. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_to1_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 1. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_to2_wH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 2. Верхняя пред. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_to2_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 2. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_gas_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура газа. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_gas_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура газа. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_so_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в СО. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_so_wH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в СО. Верхняя пред. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_so_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в СО. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Thair_A_wH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура нагретого воздуха в ангаре. Верхняя пред. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Thair_A_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура нагретого воздуха в ангаре. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_kst_wH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в КШТ. Верхняя пред. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_kst_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в КШТ. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_angar_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на ангар. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_angar_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на ангар. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_KST_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на КШТ. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_KST_aH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на КШТ. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_in_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа на входе. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_in_wL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа на входе. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_outReg_aL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа после регулятора. Нижняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_outReg_wL" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа после регулятора. Верхняя авар. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_TO1_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 1. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_TO2_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура теплообменника 2. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tgas_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура газа. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Thair_A_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура нагретого воздуха на ангар. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_so_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в СО. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_KST_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха на КШТ. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_A_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на ангар. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pair_vv_KST_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление воздуха в воздуховоде на КШТ. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_outReg_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа после регулятора. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pgas_in_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Давление газа на входе. Авария датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KG_net_f" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Ошибка обмена с корректором газа. " />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Deblock" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Квитирование(сброс) тревог и аварий" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ТС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Ready" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Готовность к пуску" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_Af" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в ангаре ГПА. Ошибка датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Tair_GTDf" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в ГТД. Ошибка датчика" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Pusk_AVGM" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Подана команда на пуск АВГМ" />
                 <attribute type="Attributes.Type_wrn_DRV" value="ПС" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
@@ -1500,256 +1500,256 @@
               <ct:object name="VO2_reset" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: ВО2 сброс наработки" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_reset" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: ВО1 сброс наработки" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Torch2_reset" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка 2 сброс наработки" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Torch1_reset" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка 1 сброс наработки" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch1_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка1. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch1_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка1. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch2_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка2. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="torch2_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Горелка2. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува1. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO1_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува1. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO2_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува2. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VO2_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вент. обдува2. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_heat_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Электрообогрев СО. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_heat_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Электрообогрев СО. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной1. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной1. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV2_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной2. Включить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV2_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Вентилятор вытяжной2. Выключить" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Mb_vlv_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Межблочный клапан. Открыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Mb_vlv_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Межблочный клапан. Закрыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_vlv_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан на КШТ. Открыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="KST_vlv_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан на КШТ. Закрыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="OGK_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Отсченой газовый клапан. Открыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="OGK_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Отсченой газовый клапан. Закрыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv1_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 1 отбора воздуха на обогрев СО. Открыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv1_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 1 отбора воздуха на обогрев СО. Закрыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv2_oOn" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 2 отбора воздуха на обогрев СО. Открыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="SO_vlv2_oOff" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Клапан 2 отбора воздуха на обогрев СО. Закрыть" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Вход" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Kvitir" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Квитирование(сброс) тревог и аварий" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="2" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="2" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="T_kst_AOH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура воздуха в КШТ.Аварийно высокая. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="Thair_A_AOH" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: Температура нагретого воздуха в ангаре. Аварийно высокая. Сигнал." />
                 <attribute type="Attributes.Type_wrn_DRV" value="АС" />
-                <attribute type="Attributes.sColorOff" value="3" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="3" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
               <ct:object name="VV1_2" base-type="Types.DRV_DI.DRV_DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
                 <attribute type="unit.System.Attributes.Description" value="АВГМ: ВВ1 или ВВ2" />
                 <attribute type="Attributes.Type_wrn_DRV" value="Выход" />
-                <attribute type="Attributes.sColorOff" value="1" />
-                <attribute type="Attributes.sColorOn" value="0" />
+                <attribute type="Attributes.sColorOff" value="0" />
+                <attribute type="Attributes.sColorOn" value="1" />
                 <attribute type="Attributes.EUnit" value="-" />
                 <attribute type="Attributes.FracDigits" value="0" />
               </ct:object>
