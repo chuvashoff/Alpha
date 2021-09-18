@@ -8411,12 +8411,12 @@
           </ct:object>
           <ct:object name="DI_BPu_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Верхний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_BPd_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Нижний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_TOmg_crs" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -14761,12 +14761,12 @@
           </ct:object>
           <ct:object name="DI_BPu_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Верхний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_BPd_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Нижний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_TOmg_crs" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
@@ -21111,12 +21111,12 @@
           </ct:object>
           <ct:object name="DI_BPu_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Верхний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_BPd_VOU_On" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
             <attribute type="unit.System.Attributes.Description" value="Нижний байпасный клапан ВОУ открыт" />
-            <attribute type="Attributes.sColorOff" value="0" />
+            <attribute type="Attributes.sColorOff" value="3" />
             <attribute type="Attributes.sColorOn" value="1" />
           </ct:object>
           <ct:object name="DI_TOmg_crs" base-type="Types.DI.DI_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
