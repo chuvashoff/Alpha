@@ -3257,10 +3257,10 @@
               <attribute type="unit.System.Attributes.Description" value="Вентилятор ангара 1.2 - основной" />
             </ct:object>
             <ct:object name="BTN_VOT1_main" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Вентилятор обдува трансмиссии 1 - основной" />
+              <attribute type="unit.System.Attributes.Description" value="ВОТ 1 - основной" />
             </ct:object>
             <ct:object name="BTN_VOT2_main" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
-              <attribute type="unit.System.Attributes.Description" value="Вентилятор обдува трансмиссии 2 - основной" />
+              <attribute type="unit.System.Attributes.Description" value="ВОТ 2 - основной" />
             </ct:object>
             <ct:object name="BTN_StartUto" base-type="Types.BTN.BTN_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Пуск УТО" />
@@ -4236,16 +4236,16 @@
             <ct:object name="DI_A4_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Сработка реле контроля изоляции А4" />
             </ct:object>
-            <ct:object name="DI_SQ1_stOn" base-type="Types.WRN_Off.WRN_Off_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="DI_SQ1_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ1" />
             </ct:object>
-            <ct:object name="DI_SQ2_stOn" base-type="Types.WRN_Off.WRN_Off_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="DI_SQ2_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ2" />
             </ct:object>
-            <ct:object name="DI_SQ3_stOn" base-type="Types.WRN_Off.WRN_Off_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="DI_SQ3_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ3" />
             </ct:object>
-            <ct:object name="DI_SQ4_stOn" base-type="Types.WRN_Off.WRN_Off_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
+            <ct:object name="DI_SQ4_stOn" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
               <attribute type="unit.System.Attributes.Description" value="Концевой выключатель SQ4" />
             </ct:object>
             <ct:object name="DI_Deblock_PRU" base-type="Types.WRN_On.WRN_On_PLC_View" aspect="Types.PLC_Aspect" access-level="public" >
