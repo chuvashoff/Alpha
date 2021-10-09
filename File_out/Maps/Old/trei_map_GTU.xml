@@ -45102,6 +45102,12 @@
     <category>DataCategory_GTU_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>Diag.HW.BR1_10.Not_ready</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>11486</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>Diag.HW.BR1_10.Err_CH_01</node-path>
     <protocoltype>Analog</protocoltype>
     <index>13641</index>

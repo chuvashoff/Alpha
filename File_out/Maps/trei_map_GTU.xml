@@ -25910,6 +25910,102 @@
     <category>DataCategory_GTU_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>DI.DI_ElSt_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4039</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ElSt_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4040</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vpp_wH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4041</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vpp_aH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4042</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_dPm_MF84_hi.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4043</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_BUSH_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4044</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_POS_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4045</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AZ1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4046</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AZ2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4047</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_APK_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4048</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_APK_stOff.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4049</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Chip_FS.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4050</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Chip_KP.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4051</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Chip_SPK.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4052</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Chip_RPT.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4053</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Chip_ST.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4054</index>
+    <category>DataCategory_GTU_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>DI.DI_ElSt_ready.qbiValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5530</index>

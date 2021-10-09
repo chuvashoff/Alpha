@@ -36630,6 +36630,900 @@
     <category>DataCategory_GPA_NoArcDiscrete</category>
   </item>
   <item Binding="Introduced">
+    <node-path>DI.DI_NO_1.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4574</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AO_1.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4575</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_EOno_1.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4576</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_EOnz_1.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4577</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_NO_2.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4578</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AO_2.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4579</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VOss_fromKC.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4582</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AO_ButtonBlockSAU.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4583</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AObs_fromKC.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4584</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AOss_fromKC.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4585</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AObs_fromKCr.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4586</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AOss_fromKCr.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4587</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VOss_fromKCr.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4588</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AVGM_work.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4589</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AVGM_to_KST.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4590</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Door_Vsas_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4591</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Door_lVOU_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4592</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Door_rVOU_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4593</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_BPu_VOU_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4594</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_BPd_VOU_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4595</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_TOmg_crs.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4596</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_TMG_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4597</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_TMG_stOff.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4598</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_PNS_blk.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4599</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Lm_NB_Hi.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4600</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Pmsn_Low.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4601</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vmbn_aH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4602</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vmbn_aL.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4603</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vmbd_aH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4604</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vmbd_aL.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4605</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vs_wH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4606</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vs_aH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4607</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Os_wH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4608</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Os_aH.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4609</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VvUTO_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4610</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VvUTO_Ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4611</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Door_BAUTO_On.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4612</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Vn_UTO_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4613</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_EN_UTO_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4614</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zd_pcw_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4615</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zd_phw_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4616</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zd_scw_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4617</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zd_shw_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4618</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zd_bw_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4619</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ZsTUT_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4620</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ZsBUT_ready.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4621</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_PwrUTO_crs.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4622</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_dPKr1_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4623</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Door_TB_ON.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4624</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ASPT_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4625</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Fire_OD.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4626</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Fire_A.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4627</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Fire_ET.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4628</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Fire_SAU.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4629</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Fire_AVGM.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4630</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ASKZ_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4631</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_10_OD.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4632</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_20_OD.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4633</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_10_A.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4634</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_20_A.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4635</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_10_AVGM.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4636</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Zag_20_AVGM.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4637</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_dP_MFO.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4638</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_KSTG_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4639</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_MSGUvsas_crs.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4640</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_MSGUnagn_crs.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4641</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VvIBP_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4642</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_IBPpwr_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4643</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_IBP_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4644</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_NsBMA_blk.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4645</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_TEN1_MO_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4646</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_VnMO_flt.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4647</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Bypass_ON.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4648</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_ZU_brk.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4649</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G101_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4650</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G102_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4651</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G103_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4652</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G104_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4653</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G105_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4654</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G106_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4655</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G201_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4656</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G202_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4657</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G203_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4658</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G204_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4659</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G205_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4660</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G206_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4661</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G1_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4662</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G2_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4663</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G3_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4664</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G4_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4665</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_QF101_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4666</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_QF102_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4667</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_QF201_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4668</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_QF202_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4669</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_QF301_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4670</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_vv1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4671</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Pwr_BEO_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4672</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_vv2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4673</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Pwr_BEOres_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4674</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_vv3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4675</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SF112_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4676</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4677</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4678</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4679</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S4_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4680</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S5_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4681</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S6_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4682</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S7_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4683</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_1S8_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4684</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4685</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4686</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4687</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S4_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4688</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S5_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4689</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S6_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4690</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S7_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4691</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S8_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4692</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_3S1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4693</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_3S2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4694</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_3S3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4695</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_3S4_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4696</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_A1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4697</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_A2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4698</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_A3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4699</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_A4_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4700</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SQ1_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4701</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SQ2_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4702</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SQ3_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4703</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SQ4_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4704</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Deblock_PRU.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4705</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Sound_OF_PRU.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4706</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_RoUp.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4707</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_RoDown.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4708</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_EO_ON.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4709</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G107_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4710</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G108_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4711</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G207_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4712</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G208_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4713</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G109_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4714</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_G209_Ok.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4715</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_BZD_brk.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4716</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_BZD_alarm.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4717</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_AO_BZD.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4718</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_Power_BZD.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4719</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_SF116_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4720</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S9_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4721</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S10_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4722</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_2S11_stOn.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4723</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
+    <node-path>DI.DI_aVent_KSHT.iValue</node-path>
+    <protocoltype>Bool</protocoltype>
+    <index>4724</index>
+    <category>DataCategory_GPA_NoArcDiscrete</category>
+  </item>
+  <item Binding="Introduced">
     <node-path>DI.DI_NO_1.qbiValue</node-path>
     <protocoltype>Analog</protocoltype>
     <index>5626</index>
